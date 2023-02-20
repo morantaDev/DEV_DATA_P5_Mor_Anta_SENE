@@ -116,7 +116,7 @@ Fonctions_veille.menu(tableau_valide,tableau_invalide)
 
     
 
-test=Fonctions_veille.tester()
+#test=Fonctions_veille.tester()
     
     
 
