@@ -1,0 +1,14 @@
+rows = int(input("Entrez le nombre de lignes : "))
+columns = int(input("Entrez le nombre de colonnes : "))
+
+table = []
+for i in range(rows):
+    row = []
+    for j in range(columns):
+        row.append(" ")
+    table.append(row)
+
+for i in range(rows):
+    for j in range(columns):
+        print(table[i][j], end=" ")
+    print()

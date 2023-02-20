@@ -1,0 +1,15 @@
+code couleur
+
+
+#Sequence d'echappement ANSI
+
+
+#flag + data => ESC[+data => \x1b[+ data
+
+print("\x1b[32;40mBonjour")
+
+print("\x1b[1;38;5;226mBonjour")
+
+print("\x1b[31;40mBonjour")
+
+print("\x1b[34;40mBonjour")
