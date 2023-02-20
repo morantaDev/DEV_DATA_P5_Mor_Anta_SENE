@@ -105,6 +105,7 @@ def Check_Note(sublist):
             else:
                 print("Erreur")
             newListe1=[float(x) for x in newListe]
+            #récuperer newliste et insère 
             print(len(newListe))
             tab2.append(newListe1)
         
