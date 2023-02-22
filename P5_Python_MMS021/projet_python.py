@@ -113,18 +113,17 @@ print()
 
 test=Fonctions_veille.tester()
 #print(Fonctions_veille.Check_Classe(test))
-for i in test:
-    print(Fonctions_veille.calcul(i))
+# for i in test:
+#     print(Fonctions_veille.calcul(i))
     
     
     
 # Afficher les 5 premiers
 
+# for item in tableau_valide:                 #[:3]
+#     print(Fonctions_veille.calcul(item))
 
 
-for item in tableau_valide:
-    print(Fonctions_veille.calcul(item))
-
-
+print(tableau_valide)
 
 

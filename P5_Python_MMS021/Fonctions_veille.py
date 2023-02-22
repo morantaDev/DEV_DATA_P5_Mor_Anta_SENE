@@ -147,10 +147,11 @@ def calcul(sublist):
     moyG=str(moyG)
     sublist.append(moyG)
     
+    
     #print(sublist)
     tri=sorted(sublist, key=itemgetter(-1), reverse=True)
 
-    return sublist[3]+' '+sublist[2]
+    return tri             #sublist[3]+' '+sublist[2]+' '+sublist[-1]
 
 #Ajouter une information en vérifiant la validité des informations données
 def Ajouter():
