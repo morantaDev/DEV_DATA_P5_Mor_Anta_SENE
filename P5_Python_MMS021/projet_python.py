@@ -129,7 +129,7 @@ for item in tableau_valide1:
     
 
     
-entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "   Moyenne   "]
+entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "Moyenne"]
 
 print(Fonctions_veille.affiche_tableau(tableau_valide1,entete1))
 

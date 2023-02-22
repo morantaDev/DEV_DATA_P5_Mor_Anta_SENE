@@ -276,8 +276,8 @@ def affiche_tableau(donnees, entete):# Détermination de la largeur des colonnes
 
     # Affichage du tableau
     def print_ligne(ligne, debut="+", intersection="+", fin="+", separateur="-"):
-        print(debut + separateur.join([separateur * largeurs[j] for j in range(len(ligne))]) + fin)
-        print(intersection + intersection.join("{:^{}}".format(str(ligne[j]), largeurs[j]) for j in range(len(ligne))) + intersection)
+        print(debut + separateur.join([separateur * largeurs[j]*2 for j in range(len(ligne))]) + fin)
+        print(intersection + intersection.join("    {:^{}}  ".format(str(ligne[j]), largeurs[j]) for j in range(len(ligne))) + intersection)
 
     print_ligne(entete)
     print_ligne([], debut="+", intersection="+", fin="+", separateur="+")
@@ -333,6 +333,8 @@ def affiche_cinqPremier(liste):
     tri=sorted(liste, key=lambda x: x[-1], reverse=True)
     
     return tri[1:6]
+
+
     
 
         
