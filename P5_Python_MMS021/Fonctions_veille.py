@@ -108,6 +108,7 @@ def Check_Note(sublist):
 def calcul(sublist):
     tab=[]
     mat=[]
+    moyG=0
     subject=sublist[6].split('#')
     for i in range(len(subject)):
         item=subject[i].replace('[',':')
@@ -137,13 +138,9 @@ def calcul(sublist):
                 intMoy=[float(item) for item in moyg]
                 moyG=sum(i for i in intMoy)/len(intMoy)
                 #print(moyG)
-            else:
-                print("Erreur")
-            newListe1=[float(x) for x in newListe]
-            print(len(newListe))
-            tab2.append(newListe1)
+            sublist.append(moyG)
         
-    return True
+    return sublist
 
 #Ajouter une information en vérifiant la validité des informations données
 def Ajouter():

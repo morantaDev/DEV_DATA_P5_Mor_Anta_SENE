@@ -14,6 +14,8 @@ with open("/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv","r+") as
 tabValid=[]
 tabInValid=[]
 
+# print(data)
+
 for sublist in range(len(data)-1):
     num=Fonctions_veille.check_Numero(data[sublist])
     #numéro valide
@@ -74,7 +76,7 @@ for i in range(len(tabValid_Date)-1):
     else:
         tabValid_classe.append(tabValid_Date[i])
 
-print(len(tabInValid))             #55555555555555555
+#print(len(tabInValid))             #55555555555555555
 
 #Note valide 
 tabInValid_note=[]
@@ -95,11 +97,11 @@ tableau_invalide=tabInValid
 
 print(len(tableau_valide))
 
-test=Fonctions_veille.tester()
+# test=Fonctions_veille.tester()
 
 #print(Fonctions_veille.cinq_premier(tableau_valide))
 
-#print(Fonctions_veille.n_premier(tableau_valide,2))
+# #print(Fonctions_veille.n_premier(tableau_valide,2))
 
 
 
@@ -107,21 +109,22 @@ tableau_valide1=[]
 
 for i in tableau_valide:
     tableau_valide1.append(Fonctions_veille.calcul(i)) 
-print(tableau_valide[1])
-
+    
+print(tableau_valide1)
+    
 
     
+# print(tableau_valide1[5])
 
 for item in tableau_valide1:
     del item[0]
     del item[5]
-    item[3]=item[3].strip()
-    for i in range(len(item[4])):
-        item[4]=item[4][0]+'eme'+item[4][-1]
+
     
-entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "   Moyenne   "]
+# entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "   Moyenne   "]
 
-print(Fonctions_veille.affiche_tableau(tableau_valide1,entete1))
+# print(Fonctions_veille.affiche_tableau(tableau_valide1,entete1))
 
 
 
+fichier.close()
