@@ -138,41 +138,12 @@ def calcul(sublist):
                 moyG=sum(i for i in intMoy)/len(intMoy)
                 #print(moyG)
             else:
-                continue
-    
-    moyG=float(moyG)
-    moyG="%.3f"%moyG
-    sublist.append(moyG)
-
-    return sublist         
-
-def cinq_premier(liste_valide):
-    database=[]
-    tableau_trie=[]
-    for item in liste_valide:                 #[:3]
-        mylist=calcul(item)
-        database.append(mylist)
-    tri=sorted(database, key=lambda x: x[-1], reverse=True)
-
-    for item in tri[1:6]:
-        tableau_trie.append(item)
-    return tableau_trie
-
-
-def n_premier(liste_valide,n):
-    database=[]
-    tableau_trie=[]
-    for item in liste_valide:                 #[:3]
-        mylist=calcul(item)
-        database.append(mylist)
-    tri=sorted(database, key=lambda x: x[-1], reverse=True)
-
-    for item in tri[:n]:
-        tableau_trie.append(item)
-    return tableau_trie
-
-
-
+                print("Erreur")
+            newListe1=[float(x) for x in newListe]
+            print(len(newListe))
+            tab2.append(newListe1)
+        
+    return True
 
 #Ajouter une information en vérifiant la validité des informations données
 def Ajouter():
