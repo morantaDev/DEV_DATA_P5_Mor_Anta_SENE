@@ -138,7 +138,7 @@ def calcul(sublist):
                 intMoy=[float(item) for item in moyg]
                 moyG=sum(i for i in intMoy)/len(intMoy)
                 #print(moyG)
-    moyG="%.2f"%moyG
+    moyG=float("%.2f"%moyG)
     sublist.append(moyG)
         
     return sublist
@@ -329,7 +329,11 @@ def menu(listeValid, listeInvalid):
         print("Veuillez entrer une bonne valeur")
 
 
-
+def affiche_cinqPremier(liste):
+    tri=sorted(liste, key=lambda x: x[-1], reverse=True)
+    
+    return tri[1:6]
+    
 
         
             
