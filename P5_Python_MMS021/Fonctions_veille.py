@@ -138,7 +138,8 @@ def calcul(sublist):
                 intMoy=[float(item) for item in moyg]
                 moyG=sum(i for i in intMoy)/len(intMoy)
                 #print(moyG)
-                sublist.append(moyG)
+    moyG="%.2f"%moyG
+    sublist.append(moyG)
         
     return sublist
 
