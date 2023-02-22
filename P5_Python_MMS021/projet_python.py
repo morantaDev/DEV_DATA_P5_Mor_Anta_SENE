@@ -110,7 +110,7 @@ tableau_valide1=[]
 for i in tableau_valide:
     tableau_valide1.append(Fonctions_veille.calcul(i)) 
     
-print(tableau_valide1)
+print(tableau_valide1[1])
     
 
     
@@ -119,6 +119,12 @@ print(tableau_valide1)
 for item in tableau_valide1:
     del item[0]
     del item[5]
+    item[3]=item[3].strip()
+    for i in range(len(item[4])):
+        item[4]=item[4][0]+'eme'+item[4][-1]
+        
+print(tableau_valide1[1])
+    
 
     
 # entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "   Moyenne   "]
