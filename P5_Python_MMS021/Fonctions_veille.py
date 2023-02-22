@@ -277,7 +277,8 @@ def affiche_tableau(donnees, entete):# Détermination de la largeur des colonnes
     # Affichage du tableau
     def print_ligne(ligne, debut="+", intersection="+", fin="+", separateur="-"):
         print(debut + separateur.join([separateur * largeurs[j]*2 for j in range(len(ligne))]) + fin)
-        print(intersection + intersection.join("    {:^{}}  ".format(str(ligne[j]), largeurs[j]) for j in range(len(ligne))) + intersection)
+        print(intersection + intersection.join("    {:^{}}  ".format(str(ligne[j]), largeurs[j]) for j in range(len(ligne))) +'\t  '+intersection)
+        print(debut + separateur.join([separateur * largeurs[j]*2 for j in range(len(ligne))]) + fin)
 
     print_ligne(entete)
     print_ligne([], debut="+", intersection="+", fin="+", separateur="+")
