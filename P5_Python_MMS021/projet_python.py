@@ -11,16 +11,8 @@ with open("/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv","r+") as
     
     for ligne in monLecteur:
         data.append(ligne)
-        
-
-#print(data)    
-
-
 tabValid=[]
 tabInValid=[]
-
-# prenom=Fonctions_veille.Check_prenom(test)
-
 
 for sublist in range(len(data)-1):
     num=Fonctions_veille.check_Numero(data[sublist])
@@ -68,13 +60,10 @@ for i in range(len(tabValid_Prenom)-1):
         tabInValid.append(tabValid_Prenom[i])
     else:
         tabValid_Date.append(tabValid_Prenom[i])
-        
-
 
 print(len(tabInValid))      #444444444444444444444
 
 #classe valide
-
 tabValid_classe=[]
 tabInValid_classe=[]
 
@@ -84,12 +73,10 @@ for i in range(len(tabValid_Date)-1):
         tabInValid.append(tabValid_Date[i])
     else:
         tabValid_classe.append(tabValid_Date[i])
-        
-        
+
 print(len(tabInValid))             #55555555555555555
 
 #Note valide 
-
 tabInValid_note=[]
 tabValid_note=[]
 
@@ -108,22 +95,33 @@ tableau_invalide=tabInValid
 
 print(len(tableau_valide))
 
-#print(tableau_invalide)
-print()
-
 test=Fonctions_veille.tester()
-#print(Fonctions_veille.Check_Classe(test))
-# for i in test:
-#     print(Fonctions_veille.calcul(i))
-    
-    
-    
-# Afficher les 5 premiers
 
-# for item in tableau_valide:                 #[:3]
-#     print(Fonctions_veille.calcul(item))
+#print(Fonctions_veille.cinq_premier(tableau_valide))
+
+#print(Fonctions_veille.n_premier(tableau_valide,2))
 
 
-print(tableau_valide)
+
+tableau_valide1=[]
+
+for i in tableau_valide:
+    tableau_valide1.append(Fonctions_veille.calcul(i)) 
+print(tableau_valide[1])
+
+
+    
+
+for item in tableau_valide1:
+    del item[0]
+    del item[5]
+    item[3]=item[3].strip()
+    for i in range(len(item[4])):
+        item[4]=item[4][0]+'eme'+item[4][-1]
+    
+entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "   Moyenne   "]
+
+print(Fonctions_veille.affiche_tableau(tableau_valide1,entete1))
+
 
 

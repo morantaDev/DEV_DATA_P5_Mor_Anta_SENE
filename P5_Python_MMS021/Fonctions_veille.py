@@ -73,6 +73,12 @@ def Search(sublist,num):
     except ValueError:
             return None
 
+def control_note(notes):
+    for i in notes:
+        if float(i)<=0 and float(i)>=20:
+            return True
+    return False
+    
 def Check_Note(sublist):
     tab=[]
     mat=[]
@@ -95,6 +101,8 @@ def Check_Note(sublist):
         #Convertir les éléments de chaque sous-liste en entier
                 if item[i].isnumeric()==False:
                     return False 
+                elif float(item[i])>0 and float(item[i])>20:
+                    return False
     return True
 
 def calcul(sublist):
@@ -131,27 +139,40 @@ def calcul(sublist):
                 #print(moyG)
             else:
                 continue
-            newListe1=[float(x) for x in newListe]
-            #print(len(newListe))
-            newListe1.append(moyG)
-            tab2.append(newListe1)
-            #print()
-        
-            newElement=[item for item in zip(mat,tab2)]
-            newElement.append(moyG)
-        
     
-    for item in zip(mat,tab2):
-        my_tuple.append(item)
-    
-    moyG=str(moyG)
+    moyG=float(moyG)
+    moyG="%.3f"%moyG
     sublist.append(moyG)
-    
-    
-    #print(sublist)
-    tri=sorted(sublist, key=itemgetter(-1), reverse=True)
 
-    return tri             #sublist[3]+' '+sublist[2]+' '+sublist[-1]
+    return sublist         
+
+def cinq_premier(liste_valide):
+    database=[]
+    tableau_trie=[]
+    for item in liste_valide:                 #[:3]
+        mylist=calcul(item)
+        database.append(mylist)
+    tri=sorted(database, key=lambda x: x[-1], reverse=True)
+
+    for item in tri[1:6]:
+        tableau_trie.append(item)
+    return tableau_trie
+
+
+def n_premier(liste_valide,n):
+    database=[]
+    tableau_trie=[]
+    for item in liste_valide:                 #[:3]
+        mylist=calcul(item)
+        database.append(mylist)
+    tri=sorted(database, key=lambda x: x[-1], reverse=True)
+
+    for item in tri[:n]:
+        tableau_trie.append(item)
+    return tableau_trie
+
+
+
 
 #Ajouter une information en vérifiant la validité des informations données
 def Ajouter():
@@ -279,7 +300,22 @@ def affichage_pagin(listeValid,counter):
             reponse==1
     return pagin
     
-        
+
+
+def affiche_tableau(donnees, entete):# Détermination de la largeur des colonnes
+    largeurs = [max(len(str(donnees[i][j])) for i in range(len(donnees))) for j in range(len(entete))]
+
+    # Affichage du tableau
+    def print_ligne(ligne, debut="+", intersection="+", fin="+", separateur="-"):
+        print(debut + separateur.join([separateur * largeurs[j] for j in range(len(ligne))]) + fin)
+        print(intersection + intersection.join("{:^{}}".format(str(ligne[j]), largeurs[j]) for j in range(len(ligne))) + intersection)
+
+    print_ligne(entete)
+    print_ligne([], debut="+", intersection="+", fin="+", separateur="+")
+    for ligne in donnees:
+        print_ligne(ligne)
+    
+    return print_ligne      
     
     
 def menu(listeValid, listeInvalid):
@@ -324,11 +360,6 @@ def menu(listeValid, listeInvalid):
         print("Veuillez entrer une bonne valeur")
 
 
-def control_note(note):
-    if note>=0 and note<=20:
-        return True
-    else:
-        return False
 
 
         
