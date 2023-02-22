@@ -19,7 +19,7 @@ with open("/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv","r+") as
 tabValid=[]
 tabInValid=[]
 
-prenom=Fonctions_veille.Check_prenom(test)
+# prenom=Fonctions_veille.Check_prenom(test)
 
 
 for sublist in range(len(data)-1):
@@ -29,17 +29,20 @@ for sublist in range(len(data)-1):
         tabInValid.append(data[sublist])
     else:
         tabValid.append(data[sublist])
+
+print(len(tabInValid))  #1111111111
+
     #Nom valide
 tabValid_Nom=[]
 tabInValid_Nom=[]
 for i in range (len(tabValid)-1):
     nom=Fonctions_veille.Check_Nom(tabValid[i])
     if nom==False:
-        tabInValid_Nom.append(tabValid[i])
+        tabInValid.append(tabValid[i])
     else:
         tabValid_Nom.append(tabValid[i])
         
-#print(tabInValid_Nom)
+print(len(tabInValid))      #2222222222222222222222
 
 #prénom valide
 
@@ -49,11 +52,11 @@ tabInValid_Prenom=[]
 for i in range(len(tabValid_Nom)-1):
     prenom=Fonctions_veille.Check_prenom(tabValid_Nom[i])
     if prenom==False:
-        tabInValid_Prenom.append(tabValid_Nom[i])
+        tabInValid.append(tabValid_Nom[i])
     else:
         tabValid_Prenom.append(tabValid_Nom[i])
         
-#print(tabValid_Prenom)
+print(len(tabInValid))      #33333333333333333333333
 
 #Date valide
 tabValid_Date=[]
@@ -62,11 +65,13 @@ tabInValid_Date=[]
 for i in range(len(tabValid_Prenom)-1):
     date=Fonctions_veille.Check_Date(tabValid_Prenom[i])
     if date==False:
-        tabInValid_Date.append(tabValid_Prenom[i])
+        tabInValid.append(tabValid_Prenom[i])
     else:
         tabValid_Date.append(tabValid_Prenom[i])
         
-#print(tabValid_Date)
+
+
+print(len(tabInValid))      #444444444444444444444
 
 #classe valide
 
@@ -76,13 +81,12 @@ tabInValid_classe=[]
 for i in range(len(tabValid_Date)-1):
     classe=Fonctions_veille.Check_Classe(tabValid_Date[i])
     if classe==False:
-        tabInValid_classe.append(tabValid_Date[i])
+        tabInValid.append(tabValid_Date[i])
     else:
         tabValid_classe.append(tabValid_Date[i])
         
         
-#print(tabInValid_classe)
-
+print(len(tabInValid))             #55555555555555555
 
 #Note valide 
 
@@ -96,49 +100,30 @@ for i in range(len(tabValid_classe)-1):
     else:
         tabValid_note.append(tabValid_classe[i])
         
-#print(tabValid_note)
-
+print(len(tabInValid))          #66666666666666666666666
 
 tableau_valide=tabValid_note
-tableau_invalide=tabInValid_note
+tableau_invalide=tabInValid
 
 
-Fonctions_veille.menu(tableau_valide,tableau_invalide)
+print(len(tableau_valide))
 
-# num="M60GRTL"
-# for item in tableau_valide:
-#     try:
-#         print(Fonctions_veille.Search(item,num))
-#     except:
-#         print("L'information recherchée n'existe pas.")
+#print(tableau_invalide)
+print()
 
-
-
-    
-
-#test=Fonctions_veille.tester()
+test=Fonctions_veille.tester()
+#print(Fonctions_veille.Check_Classe(test))
+for i in test:
+    print(Fonctions_veille.calcul(i))
     
     
+    
+# Afficher les 5 premiers
 
 
 
-
-
-# test=Fonctions_veille.tester()
-# print(Fonctions_veille.Check_Note(test))
-
-
-# num="20149LH"
-
-
-# print(Fonctions_veille.check_Numero(test))
-
-# num="20149LH"
-# Fonctions_veille.Search(test,num)
-
-#print(Fonctions_veille.Check_Note(test))
-
-#print(Fonctions_veille.modify(test))
+for item in tableau_valide:
+    print(Fonctions_veille.calcul(item))
 
 
 

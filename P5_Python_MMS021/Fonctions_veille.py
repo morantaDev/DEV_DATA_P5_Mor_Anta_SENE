@@ -1,8 +1,10 @@
 import datetime
+from operator import itemgetter
 def tester():
 
-    liste = ['AAD003', '20149LH', 'CISSE', 'baba', '16 fev 99', '6ieme A', 'Math[11:10|13:06] #Francais[08|12:12] #Anglais[13|13:12] #PC[09|18:07] #SVT[15|10:10] #HG[11|14|19:17]']
-    return liste
+    liste = ['AAD003', '20149LH', 'CISSE', 'baba', '16 fev 99', '                   6ieme A', 'Math[11:10|13:06] #Francais[08|12:12] #Anglais[13|13:12] #PC[09|18:07] #SVT[15|10:10] #HG[11|14|19:17]']
+    liste2 = [['AAD003', '20149LH', 'CISSE', 'baba', '16 fev 99', '6ieme A', 'Math[11:10|13:06] #Francais[08|12:12] #Anglais[13|13:12] #PC[09|18:07] #SVT[15|10:10] #HG[11|14|19:17]'],['AAD003', '20123LH', 'SARR', 'Ousmane', '13/12/97', '6ieme A', 'Math[11:10|17:06] #Francais[10|12:12] #Anglais[13|15:12] #PC[09|18:07] #SVT[15|11:10] #HG[10|14|12:16]']]
+    return liste2
 def is_lower(sublist):
 
     for i in sublist:
@@ -24,38 +26,33 @@ def check_Numero(sublist):
     #verifier s'il y a une/+ lettre minuscule
 def Check_Nom(sublist):
     for  i in range(len(sublist)-1):
-        return sublist[2][0].isalpha()==True and sublist[2][0].isupper()==True and cpt_lettre(sublist[2])>=2
+        return sublist[2][0].isalpha()==True and cpt_lettre(sublist[2])>=2
 def Check_prenom(sublist):
-        
-
     for  i in range(len(sublist)-1):
-        return sublist[3][0].isupper()==True and cpt_lettre(sublist[3])>=3
+        return cpt_lettre(sublist[3])>=3
 def Check_Date(sublist):
-
-    #date.strftime(sublist[4],"%-d-%-m-%y")
-    tab=[]
-    tab_month=[]
     mois=0
     try:
         mois_en_chiffres = {'janvier': '01', 'fev': '02', 'février': '02', 'mars': '03', 'avril': '04', 'mai': '05', 'juin': '06', 'juillet': '07', 'août': '08', 'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'}
         sep=['/','-','_','|',' ',',',':']
-        for i in sublist[4]:
+        element=sublist[4].strip()
+        for i in element:
             if i in sep:
-                item=sublist[4].split(i)
+                item=element.split(i)
         jour=int(item[0])
-    #Gerer les mois en lettres
-    # try:
-    #     mois=datetime.datetime.strptime(item[1],"%B").month
-    # except:
-    #     mois=int(item[1])
         if item[1].isdigit():
             mois=int(item[1])
         else:
             mois=mois_en_chiffres[item[1].lower()]
             mois=int(mois)
+        if item[2].isdigit()==True and item[2] in '^(0?[0-9]|1[0-9]|2[0-3])$':
+            item[2]='20'+i
+                
+        else:
+            item[2]='19'+i
         annee=int(item[2])
         dt=datetime.datetime(annee, mois, jour)
-        dt2=dt.strftime("%d/%m/%y")
+        dt2=dt.strftime("%d/%m/%Y")
         return True
     except:
         return False
@@ -63,10 +60,11 @@ def Check_Date(sublist):
     
     #return dt2
 def Check_Classe(sublist):
-    if sublist[5][0] in ['3','4','5','6'] and sublist[5][-1] in ['A','B']:
-        return True
-    return False
-
+    element=sublist[5].strip()
+    if len(element)!=0:
+        return element[0] in ['3','4','5','6'] and element[-1] in ['A','B']
+    else:
+        return False
 
 def Search(sublist,num):
     try:
@@ -74,27 +72,52 @@ def Search(sublist,num):
             print(sublist)
     except ValueError:
             return None
-    
+
 def Check_Note(sublist):
     tab=[]
+    mat=[]
     subject=sublist[6].split('#')
     for i in range(len(subject)):
         item=subject[i].replace('[',':')
         item1=item.replace(']',':')
         item2=item1.replace('|',':')
-        item3=item2.replace(' ','').replace(',','.')
+        item3=item2.replace(' ','').replace(',',':')
         Split_2=item3.split(':')
         tab.append(Split_2)
         tab1=[]
         for item in tab:
             tab1.append(item[1:-1])
-        tab2=[]
+        mat.append(item[0])
+        # print(mat)
+        
         for item in tab1:
-            for i in item:
-            #Convertir les éléments de chaque sous-liste en entier
-                i=i.replace(',','.')
-                if i.isdigit()==False:
-                    return False    
+            for i in range(len(item)-1):
+        #Convertir les éléments de chaque sous-liste en entier
+                if item[i].isnumeric()==False:
+                    return False 
+    return True
+
+def calcul(sublist):
+    tab=[]
+    mat=[]
+    subject=sublist[6].split('#')
+    for i in range(len(subject)):
+        item=subject[i].replace('[',':')
+        item1=item.replace(']',':')
+        item2=item1.replace('|',':')
+        item3=item2.replace(' ','').replace(',',':')
+        Split_2=item3.split(':')
+        tab.append(Split_2)
+        tab1=[]
+        for item in tab:
+            tab1.append(item[1:-1])
+        mat.append(item[0])
+        # print(mat)
+        
+        moyg=[]
+        tab2=[]
+        my_tuple=[]
+        for item in tab1:
             newListe=[float(x) for x in item]
             if len(newListe) != 0:
                 moyenne=sum(newListe)/len(newListe)
@@ -102,13 +125,32 @@ def Check_Note(sublist):
                 moy="%.2f"%moy
                 
                 newListe.append(moy)
+                moyg.append(moy)
+                intMoy=[float(item) for item in moyg]
+                moyG=sum(i for i in intMoy)/len(intMoy)
+                #print(moyG)
             else:
-                print("Erreur")
+                continue
             newListe1=[float(x) for x in newListe]
-            print(len(newListe))
+            #print(len(newListe))
+            newListe1.append(moyG)
             tab2.append(newListe1)
+            #print()
         
-    return True
+            newElement=[item for item in zip(mat,tab2)]
+            newElement.append(moyG)
+        
+    
+    for item in zip(mat,tab2):
+        my_tuple.append(item)
+    
+    moyG=str(moyG)
+    sublist.append(moyG)
+    
+    #print(sublist)
+    tri=sorted(sublist, key=itemgetter(-1), reverse=True)
+
+    return sublist[3]+' '+sublist[2]
 
 #Ajouter une information en vérifiant la validité des informations données
 def Ajouter():
@@ -165,35 +207,9 @@ def Ajouter():
     while control_note(hg)==False:
         hg=int(input("Entrer la note d'histoire et de géographie:\n"))
     note_hg.append(hg)
-    tabNote.append(note_hg)
-    
-    
-    
+    tabNote.append(note_hg) 
     return newElement
-    
 
-    # while check_Numero(numero)==False:
-    #     numero=str(input("Erreur. veuillez entrer un numéro valide de la personne à ajouter\n"))
-    
-    # if Check_Nom(nom)==True:
-    # else:
-    #     print("Le nom entré n'est pas valide")
-    # if Check_prenom(prenom)==True:
-    #     newElement.append(prenom)
-    # else:
-    #     print("Le prénom entré n'est pas valide")
-    # if Check_Date(date)==True:
-    #     newElement.append(date)
-    # else:
-    #     print("La date entré n'est pas valide") 
-    # if Check_Classe(classe)==True:
-    #     newElement.append(classe)
-    # else:
-    #     print("La classe entrée n'est pas valide")
-    
-    #Ajouter les differentes notes dans une liste de listes
-    #recupérer les notes supérieur à 0 et inférieur à 20
-    #Modifier une information invalide et le transfèrer dans une structure des informations valides 
 def modify(listeValid,sublist):
     #Se positionner sur la chaîne cible et affecter l'ancienne valeur à la nouvelle
     print("1. Pour modifier le numéro")
@@ -324,9 +340,6 @@ def control_note(note):
     
     
     
-    #Afficher les 5 premiers
-    
-    #Pour afficher les 5 premiers, il faut que la moyenne de ses deniers soient supérieur au reste
     
 
     
