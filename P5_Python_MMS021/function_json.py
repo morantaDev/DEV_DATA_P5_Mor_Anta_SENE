@@ -2,9 +2,9 @@ import datetime
 #from operator import itemgetter
 def tester():
 
-    liste = ['AAD003', '20149LH', 'CISSE', 'baba', '16 fev 99', '6ieme A', 'Math[11:10|13:06] #Francais[08|12:12] #Anglais[13|13:12] #PC[09|18:07] #SVT[15|10:10] #HG[11|14|19:17]']
+    liste = ['AAD003', '20149LH', 'CISSE', 'baba', '16 fev 99', '                   6ieme A', 'Math[11:10|13:06] #Francais[08|12:12] #Anglais[13|13:12] #PC[09|18:07] #SVT[15|10:10] #HG[11|14|19:17]']
     liste2 = [['AAD003', '20149LH', 'CISSE', 'baba', '16 fev 99', '6ieme A', 'Math[11:10|13:06] #Francais[08|12:12] #Anglais[13|13:12] #PC[09|18:07] #SVT[15|10:10] #HG[11|14|19:17]'],['AAD003', '20123LH', 'SARR', 'Ousmane', '13/12/97', '6ieme A', 'Math[11:10|17:06] #Francais[10|12:12] #Anglais[13|15:12] #PC[09|18:07] #SVT[15|11:10] #HG[10|14|12:16]']]
-    return liste
+    return liste2
 def is_lower(sublist):
 
     for i in sublist:
@@ -20,9 +20,9 @@ def cpt_lettre(sublist):
         if i.isalpha()==True:
             counter+=1
     return counter
-def check_Numero(sublist):
-    for  i in range(len(sublist)-1):
-        return len(sublist[1])==7 and (sublist[1][i]).isalnum()==True and is_lower(sublist[1])
+def check_Numero(items):
+    for  i in range(items['Numero']):
+        return len(items['Numero'])==7 and (items['Numero'][i]).isalnum()==True and is_lower(items['Numero'])
     #verifier s'il y a une/+ lettre minuscule
 def Check_Nom(sublist):
     for  i in range(len(sublist)-1):
@@ -94,6 +94,7 @@ def Check_Note(sublist):
         for item in tab:
             tab1.append(item[1:-1])
         mat.append(item[0])
+        # print(mat)
         
         for item in tab1:
             for i in range(len(item)-1):

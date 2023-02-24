@@ -110,8 +110,9 @@ tableau_valide1=[]
 for i in tableau_valide:
     tableau_valide1.append(Fonctions_veille.calcul(i)) 
     
-print(tableau_valide1[1])
-    
+#print(tableau_valide1[1])
+
+valide=tableau_valide1
 
     
 # print(tableau_valide1[5])
@@ -131,12 +132,12 @@ for item in tableau_valide1:
     
 entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "Moyenne"]
 
-print(Fonctions_veille.affiche_tableau(tableau_valide1,entete1))
+#print(Fonctions_veille.affiche_tableau(tableau_valide1,entete1))
 
 
-cinq_premier=Fonctions_veille.affiche_cinqPremier(tableau_valide2)
+#cinq_premier=Fonctions_veille.affiche_cinqPremier(tableau_valide2)
 
 print()
-print(Fonctions_veille.affiche_tableau(cinq_premier,entete1))
+#print(Fonctions_veille.affiche_tableau(cinq_premier,entete1))
 
 fichier.close()
