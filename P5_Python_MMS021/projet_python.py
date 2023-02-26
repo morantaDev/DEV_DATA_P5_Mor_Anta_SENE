@@ -97,6 +97,7 @@ tableau_invalide=tabInValid
 
 print(len(tableau_valide))
 
+
 # test=Fonctions_veille.tester()
 
 #print(Fonctions_veille.cinq_premier(tableau_valide))
@@ -128,7 +129,7 @@ for item in tableau_valide1:
         
     tableau_valide2.append(item)
     
-
+#print(tableau_valide2)
     
 entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "Moyenne"]
 

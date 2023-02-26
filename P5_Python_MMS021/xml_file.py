@@ -1,35 +1,60 @@
 import csv
+import P5_StructuresDeDonnees.csv_to_json_and_xml as csv_to_json_and_xml
+
+import P5_StructuresDeDonnees.function_json as function_json
+
 
 
 data=[]
 with open("/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv") as fichier:
-    csv_lecteur=csv.reader(fichier)
+    csv_lecteur=csv.DictReader(fichier)
     
     for rows in csv_lecteur:
         data.append(rows)
+        
+        
+        
+    tabValid=[]
+    tabInValid=[]
+        
+for i in data:
+    if function_json.check_Numero(i) and function_json.Check_Nom(i) and function_json.Check_prenom(i) and function_json.Check_Classe(i) and function_json.Check_Note(i):
+        tabValid.append(i)
+        
+    else:
+        tabInValid.append(i)
+        
+valide=[]
+for i in tabValid:
+    valide.append(function_json.calcul(i))
+
+#print(valide)
+
+tri=sorted(valide, key=lambda x: x['Moyenne'], reverse=True)
+
+print(tri)
         
         
 fichier.close()
 
 #CODE,Numero,Nom,Prénom,Date de naissance,Classe,Note
 
-def convert_rows(rows):
-    return """<etudiant>
-    <Numero id="%s">
-        <Nom>%s</Nom>
-        <Prénom>%s</Prénom>
-        <Date_de_naissance>%s</Date_de_naissance>
-        <Classe>%s</Classe>
-        <Note>%s</Note>
-    </Numero>
-</etudiant>
+def convert_rows(dictio):
+        return """<etudiant>
+        <Numero id="%s">
+            <Nom>%s</Nom>
+            <Prénom>%s</Prénom>
+            <Date_de_naissance>%s</Date_de_naissance>
+            <Classe>%s</Classe>
+        </Numero>
+    </etudiant>
 """ % (
-    rows[1], rows[2], rows[3], rows[4], rows[5], rows[6])
+    dictio['Numero'], dictio['Nom'], dictio['Prénom'], dictio['Date de naissance'],dictio['Classe'])
 
 # print '\n'.join(fichier.apply(convert_rows, axis=1))
 
 with open("xml_file.xml", "w") as xml_file:
-    xml_file.write('\n'.join([convert_rows(rows) for rows in data]))
+    xml_file.write('\n'.join(convert_rows(dictio) for dictio in tabInValid))
     
     
     

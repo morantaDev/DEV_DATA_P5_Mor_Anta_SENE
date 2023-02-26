@@ -1,0 +1,849 @@
+<etudiant>
+        <Numero id="2014079LH">
+            <Nom>CISSE</Nom>
+            <Prénom>Baba</Prénom>
+            <Date_de_naissance>16/08/99</Date_de_naissance>
+            <Classe>6ieme A</Classe>
+            <Note>Math[11|13:06] #Francais[08|17:12] #Anglais[13|13:12] #PC[09|18:07] #SVT[15|10:10] #HG[14|19:17]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="2016023LD">
+            <Nom>NDIAYE</Nom>
+            <Prénom>mbaye</Prénom>
+            <Date_de_naissance>12/09/00</Date_de_naissance>
+            <Classe>5ieme A</Classe>
+            <Note>Math[05|13:05] #Francais[11|17:15] #Anglais[19|14:15] #PC[13|11:07] #SVT[12|09:12] #HG[16|15:17]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="286325HG">
+            <Nom>GAYE</Nom>
+            <Prénom>Awa</Prénom>
+            <Date_de_naissance>13/04/12</Date_de_naissance>
+            <Classe>3iemeA</Classe>
+            <Note>Math[04|13:05] #Francais[15|06:11] #Anglais[15|13:13] #PC[14|13:07] #SVT[12|19:10] #HG[18|15:17]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201817JK">
+            <Nom>NDAO</Nom>
+            <Prénom>Ndiaga</Prénom>
+            <Date_de_naissance>12/04/00</Date_de_naissance>
+            <Classe>6iemeB</Classe>
+            <Note>Math[04|13:05] #Francais[15|16:14] #Anglais[15|16:11] #PC[04|03:07] #SVT[12|09:11] #HG[16|15:10]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="65281LKJ">
+            <Nom>DEME</Nom>
+            <Prénom>Saliou</Prénom>
+            <Date_de_naissance>19/03/05</Date_de_naissance>
+            <Classe>5iemeB</Classe>
+            <Note>Math[20|19.5:05] #Francais[13|16:14] #Anglais[17|19:17] #PC[14|13:17] #SVT[12|19:10] #HG[16|19:17]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="2007095KH">
+            <Nom>Ngadeu</Nom>
+            <Prénom>Dinka</Prénom>
+            <Date_de_naissance>03/12/01</Date_de_naissance>
+            <Classe>3iemeB</Classe>
+            <Note>Math[12|13:15] #Francais[05|18:12] #Anglais[12|14:18] #PC[24|13:07] #SVT[17|09:12] #HG[16|15:17]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201607RK">
+            <Nom>BA</Nom>
+            <Prénom>Mouhamed</Prénom>
+            <Date_de_naissance>19/06/96</Date_de_naissance>
+            <Classe>4iemeC</Classe>
+            <Note>Math[04|03:05] #Francais[15|16:14] #Anglais[15|16:14] #PC[04|03:07] #SVT[12|09:15] #HG[16|15:13]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="2014067K">
+            <Nom>GUEYE</Nom>
+            <Prénom>Mansour</Prénom>
+            <Date_de_naissance>34-13-1992</Date_de_naissance>
+            <Classe>4iemeC</Classe>
+            <Note>Math[14|12:15] #Francais[18|06:14] #Anglais[15|12:12] #PC[18|13:07] #SVT[11|19:12] #HG[13|15:12]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="20133HGF">
+            <Nom>DANSOKHO</Nom>
+            <Prénom>Siriman</Prénom>
+            <Date_de_naissance>13/04/10</Date_de_naissance>
+            <Classe>6iemeC</Classe>
+            <Note>Math[04|03:05] #Francais[15|15:14] #Anglais[15|06:15] #PC[14|06:07] #SVT[18|09:15] #HG[11|15:12]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="2017ZEA5L">
+            <Nom>TOURE</Nom>
+            <Prénom>Sokhna</Prénom>
+            <Date_de_naissance>23/04/14</Date_de_naissance>
+            <Classe>3iemeC</Classe>
+            <Note>Math[14|13:05] #Francais[18|16:14] #Anglais[15|06:17] #PC[14|13:07] #SVT[18|12:16] #HG[13|15:13]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="">
+            <Nom></Nom>
+            <Prénom></Prénom>
+            <Date_de_naissance></Date_de_naissance>
+            <Classe></Classe>
+            <Note></Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="">
+            <Nom></Nom>
+            <Prénom></Prénom>
+            <Date_de_naissance></Date_de_naissance>
+            <Classe></Classe>
+            <Note></Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="">
+            <Nom></Nom>
+            <Prénom></Prénom>
+            <Date_de_naissance></Date_de_naissance>
+            <Classe></Classe>
+            <Note></Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="">
+            <Nom></Nom>
+            <Prénom></Prénom>
+            <Date_de_naissance></Date_de_naissance>
+            <Classe></Classe>
+            <Note></Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="">
+            <Nom></Nom>
+            <Prénom></Prénom>
+            <Date_de_naissance></Date_de_naissance>
+            <Classe></Classe>
+            <Note></Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="">
+            <Nom></Nom>
+            <Prénom></Prénom>
+            <Date_de_naissance></Date_de_naissance>
+            <Classe></Classe>
+            <Note></Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="">
+            <Nom></Nom>
+            <Prénom></Prénom>
+            <Date_de_naissance></Date_de_naissance>
+            <Classe></Classe>
+            <Note></Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="">
+            <Nom></Nom>
+            <Prénom></Prénom>
+            <Date_de_naissance></Date_de_naissance>
+            <Classe></Classe>
+            <Note></Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="LSNP5Of">
+            <Nom>Sow</Nom>
+            <Prénom>Mari</Prénom>
+            <Date_de_naissance>28/12/01</Date_de_naissance>
+            <Classe>6eme A</Classe>
+            <Note>Math[10|11:15] #Francais[7|12|8:13] #Anglais[13,5|9:15] #PC[11:9]  #SVT[12|9|16|11:12]  #HG[10:13]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="UHT9KD8">
+            <Nom>Seye</Nom>
+            <Prénom>Malick</Prénom>
+            <Date_de_naissance>07/10/07</Date_de_naissance>
+            <Classe>5eme C</Classe>
+            <Note>Math[10|14,5|11|03:16] #PC[11:19]  #Francais[4|11:13]  #SVT[12|9|16|11:12] #HG[19:13]  #Anglais[10,5:15]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="O6G7XCQ">
+            <Nom>Tamba</Nom>
+            <Prénom>Lamine</Prénom>
+            <Date_de_naissance>09/01/06</Date_de_naissance>
+            <Classe>3eme D</Classe>
+            <Note>SVT[13|9|11:14] #HG[10:13]  #Math[12|14,5|11:13]  #Francais[8|11:13] #Anglais[13,5:15]  #PC[13|11:9]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="GFD3G8G">
+            <Nom>Ndour</Nom>
+            <Prénom>Fatime</Prénom>
+            <Date_de_naissance>05/mars/2002</Date_de_naissance>
+            <Classe>5eme D</Classe>
+            <Note>Math[9|10,5|10|13:16] #PC[12:15]  #Francais[10|17:13]  #SVT[15|9|06|11:12] #HG[13:03]  #Anglais[13,12:05]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="GSQ3H84">
+            <Nom>Diouf</Nom>
+            <Prénom>Wally</Prénom>
+            <Date_de_naissance>30/09/05</Date_de_naissance>
+            <Classe>4eme c</Classe>
+            <Note></Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="345ERTH">
+            <Nom>Abdou</Nom>
+            <Prénom>Wade</Prénom>
+            <Date_de_naissance>31/12/07</Date_de_naissance>
+            <Classe>6eme D</Classe>
+            <Note>Math[12|4:15] #Francais[10|17|18:10] #Anglais[10,9|9:15] #PC[0:11] #SVT[10|20|16|10:9] #HG[9:10]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="ERSTYDD">
+            <Nom>Akapla</Nom>
+            <Prénom>Diop</Prénom>
+            <Date_de_naissance>03/05/78</Date_de_naissance>
+            <Classe>5eme C</Classe>
+            <Note>Math[10|14:15] #Francais[11|9|1:10] #Anglais[10,9|9:1] #PC[10:11] #SVT[10|2|6|10:9] #HG[17:0]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="23453RD">
+            <Nom>yéré</Nom>
+            <Prénom>Niani</Prénom>
+            <Date_de_naissance>05/11/12</Date_de_naissance>
+            <Classe>3eme D</Classe>
+            <Note>Math[18|4:8] #Francais[10|9|18:12] #Anglais[10,9|9:3] #PC[10:11] #SVT[10|6|16|10:9] #HG[19:10]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="ERTDH6G">
+            <Nom>Gadiaga</Nom>
+            <Prénom>Xouli</Prénom>
+            <Date_de_naissance>30/07/18</Date_de_naissance>
+            <Classe>5eme 4</Classe>
+            <Note>Math[1|4:15] #Francais[10|19|14:13] #Anglais[10,9|9:1] #PC[10:11] #SVT[10|20|16|10:9] #HG[9:18]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="TTEDJE56">
+            <Nom>Missari</Nom>
+            <Prénom>Koumpa</Prénom>
+            <Date_de_naissance>31/09/2014</Date_de_naissance>
+            <Classe>3eme B</Classe>
+            <Note>Math[10|4:15] #Francais[18|9|18:10] #Anglais[10,9|9:5] #PC[10:11] #SVT[10|20|16|10:9] #HG[19:10]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="LSNP1OC">
+            <Nom>Moosky</Nom>
+            <Prénom>Faye</Prénom>
+            <Date_de_naissance>23/04/88</Date_de_naissance>
+            <Classe>4 eme C</Classe>
+            <Note>rançais[10|07:15]#Anglais[01|18:13]#SVT[10|11:14]#HG[16|17:14]#Science_Physique[18|12:12]#Math[15|17:11]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="83WERRE">
+            <Nom>Wesh</Nom>
+            <Prénom>Morey</Prénom>
+            <Date_de_naissance>25_11_2004</Date_de_naissance>
+            <Classe>3eme D</Classe>
+            <Note>Français[16|08:15]#Anglais[19|19:17]#SVT[12|14:07]#HG[18|13:17]#Science_Physique[00|03:02]#Math[06|17:13]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="TER0R0R">
+            <Nom>Billie</Nom>
+            <Prénom>Jeane</Prénom>
+            <Date_de_naissance>17/08/98</Date_de_naissance>
+            <Classe>1ereS1</Classe>
+            <Note>Français[06|08:05]#Anglais[20|20:17]#SVT[13|14:13]#HG[11|13:17]#Science_Physique[12|11:15]#Math[06|17:18]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="WHYIAMI">
+            <Nom>Ragnard</Nom>
+            <Prénom>Lordbrock</Prénom>
+            <Date_de_naissance>01/12/79</Date_de_naissance>
+            <Classe>1 ere S1</Classe>
+            <Note>Français[06|07:05]#Anglais[10|10:11]#SVT[13|17:13]#HG[11|05:07]#Science_Physique[12|18:15]#Math[16|17:18]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="WOO3OOO">
+            <Nom>Perus</Nom>
+            <Prénom>Morgan</Prénom>
+            <Date_de_naissance>06/06/70</Date_de_naissance>
+            <Classe>Tle S1</Classe>
+            <Note>Français[08|07:15]#Anglais[10|10:09]#SVT[13|13:13]#HG[03|05:07]#Science_Physique[13|11:12]#Math[10|07:08]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="558YRYT">
+            <Nom>Shawn</Nom>
+            <Prénom>Thiam</Prénom>
+            <Date_de_naissance>28/02/97</Date_de_naissance>
+            <Classe>Tle S2</Classe>
+            <Note>Français[09|17:16]#Anglais[10|13:09]#SVT[13|12:14]#HG[13|15:07]#Science_Physique[12|12:14]#Math[11|07:18]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="444111T">
+            <Nom>Mbeuthie Fall</Nom>
+            <Prénom>Laye</Prénom>
+            <Date_de_naissance>01/09/15</Date_de_naissance>
+            <Classe>Tlel'1</Classe>
+            <Note>Français[09|17:16]#Anglais[10|13:15]#SVT[13|12:14]#HG[11|15:11]#Science_Physique[12|13:14]#Math[10|07:12]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="WORK246">
+            <Nom>Famara</Nom>
+            <Prénom>Bodian</Prénom>
+            <Date_de_naissance>12/12/95</Date_de_naissance>
+            <Classe>5eme F</Classe>
+            <Note>Français[19|17:10]#Anglais[13|14:15]#SVT[13|16:14]#HG[13|15:11]#Science_Physique[17|13:14]#Math[16|07:12]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="2022R3M">
+            <Nom>DIAW</Nom>
+            <Prénom>Fallou</Prénom>
+            <Date_de_naissance>o5-06-1999</Date_de_naissance>
+            <Classe>3èmeC</Classe>
+            <Note>Math[17|16:19]#Français[14|15:14]#Anglais[18|17:16]#PC[19|19:19]#SVT[11:16]#HG[12:19]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="2016EJKL">
+            <Nom>SECK</Nom>
+            <Prénom>Modou</Prénom>
+            <Date_de_naissance>03/01/99</Date_de_naissance>
+            <Classe>5èmeB</Classe>
+            <Note>Math[05|03|00:09]#Français[09|12|13:10]#Anglais[12|12:16]#PC[04|08:10]#SVT[12|13:14]#HG[10|12:15]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="2019GHS">
+            <Nom>BOISY</Nom>
+            <Prénom>Chris</Prénom>
+            <Date_de_naissance>04/09/01</Date_de_naissance>
+            <Classe>5èmeC</Classe>
+            <Note>Math[13|11:13] #PC[13|19:14]  #Francais[12|14:14]  #SVT[15|19:15] #HG[10|18:13]  #Anglais[11|12|11:20</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="20178XYZ">
+            <Nom>FALL</Nom>
+            <Prénom>Khabane</Prénom>
+            <Date_de_naissance>27/12/98</Date_de_naissance>
+            <Classe>6èmeC</Classe>
+            <Note>Math[13|11:13] #PC[13|19:14]  #Francais[12|14:14]  #SVT[15|19:15] #HG[10|18:13]  #Anglais[11|12|11:20]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="2019R3M">
+            <Nom>MOHAMED</Nom>
+            <Prénom>Ben Omar</Prénom>
+            <Date_de_naissance>30/03/99</Date_de_naissance>
+            <Classe>3èmeC</Classe>
+            <Note>Math[12|16|18:19]#Françcais[15:17]#Anglais[10|11:09]#PC[15|17|13:17]#SVT[16|16:14]#HG[15:17]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201305PG8">
+            <Nom>DIAW</Nom>
+            <Prénom>FARA</Prénom>
+            <Date_de_naissance>09/06/95</Date_de_naissance>
+            <Classe>6eme A</Classe>
+            <Note>Français[12|14:15]#Anglais[16|18:19]#SVT[10|11:09]#HG[12|11:17]#Science_Physique[15|17:18]#Math[13|17:16]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201307PG8">
+            <Nom>NDIOUR</Nom>
+            <Prénom>LEMOU</Prénom>
+            <Date_de_naissance>12/07/96</Date_de_naissance>
+            <Classe>3eme A</Classe>
+            <Note>PC[11:9]# Math[12|14,5|11:13] #Francais[14|12:13] #Anglais[12,8:15] #SVT[10|9|16|13:12] #HG[10:16]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201301PFT">
+            <Nom>FAYE</Nom>
+            <Prénom>BIRAM</Prénom>
+            <Date_de_naissance>23/03/99</Date_de_naissance>
+            <Classe>3eme B</Classe>
+            <Note>PC[11:9]# Math[12|14,5|11:13] #Francais[14|12:13] #Anglais[12,8:15] #SVT[10|9|16|13:12] #HG[10:16]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201308PG7">
+            <Nom>DIOUF</Nom>
+            <Prénom>ALY</Prénom>
+            <Date_de_naissance>22/05/98</Date_de_naissance>
+            <Classe>5eme C</Classe>
+            <Note>PC[11:9]# Math[12|14,5|11:13] #Francais[4|11:13] #Anglais[13,8:15] #SVT[12|9|16|11:12] #HG[11:13]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201306PH3">
+            <Nom>DIOP</Nom>
+            <Prénom>DABA</Prénom>
+            <Date_de_naissance>24/09/99</Date_de_naissance>
+            <Classe>3eme D</Classe>
+            <Note>Math[10|11:15] #Francais[7|12|8:13] #Anglais[13,5|9:15] #PC[11:9] #SVT[12|9|16|11:12] #HG[10:13]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201302PL6">
+            <Nom>DIENE</Nom>
+            <Prénom>DALY</Prénom>
+            <Date_de_naissance>12/10/97</Date_de_naissance>
+            <Classe>4eme B</Classe>
+            <Note>PC[11:9]# Math[12|14,5|11:13] #Francais[4|11:13] #Anglais[13,8:15] #SVT[12|9|16|11:12] #HG[11:13]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201305PY9">
+            <Nom>FALL</Nom>
+            <Prénom>ABOU</Prénom>
+            <Date_de_naissance>23-decembre-1994</Date_de_naissance>
+            <Classe>5eme D</Classe>
+            <Note>#Math[14|12|10:12] #PC[12|9:12] #Francais[14:15] #SVT[16:17] #HG[12|16:14] #Anglais[13|10:11]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201306PT4">
+            <Nom>FAYE</Nom>
+            <Prénom>SIDI</Prénom>
+            <Date_de_naissance>12/11/93</Date_de_naissance>
+            <Classe>3eme A</Classe>
+            <Note>PC[11:9]# Math[12|14,5|11:13] #Francais[4|11:13] #Anglais[13,8:15] #SVT[12|9|16|11:12] #HG[11:13]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201301PB7">
+            <Nom>SENE</Nom>
+            <Prénom>DOMINIQUE</Prénom>
+            <Date_de_naissance>24/01/98</Date_de_naissance>
+            <Classe>3eme A</Classe>
+            <Note>Math[10|14,5|11|15:17] #PC[11:9] #Francais[16|11:13] #SVT[12|9|14|11:12] #HG[15:11] #Anglais[13,5:15]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="201309OD3">
+            <Nom>NDIAYE</Nom>
+            <Prénom>SALIF</Prénom>
+            <Date_de_naissance>26/06/96</Date_de_naissance>
+            <Classe>4eme c</Classe>
+            <Note>Math[10|11:15] #Francais[7|9|8:13] #Anglais[10,5|9:15] #PC[10:11] #SVT[12|11|16|8:12] #HG[10:10]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="R456T7O">
+            <Nom>FAURE</Nom>
+            <Prénom>JULIE</Prénom>
+            <Date_de_naissance>12/11/00</Date_de_naissance>
+            <Classe>6èmeG</Classe>
+            <Note>Math[20|19.5:05] #Francais[13|16:14] #Anglais[17|19:17] #PC[14|13:17] #SVT[12|19:10] #HG[16|19:17]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="PO0023R">
+            <Nom>DUPASQUIER</Nom>
+            <Prénom>ERIC</Prénom>
+            <Date_de_naissance>02/09/90</Date_de_naissance>
+            <Classe>3èmeC</Classe>
+            <Note>Math[20|18:18] #Francais[12|14|14:13] #Anglais[15,16|16:14] #PC[17:18]  #SVT[14|15|15|16:14]  #HG[13:16]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="54FR342">
+            <Nom>Kamou</Nom>
+            <Prénom>LAYE</Prénom>
+            <Date_de_naissance>04/03/20</Date_de_naissance>
+            <Classe>5eme C</Classe>
+            <Note>Math[04|03:05] #Francais[15|16:14] #Anglais[15|16:17] #PC[04|03:07] #SVT[12|09:10] #HG[16|15:17]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="8987BHT">
+            <Nom>MBAYE</Nom>
+            <Prénom>IBOU</Prénom>
+            <Date_de_naissance>03/01/00</Date_de_naissance>
+            <Classe>3eme D</Classe>
+            <Note>SVT[12|20:19] #PC[13|16:19] #Francais[24|15:12] #SVT[12|18:16] #Anglais[17|19:11] #HG[00|07:02] #Math[11|13:14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="101465876kj">
+            <Nom>Gueye</Nom>
+            <Prénom>Moussa</Prénom>
+            <Date_de_naissance>01/01/00</Date_de_naissance>
+            <Classe> 6eme A</Classe>
+            <Note>MATH[10|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="16382702l">
+            <Nom>DIOUF</Nom>
+            <Prénom>BALLA</Prénom>
+            <Date_de_naissance>02/01/00</Date_de_naissance>
+            <Classe>6eme A</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="1732919jj">
+            <Nom>DIOP</Nom>
+            <Prénom>MODOU</Prénom>
+            <Date_de_naissance>04/01/00</Date_de_naissance>
+            <Classe>6eme A</Classe>
+            <Note>MATH[13|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="127923ghj">
+            <Nom>FALL</Nom>
+            <Prénom>SOBLE</Prénom>
+            <Date_de_naissance>05/01/00</Date_de_naissance>
+            <Classe>6eme A</Classe>
+            <Note>MATH[14|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="1908GD">
+            <Nom>GAYE</Nom>
+            <Prénom>PATHÉ</Prénom>
+            <Date_de_naissance>06/01/00</Date_de_naissance>
+            <Classe>6eme A</Classe>
+            <Note>MATH[15|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="1382839hjklk">
+            <Nom>HANN</Nom>
+            <Prénom>JIM</Prénom>
+            <Date_de_naissance>07/01/00</Date_de_naissance>
+            <Classe>6eme A</Classe>
+            <Note>MATH[16|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="17282hh">
+            <Nom>KA</Nom>
+            <Prénom>LAMINE</Prénom>
+            <Date_de_naissance>09/01/00</Date_de_naissance>
+            <Classe>6eme A</Classe>
+            <Note>MATH[18|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="17329pp">
+            <Nom>LOUM</Nom>
+            <Prénom>MOUSSA</Prénom>
+            <Date_de_naissance>10/01/00</Date_de_naissance>
+            <Classe>6eme A</Classe>
+            <Note>MATH[19|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0000">
+            <Nom>BA</Nom>
+            <Prénom>MODOU</Prénom>
+            <Date_de_naissance>12/12/05</Date_de_naissance>
+            <Classe>3 em A</Classe>
+            <Note>MATH[|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0001">
+            <Nom>BODIAN</Nom>
+            <Prénom>FATOU</Prénom>
+            <Date_de_naissance>11/04/06</Date_de_naissance>
+            <Classe>3 em B</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0002">
+            <Nom>CAMARA</Nom>
+            <Prénom>PAPE</Prénom>
+            <Date_de_naissance>04/02/09</Date_de_naissance>
+            <Classe>4 em B</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0003">
+            <Nom>CISSE</Nom>
+            <Prénom>PHILO</Prénom>
+            <Date_de_naissance>25/03/10</Date_de_naissance>
+            <Classe>5 em B</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0004">
+            <Nom>DIOP</Nom>
+            <Prénom>KHADIM</Prénom>
+            <Date_de_naissance>04/02/11</Date_de_naissance>
+            <Classe>6 em B</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0005">
+            <Nom>FALL</Nom>
+            <Prénom>KATY</Prénom>
+            <Date_de_naissance>05/11/10</Date_de_naissance>
+            <Classe>6 em A</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0006">
+            <Nom>NDIAYE</Nom>
+            <Prénom>SOKHNA</Prénom>
+            <Date_de_naissance>06/08/07</Date_de_naissance>
+            <Classe>4 em B</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0007">
+            <Nom>MBAYE</Nom>
+            <Prénom>CHEIKH</Prénom>
+            <Date_de_naissance>07/06/07</Date_de_naissance>
+            <Classe>4 em A</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0008">
+            <Nom>POUYE</Nom>
+            <Prénom>PALLA</Prénom>
+            <Date_de_naissance>08/08/07</Date_de_naissance>
+            <Classe>5 em B</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="AAAA0009">
+            <Nom>OUATARA</Nom>
+            <Prénom>THIERNO</Prénom>
+            <Date_de_naissance>09/09/07</Date_de_naissance>
+            <Classe>5 em A</Classe>
+            <Note>MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="WYI96BT">
+            <Nom>BA</Nom>
+            <Prénom>MOUSSA</Prénom>
+            <Date_de_naissance>05/11/10</Date_de_naissance>
+            <Classe>6em A</Classe>
+            <Note>Math[10|12:15] #Francais[17|9|8:14] #Anglais[10 |7|9:15] #PC[10:11]  #SVT[12|11|16|8:12]  #HG[10:10]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="NO895G">
+            <Nom>DIOUF</Nom>
+            <Prénom>Ibou</Prénom>
+            <Date_de_naissance>07/11/94</Date_de_naissance>
+            <Classe>5 em B</Classe>
+            <Note>Math[9|10,5|11:16] #PC[12|13:19]  #Francais[10|11:13]  #SVT[15|9|16|11:12] #HG[13:13]  #Anglais[13,12:15]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="NT129YK">
+            <Nom>T8UR5</Nom>
+            <Prénom>Kine</Prénom>
+            <Date_de_naissance>12.32.1990</Date_de_naissance>
+            <Classe>4 em A</Classe>
+            <Note>SVT[12|20:19] #PC[13|16:19] #Francais[24|15:12] #SVT[12|18:16] #Anglais[17|19:11] #HG[00|7:2] #Math[11|13:14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="12OUITY7">
+            <Nom>Fall</Nom>
+            <Prénom>H654F</Prénom>
+            <Date_de_naissance>26/12/88</Date_de_naissance>
+            <Classe>5 eme B</Classe>
+            <Note>SVT[12|20:10] #PC[13|12:10] #Francais[12|11:13] #SVT[00|10:12] #Anglais[11|12:12] #HG[12|13:3] #Math[00|15:11]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="12DREY89">
+            <Nom>Sall</Nom>
+            <Prénom>Dibor</Prénom>
+            <Date_de_naissance></Date_de_naissance>
+            <Classe>6 eme C</Classe>
+            <Note>SVT[12|20:19] #PC[13|16:19] #Francais[24|15:12] #SVT[12|18:16] #Anglais[17|19:11] #HG[00|07:02] #Math[11|13:14]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="BT3456YH">
+            <Nom>Dingka</Nom>
+            <Prénom>Kaba</Prénom>
+            <Date_de_naissance>12/05/97</Date_de_naissance>
+            <Classe>4 eme A</Classe>
+            <Note>SVT[11|10:12] #PC[11|18:20] #Francais[12|11:13] #SVT[13|15:17] #Anglais[00|02:01] #HG[00|05:00] #Math[10|01:09]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="DR765TR4">
+            <Nom>Ndiaye</Nom>
+            <Prénom>Ndeye</Prénom>
+            <Date_de_naissance>23/05/96</Date_de_naissance>
+            <Classe>5 eme D</Classe>
+            <Note>SVT[10|07:20] #PC[00|13:10] #Francais[04|10:17] #SVT[13|19:14] #Anglais[12|13:17] #HG[05|08:09] #Math[10|14:17]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="GT3456YT">
+            <Nom>Diop</Nom>
+            <Prénom>Sokhna</Prénom>
+            <Date_de_naissance>23/08/92</Date_de_naissance>
+            <Classe>4 eme A</Classe>
+            <Note>SVT[10|08:09] #PC[11|14:17] #Francais[12|13:16] #SVT[11|13:19] #Anglais[18|15:13] #HG[10|04:09] #Math[14|16:19]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="34FT768H">
+            <Nom>Dioum</Nom>
+            <Prénom>Khoudia</Prénom>
+            <Date_de_naissance>12/09/95</Date_de_naissance>
+            <Classe>6 eme B</Classe>
+            <Note>SVT[00|12:12] #PC[10|15:17] #Francais[00|02:13] #SVT[13|1à:14] #Anglais[14|18:15] #HG[20|15:09] #Math[10|12:16]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="45TGFD67">
+            <Nom>King</Nom>
+            <Prénom>Kine</Prénom>
+            <Date_de_naissance>24/05/98</Date_de_naissance>
+            <Classe>6 eme C</Classe>
+            <Note>SVT[12|20:19] #PC[10|12:10] #Francais[20|19:14] #SVT[11|08:06] #Anglais[11|19:15] #HG[13|15:20] #Math[17|18:19]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="VFT34UYT">
+            <Nom>Fakha</Nom>
+            <Prénom>Fatou</Prénom>
+            <Date_de_naissance>23/09/95</Date_de_naissance>
+            <Classe>3 eme A</Classe>
+            <Note>SVT[16|13:12] #PC[17|16:14] #Francais[20|15:18] #SVT[11|12:18] #Anglais[12|13:16] #HG[18|14:18] #Math[16|18:10]</Note>
+        </Numero>
+    </etudiant>
+
+<etudiant>
+        <Numero id="FTR3456G">
+            <Nom>Drame</Nom>
+            <Prénom>Rama</Prénom>
+            <Date_de_naissance>12/03/92</Date_de_naissance>
+            <Classe>5 eme B</Classe>
+            <Note>SVT[12|20:19] #PC[13|14:10] #Francais[14|18:19] #SVT[16|19:14] #Anglais[14|15:18] #HG[10|07:20] #Math[19|17:18]</Note>
+        </Numero>
+    </etudiant>
