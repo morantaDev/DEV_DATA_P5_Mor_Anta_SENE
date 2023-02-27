@@ -1,6483 +1,767 @@
 [
     {
-        "CODE": "AAD004",
-        "Numero": "JD7LO99",
-        "Nom": "SOW",
-        "Prénom": "Mariama",
-        "Date de naissance": "12/18/2017",
-        "Classe": "4eme B",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
+        "CODE": "AAD003",
+        "Numero": "2014079LH",
+        "Nom": "CISSE",
+        "Prénom": "Baba",
+        "Date de naissance": "16/08/99",
+        "Classe": "6ieme A",
+        "Note": "Math[11|13:06] #Francais[08|17:12] #Anglais[13|13:12] #PC[09|18:07] #SVT[15|10:10] #HG[14|19:17]"
     },
     {
-        "CODE": "AAD004",
-        "Numero": "LIHGFR0",
-        "Nom": "Diallo",
-        "Prénom": "Nourou",
-        "Date de naissance": "02/01/12",
-        "Classe": "6emA",
-        "Matieres": {
-            "Math": [
-                14.0,
-                15.0,
-                10.0,
-                13.0
-            ],
-            "Francais": [
-                12.0,
-                13.0,
-                13.0,
-                12.67
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                14.0,
-                13.0,
-                7.0,
-                11.33
-            ],
-            "SVT": [
-                15.0,
-                19.0,
-                10.0,
-                14.67
-            ],
-            "HG": [
-                13.0,
-                12.0,
-                15.0,
-                13.33
-            ]
-        },
-        "Moyenne": 13.5
+        "CODE": "AAD003",
+        "Numero": "2016023LD",
+        "Nom": "NDIAYE",
+        "Prénom": "mbaye",
+        "Date de naissance": "12/09/00",
+        "Classe": "5ieme A",
+        "Note": "Math[05|13:05] #Francais[11|17:15] #Anglais[19|14:15] #PC[13|11:07] #SVT[12|09:12] #HG[16|15:17]"
     },
     {
-        "CODE": "AAD005",
-        "Numero": "40DKG6T",
-        "Nom": "Diallo",
-        "Prénom": "awa",
-        "Date de naissance": "21/10/04",
-        "Classe": "6emA",
-        "Matieres": {
-            "PC": [
-                17.0,
-                20.0,
-                18.0,
-                15.0,
-                17.5
-            ],
-            "Math": [
-                15.0,
-                16.0,
-                15.0,
-                13.0,
-                17.0,
-                15.2
-            ],
-            "Francais": [
-                11.0,
-                13.0,
-                12.0
-            ],
-            "Anglais": [
-                14.0,
-                13.0,
-                13.5
-            ],
-            "SVT": [
-                13.0,
-                11.0,
-                15.0,
-                11.0,
-                12.0,
-                12.4
-            ],
-            "HG": [
-                15.0,
-                13.0,
-                14.0
-            ]
-        },
-        "Moyenne": 14.1
+        "CODE": "AAD003",
+        "Numero": "286325HG",
+        "Nom": "GAYE",
+        "Prénom": "Awa",
+        "Date de naissance": "13/04/12",
+        "Classe": "3iemeA",
+        "Note": "Math[04|13:05] #Francais[15|06:11] #Anglais[15|13:13] #PC[14|13:07] #SVT[12|19:10] #HG[18|15:17]"
     },
     {
-        "CODE": "AAD005",
-        "Numero": "44DSW78",
-        "Nom": "Ndiaye",
-        "Prénom": "Sidy",
-        "Date de naissance": "19/01/05",
-        "Classe": "4emB",
-        "Matieres": {
-            "PC": [
-                7.0,
-                10.0,
-                9.0,
-                10.0,
-                9.0
-            ],
-            "Math": [
-                11.0,
-                10.0,
-                12.0,
-                10.0,
-                10.75
-            ],
-            "Francais": [
-                14.0,
-                15.0,
-                14.5
-            ],
-            "Anglais": [
-                14.0,
-                14.0,
-                14.0
-            ],
-            "SVT": [
-                14.0,
-                12.0,
-                10.0,
-                10.0,
-                11.5
-            ],
-            "HG": [
-                14.0,
-                14.0,
-                14.0
-            ]
-        },
-        "Moyenne": 12.29
+        "CODE": "AAD003",
+        "Numero": "201817JK",
+        "Nom": "NDAO",
+        "Prénom": "Ndiaga",
+        "Date de naissance": "12/04/00",
+        "Classe": "6iemeB",
+        "Note": "Math[04|13:05] #Francais[15|16:14] #Anglais[15|16:11] #PC[04|03:07] #SVT[12|09:11] #HG[16|15:10]"
     },
     {
-        "CODE": "AAD005",
-        "Numero": "20LH7BG",
-        "Nom": "FAYE",
-        "Prénom": "Fallou",
-        "Date de naissance": "19/04/02",
-        "Classe": "4emA",
-        "Matieres": {
-            "PC": [
-                8.0,
-                13.0,
-                11.0,
-                12.0,
-                11.0
-            ],
-            "Math": [
-                10.0,
-                10.0,
-                10.0,
-                11.0,
-                10.0,
-                10.2
-            ],
-            "Francais": [
-                12.0,
-                13.0,
-                12.5
-            ],
-            "Anglais": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "SVT": [
-                12.0,
-                15.0,
-                10.0,
-                9.0,
-                10.0,
-                11.2
-            ],
-            "HG": [
-                8.0,
-                10.0,
-                9.0
-            ]
-        },
-        "Moyenne": 10.73
+        "CODE": "AAD003",
+        "Numero": "65281LKJ",
+        "Nom": "DEME",
+        "Prénom": "Saliou",
+        "Date de naissance": "19/03/05",
+        "Classe": "5iemeB",
+        "Note": "Math[20|19.5:05] #Francais[13|16:14] #Anglais[17|19:17] #PC[14|13:17] #SVT[12|19:10] #HG[16|19:17]"
     },
     {
-        "CODE": "AAD005",
-        "Numero": "8D805GT",
-        "Nom": "Diop",
-        "Prénom": "Seyni",
-        "Date de naissance": "29/09/05",
-        "Classe": "3emA",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                12.0,
-                8.0,
-                13.0,
-                10.0
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                9.0,
-                15.0,
-                10.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ]
-        },
-        "Moyenne": 11.0
+        "CODE": "AAD003",
+        "Numero": "2007095KH",
+        "Nom": "Ngadeu",
+        "Prénom": "Dinka",
+        "Date de naissance": "03/12/01",
+        "Classe": "3iemeB",
+        "Note": "Math[12|13:15] #Francais[05|18:12] #Anglais[12|14:18] #PC[24|13:07] #SVT[17|09:12] #HG[16|15:17]"
     },
     {
-        "CODE": "AAD005",
-        "Numero": "9HBW36T",
-        "Nom": "Ba",
-        "Prénom": "Aliou",
-        "Date de naissance": "01/01/06",
-        "Classe": "5emA",
-        "Matieres": {
-            "Math": [
-                15.0,
-                16.0,
-                15.0,
-                15.33
-            ],
-            "Francais": [
-                10.0,
-                11.0,
-                10.0,
-                9.0,
-                10.0
-            ],
-            "Anglais": [
-                14.0,
-                12.0,
-                13.0,
-                15.0,
-                13.5
-            ],
-            "PC": [
-                15.0,
-                15.0,
-                15.0
-            ],
-            "SVT": [
-                12.0,
-                10.0,
-                17.0,
-                13.0,
-                12.0,
-                12.8
-            ],
-            "HG": [
-                17.0,
-                14.0,
-                15.5
-            ]
-        },
-        "Moyenne": 13.69
-    },
-    {
-        "CODE": "AAD005",
-        "Numero": "W8NNJ6T",
-        "Nom": "Ndoye",
-        "Prénom": "Ousmane",
-        "Date de naissance": "09/04/04",
-        "Classe": "5emB",
-        "Matieres": {
-            "Math": [
-                20.0,
-                18.0,
-                18.0,
-                18.67
-            ],
-            "Francais": [
-                12.0,
-                14.0,
-                14.0,
-                13.0,
-                13.25
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                16.0,
-                14.0,
-                15.25
-            ],
-            "PC": [
-                17.0,
-                18.0,
-                17.5
-            ],
-            "SVT": [
-                14.0,
-                15.0,
-                15.0,
-                16.0,
-                14.0,
-                14.8
-            ],
-            "HG": [
-                13.0,
-                16.0,
-                14.5
-            ]
-        },
-        "Moyenne": 15.66
-    },
-    {
-        "CODE": "AAD005",
-        "Numero": "23YLTXT",
-        "Nom": "Baal",
-        "Prénom": "Thierno",
-        "Date de naissance": "22/01/06",
-        "Classe": "3emA",
-        "Matieres": {
-            "PC": [
-                13.0,
-                11.0,
-                13.0,
-                12.33
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                15.0,
-                8.0,
-                12.25
-            ],
-            "Francais": [
-                11.0,
-                11.0,
-                11.0
-            ],
-            "Anglais": [
-                12.0,
-                14.0,
-                13.0
-            ],
-            "SVT": [
-                12.0,
-                12.0,
-                10.0,
-                10.0,
-                11.0
-            ],
-            "HG": [
-                8.0,
-                10.0,
-                9.0
-            ]
-        },
-        "Moyenne": 11.43
-    },
-    {
-        "CODE": "AAD005",
-        "Numero": "48DKG8T",
-        "Nom": "Baal",
-        "Prénom": "Boubou",
-        "Date de naissance": "26/04/03",
-        "Classe": "4emB",
-        "Matieres": {
-            "PC": [
-                17.0,
-                11.0,
-                8.0,
-                11.0,
-                11.75
-            ],
-            "Math": [
-                12.0,
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                12.0,
-                16.0,
-                14.0
-            ],
-            "Anglais": [
-                12.0,
-                12.0,
-                12.0
-            ],
-            "SVT": [
-                13.0,
-                15.0,
-                11.0,
-                14.0,
-                13.25
-            ],
-            "HG": [
-                12.0,
-                17.0,
-                14.5
-            ]
-        },
-        "Moyenne": 12.92
-    },
-    {
-        "CODE": "AAD005",
-        "Numero": "Q7XVP6G",
-        "Nom": "Seck",
-        "Prénom": "Bineta",
-        "Date de naissance": "12/02/05",
-        "Classe": "3emA",
-        "Matieres": {
-            "PC": [
-                14.0,
-                8.0,
-                16.0,
-                12.67
-            ],
-            "Math": [
-                12.0,
-                16.0,
-                11.0,
-                12.0,
-                12.75
-            ],
-            "Francais": [
-                13.0,
-                16.0,
-                14.5
-            ],
-            "Anglais": [
-                10.0,
-                10.0,
-                10.0
-            ],
-            "SVT": [
-                13.0,
-                13.0,
-                12.0,
-                8.0,
-                11.5
-            ],
-            "HG": [
-                10.0,
-                9.0,
-                9.5
-            ]
-        },
-        "Moyenne": 11.82
-    },
-    {
-        "CODE": "AAD005",
-        "Numero": "M67KQV7",
-        "Nom": "Correa",
-        "Prénom": "Albert",
-        "Date de naissance": "26/12/03",
-        "Classe": "6emA",
-        "Matieres": {
-            "PC": [
-                11.0,
-                10.0,
-                9.0,
-                10.0,
-                10.0
-            ],
-            "Math": [
-                11.0,
-                10.0,
-                12.0,
-                10.0,
-                10.75
-            ],
-            "Francais": [
-                10.0,
-                9.0,
-                9.5
-            ],
-            "Anglais": [
-                12.0,
-                111.0,
-                61.5
-            ],
-            "SVT": [
-                10.0,
-                12.0,
-                8.0,
-                12.0,
-                10.5
-            ],
-            "HG": [
-                11.0,
-                13.0,
-                12.0
-            ]
-        },
-        "Moyenne": 19.04
-    },
-    {
-        "CODE": "AAD007",
-        "Numero": "H18AC4W",
+        "CODE": "AAD003",
+        "Numero": "201607RK",
         "Nom": "BA",
         "Prénom": "Mouhamed",
-        "Date de naissance": "14/01/05",
-        "Classe": "6emA",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                12.0,
-                8.0,
-                13.0,
-                10.0
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                9.0,
-                15.0,
-                10.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ]
-        },
-        "Moyenne": 11.0
+        "Date de naissance": "19/06/96",
+        "Classe": "4iemeC",
+        "Note": "Math[04|03:05] #Francais[15|16:14] #Anglais[15|16:14] #PC[04|03:07] #SVT[12|09:15] #HG[16|15:13]"
     },
     {
-        "CODE": "AAD007",
-        "Numero": "EPJHQQ5",
+        "CODE": "AAD003",
+        "Numero": "2014067K",
+        "Nom": "GUEYE",
+        "Prénom": "Mansour",
+        "Date de naissance": "34-13-1992",
+        "Classe": "4iemeC",
+        "Note": "Math[14|12:15] #Francais[18|06:14] #Anglais[15|12:12] #PC[18|13:07] #SVT[11|19:12] #HG[13|15:12]"
+    },
+    {
+        "CODE": "AAD003",
+        "Numero": "20133HGF",
+        "Nom": "DANSOKHO",
+        "Prénom": "Siriman",
+        "Date de naissance": "13/04/10",
+        "Classe": "6iemeC",
+        "Note": "Math[04|03:05] #Francais[15|15:14] #Anglais[15|06:15] #PC[14|06:07] #SVT[18|09:15] #HG[11|15:12]"
+    },
+    {
+        "CODE": "AAD003",
+        "Numero": "2017ZEA5L",
+        "Nom": "TOURE",
+        "Prénom": "Sokhna",
+        "Date de naissance": "23/04/14",
+        "Classe": "3iemeC",
+        "Note": "Math[14|13:05] #Francais[18|16:14] #Anglais[15|06:17] #PC[14|13:07] #SVT[18|12:16] #HG[13|15:13]"
+    },
+    {
+        "CODE": "AAD004",
+        "Numero": "",
+        "Nom": "",
+        "Prénom": "",
+        "Date de naissance": "",
+        "Classe": "",
+        "Note": ""
+    },
+    {
+        "CODE": "AAD004",
+        "Numero": "",
+        "Nom": "",
+        "Prénom": "",
+        "Date de naissance": "",
+        "Classe": "",
+        "Note": ""
+    },
+    {
+        "CODE": "AAD004",
+        "Numero": "",
+        "Nom": "",
+        "Prénom": "",
+        "Date de naissance": "",
+        "Classe": "",
+        "Note": ""
+    },
+    {
+        "CODE": "AAD004",
+        "Numero": "",
+        "Nom": "",
+        "Prénom": "",
+        "Date de naissance": "",
+        "Classe": "",
+        "Note": ""
+    },
+    {
+        "CODE": "AAD004",
+        "Numero": "",
+        "Nom": "",
+        "Prénom": "",
+        "Date de naissance": "",
+        "Classe": "",
+        "Note": ""
+    },
+    {
+        "CODE": "AAD004",
+        "Numero": "",
+        "Nom": "",
+        "Prénom": "",
+        "Date de naissance": "",
+        "Classe": "",
+        "Note": ""
+    },
+    {
+        "CODE": "AAD004",
+        "Numero": "",
+        "Nom": "",
+        "Prénom": "",
+        "Date de naissance": "",
+        "Classe": "",
+        "Note": ""
+    },
+    {
+        "CODE": "AAD004",
+        "Numero": "",
+        "Nom": "",
+        "Prénom": "",
+        "Date de naissance": "",
+        "Classe": "",
+        "Note": ""
+    },
+    {
+        "CODE": "AAD22",
+        "Numero": "LSNP5Of",
+        "Nom": "Sow",
+        "Prénom": "Mari",
+        "Date de naissance": "28/12/01",
+        "Classe": "6eme A",
+        "Note": "Math[10|11:15] #Francais[7|12|8:13] #Anglais[13,5|9:15] #PC[11:9]  #SVT[12|9|16|11:12]  #HG[10:13]"
+    },
+    {
+        "CODE": "AAD22",
+        "Numero": "UHT9KD8",
+        "Nom": "Seye",
+        "Prénom": "Malick",
+        "Date de naissance": "07/10/07",
+        "Classe": "5eme C",
+        "Note": "Math[10|14,5|11|03:16] #PC[11:19]  #Francais[4|11:13]  #SVT[12|9|16|11:12] #HG[19:13]  #Anglais[10,5:15]"
+    },
+    {
+        "CODE": "AAD22",
+        "Numero": "O6G7XCQ",
+        "Nom": "Tamba",
+        "Prénom": "Lamine",
+        "Date de naissance": "09/01/06",
+        "Classe": "3eme D",
+        "Note": "SVT[13|9|11:14] #HG[10:13]  #Math[12|14,5|11:13]  #Francais[8|11:13] #Anglais[13,5:15]  #PC[13|11:9]"
+    },
+    {
+        "CODE": "AAD22",
+        "Numero": "GFD3G8G",
+        "Nom": "Ndour",
+        "Prénom": "Fatime",
+        "Date de naissance": "05/mars/2002",
+        "Classe": "5eme D",
+        "Note": "Math[9|10,5|10|13:16] #PC[12:15]  #Francais[10|17:13]  #SVT[15|9|06|11:12] #HG[13:03]  #Anglais[13,12:05]"
+    },
+    {
+        "CODE": "AAD22",
+        "Numero": "GSQ3H84",
+        "Nom": "Diouf",
+        "Prénom": "Wally",
+        "Date de naissance": "30/09/05",
+        "Classe": "4eme c",
+        "Note": ""
+    },
+    {
+        "CODE": "ABD009",
+        "Numero": "345ERTH",
+        "Nom": "Abdou",
+        "Prénom": "Wade",
+        "Date de naissance": "31/12/07",
+        "Classe": "6eme D",
+        "Note": "Math[12|4:15] #Francais[10|17|18:10] #Anglais[10,9|9:15] #PC[0:11] #SVT[10|20|16|10:9] #HG[9:10]"
+    },
+    {
+        "CODE": "ABD009",
+        "Numero": "ERSTYDD",
+        "Nom": "Akapla",
+        "Prénom": "Diop",
+        "Date de naissance": "03/05/78",
+        "Classe": "5eme C",
+        "Note": "Math[10|14:15] #Francais[11|9|1:10] #Anglais[10,9|9:1] #PC[10:11] #SVT[10|2|6|10:9] #HG[17:0]"
+    },
+    {
+        "CODE": "ABD009",
+        "Numero": "23453RD",
+        "Nom": "yéré",
+        "Prénom": "Niani",
+        "Date de naissance": "05/11/12",
+        "Classe": "3eme D",
+        "Note": "Math[18|4:8] #Francais[10|9|18:12] #Anglais[10,9|9:3] #PC[10:11] #SVT[10|6|16|10:9] #HG[19:10]"
+    },
+    {
+        "CODE": "ABD009",
+        "Numero": "ERTDH6G",
+        "Nom": "Gadiaga",
+        "Prénom": "Xouli",
+        "Date de naissance": "30/07/18",
+        "Classe": "5eme 4",
+        "Note": "Math[1|4:15] #Francais[10|19|14:13] #Anglais[10,9|9:1] #PC[10:11] #SVT[10|20|16|10:9] #HG[9:18]"
+    },
+    {
+        "CODE": "ABD009",
+        "Numero": "TTEDJE56",
+        "Nom": "Missari",
+        "Prénom": "Koumpa",
+        "Date de naissance": "31/09/2014",
+        "Classe": "3eme B",
+        "Note": "Math[10|4:15] #Francais[18|9|18:10] #Anglais[10,9|9:5] #PC[10:11] #SVT[10|20|16|10:9] #HG[19:10]"
+    },
+    {
+        "CODE": "ABN018",
+        "Numero": "LSNP1OC",
+        "Nom": "Moosky",
+        "Prénom": "Faye",
+        "Date de naissance": "23/04/88",
+        "Classe": "4 eme C",
+        "Note": "rançais[10|07:15]#Anglais[01|18:13]#SVT[10|11:14]#HG[16|17:14]#Science_Physique[18|12:12]#Math[15|17:11]"
+    },
+    {
+        "CODE": "ABN018",
+        "Numero": "83WERRE",
+        "Nom": "Wesh",
+        "Prénom": "Morey",
+        "Date de naissance": "25_11_2004",
+        "Classe": "3eme D",
+        "Note": "Français[16|08:15]#Anglais[19|19:17]#SVT[12|14:07]#HG[18|13:17]#Science_Physique[00|03:02]#Math[06|17:13]"
+    },
+    {
+        "CODE": "ABN018",
+        "Numero": "TER0R0R",
+        "Nom": "Billie",
+        "Prénom": "Jeane",
+        "Date de naissance": "17/08/98",
+        "Classe": "1ereS1",
+        "Note": "Français[06|08:05]#Anglais[20|20:17]#SVT[13|14:13]#HG[11|13:17]#Science_Physique[12|11:15]#Math[06|17:18]"
+    },
+    {
+        "CODE": "ABN018",
+        "Numero": "WHYIAMI",
+        "Nom": "Ragnard",
+        "Prénom": "Lordbrock",
+        "Date de naissance": "01/12/79",
+        "Classe": "1 ere S1",
+        "Note": "Français[06|07:05]#Anglais[10|10:11]#SVT[13|17:13]#HG[11|05:07]#Science_Physique[12|18:15]#Math[16|17:18]"
+    },
+    {
+        "CODE": "ABN018",
+        "Numero": "WOO3OOO",
+        "Nom": "Perus",
+        "Prénom": "Morgan",
+        "Date de naissance": "06/06/70",
+        "Classe": "Tle S1",
+        "Note": "Français[08|07:15]#Anglais[10|10:09]#SVT[13|13:13]#HG[03|05:07]#Science_Physique[13|11:12]#Math[10|07:08]"
+    },
+    {
+        "CODE": "ABN018",
+        "Numero": "558YRYT",
+        "Nom": "Shawn",
+        "Prénom": "Thiam",
+        "Date de naissance": "28/02/97",
+        "Classe": "Tle S2",
+        "Note": "Français[09|17:16]#Anglais[10|13:09]#SVT[13|12:14]#HG[13|15:07]#Science_Physique[12|12:14]#Math[11|07:18]"
+    },
+    {
+        "CODE": "ABN018",
+        "Numero": "444111T",
+        "Nom": "Mbeuthie Fall",
+        "Prénom": "Laye",
+        "Date de naissance": "01/09/15",
+        "Classe": "Tlel'1",
+        "Note": "Français[09|17:16]#Anglais[10|13:15]#SVT[13|12:14]#HG[11|15:11]#Science_Physique[12|13:14]#Math[10|07:12]"
+    },
+    {
+        "CODE": "ABN018",
+        "Numero": "WORK246",
+        "Nom": "Famara",
+        "Prénom": "Bodian",
+        "Date de naissance": "12/12/95",
+        "Classe": "5eme F",
+        "Note": "Français[19|17:10]#Anglais[13|14:15]#SVT[13|16:14]#HG[13|15:11]#Science_Physique[17|13:14]#Math[16|07:12]"
+    },
+    {
+        "CODE": "AFD006",
+        "Numero": "2022R3M",
         "Nom": "DIAW",
         "Prénom": "Fallou",
-        "Date de naissance": "12/08/06",
-        "Classe": "3eme B",
-        "Matieres": {
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                14.0,
-                12.0,
-                13.0,
-                13.0
-            ],
-            "Anglais": [
-                12.0,
-                8.0,
-                15.0,
-                11.67
-            ],
-            "SVT": [
-                10.0,
-                9.0,
-                16.0,
-                13.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                16.0,
-                13.0
-            ]
-        },
-        "Moyenne": 11.78
-    },
-    {
-        "CODE": "AAD007",
-        "Numero": "KM729R9",
-        "Nom": "NDIAYE",
-        "Prénom": "Marie",
-        "Date de naissance": "19/02/07",
-        "Classe": "3eme A",
-        "Matieres": {
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                4.0,
-                11.0,
-                13.0,
-                9.33
-            ],
-            "Anglais": [
-                13.0,
-                8.0,
-                15.0,
-                12.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                11.0,
-                13.0,
-                12.0
-            ]
-        },
-        "Moyenne": 11.05
-    },
-    {
-        "CODE": "AAD007",
-        "Numero": "Q7U2XFP",
-        "Nom": "DEME",
-        "Prénom": "Abdou",
-        "Date de naissance": "16/01/04",
-        "Classe": "4 eme A",
-        "Matieres": {
-            "Math": [
-                10.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                16.0,
-                11.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Francais": [
-                4.0,
-                11.0,
-                13.0,
-                9.33
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                15.0,
-                11.0
-            ]
-        },
-        "Moyenne": 10.89
-    },
-    {
-        "CODE": "AAD007",
-        "Numero": "0747PMJ",
-        "Nom": "Ndao",
-        "Prénom": "Baye Ndiaga",
-        "Date de naissance": "08/08/08",
-        "Classe": "5em B",
-        "Matieres": {
-            "SVT": [
-                13.0,
-                9.0,
-                11.0,
-                14.0,
-                11.75
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                8.0,
-                11.0,
-                13.0,
-                10.67
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                15.0,
-                11.0
-            ],
-            "PC": [
-                13.0,
-                11.0,
-                9.0,
-                11.0
-            ]
-        },
-        "Moyenne": 11.15
-    },
-    {
-        "CODE": "AAD007",
-        "Numero": "18G9C4L",
-        "Nom": "DIEYE",
-        "Prénom": "Abdoulaye",
-        "Date de naissance": "01/01/02",
-        "Classe": "6emB",
-        "Matieres": {
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                4.0,
-                11.0,
-                13.0,
-                9.33
-            ],
-            "Anglais": [
-                13.0,
-                8.0,
-                15.0,
-                12.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                11.0,
-                13.0,
-                12.0
-            ]
-        },
-        "Moyenne": 11.05
-    },
-    {
-        "CODE": "AAD007",
-        "Numero": "UQI7FN8",
-        "Nom": "Cyrille ",
-        "Prénom": "Keys",
-        "Date de naissance": "07/11/07",
-        "Classe": "4 em A",
-        "Matieres": {
-            "Math": [
-                9.0,
-                10.0,
-                5.0,
-                11.0,
-                13.0,
-                16.0,
-                10.67
-            ],
-            "PC": [
-                12.0,
-                19.0,
-                15.5
-            ],
-            "Francais": [
-                10.0,
-                11.0,
-                13.0,
-                11.33
-            ],
-            "SVT": [
-                15.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.6
-            ],
-            "HG": [
-                13.0,
-                13.0,
-                13.0
-            ],
-            "Anglais": [
-                13.0,
-                12.0,
-                15.0,
-                13.33
-            ]
-        },
-        "Moyenne": 12.74
-    },
-    {
-        "CODE": "AAD007",
-        "Numero": "9H37AKZ",
-        "Nom": "LOW",
-        "Prénom": "Joakim",
-        "Date de naissance": "20/12/02",
-        "Classe": "4em A",
-        "Matieres": {
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                14.0,
-                12.0,
-                13.0,
-                13.0
-            ],
-            "Anglais": [
-                12.0,
-                8.0,
-                15.0,
-                11.67
-            ],
-            "SVT": [
-                10.0,
-                9.0,
-                16.0,
-                13.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                16.0,
-                13.0
-            ]
-        },
-        "Moyenne": 11.78
-    },
-    {
-        "CODE": "AAD007",
-        "Numero": "6691DTO",
-        "Nom": "Ndour",
-        "Prénom": "Karin",
-        "Date de naissance": "07/07/03",
-        "Classe": "5 eme B",
-        "Matieres": {
-            "SVT": [
-                15.0,
-                11.0,
-                11.0,
-                12.0,
-                12.25
-            ],
-            "HG": [
-                6.0,
-                16.0,
-                11.0
-            ],
-            "Math": [
-                10.0,
-                14.0,
-                9.0,
-                11.0,
-                17.0,
-                12.2
-            ],
-            "Francais": [
-                8.0,
-                13.0,
-                13.0,
-                11.33
-            ],
-            "Anglais": [
-                18.0,
-                5.0,
-                15.0,
-                12.67
-            ],
-            "PC": [
-                7.0,
-                11.0,
-                9.0,
-                9.0
-            ]
-        },
-        "Moyenne": 11.41
-    },
-    {
-        "CODE": "AAD007",
-        "Numero": "8YM0304",
-        "Nom": "KIBINDA",
-        "Prénom": "Iniess",
-        "Date de naissance": "15/08/05",
-        "Classe": "6 em A",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                9.0,
-                8.0,
-                13.0,
-                9.25
-            ],
-            "Anglais": [
-                10.0,
-                5.0,
-                9.0,
-                15.0,
-                9.75
-            ],
-            "PC": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "SVT": [
-                12.0,
-                11.0,
-                16.0,
-                8.0,
-                12.0,
-                11.8
-            ],
-            "HG": [
-                10.0,
-                10.0,
-                10.0
-            ]
-        },
-        "Moyenne": 10.55
-    },
-    {
-        "CODE": "AAD22",
-        "Numero": "PONAAC0",
-        "Nom": "Tine",
-        "Prénom": "Jean",
-        "Date de naissance": "18/05/04",
-        "Classe": "3eme A",
-        "Matieres": {
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                14.0,
-                12.0,
-                13.0,
-                13.0
-            ],
-            "Anglais": [
-                12.0,
-                8.0,
-                15.0,
-                11.67
-            ],
-            "SVT": [
-                10.0,
-                9.0,
-                16.0,
-                13.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                16.0,
-                13.0
-            ]
-        },
-        "Moyenne": 11.78
-    },
-    {
-        "CODE": "AAD22",
-        "Numero": "27WERUG",
-        "Nom": "Fall",
-        "Prénom": "Ouley",
-        "Date de naissance": "16/11/05",
-        "Classe": "3eme B",
-        "Matieres": {
-            "PC": [
-                11.0,
-                19.0,
-                15.0
-            ],
-            "Math": [
-                2.0,
-                10.0,
-                5.0,
-                11.0,
-                13.0,
-                8.2
-            ],
-            "Francais": [
-                14.0,
-                11.0,
-                13.0,
-                12.67
-            ],
-            "Anglais": [
-                3.0,
-                8.0,
-                10.0,
-                7.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                10.0,
-                11.6
-            ],
-            "HG": [
-                11.0,
-                15.0,
-                13.0
-            ]
-        },
-        "Moyenne": 11.24
-    },
-    {
-        "CODE": "AAD22",
-        "Numero": "HDCB2G7",
-        "Nom": "Ndaw",
-        "Prénom": "Ousmane",
-        "Date de naissance": "14/08/00",
-        "Classe": "4eme B",
-        "Matieres": {
-            "PC": [
-                11.0,
-                19.0,
-                15.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                3.0,
-                9.0
-            ],
-            "Francais": [
-                14.0,
-                11.0,
-                13.0,
-                12.67
-            ],
-            "Anglais": [
-                13.0,
-                8.0,
-                5.0,
-                8.67
-            ],
-            "SVT": [
-                12.0,
-                19.0,
-                16.0,
-                11.0,
-                19.0,
-                15.4
-            ],
-            "HG": [
-                11.0,
-                10.0,
-                10.5
-            ]
-        },
-        "Moyenne": 11.87
-    },
-    {
-        "CODE": "AAD22",
-        "Numero": "GC4BDQ7",
-        "Nom": "Sarr",
-        "Prénom": "Oumi",
-        "Date de naissance": "17/06/03",
-        "Classe": "3eme A",
-        "Matieres": {
-            "Math": [
-                10.0,
-                14.0,
-                5.0,
-                11.0,
-                15.0,
-                17.0,
-                12.0
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Francais": [
-                16.0,
-                11.0,
-                13.0,
-                13.33
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                14.0,
-                11.0,
-                12.0,
-                11.6
-            ],
-            "HG": [
-                15.0,
-                11.0,
-                13.0
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                15.0,
-                11.0
-            ]
-        },
-        "Moyenne": 11.82
-    },
-    {
-        "CODE": "AAD22",
-        "Numero": "BK63HBS",
-        "Nom": "Gueye",
-        "Prénom": "Astou",
-        "Date de naissance": "28/02/12",
-        "Classe": "3eme A",
-        "Matieres": {
-            "SVT": [
-                15.0,
-                11.0,
-                11.0,
-                12.0,
-                12.25
-            ],
-            "HG": [
-                6.0,
-                16.0,
-                11.0
-            ],
-            "Math": [
-                10.0,
-                14.0,
-                9.0,
-                11.0,
-                17.0,
-                12.2
-            ],
-            "Francais": [
-                8.0,
-                13.0,
-                13.0,
-                11.33
-            ],
-            "Anglais": [
-                18.0,
-                5.0,
-                15.0,
-                12.67
-            ],
-            "PC": [
-                7.0,
-                11.0,
-                9.0,
-                9.0
-            ]
-        },
-        "Moyenne": 11.41
-    },
-    {
-        "CODE": "ABD009",
-        "Numero": "SDFTY34",
-        "Nom": "Senir",
-        "Prénom": "Mbol",
-        "Date de naissance": "24/02/15",
-        "Classe": "4eme B",
-        "Matieres": {
-            "Math": [
-                1.0,
-                5.0,
-                8.0,
-                4.67
-            ],
-            "Francais": [
-                10.0,
-                9.0,
-                18.0,
-                10.0,
-                11.75
-            ],
-            "Anglais": [
-                10.0,
-                9.0,
-                9.0,
-                15.0,
-                10.75
-            ],
-            "PC": [
-                17.0,
-                11.0,
-                14.0
-            ],
-            "SVT": [
-                10.0,
-                20.0,
-                16.0,
-                10.0,
-                9.0,
-                13.0
-            ],
-            "HG": [
-                6.0,
-                10.0,
-                8.0
-            ]
-        },
-        "Moyenne": 10.36
-    },
-    {
-        "CODE": "ABD009",
-        "Numero": "ZRDFD4S",
-        "Nom": "Ndiareme",
-        "Prénom": "Sylla",
-        "Date de naissance": "03/09/05",
-        "Classe": "3eme A",
-        "Matieres": {
-            "Math": [
-                1.0,
-                4.0,
-                15.0,
-                6.67
-            ],
-            "Francais": [
-                0.0,
-                19.0,
-                8.0,
-                10.0,
-                9.25
-            ],
-            "Anglais": [
-                2.0,
-                19.0,
-                1.0,
-                5.0,
-                6.75
-            ],
-            "PC": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "SVT": [
-                10.0,
-                20.0,
-                16.0,
-                10.0,
-                9.0,
-                13.0
-            ],
-            "HG": [
-                9.0,
-                1.0,
-                5.0
-            ]
-        },
-        "Moyenne": 8.53
-    },
-    {
-        "CODE": "ABD009",
-        "Numero": "DFGE67T",
-        "Nom": "Mbor",
-        "Prénom": "Tounkho",
-        "Date de naissance": "17/10/01",
-        "Classe": "5eme B",
-        "Matieres": {
-            "Math": [
-                10.0,
-                4.0,
-                5.0,
-                6.33
-            ],
-            "Francais": [
-                12.0,
-                19.0,
-                18.0,
-                10.0,
-                14.75
-            ],
-            "Anglais": [
-                10.0,
-                9.0,
-                9.0,
-                4.0,
-                8.0
-            ],
-            "PC": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "SVT": [
-                10.0,
-                10.0,
-                8.0,
-                10.0,
-                9.0,
-                9.4
-            ],
-            "HG": [
-                9.0,
-                17.0,
-                13.0
-            ]
-        },
-        "Moyenne": 10.33
-    },
-    {
-        "CODE": "ABD009",
-        "Numero": "56GFSE6",
-        "Nom": "Awa",
-        "Prénom": "Samaké",
-        "Date de naissance": "30/09/05",
-        "Classe": "5eme B",
-        "Matieres": {
-            "Math": [
-                1.0,
-                4.0,
-                7.0,
-                4.0
-            ],
-            "Francais": [
-                1.0,
-                9.0,
-                18.0,
-                10.0,
-                9.5
-            ],
-            "Anglais": [
-                10.0,
-                9.0,
-                9.0,
-                9.0,
-                9.25
-            ],
-            "PC": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "SVT": [
-                10.0,
-                20.0,
-                16.0,
-                10.0,
-                9.0,
-                13.0
-            ],
-            "HG": [
-                9.0,
-                10.0,
-                9.5
-            ]
-        },
-        "Moyenne": 9.29
-    },
-    {
-        "CODE": "ABD009",
-        "Numero": "RTGHSDG",
-        "Nom": "Ndol",
-        "Prénom": "Gueye",
-        "Date de naissance": "30/09/06",
-        "Classe": "5eme B",
-        "Matieres": {
-            "Math": [
-                10.0,
-                4.0,
-                15.0,
-                9.67
-            ],
-            "Francais": [
-                11.0,
-                1.0,
-                17.0,
-                10.0,
-                9.75
-            ],
-            "Anglais": [
-                8.0,
-                9.0,
-                5.0,
-                14.0,
-                9.0
-            ],
-            "PC": [
-                17.0,
-                11.0,
-                14.0
-            ],
-            "SVT": [
-                15.0,
-                10.0,
-                6.0,
-                8.0,
-                5.0,
-                8.8
-            ],
-            "HG": [
-                9.0,
-                16.0,
-                12.5
-            ]
-        },
-        "Moyenne": 10.62
-    },
-    {
-        "CODE": "ABN018",
-        "Numero": "QBN34UI",
-        "Nom": "Moose",
-        "Prénom": "Rodriguez",
-        "Date de naissance": "01-22-1999",
-        "Classe": "5eme B",
-        "Matieres": {
-            "Français": [
-                12.0,
-                14.0,
-                15.0,
-                13.67
-            ],
-            "Anglais": [
-                16.0,
-                18.0,
-                19.0,
-                17.67
-            ],
-            "SVT": [
-                10.0,
-                11.0,
-                9.0,
-                10.0
-            ],
-            "HG": [
-                12.0,
-                11.0,
-                17.0,
-                13.33
-            ],
-            "Science_Physique": [
-                15.0,
-                17.0,
-                18.0,
-                16.67
-            ],
-            "Math": [
-                13.0,
-                17.0,
-                16.0,
-                15.33
-            ]
-        },
-        "Moyenne": 14.45
-    },
-    {
-        "CODE": "ABN018",
-        "Numero": "PONAAM0",
-        "Nom": "Mayoro",
-        "Prénom": "Diop",
-        "Date de naissance": "14 05 2002",
-        "Classe": "6emeB",
-        "Matieres": {
-            "Français": [
-                12.0,
-                8.0,
-                17.0,
-                12.33
-            ],
-            "Anglais": [
-                15.0,
-                19.0,
-                17.0,
-                17.0
-            ],
-            "SVT": [
-                18.0,
-                16.0,
-                17.0,
-                17.0
-            ],
-            "HG": [
-                18.0,
-                13.0,
-                17.0,
-                16.0
-            ],
-            "Science_Physique": [
-                13.0,
-                13.0,
-                12.0,
-                12.67
-            ],
-            "Math": [
-                15.0,
-                14.0,
-                15.0,
-                14.67
-            ]
-        },
-        "Moyenne": 14.95
+        "Date de naissance": "o5-06-1999",
+        "Classe": "3èmeC",
+        "Note": "Math[17|16:19]#Français[14|15:14]#Anglais[18|17:16]#PC[19|19:19]#SVT[11:16]#HG[12:19]"
     },
     {
         "CODE": "AFD006",
-        "Numero": "2022HEC",
-        "Nom": "SYLLA",
-        "Prénom": "Gallas",
-        "Date de naissance": "02/03/00",
-        "Classe": "6èmeA",
-        "Matieres": {
-            "Math": [
-                9.0,
-                15.0,
-                19.0,
-                14.33
-            ],
-            "Français": [
-                10.0,
-                12.0,
-                13.0,
-                11.67
-            ],
-            "Anglais": [
-                18.0,
-                14.0,
-                19.0,
-                17.0
-            ],
-            "PC": [
-                9.0,
-                10.0,
-                12.0,
-                10.33
-            ],
-            "SVT": [
-                3.0,
-                11.0,
-                16.0,
-                10.0
-            ],
-            "HG": [
-                12.0,
-                14.0,
-                13.0
-            ]
-        },
-        "Moyenne": 12.72
+        "Numero": "2016EJKL",
+        "Nom": "SECK",
+        "Prénom": "Modou",
+        "Date de naissance": "03/01/99",
+        "Classe": "5èmeB",
+        "Note": "Math[05|03|00:09]#Français[09|12|13:10]#Anglais[12|12:16]#PC[04|08:10]#SVT[12|13:14]#HG[10|12:15]"
     },
     {
         "CODE": "AFD006",
-        "Numero": "2017ERT",
-        "Nom": "MANTANE",
-        "Prénom": "Elisabeth",
-        "Date de naissance": "03/04/96",
-        "Classe": "4èmeA",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                12.0,
-                8.0,
-                13.0,
-                10.0
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                9.0,
-                15.0,
-                10.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ]
-        },
-        "Moyenne": 11.0
+        "Numero": "2019GHS",
+        "Nom": "BOISY",
+        "Prénom": "Chris",
+        "Date de naissance": "04/09/01",
+        "Classe": "5èmeC",
+        "Note": "Math[13|11:13] #PC[13|19:14]  #Francais[12|14:14]  #SVT[15|19:15] #HG[10|18:13]  #Anglais[11|12|11:20"
     },
     {
         "CODE": "AFD006",
-        "Numero": "2014TGR",
-        "Nom": "MENDY",
-        "Prénom": "Marcelin",
-        "Date de naissance": "12/11/92",
-        "Classe": "6èmeA",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
+        "Numero": "20178XYZ",
+        "Nom": "FALL",
+        "Prénom": "Khabane",
+        "Date de naissance": "27/12/98",
+        "Classe": "6èmeC",
+        "Note": "Math[13|11:13] #PC[13|19:14]  #Francais[12|14:14]  #SVT[15|19:15] #HG[10|18:13]  #Anglais[11|12|11:20]"
     },
     {
         "CODE": "AFD006",
-        "Numero": "2020DFH",
-        "Nom": "NDIAYE",
-        "Prénom": "Fatah",
-        "Date de naissance": "23/08/00",
-        "Classe": "4èmeB",
-        "Matieres": {
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                14.0,
-                12.0,
-                13.0,
-                13.0
-            ],
-            "Anglais": [
-                12.0,
-                8.0,
-                15.0,
-                11.67
-            ],
-            "SVT": [
-                10.0,
-                9.0,
-                16.0,
-                13.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                16.0,
-                13.0
-            ]
-        },
-        "Moyenne": 11.78
+        "Numero": "2019R3M",
+        "Nom": "MOHAMED",
+        "Prénom": "Ben Omar",
+        "Date de naissance": "30/03/99",
+        "Classe": "3èmeC",
+        "Note": "Math[12|16|18:19]#Françcais[15:17]#Anglais[10|11:09]#PC[15|17|13:17]#SVT[16|16:14]#HG[15:17]"
     },
     {
-        "CODE": "AFD006",
-        "Numero": "2018JKH",
-        "Nom": "NDIAYE",
-        "Prénom": "Zeyna",
-        "Date de naissance": "23/06/98",
-        "Classe": "4èmeA",
-        "Matieres": {
-            "Math": [
-                13.0,
-                11.0,
-                13.0,
-                12.33
-            ],
-            "PC": [
-                13.0,
-                19.0,
-                14.0,
-                15.33
-            ],
-            "Francais": [
-                12.0,
-                14.0,
-                14.0,
-                13.33
-            ],
-            "SVT": [
-                15.0,
-                19.0,
-                15.0,
-                16.33
-            ],
-            "HG": [
-                10.0,
-                18.0,
-                13.0,
-                13.67
-            ],
-            "Anglais": [
-                11.0,
-                12.0,
-                11.0,
-                11.33
-            ]
-        },
-        "Moyenne": 13.72
-    },
-    {
-        "CODE": "AKH014",
-        "Numero": "2020UT6",
-        "Nom": "SIHARAJ",
-        "Prénom": "SORPHAKA",
-        "Date de naissance": "11/09/02",
-        "Classe": "6èmeB",
-        "Matieres": {
-            "Math": [
-                14.0,
-                12.0,
-                15.0,
-                13.67
-            ],
-            "Francais": [
-                18.0,
-                6.0,
-                14.0,
-                12.67
-            ],
-            "Anglais": [
-                15.0,
-                12.0,
-                12.0,
-                13.0
-            ],
-            "PC": [
-                18.0,
-                13.0,
-                7.0,
-                12.67
-            ],
-            "SVT": [
-                11.0,
-                19.0,
-                12.0,
-                14.0
-            ],
-            "HG": [
-                13.0,
-                15.0,
-                12.0,
-                13.33
-            ]
-        },
-        "Moyenne": 13.22
-    },
-    {
-        "CODE": "AKH014",
-        "Numero": "2021IJ3",
-        "Nom": "LEFRANC",
-        "Prénom": "LYDIE",
-        "Date de naissance": "04/06/01",
-        "Classe": "4èmeB",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AKH014",
-        "Numero": "1992I0E",
-        "Nom": "MAHMOUD",
-        "Prénom": "ABDERRAHMAN",
-        "Date de naissance": "12/12/99",
-        "Classe": "4èmeA",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                12.0,
-                8.0,
-                13.0,
-                10.0
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                9.0,
-                15.0,
-                10.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AKH014",
-        "Numero": "20L6TRA",
-        "Nom": "MIMOUNI",
-        "Prénom": "MIMOUNI",
-        "Date de naissance": "12/07/97",
+        "CODE": "AID011",
+        "Numero": "201305PG8",
+        "Nom": "DIAW",
+        "Prénom": "FARA",
+        "Date de naissance": "09/06/95",
         "Classe": "6eme A",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
+        "Note": "Français[12|14:15]#Anglais[16|18:19]#SVT[10|11:09]#HG[12|11:17]#Science_Physique[15|17:18]#Math[13|17:16]"
     },
     {
-        "CODE": "AKH014",
-        "Numero": "9OIM76T",
-        "Nom": "GALEA",
-        "Prénom": "EMILIE",
-        "Date de naissance": "04/07/94",
-        "Classe": "5eme A",
-        "Matieres": {
-            "MATH": [
-                18.0,
-                14.0,
-                20.0,
-                17.33
-            ],
-            "PC": [
-                12.0,
-                13.0,
-                15.0,
-                13.33
-            ],
-            "SVT": [
-                10.0,
-                13.0,
-                16.0,
-                13.0
-            ],
-            "FRANÇAIS": [
-                10.0,
-                11.0,
-                14.0,
-                11.67
-            ],
-            "ANGLAIS": [
-                11.0,
-                11.0,
-                20.0,
-                14.0
-            ],
-            "HG": [
-                10.0,
-                12.0,
-                14.0,
-                12.0
-            ]
-        },
-        "Moyenne": 13.55
+        "CODE": "AID011",
+        "Numero": "201307PG8",
+        "Nom": "NDIOUR",
+        "Prénom": "LEMOU",
+        "Date de naissance": "12/07/96",
+        "Classe": "3eme A",
+        "Note": "PC[11:9]# Math[12|14,5|11:13] #Francais[14|12:13] #Anglais[12,8:15] #SVT[10|9|16|13:12] #HG[10:16]"
     },
     {
-        "CODE": "AKH014",
-        "Numero": "30NB45E",
-        "Nom": "HAMAMA",
-        "Prénom": "MAVEL",
-        "Date de naissance": "07/01/98",
+        "CODE": "AID011",
+        "Numero": "201301PFT",
+        "Nom": "FAYE",
+        "Prénom": "BIRAM",
+        "Date de naissance": "23/03/99",
         "Classe": "3eme B",
-        "Matieres": {
-            "MATH": [
-                11.0,
-                14.0,
-                20.0,
-                15.0
-            ],
-            "PC": [
-                12.0,
-                13.0,
-                15.0,
-                13.33
-            ],
-            "SVT": [
-                10.0,
-                13.0,
-                16.0,
-                13.0
-            ],
-            "FRANÇAIS": [
-                10.0,
-                11.0,
-                14.0,
-                11.67
-            ],
-            "ANGLAIS": [
-                11.0,
-                11.0,
-                20.0,
-                14.0
-            ],
-            "HG": [
-                10.0,
-                12.0,
-                14.0,
-                12.0
-            ]
-        },
-        "Moyenne": 13.17
+        "Note": "PC[11:9]# Math[12|14,5|11:13] #Francais[14|12:13] #Anglais[12,8:15] #SVT[10|9|16|13:12] #HG[10:16]"
     },
     {
-        "CODE": "ALT020",
-        "Numero": "CIDIE01",
-        "Nom": "CISSE",
-        "Prénom": "Diégane",
-        "Date de naissance": "02/05/32",
-        "Classe": "5emeA",
-        "Matieres": {
-            "MATH": [
-                15.0,
-                17.0,
-                20.0,
-                17.33
-            ],
-            "SVT": [
-                11.0,
-                13.0,
-                10.0,
-                11.33
-            ],
-            "PC": [
-                15.0,
-                12.0,
-                15.0,
-                14.0
-            ],
-            "ANGLAIS": [
-                5.0,
-                12.0,
-                15.0,
-                10.67
-            ],
-            "FRANCAIS": [
-                6.0,
-                11.0,
-                9.0,
-                8.67
-            ],
-            "HG": [
-                1.0,
-                15.0,
-                18.0,
-                11.33
-            ],
-            "": [
-                11.33
-            ]
-        },
-        "Moyenne": 10.48
-    },
-    {
-        "CODE": "ALT020",
-        "Numero": "MN45LD5",
-        "Nom": "SENGHOR",
-        "Prénom": "Mbegane",
-        "Date de naissance": "12/05/68",
-        "Classe": "4emeA",
-        "Matieres": {
-            "MATH": [
-                19.0,
-                4.0,
-                8.0,
-                10.33
-            ],
-            "SVT": [
-                12.0,
-                5.0,
-                16.0,
-                11.0
-            ],
-            "PC": [
-                7.0,
-                13.0,
-                9.0,
-                9.67
-            ],
-            "ANGLAIS": [
-                13.0,
-                17.0,
-                14.0,
-                14.67
-            ],
-            "FRANCAIS": [
-                19.0,
-                17.0,
-                11.0,
-                15.67
-            ],
-            "HG": [
-                15.0,
-                11.0,
-                12.0,
-                12.67
-            ],
-            "": [
-                12.67
-            ]
-        },
-        "Moyenne": 10.57
-    },
-    {
-        "CODE": "ALT020",
-        "Numero": "KF578FG",
-        "Nom": "MARA",
-        "Prénom": "Souma",
-        "Date de naissance": "17,11,1921",
-        "Classe": "3emeA",
-        "Matieres": {
-            "MATH": [
-                11.0,
-                14.0,
-                16.0,
-                13.67
-            ],
-            "SVT": [
-                7.0,
-                16.0,
-                20.0,
-                14.33
-            ],
-            "PC": [
-                14.0,
-                12.0,
-                17.0,
-                14.33
-            ],
-            "ANGLAIS": [
-                11.0,
-                6.0,
-                15.0,
-                10.67
-            ],
-            "FRANCAIS": [
-                16.0,
-                11.0,
-                9.0,
-                12.0
-            ],
-            "HG": [
-                8.0,
-                16.0,
-                10.0,
-                11.33
-            ],
-            "": [
-                11.33
-            ]
-        },
-        "Moyenne": 10.9
-    },
-    {
-        "CODE": "ALT020",
-        "Numero": "JROÙ457",
-        "Nom": "CONDOUL",
-        "Prénom": "Sangoul",
-        "Date de naissance": "07|06|1945",
-        "Classe": "6emeA",
-        "Matieres": {
-            "MATH": [
-                15.0,
-                10.0,
-                19.0,
-                14.67
-            ],
-            "SVT": [
-                16.0,
-                13.0,
-                19.0,
-                16.0
-            ],
-            "PC": [
-                16.0,
-                13.0,
-                10.0,
-                13.0
-            ],
-            "ANGLAIS": [
-                15.0,
-                2.0,
-                16.0,
-                11.0
-            ],
-            "FRANCAIS": [
-                15.0,
-                20.0,
-                11.0,
-                15.33
-            ],
-            "HG": [
-                12.0,
-                13.0,
-                11.0,
-                12.0
-            ],
-            "": [
-                12.0
-            ]
-        },
-        "Moyenne": 11.71
-    },
-    {
-        "CODE": "ALT020",
-        "Numero": "VF14HGZ",
-        "Nom": "TAMBEDOU",
-        "Prénom": "NiouKH",
-        "Date de naissance": "18/12/99",
-        "Classe": "4emeB",
-        "Matieres": {
-            "MATH": [
-                10.0,
-                12.0,
-                11.0,
-                11.0
-            ],
-            "SVT": [
-                5.0,
-                7.0,
-                11.0,
-                7.67
-            ],
-            "PC": [
-                15.0,
-                5.0,
-                9.0,
-                9.67
-            ],
-            "ANGLAIS": [
-                11.0,
-                16.0,
-                15.0,
-                14.0
-            ],
-            "FRANCAIS": [
-                16.0,
-                11.0,
-                19.0,
-                15.33
-            ],
-            "HG": [
-                11.0,
-                10.0,
-                18.0,
-                13.0
-            ],
-            "": [
-                13.0
-            ]
-        },
-        "Moyenne": 10.1
-    },
-    {
-        "CODE": "ALT020",
-        "Numero": "RTOP15K",
-        "Nom": "SARR",
-        "Prénom": "Mbissine",
-        "Date de naissance": "01/12/96",
-        "Classe": "5emeB",
-        "Matieres": {
-            "MATH": [
-                16.0,
-                16.0,
-                15.0,
-                15.67
-            ],
-            "SVT": [
-                10.0,
-                13.0,
-                16.0,
-                13.0
-            ],
-            "PC": [
-                10.0,
-                14.0,
-                18.0,
-                14.0
-            ],
-            "ANGLAIS": [
-                15.0,
-                14.0,
-                15.0,
-                14.67
-            ],
-            "FRANCAIS": [
-                11.0,
-                11.0,
-                16.0,
-                12.67
-            ],
-            "HG": [
-                19.0,
-                16.0,
-                12.0,
-                15.67
-            ],
-            "": [
-                15.67
-            ]
-        },
-        "Moyenne": 12.24
-    },
-    {
-        "CODE": "ALT020",
-        "Numero": "FYHE142",
+        "CODE": "AID011",
+        "Numero": "201308PG7",
         "Nom": "DIOUF",
-        "Prénom": "MBathiou",
-        "Date de naissance": "14-25-13",
-        "Classe": "6emeB",
-        "Matieres": {
-            "MATH": [
-                13.0,
-                18.0,
-                16.0,
-                15.67
-            ],
-            "SVT": [
-                18.0,
-                19.0,
-                20.0,
-                19.0
-            ],
-            "PC": [
-                17.0,
-                13.0,
-                14.0,
-                14.67
-            ],
-            "ANGLAIS": [
-                15.0,
-                12.0,
-                14.0,
-                13.67
-            ],
-            "FRANCAIS": [
-                9.0,
-                1.0,
-                19.0,
-                9.67
-            ],
-            "HG": [
-                16.0,
-                11.0,
-                15.0,
-                14.0
-            ],
-            "": [
-                14.0
-            ]
-        },
-        "Moyenne": 12.38
-    },
-    {
-        "CODE": "ALT020",
-        "Numero": "HGKE145",
-        "Nom": "DEME",
-        "Prénom": "Ndew",
-        "Date de naissance": "15/02/56",
-        "Classe": "6emeB",
-        "Matieres": {
-            "MATH": [
-                15.0,
-                15.0,
-                16.0,
-                15.33
-            ],
-            "SVT": [
-                17.0,
-                14.0,
-                15.0,
-                15.33
-            ],
-            "PC": [
-                19.0,
-                12.0,
-                14.0,
-                15.0
-            ],
-            "ANGLAIS": [
-                12.0,
-                10.0,
-                11.0,
-                11.0
-            ],
-            "FRANCAIS": [
-                16.0,
-                13.0,
-                14.0,
-                14.33
-            ],
-            "HG": [
-                13.0,
-                12.0,
-                14.0,
-                13.0
-            ],
-            "": [
-                13.0
-            ]
-        },
-        "Moyenne": 12.0
-    },
-    {
-        "CODE": "ALT020",
-        "Numero": "54BFH54",
-        "Nom": "KOITA",
-        "Prénom": "Fatou",
-        "Date de naissance": "15/11/78",
-        "Classe": "4emeB",
-        "Matieres": {
-            "MATH": [
-                14.0,
-                17.0,
-                16.0,
-                15.67
-            ],
-            "SVT": [
-                15.0,
-                19.0,
-                13.0,
-                15.67
-            ],
-            "PC": [
-                15.0,
-                16.0,
-                19.0,
-                16.67
-            ],
-            "ANGLAIS": [
-                13.0,
-                19.0,
-                16.0,
-                16.0
-            ],
-            "FRANCAIS": [
-                10.0,
-                11.0,
-                11.0,
-                10.67
-            ],
-            "HG": [
-                13.0,
-                14.0,
-                11.0,
-                12.67
-            ],
-            "": [
-                12.67
-            ]
-        },
-        "Moyenne": 12.48
-    },
-    {
-        "CODE": "ALT020",
-        "Numero": "DF85FUJ",
-        "Nom": "LABOU",
-        "Prénom": "Pon",
-        "Date de naissance": "17/06/02",
-        "Classe": "5emeA",
-        "Matieres": {
-            "MATH": [
-                15.0,
-                17.0,
-                20.0,
-                17.33
-            ],
-            "SVT": [
-                11.0,
-                9.0,
-                13.0,
-                11.0
-            ],
-            "PC": [
-                18.0,
-                17.0,
-                5.0,
-                13.33
-            ],
-            "ANGLAIS": [
-                15.0,
-                12.0,
-                15.0,
-                14.0
-            ],
-            "FRANCAIS": [
-                16.0,
-                11.0,
-                19.0,
-                15.33
-            ],
-            "HG": [
-                11.0,
-                15.0,
-                18.0,
-                14.67
-            ],
-            "": [
-                14.67
-            ]
-        },
-        "Moyenne": 12.24
-    },
-    {
-        "CODE": "AMB001",
-        "Numero": "12889HI",
-        "Nom": "CAMARA",
-        "Prénom": "KAMOU",
-        "Date de naissance": "03/01/00",
-        "Classe": "6eme A",
-        "Matieres": {
-            "MATH": [
-                12.0,
-                14.0,
-                20.0,
-                15.33
-            ],
-            "PC": [
-                12.0,
-                13.0,
-                15.0,
-                13.33
-            ],
-            "SVT": [
-                10.0,
-                13.0,
-                16.0,
-                13.0
-            ],
-            "FRANÇAIS": [
-                10.0,
-                11.0,
-                14.0,
-                11.67
-            ],
-            "ANGLAIS": [
-                11.0,
-                11.0,
-                20.0,
-                14.0
-            ],
-            "HG": [
-                10.0,
-                12.0,
-                14.0,
-                12.0
-            ]
-        },
-        "Moyenne": 13.22
-    },
-    {
-        "CODE": "AMB001",
-        "Numero": "19937HH",
-        "Nom": "JANN",
-        "Prénom": "KABOU",
-        "Date de naissance": "08/01/00",
-        "Classe": "6eme A",
-        "Matieres": {
-            "MATH": [
-                17.0,
-                14.0,
-                20.0,
-                17.0
-            ],
-            "PC": [
-                12.0,
-                13.0,
-                15.0,
-                13.33
-            ],
-            "SVT": [
-                10.0,
-                13.0,
-                16.0,
-                13.0
-            ],
-            "FRANÇAIS": [
-                10.0,
-                11.0,
-                14.0,
-                11.67
-            ],
-            "ANGLAIS": [
-                11.0,
-                11.0,
-                20.0,
-                14.0
-            ],
-            "HG": [
-                10.0,
-                12.0,
-                14.0,
-                12.0
-            ]
-        },
-        "Moyenne": 13.5
-    },
-    {
-        "CODE": "AMD013",
-        "Numero": "E7812Z3",
-        "Nom": "DIOP",
         "Prénom": "ALY",
-        "Date de naissance": "12/04/98",
-        "Classe": "5emA",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                14.0,
-                12.0,
-                10.0,
-                12.0,
-                12.0
-            ],
-            "PC": [
-                12.0,
-                9.0,
-                12.0,
-                11.0
-            ],
-            "Francais": [
-                14.0,
-                15.0,
-                14.5
-            ],
-            "SVT": [
-                16.0,
-                17.0,
-                16.5
-            ],
-            "HG": [
-                12.0,
-                16.0,
-                14.0,
-                14.0
-            ],
-            "Anglais": [
-                13.0,
-                10.0,
-                11.0,
-                11.33
-            ]
-        },
-        "Moyenne": 11.33
+        "Date de naissance": "22/05/98",
+        "Classe": "5eme C",
+        "Note": "PC[11:9]# Math[12|14,5|11:13] #Francais[4|11:13] #Anglais[13,8:15] #SVT[12|9|16|11:12] #HG[11:13]"
     },
     {
-        "CODE": "AMD013",
-        "Numero": "Z781263",
+        "CODE": "AID011",
+        "Numero": "201306PH3",
+        "Nom": "DIOP",
+        "Prénom": "DABA",
+        "Date de naissance": "24/09/99",
+        "Classe": "3eme D",
+        "Note": "Math[10|11:15] #Francais[7|12|8:13] #Anglais[13,5|9:15] #PC[11:9] #SVT[12|9|16|11:12] #HG[10:13]"
+    },
+    {
+        "CODE": "AID011",
+        "Numero": "201302PL6",
+        "Nom": "DIENE",
+        "Prénom": "DALY",
+        "Date de naissance": "12/10/97",
+        "Classe": "4eme B",
+        "Note": "PC[11:9]# Math[12|14,5|11:13] #Francais[4|11:13] #Anglais[13,8:15] #SVT[12|9|16|11:12] #HG[11:13]"
+    },
+    {
+        "CODE": "AID011",
+        "Numero": "201305PY9",
+        "Nom": "FALL",
+        "Prénom": "ABOU",
+        "Date de naissance": "23-decembre-1994",
+        "Classe": "5eme D",
+        "Note": "#Math[14|12|10:12] #PC[12|9:12] #Francais[14:15] #SVT[16:17] #HG[12|16:14] #Anglais[13|10:11]"
+    },
+    {
+        "CODE": "AID011",
+        "Numero": "201306PT4",
         "Nom": "FAYE",
-        "Prénom": "FATOU",
-        "Date de naissance": "12/04/97",
-        "Classe": "6emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                13.0,
-                12.0,
-                13.0,
-                12.67
-            ],
-            "PC": [
-                10.0,
-                9.0,
-                19.0,
-                12.67
-            ],
-            "Francais": [
-                4.0,
-                10.0,
-                7.0
-            ],
-            "SVT": [
-                12.0,
-                19.0,
-                7.0,
-                12.67
-            ],
-            "HG": [
-                12.0,
-                10.0,
-                14.0,
-                12.0
-            ],
-            "Anglais": [
-                3.0,
-                13.0,
-                15.0,
-                10.33
-            ]
-        },
-        "Moyenne": 9.62
+        "Prénom": "SIDI",
+        "Date de naissance": "12/11/93",
+        "Classe": "3eme A",
+        "Note": "PC[11:9]# Math[12|14,5|11:13] #Francais[4|11:13] #Anglais[13,8:15] #SVT[12|9|16|11:12] #HG[11:13]"
     },
     {
-        "CODE": "AMD013",
-        "Numero": "Z7812Z3",
-        "Nom": "DIOUF",
-        "Prénom": "MALICK",
-        "Date de naissance": "05:42:18",
-        "Classe": "4emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "HG": [
-                11.0,
-                15.0,
-                18.0,
-                14.67
-            ],
-            "PC": [
-                15.0,
-                18.0,
-                16.5
-            ],
-            "Francais": [
-                12.0,
-                13.0,
-                11.0,
-                12.0
-            ],
-            "SVT": [
-                13.0,
-                14.0,
-                15.0,
-                14.0
-            ],
-            "Math": [
-                11.0,
-                16.0,
-                13.5
-            ],
-            "Anglais": [
-                11.0,
-                14.0,
-                16.0,
-                13.67
-            ]
-        },
-        "Moyenne": 12.05
+        "CODE": "AID011",
+        "Numero": "201301PB7",
+        "Nom": "SENE",
+        "Prénom": "DOMINIQUE",
+        "Date de naissance": "24/01/98",
+        "Classe": "3eme A",
+        "Note": "Math[10|14,5|11|15:17] #PC[11:9] #Francais[16|11:13] #SVT[12|9|14|11:12] #HG[15:11] #Anglais[13,5:15]"
     },
     {
-        "CODE": "AMD013",
-        "Numero": "Z7812Z5",
-        "Nom": "DIOUM",
-        "Prénom": "ALIOUNE",
-        "Date de naissance": "12,12,2011",
-        "Classe": "3emB",
-        "Matieres": {
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                4.0,
-                11.0,
-                13.0,
-                9.33
-            ],
-            "Anglais": [
-                13.0,
-                8.0,
-                15.0,
-                12.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                11.0,
-                13.0,
-                12.0
-            ]
-        },
-        "Moyenne": 11.05
-    },
-    {
-        "CODE": "AMD013",
-        "Numero": "Z7812Z9",
+        "CODE": "AID011",
+        "Numero": "201309OD3",
         "Nom": "NDIAYE",
-        "Prénom": "MOUSSA",
-        "Date de naissance": "12 03 1999",
-        "Classe": "3emA",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                9.0,
-                8.0,
-                13.0,
-                9.25
-            ],
-            "Anglais": [
-                10.0,
-                5.0,
-                9.0,
-                15.0,
-                9.75
-            ],
-            "PC": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "SVT": [
-                12.0,
-                11.0,
-                16.0,
-                8.0,
-                12.0,
-                11.8
-            ],
-            "HG": [
-                10.0,
-                10.0,
-                10.0
-            ]
-        },
-        "Moyenne": 10.55
+        "Prénom": "SALIF",
+        "Date de naissance": "26/06/96",
+        "Classe": "4eme c",
+        "Note": "Math[10|11:15] #Francais[7|9|8:13] #Anglais[10,5|9:15] #PC[10:11] #SVT[12|11|16|8:12] #HG[10:10]"
     },
     {
-        "CODE": "AMD013",
-        "Numero": "Z7852Z3",
-        "Nom": "FALL",
-        "Prénom": "MOUSTAPHA",
-        "Date de naissance": "09/09/12",
-        "Classe": "6emB",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                9.0,
-                8.0,
-                13.0,
-                9.25
-            ],
-            "Anglais": [
-                10.0,
-                5.0,
-                9.0,
-                15.0,
-                9.75
-            ],
-            "PC": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "SVT": [
-                12.0,
-                11.0,
-                16.0,
-                8.0,
-                12.0,
-                11.8
-            ],
-            "HG": [
-                10.0,
-                10.0,
-                10.0
-            ]
-        },
-        "Moyenne": 10.55
+        "CODE": "AKH014",
+        "Numero": "R456T7O",
+        "Nom": "FAURE",
+        "Prénom": "JULIE",
+        "Date de naissance": "12/11/00",
+        "Classe": "6èmeG",
+        "Note": "Math[20|19.5:05] #Francais[13|16:14] #Anglais[17|19:17] #PC[14|13:17] #SVT[12|19:10] #HG[16|19:17]"
     },
     {
-        "CODE": "AMD013",
-        "Numero": "Z7812Z7",
+        "CODE": "AKH014",
+        "Numero": "PO0023R",
+        "Nom": "DUPASQUIER",
+        "Prénom": "ERIC",
+        "Date de naissance": "02/09/90",
+        "Classe": "3èmeC",
+        "Note": "Math[20|18:18] #Francais[12|14|14:13] #Anglais[15,16|16:14] #PC[17:18]  #SVT[14|15|15|16:14]  #HG[13:16]"
+    },
+    {
+        "CODE": "AKH014",
+        "Numero": "54FR342",
+        "Nom": "Kamou",
+        "Prénom": "LAYE",
+        "Date de naissance": "04/03/20",
+        "Classe": "5eme C",
+        "Note": "Math[04|03:05] #Francais[15|16:14] #Anglais[15|16:17] #PC[04|03:07] #SVT[12|09:10] #HG[16|15:17]"
+    },
+    {
+        "CODE": "AKH014",
+        "Numero": "8987BHT",
         "Nom": "MBAYE",
-        "Prénom": "IDRISSA",
-        "Date de naissance": "15 05 2011",
-        "Classe": "4emA",
-        "Matieres": {
-            "SVT": [
-                15.0,
-                11.0,
-                11.0,
-                12.0,
-                12.25
-            ],
-            "HG": [
-                6.0,
-                14.0,
-                16.0,
-                12.0
-            ],
-            "Math": [
-                10.0,
-                12.0,
-                19.0,
-                11.0,
-                16.0,
-                13.6
-            ],
-            "Francais": [
-                18.0,
-                11.0,
-                15.0,
-                14.67
-            ],
-            "Anglais": [
-                8.0,
-                15.0,
-                15.0,
-                12.67
-            ],
-            "PC": [
-                7.0,
-                11.0,
-                9.0,
-                9.0,
-                9.0
-            ]
-        },
-        "Moyenne": 12.37
+        "Prénom": "IBOU",
+        "Date de naissance": "03/01/00",
+        "Classe": "3eme D",
+        "Note": "SVT[12|20:19] #PC[13|16:19] #Francais[24|15:12] #SVT[12|18:16] #Anglais[17|19:11] #HG[00|07:02] #Math[11|13:14]"
     },
     {
-        "CODE": "AMD013",
-        "Numero": "Z7312Z3",
-        "Nom": "TINE",
-        "Prénom": "SEYDOU",
-        "Date de naissance": "03/09/00",
-        "Classe": "5emA",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                12.0,
-                8.0,
-                13.0,
-                10.0
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                9.0,
-                15.0,
-                10.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMD013",
-        "Numero": "Z7832Z3",
-        "Nom": "SANE",
-        "Prénom": "MOUSSA",
-        "Date de naissance": "29/12/01",
-        "Classe": "5emA",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                11.0,
-                11.0,
-                12.0,
-                11.33
-            ],
-            "PC": [
-                11.0,
-                11.0,
-                12.0,
-                11.33
-            ],
-            "ANGLAIS": [
-                10.0,
-                14.0,
-                15.0,
-                13.0
-            ],
-            "SVT": [
-                11.0,
-                1.0,
-                14.0,
-                8.67
-            ],
-            "HG": [
-                11.0,
-                13.0,
-                14.0,
-                12.67
-            ],
-            "Francais": [
-                11.0,
-                15.0,
-                12.0,
-                12.67
-            ]
-        },
-        "Moyenne": 9.95
-    },
-    {
-        "CODE": "AMD013",
-        "Numero": "Z8812Z3",
-        "Nom": "TOURE",
-        "Prénom": "OUMAR",
-        "Date de naissance": "29/11/01",
-        "Classe": "5emB",
-        "Matieres": {
-            "Math": [
-                9.0,
-                10.0,
-                5.0,
-                10.0,
-                13.0,
-                12.0,
-                9.83
-            ],
-            "PC": [
-                12.0,
-                19.0,
-                15.5
-            ],
-            "Francais": [
-                10.0,
-                11.0,
-                13.0,
-                11.33
-            ],
-            "SVT": [
-                15.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.6
-            ],
-            "HG": [
-                13.0,
-                13.0,
-                13.0
-            ],
-            "Anglais": [
-                11.0,
-                12.0,
-                15.0,
-                12.67
-            ]
-        },
-        "Moyenne": 12.49
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA001",
-        "Nom": "FAYE",
-        "Prénom": "FATOU",
-        "Date de naissance": "12/04/93",
-        "Classe": "6emA",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA002",
-        "Nom": "GAYE",
-        "Prénom": "THIERNO",
-        "Date de naissance": "14/02/92",
-        "Classe": "6emB",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA003",
-        "Nom": "DIOP",
-        "Prénom": "YOUSSOU",
-        "Date de naissance": "12/06/94",
-        "Classe": "5emA",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA004",
-        "Nom": "WAGNE",
-        "Prénom": "PETIT",
-        "Date de naissance": "12/07/95",
-        "Classe": "5emB",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA005",
-        "Nom": "CISSE",
-        "Prénom": "GALAYE",
-        "Date de naissance": "04/03/95",
-        "Classe": "4emA",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA006",
-        "Nom": "GOMIS",
-        "Prénom": "PATA",
-        "Date de naissance": "01/06/97",
-        "Classe": "4emB",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA007",
-        "Nom": "SANE ",
-        "Prénom": "BALLA",
-        "Date de naissance": "09/09/99",
-        "Classe": "3emA",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA008",
-        "Nom": "SAGNA",
-        "Prénom": "SADIO",
-        "Date de naissance": "06/06/99",
-        "Classe": "3emB",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA009",
-        "Nom": "NIANG",
-        "Prénom": "MAREME",
-        "Date de naissance": "12/12/96",
-        "Classe": "6emA",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMG015",
-        "Numero": "SONA010",
-        "Nom": "FALL",
-        "Prénom": "KHADY",
-        "Date de naissance": "07-06-199Ç",
-        "Classe": "6emB",
-        "Matieres": {
-            "Math": [
-                4.0,
-                3.0,
-                5.0,
-                4.0
-            ],
-            "Francais": [
-                15.0,
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                15.0,
-                16.0,
-                17.0,
-                16.0
-            ],
-            "PC": [
-                4.0,
-                3.0,
-                7.0,
-                4.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                10.0,
-                10.33
-            ],
-            "HG": [
-                16.0,
-                15.0,
-                17.0,
-                16.0
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "AMK016",
-        "Numero": "A7723ML",
-        "Nom": "Kane",
+        "CODE": "AMB001",
+        "Numero": "101465876kj",
+        "Nom": "Gueye",
         "Prénom": "Moussa",
-        "Date de naissance": "29/12/01",
-        "Classe": "6emA",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                14.0,
-                12.0,
-                10.0,
-                12.0,
-                12.0
-            ],
-            "PC": [
-                12.0,
-                9.0,
-                12.0,
-                11.0
-            ],
-            "Francais": [
-                14.0,
-                15.0,
-                14.5
-            ],
-            "SVT": [
-                16.0,
-                17.0,
-                16.5
-            ],
-            "HG": [
-                12.0,
-                16.0,
-                14.0,
-                14.0
-            ],
-            "Anglais": [
-                13.0,
-                10.0,
-                11.0,
-                11.33
-            ]
-        },
-        "Moyenne": 11.33
+        "Date de naissance": "01/01/00",
+        "Classe": " 6eme A",
+        "Note": "MATH[10|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
     },
     {
-        "CODE": "AMK016",
-        "Numero": "Z7812Z3",
-        "Nom": "Konimba",
-        "Prénom": "Mousona",
-        "Date de naissance": "12 12 2009",
-        "Classe": "3emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                12.0,
-                10.0,
-                19.0,
-                13.67
-            ],
-            "PC": [
-                12.0,
-                12.0,
-                12.0
-            ],
-            "Francais": [
-                14.0,
-                15.0,
-                12.0,
-                19.0,
-                15.0
-            ],
-            "SVT": [
-                16.0,
-                18.0,
-                17.0,
-                17.0
-            ],
-            "HG": [
-                18.0,
-                14.0,
-                16.0
-            ],
-            "Anglais": [
-                18.0,
-                11.0,
-                14.5
-            ]
-        },
-        "Moyenne": 12.6
-    },
-    {
-        "CODE": "AMK016",
-        "Numero": "M770231",
-        "Nom": "Ilimani",
-        "Prénom": "Mustapha",
-        "Date de naissance": "12/04/97",
-        "Classe": "3emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                10.0,
-                12.0,
-                12.0,
-                11.33
-            ],
-            "PC": [
-                13.0,
-                19.0,
-                10.0,
-                14.0
-            ],
-            "Francais": [
-                19.0,
-                12.0,
-                10.0,
-                13.67
-            ],
-            "SVT": [
-                11.0,
-                16.0,
-                17.0,
-                14.67
-            ],
-            "HG": [
-                11.0,
-                13.0,
-                19.0,
-                14.33
-            ],
-            "Anglais": [
-                11.0,
-                19.0,
-                18.0,
-                16.0
-            ]
-        },
-        "Moyenne": 12.0
-    },
-    {
-        "CODE": "AMK016",
-        "Numero": "K771427",
-        "Nom": "Sy",
-        "Prénom": "Malick",
-        "Date de naissance": "05:42:18",
-        "Classe": "6emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                11.0,
-                19.0,
-                14.0
-            ],
-            "PC": [
-                10.0,
-                11.0,
-                13.0,
-                11.33
-            ],
-            "Francais": [
-                10.0,
-                12.0,
-                11.0
-            ],
-            "SVT": [
-                13.0,
-                19.0,
-                16.0
-            ],
-            "HG": [
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                10.0,
-                17.0,
-                17.0,
-                14.67
-            ]
-        },
-        "Moyenne": 11.71
-    },
-    {
-        "CODE": "AMK016",
-        "Numero": "JH23GH3",
-        "Nom": "Loum",
-        "Prénom": "Mamadou",
-        "Date de naissance": "12,12,2011",
-        "Classe": "3emA",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                13.0,
-                12.0,
-                13.0,
-                12.67
-            ],
-            "PC": [
-                10.0,
-                9.0,
-                19.0,
-                12.67
-            ],
-            "Francais": [
-                4.0,
-                10.0,
-                7.0
-            ],
-            "SVT": [
-                12.0,
-                19.0,
-                7.0,
-                12.67
-            ],
-            "HG": [
-                12.0,
-                10.0,
-                14.0,
-                12.0
-            ],
-            "Anglais": [
-                3.0,
-                13.0,
-                15.0,
-                10.33
-            ]
-        },
-        "Moyenne": 9.62
-    },
-    {
-        "CODE": "AMK016",
-        "Numero": "SX34AZ2",
-        "Nom": "Gaye",
-        "Prénom": "Souleyni",
-        "Date de naissance": "12 03 1999",
-        "Classe": "6emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                10.0,
-                19.0,
-                10.0,
-                10.0,
-                12.25
-            ],
-            "PC": [
-                10.0,
-                9.0,
-                10.0,
-                9.67
-            ],
-            "Francais": [
-                10.0,
-                13.0,
-                11.5
-            ],
-            "SVT": [
-                16.0,
-                10.0,
-                17.0,
-                14.33
-            ],
-            "HG": [
-                2.0,
-                16.0,
-                13.0,
-                10.33
-            ],
-            "Anglais": [
-                10.0,
-                11.0,
-                12.0,
-                11.0
-            ]
-        },
-        "Moyenne": 9.87
-    },
-    {
-        "CODE": "AMK016",
-        "Numero": "E9D45JJ",
-        "Nom": "Hann",
-        "Prénom": "Cheikh",
-        "Date de naissance": "09/09/12",
-        "Classe": "3emA",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                13.0,
-                11.0,
-                13.0,
-                12.33
-            ],
-            "PC": [
-                13.0,
-                19.0,
-                14.0,
-                15.33
-            ],
-            "Francais": [
-                12.0,
-                14.0,
-                14.0,
-                13.33
-            ],
-            "SVT": [
-                15.0,
-                19.0,
-                15.0,
-                16.33
-            ],
-            "HG": [
-                10.0,
-                18.0,
-                13.0,
-                13.67
-            ],
-            "Anglais": [
-                11.0,
-                12.0,
-                11.0,
-                20.0,
-                13.5
-            ]
-        },
-        "Moyenne": 12.07
-    },
-    {
-        "CODE": "AMK016",
-        "Numero": "HIE938J",
-        "Nom": "Kane",
-        "Prénom": "Aliou",
-        "Date de naissance": "15 05 2011",
-        "Classe": "6emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                20.0,
-                20.0,
-                20.0,
-                20.0,
-                20.0
-            ],
-            "PC": [
-                20.0,
-                20.0,
-                20.0,
-                20.0
-            ],
-            "Francais": [
-                14.0,
-                12.0,
-                15.0,
-                13.67
-            ],
-            "SVT": [
-                19.0,
-                19.0,
-                19.0,
-                19.0
-            ],
-            "HG": [
-                7.0,
-                1.0,
-                10.0,
-                6.0
-            ],
-            "Anglais": [
-                6.0,
-                13.0,
-                13.0,
-                10.67
-            ]
-        },
-        "Moyenne": 12.76
-    },
-    {
-        "CODE": "AMK016",
-        "Numero": "23JHNB2",
-        "Nom": "Ngimbona",
-        "Prénom": "Charles",
-        "Date de naissance": "03/09/00",
-        "Classe": "3emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                11.0,
-                10.0,
-                9.0,
-                11.0,
-                10.25
-            ],
-            "PC": [
-                11.0,
-                11.0,
-                9.0,
-                11.0,
-                10.5
-            ],
-            "Francais": [
-                18.0,
-                19.0,
-                19.0,
-                17.0,
-                18.25
-            ],
-            "SVT": [
-                1.0,
-                11.0,
-                6.0
-            ],
-            "HG": [
-                19.0,
-                19.0,
-                19.0
-            ],
-            "Anglais": [
-                19.0,
-                17.0,
-                19.0,
-                18.33
-            ]
-        },
-        "Moyenne": 11.76
-    },
-    {
-        "CODE": "AMK016",
-        "Numero": "HJ293D4",
-        "Nom": "Ikouna",
-        "Prénom": "Mbalanga",
-        "Date de naissance": "01 01 2001",
-        "Classe": "3emA",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                13.0,
-                12.0,
-                10.0,
-                12.0,
-                11.75
-            ],
-            "PC": [
-                12.0,
-                9.0,
-                12.0,
-                11.0
-            ],
-            "Francais": [
-                14.0,
-                15.0,
-                14.5
-            ],
-            "SVT": [
-                16.0,
-                17.0,
-                16.5
-            ],
-            "HG": [
-                12.0,
-                16.0,
-                14.0,
-                14.0
-            ],
-            "Anglais": [
-                13.0,
-                10.0,
-                11.0,
-                11.33
-            ]
-        },
-        "Moyenne": 11.3
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "DKZGS12",
-        "Nom": "diop",
-        "Prénom": "Ousmane",
-        "Date de naissance": "                        1 fev 2004",
-        "Classe": "        5emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                14.0,
-                10.0,
-                12.0,
-                12.0
-            ],
-            "PC": [
-                9.0,
-                12.0,
-                10.5
-            ],
-            "Francais": [
-                14.0,
-                14.0,
-                15.0,
-                14.33
-            ],
-            "SVT": [
-                16.0,
-                11.0,
-                17.0,
-                14.67
-            ],
-            "HG": [
-                16.0,
-                14.0,
-                15.0
-            ],
-            "Anglais": [
-                13.0,
-                10.0,
-                11.0,
-                11.33
-            ]
-        },
-        "Moyenne": 11.12
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "DLEDQDO",
-        "Nom": "ndiaye",
-        "Prénom": "abdou",
-        "Date de naissance": "21/03/05",
-        "Classe": "       4 emA",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "HG": [
-                11.0,
-                15.0,
-                18.0,
-                14.67
-            ],
-            "PC": [
-                15.0,
-                18.0,
-                16.5
-            ],
-            "Francais": [
-                12.0,
-                13.0,
-                11.0,
-                12.0
-            ],
-            "SVT": [
-                13.0,
-                14.0,
-                15.0,
-                14.0
-            ],
-            "Math": [
-                11.0,
-                16.0,
-                13.5
-            ],
-            "Anglais": [
-                11.0,
-                14.0,
-                16.0,
-                13.67
-            ]
-        },
-        "Moyenne": 12.05
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "XSDEF12",
-        "Nom": "gueye",
-        "Prénom": "fatou",
-        "Date de naissance": "03/04/05",
-        "Classe": "        4emB",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "HG": [
-                12.0,
-                11.0,
-                11.5
-            ],
-            "SVT": [
-                12.0,
-                10.0,
-                8.0,
-                10.0
-            ],
-            "Francais": [
-                14.0,
-                11.0,
-                4.0,
-                9.67
-            ],
-            "PC": [
-                10.0,
-                4.0,
-                9.0,
-                7.67
-            ],
-            "Math": [
-                18.0,
-                19.0,
-                18.5
-            ],
-            "Anglais": [
-                4.0,
-                8.0,
-                16.0,
-                9.33
-            ]
-        },
-        "Moyenne": 9.52
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "DEGLAC4",
-        "Nom": "fall",
-        "Prénom": "saly",
-        "Date de naissance": "06/12/07",
-        "Classe": "      6 em B",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "HG": [
-                13.0,
-                14.0,
-                13.5
-            ],
-            "SVT": [
-                14.0,
-                13.0,
-                18.0,
-                15.0
-            ],
-            "Francais": [
-                11.0,
-                12.0,
-                14.0,
-                12.33
-            ],
-            "PC": [
-                12.0,
-                14.0,
-                10.0,
-                12.0
-            ],
-            "Math": [
-                11.0,
-                12.0,
-                11.5
-            ],
-            "Anglais": [
-                14.0,
-                18.0,
-                1.0,
-                11.0
-            ]
-        },
-        "Moyenne": 10.76
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "DZFXML5",
-        "Nom": "Lo",
-        "Prénom": "amy",
-        "Date de naissance": "08/03/03",
-        "Classe": "      3 em A",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "HG": [
-                13.0,
-                14.0,
-                13.5
-            ],
-            "SVT": [
-                14.0,
-                13.0,
-                18.0,
-                15.0
-            ],
-            "Francais": [
-                11.0,
-                12.0,
-                14.0,
-                12.33
-            ],
-            "PC": [
-                12.0,
-                14.0,
-                10.0,
-                12.0
-            ],
-            "Math": [
-                11.0,
-                12.0,
-                11.5
-            ],
-            "Anglais": [
-                14.0,
-                18.0,
-                1.0,
-                11.0
-            ]
-        },
-        "Moyenne": 10.76
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "DZLSWQ7",
-        "Nom": "sambe",
-        "Prénom": "salif",
-        "Date de naissance": "18/03/04",
-        "Classe": "       3emA",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                14.0,
-                10.0,
-                12.0,
-                12.0
-            ],
-            "PC": [
-                14.0,
-                19.0,
-                12.0,
-                15.0
-            ],
-            "ANGLAIS": [
-                10.0,
-                14.0,
-                15.0,
-                13.0
-            ],
-            "SVT": [
-                15.0,
-                16.0,
-                11.0,
-                17.0,
-                14.75
-            ],
-            "HG": [
-                12.0,
-                16.0,
-                14.0,
-                14.0
-            ],
-            "Francais": [
-                15.0,
-                14.0,
-                18.0,
-                15.67
-            ]
-        },
-        "Moyenne": 12.06
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "LFNJESM",
-        "Nom": "sambou",
-        "Prénom": "jean",
-        "Date de naissance": "19/05/06",
-        "Classe": "       5em B",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "SVT": [
-                13.0,
-                15.0,
-                14.0
-            ],
-            "PC": [
-                19.0,
-                20.0,
-                19.5
-            ],
-            "Anglais": [
-                5.0,
-                9.0,
-                9.0,
-                7.67
-            ],
-            "Math": [
-                18.0,
-                16.0,
-                17.0,
-                17.0
-            ],
-            "HG": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "Francais": [
-                13.0,
-                12.0,
-                10.0,
-                11.67
-            ]
-        },
-        "Moyenne": 11.48
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "JHDHRE8",
-        "Nom": "sene",
-        "Prénom": "jeannette",
-        "Date de naissance": "20/12/07",
-        "Classe": "       6em B",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "Math": [
-                11.0,
-                11.0,
-                12.0,
-                11.33
-            ],
-            "PC": [
-                11.0,
-                11.0,
-                12.0,
-                11.33
-            ],
-            "ANGLAIS": [
-                10.0,
-                14.0,
-                15.0,
-                13.0
-            ],
-            "SVT": [
-                11.0,
-                1.0,
-                14.0,
-                8.67
-            ],
-            "HG": [
-                11.0,
-                13.0,
-                14.0,
-                12.67
-            ],
-            "Francais": [
-                11.0,
-                15.0,
-                12.0,
-                12.67
-            ]
-        },
-        "Moyenne": 9.95
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "JGRHFNE",
-        "Nom": "sy",
-        "Prénom": "pathe",
-        "Date de naissance": "31 1 2006",
-        "Classe": "       5 emA",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "SVT": [
-                12.0,
-                11.0,
-                11.5
-            ],
-            "PC": [
-                12.0,
-                11.0,
-                11.5
-            ],
-            "Anglais": [
-                15.0,
-                14.0,
-                12.0,
-                13.67
-            ],
-            "Math": [
-                13.0,
-                13.0,
-                13.0
-            ],
-            "HG": [
-                12.0,
-                14.0,
-                13.0
-            ],
-            "Francais": [
-                14.0,
-                11.0,
-                14.0,
-                13.0
-            ]
-        },
-        "Moyenne": 10.81
-    },
-    {
-        "CODE": "AOD010",
-        "Numero": "LSXNEB0",
-        "Nom": "gueye",
-        "Prénom": "modou",
-        "Date de naissance": "03/01/02",
-        "Classe": "       3em B",
-        "Matieres": {
-            "": [
-                0
-            ],
-            "SVT": [
-                13.0,
-                15.0,
-                14.0
-            ],
-            "PC": [
-                19.0,
-                20.0,
-                19.5
-            ],
-            "Anglais": [
-                5.0,
-                9.0,
-                9.0,
-                7.67
-            ],
-            "Math": [
-                18.0,
-                16.0,
-                17.0,
-                17.0
-            ],
-            "HG": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "Francais": [
-                13.0,
-                12.0,
-                10.0,
-                11.67
-            ]
-        },
-        "Moyenne": 11.48
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "OKYLDC8",
-        "Nom": "KANE",
-        "Prénom": "Ousmane",
-        "Date de naissance": "07/12/07",
-        "Classe": "4em A",
-        "Matieres": {
-            "Math": [
-                12.0,
-                10.0,
-                11.0,
-                11.0
-            ],
-            "SVT": [
-                9.0,
-                10.0,
-                8.0,
-                9.0
-            ],
-            "PC": [
-                6.0,
-                10.0,
-                10.0,
-                8.67
-            ],
-            "Français": [
-                15.0,
-                14.0,
-                15.0,
-                14.67
-            ],
-            "Anglais": [
-                17.0,
-                16.0,
-                19.0,
-                17.33
-            ]
-        },
-        "Moyenne": 12.13
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "DKBLMT7",
-        "Nom": "KONATE",
-        "Prénom": "Djiby",
-        "Date de naissance": "09/06/10",
-        "Classe": "6em B",
-        "Matieres": {
-            "Math": [
-                17.0,
-                15.0,
-                16.0
-            ],
-            "HG": [
-                15.0,
-                10.0,
-                14.0,
-                13.0
-            ],
-            "SVT": [
-                14.0,
-                15.0,
-                12.0,
-                13.67
-            ],
-            "Français": [
-                14.0,
-                15.0,
-                14.5
-            ],
-            "Anglais": [
-                19.0,
-                17.0,
-                18.0
-            ]
-        },
-        "Moyenne": 15.03
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "CMGBDK9",
-        "Nom": "MENDY",
-        "Prénom": "Christelle",
-        "Date de naissance": "11/10/06",
-        "Classe": "3em B",
-        "Matieres": {
-            "Math": [
-                14.0,
-                18.0,
-                16.0,
-                16.0
-            ],
-            "PC": [
-                17.0,
-                16.0,
-                16.5
-            ],
-            "SVT": [
-                15.0,
-                19.0,
-                17.0
-            ],
-            "Français": [
-                11.0,
-                9.0,
-                10.0,
-                10.0
-            ],
-            "HG": [
-                8.0,
-                5.0,
-                12.0,
-                8.33
-            ],
-            "Anglais": [
-                13.0,
-                15.0,
-                14.0
-            ]
-        },
-        "Moyenne": 13.64
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "YOSADK1",
-        "Nom": "OUEDRAOGO",
-        "Prénom": "Yankoba",
-        "Date de naissance": "15/02/09",
-        "Classe": "5em A",
-        "Matieres": {
-            "Math": [
-                10.0,
-                15.0,
-                12.5
-            ],
-            "SVT": [
-                12.0,
-                11.0,
-                14.0,
-                12.33
-            ],
-            "HG": [
-                13.0,
-                10.0,
-                15.0,
-                12.67
-            ],
-            "Anglais": [
-                12.0,
-                17.0,
-                14.5
-            ],
-            "Français": [
-                18.0,
-                14.0,
-                16.0,
-                16.0
-            ]
-        },
-        "Moyenne": 13.6
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "SFSADK2",
-        "Nom": "FALL",
-        "Prénom": "Salimata",
-        "Date de naissance": "02/08/10",
-        "Classe": "6em A",
-        "Matieres": {
-            "Math": [
-                13.0,
-                9.0,
-                11.0
-            ],
-            "SVT": [
-                12.0,
-                16.0,
-                10.0,
-                12.67
-            ],
-            "HG": [
-                17.0,
-                14.0,
-                15.0,
-                15.33
-            ],
-            "Anglais": [
-                18.0,
-                17.0,
-                17.5
-            ],
-            "Français": [
-                18.0,
-                15.0,
-                17.0,
-                16.67
-            ]
-        },
-        "Moyenne": 14.63
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "MDMTDK9",
-        "Nom": "DIOP",
-        "Prénom": "Mamy",
-        "Date de naissance": "25/09/05",
-        "Classe": "3em A",
-        "Matieres": {
-            "Math": [
-                9.0,
-                11.0,
-                13.0,
-                11.0,
-                11.0
-            ],
-            "PC": [
-                13.0,
-                10.0,
-                11.5
-            ],
-            "SVT": [
-                10.0,
-                15.0,
-                14.0,
-                12.0,
-                12.75
-            ],
-            "Anglais": [
-                12.0,
-                16.0,
-                14.0
-            ],
-            "Français": [
-                11.0,
-                13.0,
-                11.0,
-                11.67
-            ]
-        },
-        "Moyenne": 12.18
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "MTBFCA2",
-        "Nom": "TAPSOBA",
-        "Prénom": "Mounkoudy",
-        "Date de naissance": "08/12/08",
-        "Classe": "4em B",
-        "Matieres": {
-            "Anglais": [
-                12.0,
-                8.0,
-                10.0,
-                10.0
-            ],
-            "Math": [
-                15.0,
-                18.0,
-                20.0,
-                17.67
-            ],
-            "PC": [
-                10.0,
-                17.0,
-                16.0,
-                14.33
-            ],
-            "SVT": [
-                19.0,
-                15.0,
-                17.0,
-                17.0
-            ],
-            "HG": [
-                11.0,
-                14.0,
-                10.0,
-                11.67
-            ],
-            "Français": [
-                6.0,
-                9.0,
-                11.0,
-                8.67
-            ]
-        },
-        "Moyenne": 13.22
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "DDPADK7",
-        "Nom": "DIA",
-        "Prénom": "Dieynaba",
-        "Date de naissance": "01/05/08",
-        "Classe": "4em B",
-        "Matieres": {
-            "Math": [
-                10.0,
-                10.0,
-                9.0,
-                9.67
-            ],
-            "PC": [
-                12.0,
-                10.0,
-                12.0,
-                11.33
-            ],
-            "SVT": [
-                5.0,
-                10.0,
-                13.0,
-                9.33
-            ],
-            "Français": [
-                12.0,
-                16.0,
-                14.0,
-                14.0
-            ],
-            "Anglais": [
-                14.0,
-                16.0,
-                19.0,
-                16.33
-            ]
-        },
-        "Moyenne": 12.13
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "ADBMML5",
-        "Nom": "DIOGOSOUMA",
-        "Prénom": "Aliou",
-        "Date de naissance": "03/10/09",
-        "Classe": "5em B",
-        "Matieres": {
-            "Français": [
-                15.0,
-                12.0,
-                13.5
-            ],
-            "Anglais": [
-                16.0,
-                10.0,
-                16.0,
-                14.0
-            ],
-            "HG": [
-                12.0,
-                18.0,
-                15.0
-            ],
-            "SVT": [
-                17.0,
-                15.0,
-                16.0
-            ],
-            "Math": [
-                15.0,
-                13.0,
-                18.0,
-                15.33
-            ]
-        },
-        "Moyenne": 14.77
-    },
-    {
-        "CODE": "ASK017",
-        "Numero": "ABHLMY1",
-        "Nom": "BAOBEY",
-        "Prénom": "Angelline",
-        "Date de naissance": "18/03/06",
-        "Classe": "3em A",
-        "Matieres": {
-            "SVT": [
-                16.0,
-                10.0,
-                17.0,
-                14.33
-            ],
-            "Math": [
-                18.0,
-                15.0,
-                19.0,
-                17.33
-            ],
-            "PC": [
-                17.0,
-                12.0,
-                17.0,
-                15.33
-            ],
-            "Français": [
-                15.0,
-                13.0,
-                16.0,
-                14.67
-            ],
-            "HG": [
-                12.0,
-                10.0,
-                15.0,
-                12.33
-            ],
-            "Anglais": [
-                14.0,
-                18.0,
-                15.0,
-                15.67
-            ]
-        },
-        "Moyenne": 14.94
-    },
-    {
-        "CODE": "BAD008",
-        "Numero": "AF32IBC",
-        "Nom": "FALL",
-        "Prénom": "OUSSEYOU",
-        "Date de naissance": "03/07/00",
-        "Classe": "3em B",
-        "Matieres": {
-            "Math": [
-                13.0,
-                15.0,
-                16.0,
-                14.67
-            ],
-            "Francais": [
-                10.0,
-                14.0,
-                13.0,
-                12.33
-            ],
-            "Anglais": [
-                12.0,
-                9.0,
-                15.0,
-                11.0,
-                11.75
-            ],
-            "PC": [
-                13.0,
-                10.0,
-                11.5
-            ],
-            "SVT": [
-                14.0,
-                9.0,
-                12.0,
-                13.0,
-                12.0
-            ],
-            "HG": [
-                13.0,
-                15.0,
-                14.0
-            ]
-        },
-        "Moyenne": 12.71
-    },
-    {
-        "CODE": "BAD008",
-        "Numero": "M60GRTL",
-        "Nom": "TINE",
-        "Prénom": "SOKHNA",
-        "Date de naissance": "25/02/05",
-        "Classe": "4em A",
-        "Matieres": {
-            "Math": [
-                8.0,
-                13.0,
-                10.0,
-                10.33
-            ],
-            "Francais": [
-                10.0,
-                10.0,
-                13.0,
-                11.0
-            ],
-            "Anglais": [
-                10.0,
-                11.0,
-                9.0,
-                7.0,
-                9.25
-            ],
-            "PC": [
-                10.0,
-                8.0,
-                9.0
-            ],
-            "SVT": [
-                11.0,
-                9.0,
-                10.0,
-                13.0,
-                10.75
-            ],
-            "HG": [
-                12.0,
-                10.0,
-                11.0
-            ]
-        },
-        "Moyenne": 10.22
-    },
-    {
-        "CODE": "BAD008",
-        "Numero": "QNXKW09",
-        "Nom": "SINE",
-        "Prénom": "MARIEME",
-        "Date de naissance": "29/08/08",
-        "Classe": "5em B",
-        "Matieres": {
-            "Math": [
-                8.0,
-                12.0,
-                9.0,
-                9.67
-            ],
-            "Francais": [
-                15.0,
-                10.0,
-                9.0,
-                11.33
-            ],
-            "Anglais": [
-                12.0,
-                9.0,
-                12.0,
-                7.0,
-                10.0
-            ],
-            "PC": [
-                11.0,
-                12.0,
-                11.5
-            ],
-            "SVT": [
-                8.0,
-                11.0,
-                10.0,
-                9.0,
-                9.5
-            ],
-            "HG": [
-                10.0,
-                11.0,
-                10.5
-            ]
-        },
-        "Moyenne": 10.42
-    },
-    {
-        "CODE": "BAD008",
-        "Numero": "G2NXW1L",
+        "CODE": "AMB001",
+        "Numero": "16382702l",
         "Nom": "DIOUF",
-        "Prénom": "MOUSTAPHA",
-        "Date de naissance": "05/07/01",
-        "Classe": "4 em B",
-        "Matieres": {
-            "Math": [
-                10.0,
-                14.0,
-                12.0,
-                12.0
-            ],
-            "Francais": [
-                10.0,
-                12.0,
-                12.0,
-                11.33
-            ],
-            "Anglais": [
-                9.0,
-                10.0,
-                11.0,
-                10.0
-            ],
-            "PC": [
-                11.0,
-                12.0,
-                11.5
-            ],
-            "SVT": [
-                13.0,
-                12.0,
-                15.0,
-                13.33
-            ],
-            "HG": [
-                15.0,
-                10.0,
-                12.5
-            ]
-        },
-        "Moyenne": 11.78
+        "Prénom": "BALLA",
+        "Date de naissance": "02/01/00",
+        "Classe": "6eme A",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
     },
     {
-        "CODE": "BAD008",
-        "Numero": "UPNCG78",
+        "CODE": "AMB001",
+        "Numero": "1732919jj",
+        "Nom": "DIOP",
+        "Prénom": "MODOU",
+        "Date de naissance": "04/01/00",
+        "Classe": "6eme A",
+        "Note": "MATH[13|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMB001",
+        "Numero": "127923ghj",
+        "Nom": "FALL",
+        "Prénom": "SOBLE",
+        "Date de naissance": "05/01/00",
+        "Classe": "6eme A",
+        "Note": "MATH[14|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMB001",
+        "Numero": "1908GD",
+        "Nom": "GAYE",
+        "Prénom": "PATHÉ",
+        "Date de naissance": "06/01/00",
+        "Classe": "6eme A",
+        "Note": "MATH[15|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMB001",
+        "Numero": "1382839hjklk",
+        "Nom": "HANN",
+        "Prénom": "JIM",
+        "Date de naissance": "07/01/00",
+        "Classe": "6eme A",
+        "Note": "MATH[16|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMB001",
+        "Numero": "17282hh",
         "Nom": "KA",
-        "Prénom": "ALIOU",
-        "Date de naissance": "10/05/09",
-        "Classe": "3em B",
-        "Matieres": {
-            "Math": [
-                9.0,
-                10.0,
-                5.0,
-                10.0,
-                13.0,
-                12.0,
-                9.83
-            ],
-            "PC": [
-                12.0,
-                19.0,
-                15.5
-            ],
-            "Francais": [
-                10.0,
-                11.0,
-                13.0,
-                11.33
-            ],
-            "SVT": [
-                15.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.6
-            ],
-            "HG": [
-                13.0,
-                13.0,
-                13.0
-            ],
-            "Anglais": [
-                11.0,
-                12.0,
-                15.0,
-                12.67
-            ]
-        },
-        "Moyenne": 12.49
+        "Prénom": "LAMINE",
+        "Date de naissance": "09/01/00",
+        "Classe": "6eme A",
+        "Note": "MATH[18|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMB001",
+        "Numero": "17329pp",
+        "Nom": "LOUM",
+        "Prénom": "MOUSSA",
+        "Date de naissance": "10/01/00",
+        "Classe": "6eme A",
+        "Note": "MATH[19|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0000",
+        "Nom": "BA",
+        "Prénom": "MODOU",
+        "Date de naissance": "12/12/05",
+        "Classe": "3 em A",
+        "Note": "MATH[|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0001",
+        "Nom": "BODIAN",
+        "Prénom": "FATOU",
+        "Date de naissance": "11/04/06",
+        "Classe": "3 em B",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0002",
+        "Nom": "CAMARA",
+        "Prénom": "PAPE",
+        "Date de naissance": "04/02/09",
+        "Classe": "4 em B",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0003",
+        "Nom": "CISSE",
+        "Prénom": "PHILO",
+        "Date de naissance": "25/03/10",
+        "Classe": "5 em B",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0004",
+        "Nom": "DIOP",
+        "Prénom": "KHADIM",
+        "Date de naissance": "04/02/11",
+        "Classe": "6 em B",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0005",
+        "Nom": "FALL",
+        "Prénom": "KATY",
+        "Date de naissance": "05/11/10",
+        "Classe": "6 em A",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0006",
+        "Nom": "NDIAYE",
+        "Prénom": "SOKHNA",
+        "Date de naissance": "06/08/07",
+        "Classe": "4 em B",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0007",
+        "Nom": "MBAYE",
+        "Prénom": "CHEIKH",
+        "Date de naissance": "07/06/07",
+        "Classe": "4 em A",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0008",
+        "Nom": "POUYE",
+        "Prénom": "PALLA",
+        "Date de naissance": "08/08/07",
+        "Classe": "5 em B",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
+    },
+    {
+        "CODE": "AMC002",
+        "Numero": "AAAA0009",
+        "Nom": "OUATARA",
+        "Prénom": "THIERNO",
+        "Date de naissance": "09/09/07",
+        "Classe": "5 em A",
+        "Note": "MATH[11|14|20]#PC[12|13:15]#SVT[10|13:16]#FRANÇAIS[10|11:14]#ANGLAIS[11|11:20]#HG[10|12|14]"
     },
     {
         "CODE": "BAD008",
         "Numero": "WYI96BT",
-        "Nom": "DIALLO",
-        "Prénom": "SEYNABOU",
-        "Date de naissance": "16/02/03",
-        "Classe": "5em B",
-        "Matieres": {
-            "Math": [
-                8.0,
-                11.0,
-                9.0,
-                9.33
-            ],
-            "Francais": [
-                12.0,
-                14.0,
-                13.0,
-                13.0
-            ],
-            "Anglais": [
-                12.0,
-                9.0,
-                11.0,
-                10.67
-            ],
-            "PC": [
-                16.0,
-                12.0,
-                14.0
-            ],
-            "SVT": [
-                14.0,
-                9.0,
-                11.0,
-                14.0,
-                12.0
-            ],
-            "HG": [
-                12.0,
-                14.0,
-                13.0
-            ]
-        },
-        "Moyenne": 12.0
-    },
-    {
-        "CODE": "BAD008",
-        "Numero": "FRTX54U",
-        "Nom": "NDIAYE",
-        "Prénom": "FATOU",
-        "Date de naissance": "22/07/05",
-        "Classe": "4em A",
-        "Matieres": {
-            "Math": [
-                12.0,
-                7.0,
-                10.0,
-                9.67
-            ],
-            "Francais": [
-                13.0,
-                14.0,
-                9.0,
-                12.0
-            ],
-            "Anglais": [
-                9.0,
-                11.0,
-                12.0,
-                10.67
-            ],
-            "PC": [
-                15.0,
-                12.0,
-                13.5
-            ],
-            "SVT": [
-                11.0,
-                10.0,
-                12.0,
-                13.0,
-                11.5
-            ],
-            "HG": [
-                10.0,
-                14.0,
-                12.0
-            ]
-        },
-        "Moyenne": 11.56
-    },
-    {
-        "CODE": "BAD008",
-        "Numero": "LJQC67L",
-        "Nom": "WADE",
-        "Prénom": "ASTOU",
-        "Date de naissance": "12/12/07",
-        "Classe": "3em B",
-        "Matieres": {
-            "Math": [
-                13.0,
-                15.0,
-                16.0,
-                14.67
-            ],
-            "Francais": [
-                10.0,
-                14.0,
-                13.0,
-                12.33
-            ],
-            "Anglais": [
-                12.0,
-                9.0,
-                19.0,
-                11.0,
-                12.75
-            ],
-            "PC": [
-                13.0,
-                10.0,
-                11.5
-            ],
-            "SVT": [
-                14.0,
-                9.0,
-                12.0,
-                13.0,
-                12.0
-            ],
-            "HG": [
-                11.0,
-                12.0,
-                11.5
-            ]
-        },
-        "Moyenne": 12.46
-    },
-    {
-        "CODE": "BAD008",
-        "Numero": "KFPB32H",
-        "Nom": "SY",
-        "Prénom": "ADJA",
-        "Date de naissance": "02/08/02",
+        "Nom": "BA",
+        "Prénom": "MOUSSA",
+        "Date de naissance": "05/11/10",
         "Classe": "6em A",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                9.0,
-                8.0,
-                13.0,
-                9.25
-            ],
-            "Anglais": [
-                10.0,
-                5.0,
-                9.0,
-                15.0,
-                9.75
-            ],
-            "PC": [
-                10.0,
-                11.0,
-                10.5
-            ],
-            "SVT": [
-                12.0,
-                11.0,
-                16.0,
-                8.0,
-                12.0,
-                11.8
-            ],
-            "HG": [
-                10.0,
-                10.0,
-                10.0
-            ]
-        },
-        "Moyenne": 10.55
+        "Note": "Math[10|12:15] #Francais[17|9|8:14] #Anglais[10 |7|9:15] #PC[10:11]  #SVT[12|11|16|8:12]  #HG[10:10]"
     },
     {
-        "CODE": "BAF013",
-        "Numero": "GH43RTU",
-        "Nom": "Ndao",
-        "Prénom": "Aram",
-        "Date de naissance": "16/02/00",
-        "Classe": "3em A",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                12.0,
-                8.0,
-                13.0,
-                10.0
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                9.0,
-                15.0,
-                10.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ]
-        },
-        "Moyenne": 11.0
+        "CODE": "BMP019",
+        "Numero": "NO895G",
+        "Nom": "DIOUF",
+        "Prénom": "Ibou",
+        "Date de naissance": "07/11/94",
+        "Classe": "5 em B",
+        "Note": "Math[9|10,5|11:16] #PC[12|13:19]  #Francais[10|11:13]  #SVT[15|9|16|11:12] #HG[13:13]  #Anglais[13,12:15]"
     },
     {
-        "CODE": "BAF013",
-        "Numero": "PLM56DS",
-        "Nom": "Gomis",
-        "Prénom": "Pipo",
-        "Date de naissance": "16/03/98",
-        "Classe": "4em B",
-        "Matieres": {
-            "Math": [
-                8.0,
-                7.0,
-                10.0,
-                8.33
-            ],
-            "Francais": [
-                15.0,
-                12.0,
-                9.0,
-                14.0,
-                12.5
-            ],
-            "Anglais": [
-                13.0,
-                15.0,
-                19.0,
-                15.0,
-                15.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                2.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                10.0
-            ],
-            "HG": [
-                10.0,
-                18.0,
-                14.0
-            ]
-        },
-        "Moyenne": 11.72
+        "CODE": "BNT021",
+        "Numero": "NT129YK",
+        "Nom": "T8UR5",
+        "Prénom": "Kine",
+        "Date de naissance": "12.32.1990",
+        "Classe": "4 em A",
+        "Note": "SVT[12|20:19] #PC[13|16:19] #Francais[24|15:12] #SVT[12|18:16] #Anglais[17|19:11] #HG[00|7:2] #Math[11|13:14]"
     },
     {
-        "CODE": "BAF013",
-        "Numero": "GF34KHS",
-        "Nom": "Diouf",
-        "Prénom": "Ousseynou",
-        "Date de naissance": "03/12/92",
-        "Classe": "5em A",
-        "Matieres": {
-            "Math": [
-                18.0,
-                17.0,
-                10.0,
-                15.0
-            ],
-            "Francais": [
-                5.0,
-                13.0,
-                9.0,
-                14.0,
-                10.25
-            ],
-            "Anglais": [
-                12.0,
-                5.0,
-                10.0,
-                14.0,
-                10.25
-            ],
-            "PC": [
-                17.0,
-                9.0,
-                13.0
-            ],
-            "SVT": [
-                12.0,
-                19.0,
-                15.0,
-                11.0,
-                12.0,
-                13.8
-            ],
-            "HG": [
-                16.0,
-                18.0,
-                17.0
-            ]
-        },
-        "Moyenne": 13.22
+        "CODE": "BNT021",
+        "Numero": "12OUITY7",
+        "Nom": "Fall",
+        "Prénom": "H654F",
+        "Date de naissance": "26/12/88",
+        "Classe": "5 eme B",
+        "Note": "SVT[12|20:10] #PC[13|12:10] #Francais[12|11:13] #SVT[00|10:12] #Anglais[11|12:12] #HG[12|13:3] #Math[00|15:11]"
     },
     {
-        "CODE": "BAF013",
-        "Numero": "JHGF7F5",
+        "CODE": "BNT021",
+        "Numero": "12DREY89",
+        "Nom": "Sall",
+        "Prénom": "Dibor",
+        "Date de naissance": "",
+        "Classe": "6 eme C",
+        "Note": "SVT[12|20:19] #PC[13|16:19] #Francais[24|15:12] #SVT[12|18:16] #Anglais[17|19:11] #HG[00|07:02] #Math[11|13:14]"
+    },
+    {
+        "CODE": "BNT021",
+        "Numero": "BT3456YH",
+        "Nom": "Dingka",
+        "Prénom": "Kaba",
+        "Date de naissance": "12/05/97",
+        "Classe": "4 eme A",
+        "Note": "SVT[11|10:12] #PC[11|18:20] #Francais[12|11:13] #SVT[13|15:17] #Anglais[00|02:01] #HG[00|05:00] #Math[10|01:09]"
+    },
+    {
+        "CODE": "BNT021",
+        "Numero": "DR765TR4",
+        "Nom": "Ndiaye",
+        "Prénom": "Ndeye",
+        "Date de naissance": "23/05/96",
+        "Classe": "5 eme D",
+        "Note": "SVT[10|07:20] #PC[00|13:10] #Francais[04|10:17] #SVT[13|19:14] #Anglais[12|13:17] #HG[05|08:09] #Math[10|14:17]"
+    },
+    {
+        "CODE": "BNT021",
+        "Numero": "GT3456YT",
         "Nom": "Diop",
-        "Prénom": "Elimane",
-        "Date de naissance": "12/01/03",
-        "Classe": "6em A",
-        "Matieres": {
-            "Math": [
-                9.0,
-                17.0,
-                10.0,
-                12.0
-            ],
-            "Francais": [
-                12.0,
-                13.0,
-                8.0,
-                18.0,
-                12.75
-            ],
-            "Anglais": [
-                3.0,
-                5.0,
-                10.0,
-                15.0,
-                8.25
-            ],
-            "PC": [
-                17.0,
-                19.0,
-                18.0
-            ],
-            "SVT": [
-                12.0,
-                19.0,
-                16.0,
-                13.0,
-                12.0,
-                14.4
-            ],
-            "HG": [
-                14.0,
-                18.0,
-                16.0
-            ]
-        },
-        "Moyenne": 13.57
+        "Prénom": "Sokhna",
+        "Date de naissance": "23/08/92",
+        "Classe": "4 eme A",
+        "Note": "SVT[10|08:09] #PC[11|14:17] #Francais[12|13:16] #SVT[11|13:19] #Anglais[18|15:13] #HG[10|04:09] #Math[14|16:19]"
     },
     {
-        "CODE": "BAF013",
-        "Numero": "RED76BH",
-        "Nom": "Cissé",
-        "Prénom": "Babacar",
-        "Date de naissance": "03/06/05",
-        "Classe": "3em B",
-        "Matieres": {
-            "Math": [
-                8.0,
-                7.0,
-                10.0,
-                8.33
-            ],
-            "Francais": [
-                15.0,
-                12.0,
-                9.0,
-                14.0,
-                12.5
-            ],
-            "Anglais": [
-                13.0,
-                15.0,
-                19.0,
-                15.0,
-                15.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                2.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                10.0
-            ],
-            "HG": [
-                10.0,
-                18.0,
-                14.0
-            ]
-        },
-        "Moyenne": 11.72
+        "CODE": "BNT021",
+        "Numero": "34FT768H",
+        "Nom": "Dioum",
+        "Prénom": "Khoudia",
+        "Date de naissance": "12/09/95",
+        "Classe": "6 eme B",
+        "Note": "SVT[00|12:12] #PC[10|15:17] #Francais[00|02:13] #SVT[13|1à:14] #Anglais[14|18:15] #HG[20|15:09] #Math[10|12:16]"
     },
     {
-        "CODE": "BAF013",
-        "Numero": "GF69LBC",
-        "Nom": "Ba",
-        "Prénom": "Abdoulaye",
-        "Date de naissance": "09/02/92",
-        "Classe": "3em A",
-        "Matieres": {
-            "Math": [
-                18.0,
-                17.0,
-                15.0,
-                16.67
-            ],
-            "Francais": [
-                10.0,
-                1.0,
-                9.0,
-                12.0,
-                8.0
-            ],
-            "Anglais": [
-                10.0,
-                11.0,
-                18.0,
-                15.0,
-                13.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                13.0,
-                11.0,
-                12.0,
-                11.4
-            ],
-            "HG": [
-                12.0,
-                19.0,
-                15.5
-            ]
-        },
-        "Moyenne": 12.51
+        "CODE": "BNT021",
+        "Numero": "45TGFD67",
+        "Nom": "King",
+        "Prénom": "Kine",
+        "Date de naissance": "24/05/98",
+        "Classe": "6 eme C",
+        "Note": "SVT[12|20:19] #PC[10|12:10] #Francais[20|19:14] #SVT[11|08:06] #Anglais[11|19:15] #HG[13|15:20] #Math[17|18:19]"
     },
     {
-        "CODE": "BAF013",
-        "Numero": "ML09RDS",
-        "Nom": "Diallo",
-        "Prénom": "Alioune",
-        "Date de naissance": "08/07/93",
-        "Classe": "4em B",
-        "Matieres": {
-            "Math": [
-                9.0,
-                7.0,
-                11.0,
-                9.0
-            ],
-            "Francais": [
-                11.0,
-                13.0,
-                19.0,
-                4.0,
-                11.75
-            ],
-            "Anglais": [
-                12.0,
-                11.0,
-                10.0,
-                15.0,
-                12.0
-            ],
-            "PC": [
-                10.0,
-                12.0,
-                11.0
-            ],
-            "SVT": [
-                13.0,
-                7.0,
-                15.0,
-                16.0,
-                2.0,
-                10.6
-            ],
-            "HG": [
-                11.0,
-                16.0,
-                13.5
-            ]
-        },
-        "Moyenne": 11.31
+        "CODE": "BNT021",
+        "Numero": "VFT34UYT",
+        "Nom": "Fakha",
+        "Prénom": "Fatou",
+        "Date de naissance": "23/09/95",
+        "Classe": "3 eme A",
+        "Note": "SVT[16|13:12] #PC[17|16:14] #Francais[20|15:18] #SVT[11|12:18] #Anglais[12|13:16] #HG[18|14:18] #Math[16|18:10]"
     },
     {
-        "CODE": "BAF013",
-        "Numero": "NBV76RD",
-        "Nom": "Gueye",
-        "Prénom": "Abdalah",
-        "Date de naissance": "01/01/92",
-        "Classe": "4em A",
-        "Matieres": {
-            "Math": [
-                12.0,
-                17.0,
-                0.0,
-                9.67
-            ],
-            "Francais": [
-                12.0,
-                17.0,
-                12.0,
-                15.0,
-                14.0
-            ],
-            "Anglais": [
-                13.0,
-                15.0,
-                19.0,
-                15.0,
-                15.5
-            ],
-            "PC": [
-                11.0,
-                19.0,
-                15.0
-            ],
-            "SVT": [
-                12.0,
-                8.0,
-                12.0,
-                11.0,
-                12.0,
-                11.0
-            ],
-            "HG": [
-                10.0,
-                18.0,
-                14.0
-            ]
-        },
-        "Moyenne": 13.2
-    },
-    {
-        "CODE": "BAF013",
-        "Numero": "NB675DH",
-        "Nom": "Dia",
-        "Prénom": "Hawa",
-        "Date de naissance": "07/07/97",
-        "Classe": "5em B",
-        "Matieres": {
-            "Math": [
-                15.0,
-                12.0,
-                10.0,
-                12.33
-            ],
-            "Francais": [
-                13.0,
-                16.0,
-                19.0,
-                19.0,
-                16.75
-            ],
-            "Anglais": [
-                12.0,
-                13.0,
-                18.0,
-                15.0,
-                14.5
-            ],
-            "PC": [
-                12.0,
-                19.0,
-                15.5
-            ],
-            "SVT": [
-                2.0,
-                9.0,
-                17.0,
-                11.0,
-                2.0,
-                8.2
-            ],
-            "HG": [
-                1.0,
-                15.0,
-                8.0
-            ]
-        },
-        "Moyenne": 12.55
-    },
-    {
-        "CODE": "BAF013",
-        "Numero": "MLHF65D",
-        "Nom": "Guissé",
-        "Prénom": "Penda",
-        "Date de naissance": "04/04/94",
-        "Classe": "3em A",
-        "Matieres": {
-            "Math": [
-                8.0,
-                7.0,
-                10.0,
-                8.33
-            ],
-            "Francais": [
-                15.0,
-                12.0,
-                9.0,
-                14.0,
-                12.5
-            ],
-            "Anglais": [
-                13.0,
-                15.0,
-                19.0,
-                15.0,
-                15.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                2.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                10.0
-            ],
-            "HG": [
-                10.0,
-                18.0,
-                14.0
-            ]
-        },
-        "Moyenne": 11.72
-    },
-    {
-        "CODE": "BMP019",
-        "Numero": "IHFK34G",
-        "Nom": "DIOUM",
-        "Prénom": "Harry",
-        "Date de naissance": "14/01/95",
-        "Classe": "5e A",
-        "Matieres": {
-            "SVT": [
-                12.0,
-                19.0,
-                1.0,
-                4.0,
-                9.0
-            ],
-            "HG": [
-                15.0,
-                11.0,
-                13.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                18.0,
-                11.0,
-                10.0,
-                13.0
-            ],
-            "Anglais": [
-                17.0,
-                5.0,
-                15.0,
-                12.33
-            ],
-            "PC": [
-                3.0,
-                15.0,
-                9.0,
-                9.0
-            ]
-        },
-        "Moyenne": 11.22
-    },
-    {
-        "CODE": "BMP019",
-        "Numero": "3FR5IJ9",
-        "Nom": "DIALLO",
-        "Prénom": "Hermione",
-        "Date de naissance": "12/08/06",
-        "Classe": "4em B",
-        "Matieres": {
-            "SVT": [
-                15.0,
-                11.0,
-                11.0,
-                12.0,
-                12.25
-            ],
-            "HG": [
-                6.0,
-                14.0,
-                16.0,
-                12.0
-            ],
-            "Math": [
-                10.0,
-                12.0,
-                19.0,
-                11.0,
-                16.0,
-                13.6
-            ],
-            "Francais": [
-                18.0,
-                11.0,
-                15.0,
-                14.67
-            ],
-            "Anglais": [
-                8.0,
-                15.0,
-                15.0,
-                12.67
-            ],
-            "PC": [
-                7.0,
-                11.0,
-                9.0,
-                9.0,
-                9.0
-            ]
-        },
-        "Moyenne": 12.37
-    },
-    {
-        "CODE": "BMP019",
-        "Numero": "PM12NG7",
-        "Nom": "DIOP",
-        "Prénom": "Marième",
-        "Date de naissance": "19/08/97",
-        "Classe": "3eme A",
-        "Matieres": {
-            "PC": [
-                15.0,
-                11.0,
-                9.0,
-                11.67
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                4.0,
-                11.0,
-                13.0,
-                9.33
-            ],
-            "Anglais": [
-                13.0,
-                8.0,
-                15.0,
-                12.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                11.0,
-                13.0,
-                12.0
-            ]
-        },
-        "Moyenne": 11.33
-    },
-    {
-        "CODE": "BMP019",
-        "Numero": "89HY6F5",
-        "Nom": "DIALLO",
-        "Prénom": "Ronald",
-        "Date de naissance": "09/05/00",
-        "Classe": "6 eme A",
-        "Matieres": {
-            "Math": [
-                10.0,
-                14.0,
-                5.0,
-                16.0,
-                11.25
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Francais": [
-                4.0,
-                11.0,
-                13.0,
-                9.33
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                15.0,
-                11.0
-            ]
-        },
-        "Moyenne": 10.85
-    },
-    {
-        "CODE": "BMP019",
-        "Numero": "5D7BKJ2",
-        "Nom": "FALL",
-        "Prénom": "Magui",
-        "Date de naissance": "30/08/08",
-        "Classe": "3em B",
-        "Matieres": {
-            "Math": [
-                10.0,
-                11.0,
-                15.0,
-                12.0
-            ],
-            "Francais": [
-                7.0,
-                12.0,
-                8.0,
-                13.0,
-                10.0
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                9.0,
-                15.0,
-                10.5
-            ],
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                13.0,
-                11.5
-            ]
-        },
-        "Moyenne": 11.0
-    },
-    {
-        "CODE": "BMP019",
-        "Numero": "PK0I89K",
-        "Nom": "CAMARA",
-        "Prénom": "Rachid",
-        "Date de naissance": "15/02/01",
-        "Classe": "6emA",
-        "Matieres": {
-            "PC": [
-                11.0,
-                9.0,
-                10.0
-            ],
-            "Math": [
-                12.0,
-                14.0,
-                5.0,
-                11.0,
-                13.0,
-                11.0
-            ],
-            "Francais": [
-                14.0,
-                11.0,
-                13.0,
-                12.67
-            ],
-            "Anglais": [
-                13.0,
-                8.0,
-                5.0,
-                8.67
-            ],
-            "SVT": [
-                12.0,
-                9.0,
-                16.0,
-                11.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                11.0,
-                13.0,
-                12.0
-            ]
-        },
-        "Moyenne": 11.06
-    },
-    {
-        "CODE": "BMP019",
-        "Numero": "9F6J9TT",
-        "Nom": "POUYE",
-        "Prénom": "Ousseynou",
-        "Date de naissance": "02/12/85",
-        "Classe": "4em A",
-        "Matieres": {
-            "Math": [
-                10.0,
-                14.0,
-                5.0,
-                11.0,
-                15.0,
-                17.0,
-                12.0
-            ],
-            "PC": [
-                11.0,
-                16.0,
-                16.0,
-                14.33
-            ],
-            "Francais": [
-                16.0,
-                11.0,
-                13.0,
-                13.33
-            ],
-            "SVT": [
-                12.0,
-                3.0,
-                17.0,
-                18.0,
-                12.0,
-                12.4
-            ],
-            "HG": [
-                14.0,
-                12.0,
-                11.0,
-                12.33
-            ],
-            "Anglais": [
-                13.0,
-                5.0,
-                15.0,
-                11.0
-            ]
-        },
-        "Moyenne": 12.56
-    },
-    {
-        "CODE": "BMP019",
-        "Numero": "6G6F9F1",
-        "Nom": "DEME",
-        "Prénom": "Mahi",
-        "Date de naissance": "27/10/93",
-        "Classe": "3 eme B",
-        "Matieres": {
-            "PC": [
-                11.0,
-                11.0,
-                9.0,
-                10.33
-            ],
-            "Math": [
-                14.0,
-                15.0,
-                11.0,
-                13.0,
-                13.25
-            ],
-            "Francais": [
-                14.0,
-                12.0,
-                13.0,
-                13.0
-            ],
-            "Anglais": [
-                12.0,
-                8.0,
-                15.0,
-                11.67
-            ],
-            "SVT": [
-                10.0,
-                9.0,
-                16.0,
-                13.0,
-                12.0,
-                12.0
-            ],
-            "HG": [
-                10.0,
-                16.0,
-                13.0
-            ]
-        },
-        "Moyenne": 12.21
-    },
-    {
-        "CODE": "BMP019",
-        "Numero": "BH54JJ6",
-        "Nom": "DUBOIS",
-        "Prénom": "Bachir",
-        "Date de naissance": "15/09/94",
-        "Classe": "5 em A",
-        "Matieres": {
-            "Math": [
-                10.0,
-                15.0,
-                15.0,
-                13.33
-            ],
-            "Francais": [
-                17.0,
-                9.0,
-                8.0,
-                13.0,
-                11.75
-            ],
-            "Anglais": [
-                10.0,
-                5.0,
-                9.0,
-                15.0,
-                9.75
-            ],
-            "PC": [
-                10.0,
-                13.0,
-                11.0,
-                11.33
-            ],
-            "SVT": [
-                12.0,
-                11.0,
-                16.0,
-                8.0,
-                12.0,
-                11.8
-            ],
-            "HG": [
-                10.0,
-                10.0,
-                10.0
-            ]
-        },
-        "Moyenne": 11.33
+        "CODE": "BNT021",
+        "Numero": "FTR3456G",
+        "Nom": "Drame",
+        "Prénom": "Rama",
+        "Date de naissance": "12/03/92",
+        "Classe": "5 eme B",
+        "Note": "SVT[12|20:19] #PC[13|14:10] #Francais[14|18:19] #SVT[16|19:14] #Anglais[14|15:18] #HG[10|07:20] #Math[19|17:18]"
     }
 ]
