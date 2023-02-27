@@ -122,21 +122,39 @@ elif choix==2:
     if format==1:
         with open('json_database', 'r') as f:
             data=json.load(f)
-        
-            for i in data:
-                if function_json.check_Numero(i) and function_json.Check_Nom(i) and function_json.Check_prenom(i) and function_json.Check_Classe(i) and function_json.Check_Note(i):
-                    tabValid.append(i)
-                
-            else:
-                tabInValid.append(i)
+
+        #Obtenir une liste de dictionnnaires
+        for i in data:
+            if function_json.check_Numero(i) and function_json.Check_Nom(i) and function_json.Check_prenom(i) and function_json.Check_Classe(i) and function_json.Check_Note(i):
+                tabValid.append(i)
+            
+        else:
+            tabInValid.append(i)
                 
         valide=[]
         invalide=[]
         for i in tabValid:
             valide.append(function_json.calcul(i))
-        #print(data)
         
-        print(valide)
+        #Conversion en csv
+        #Récupèrer les entetes et les stockées dans la liste entete
+        entete = [i for i in valide[0]]
+   
+        
+        
+        
+        with open('data_csv.csv', 'w') as csv_data:
+            csv_file = csv.writer(csv_data)
+            
+        #Parcourir entete et l'écrire dans le fichier csv
+            csv_file.writerow(entete)
+            
+        #Parcourir la variable des données et l'écrire dans le fichier csv
+            for i in valide:
+                csv_file.writerow(i.values())
+        
+        
+        #print(valide)
         
         for i in tabInValid:
             invalide.append(i)
@@ -152,7 +170,7 @@ elif choix==2:
             </Numero>
         </etudiant>
     """ % (
-        items['Numero'], items['Nom'], items['Prénom'], items['Date de naissance'],items['Classe'], items['Matieres'])
+        items['Numero'], items['Nom'], items['Prénom'], items['Date de naissance'],items['Classe'], items['Notes'])
 
             """etudiants = etree.Element("etudiants")
                 etudiant = etree.SubElement(etudiants, "etudiant")
@@ -165,15 +183,37 @@ elif choix==2:
                 prenom.text = dict['Prénom']
                 Classe = etree.SubElement(etudiant, "Classe")
                 Classe.text = dict['Classe']
-                Note = etree.SubElement(etudiant, "Note")
+                Note = etree.SubElement(etudiant, "Note")data
                 Note.text = dict['Note']
                 print(etree.tostring(etudiants, pretty_print=True))
                 
             """
         with open("xml_file.xml", "w") as xml_file:
             xml_file.write('\n'.join(convert_rows(dictio) for dictio in invalide))
+            
+        csv_file.close()
         
     elif format==2:
+        
+        with open('json_database', 'r') as f:
+            data=json.load(f)
+
+        #Obtenir une liste de dictionnnaires
+        for i in data:
+            if function_json.check_Numero(i) and function_json.Check_Nom(i) and function_json.Check_prenom(i) and function_json.Check_Classe(i) and function_json.Check_Note(i):
+                tabValid.append(i)
+            
+            else:
+                tabInValid.append(i)
+        valide=[]
+        invalide=[]
+        for i in tabValid:
+            valide.append(function_json.calcul(i))
+        
+        for i in tabInValid:
+            invalide.append(i)
+        
+        print(len(invalide))
         
         def convert_rows(items):
             return """<etudiant>
@@ -194,12 +234,18 @@ elif choix==2:
         data1=[]
         
         #Retourner un fichier csv pour les invalide
+        entete = [i for i in invalide[0]]
         
-        with open('data_csv', 'w') as csv_file:
+        with open('data_csv.csv', 'w') as csv_file:
             csvfile = csv.writer(csv_file)
+            csvfile.writerow(entete)
             
-        for item in csvfile:
-            data1.append(item)
+            for i in invalide:
+                csvfile.writerow(i.values())
+                
+            csvfile.close()
+         
+        
         
     
     
