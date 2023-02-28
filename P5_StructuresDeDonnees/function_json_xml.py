@@ -1,6 +1,10 @@
 import datetime
 #from operator import itemgetter
 
+import xml.etree.ElementTree as ET
+
+import json
+
 def is_lower(sublist):
 
     for i in sublist:
@@ -148,6 +152,55 @@ def calcul(subdict):
             
     
     return subdict
+
+
+    
+def convert_to_dict_list(data, format):
+    
+    if format == "xml":
+        root = ET.fromstring(data)
+        result = []
+        for child in root:
+            d = {}
+            for subchild in child:
+                d[subchild.tag] = subchild.text
+            result.append(d)
+        return result
+    # elif format == "yaml":
+    #     return yaml.safe_load(data)
+    elif format == "json":
+        return json.loads(data)
+    else:
+        raise ValueError("Format invalide. Veuillez sélectionner 'xml', 'yaml' ou 'json'.")
+    
+    
+def convert_to_xml(dic):
+
+    root = ET.Element("etudiants")
+
+
+
+
+    for item in dic:
+
+    
+        etudiant = ET.SubElement(root, "etudiant")
+        etudiant.attrib['id']= item['Numero']
+        numero = ET.SubElement(etudiant, "Numero")
+        numero.text = item['Numero']
+        nom = ET.SubElement(etudiant, "Nom")
+        nom.text = item['Nom']
+        prenom = ET.SubElement(etudiant, "Prénom")
+        prenom.text = item['Prénom']
+        Classe = ET.SubElement(etudiant, "Classe")
+        Classe.text = item['Classe']
+        Note = ET.SubElement(etudiant, "Note")
+        Note.text = item['Note']
+        
+        
+    tree = ET.ElementTree(root)
+
+    tree.write("invalide.xml", encoding="UTF-8", xml_declaration=True, method='xml')
 
 
 

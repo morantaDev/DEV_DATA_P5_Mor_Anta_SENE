@@ -1,6 +1,6 @@
 import json
 import csv
-import function_json
+import function_json_xml
 
 import xml.etree.ElementTree as ET
 
@@ -34,7 +34,7 @@ if choix==1:
             tabInValid=[]
                 
         for i in data:
-            if function_json.check_Numero(i) and function_json.Check_Nom(i) and function_json.Check_prenom(i) and function_json.Check_Classe(i) and function_json.Check_Note(i):
+            if function_json_xml.check_Numero(i) and function_json_xml.Check_Nom(i) and function_json_xml.Check_prenom(i) and function_json_xml.Check_Classe(i) and function_json_xml.Check_Note(i):
                 tabValid.append(i)
                 
             else:
@@ -42,7 +42,7 @@ if choix==1:
                 
                 
         for i in tabValid:
-            valide.append(function_json.calcul(i))
+            valide.append(function_json_xml.calcul(i))
 
         for j in tabInValid:
             invalide.append(j)
@@ -82,7 +82,7 @@ if choix==1:
             tabInValid=[]
                 
         for i in data:
-            if function_json.check_Numero(i) and function_json.Check_Nom(i) and function_json.Check_prenom(i) and function_json.Check_Classe(i) and function_json.Check_Note(i):
+            if function_json_xml.check_Numero(i) and function_json_xml.Check_Nom(i) and function_json_xml.Check_prenom(i) and function_json_xml.Check_Classe(i) and function_json_xml.Check_Note(i):
                 tabValid.append(i)
                 
             else:
@@ -90,7 +90,7 @@ if choix==1:
                 
                 
         for i in tabValid:
-            valide.append(function_json.calcul(i))
+            valide.append(function_json_xml.calcul(i))
 
         for j in tabInValid:
             invalide.append(j)
@@ -125,16 +125,17 @@ elif choix==2:
 
         #Obtenir une liste de dictionnnaires
         for i in data:
-            if function_json.check_Numero(i) and function_json.Check_Nom(i) and function_json.Check_prenom(i) and function_json.Check_Classe(i) and function_json.Check_Note(i):
+            if function_json_xml.check_Numero(i) and function_json_xml.Check_Nom(i) and function_json_xml.Check_prenom(i) and function_json_xml.Check_Classe(i) and function_json_xml.Check_Note(i):
                 tabValid.append(i)
             
         else:
             tabInValid.append(i)
-                
+        
+        print(tabInValid) 
         valide=[]
         invalide=[]
         for i in tabValid:
-            valide.append(function_json.calcul(i))
+            valide.append(function_json_xml.calcul(i))
         
         #Conversion en csv
         #Récupèrer les entetes et les stockées dans la liste entete
@@ -158,40 +159,11 @@ elif choix==2:
         
         for i in tabInValid:
             invalide.append(i)
-        
-        def convert_rows(items):
-            return """<etudiant>
-            <Numero id="%s">
-                <Nom>%s</Nom>
-                <Prénom>%s</Prénom>
-                <Date_de_naissance>%s</Date_de_naissance>
-                <Classe>%s</Classe>
-                <Matieres>%s</Matieres>
-            </Numero>
-        </etudiant>
-    """ % (
-        items['Numero'], items['Nom'], items['Prénom'], items['Date de naissance'],items['Classe'], items['Notes'])
-
-            """etudiants = etree.Element("etudiants")
-                etudiant = etree.SubElement(etudiants, "etudiant")
-                etudiant.set('id', dict['Numero'])
-                numero = etree.subElement(etudiant, "Numero")
-                numero.text = dict['Numero']
-                nom = etree.SubElement(etudiant, "Nom")
-                nom.text = dict['Nom']
-                prenom = etree.SubElement(etudiant, "Prénom")
-                prenom.text = dict['Prénom']
-                Classe = etree.SubElement(etudiant, "Classe")
-                Classe.text = dict['Classe']
-                Note = etree.SubElement(etudiant, "Note")data
-                Note.text = dict['Note']
-                print(etree.tostring(etudiants, pretty_print=True))
-                
-            """
-        with open("xml_file.xml", "w") as xml_file:
-            xml_file.write('\n'.join(convert_rows(dictio) for dictio in invalide))
-            
-        csv_file.close()
+    
+        print(invalide)
+    
+        # function_json_xml.convert_to_xml(invalide)      
+    # csv_file.close()
         
     elif format==2:
         
@@ -200,7 +172,7 @@ elif choix==2:
 
         #Obtenir une liste de dictionnnaires
         for i in data:
-            if function_json.check_Numero(i) and function_json.Check_Nom(i) and function_json.Check_prenom(i) and function_json.Check_Classe(i) and function_json.Check_Note(i):
+            if function_json_xml.check_Numero(i) and function_json_xml.Check_Nom(i) and function_json_xml.Check_prenom(i) and function_json_xml.Check_Classe(i) and function_json_xml.Check_Note(i):
                 tabValid.append(i)
             
             else:
@@ -208,7 +180,7 @@ elif choix==2:
         valide=[]
         invalide=[]
         for i in tabValid:
-            valide.append(function_json.calcul(i))
+            valide.append(function_json_xml.calcul(i))
         
         for i in tabInValid:
             invalide.append(i)
@@ -286,6 +258,38 @@ else:
 
 
 
+        
+    #     def convert_rows(items):
+    #         return """<etudiant>
+    #         <Numero id="%s">
+    #             <Nom>%s</Nom>
+    #             <Prénom>%s</Prénom>
+    #             <Date_de_naissance>%s</Date_de_naissance>
+    #             <Classe>%s</Classe>
+    #             <Matieres>%s</Matieres>
+    #         </Numero>
+    #     </etudiant>
+    # """ % (
+    #     items['Numero'], items['Nom'], items['Prénom'], items['Date de naissance'],items['Classe'], items['Notes'])
+
+    #         """etudiants = etree.Element("etudiants")
+    #             etudiant = etree.SubElement(etudiants, "etudiant")
+    #             etudiant.set('id', dict['Numero'])
+    #             numero = etree.subElement(etudiant, "Numero")
+    #             numero.text = dict['Numero']
+    #             nom = etree.SubElement(etudiant, "Nom")
+    #             nom.text = dict['Nom']
+    #             prenom = etree.SubElement(etudiant, "Prénom")
+    #             prenom.text = dict['Prénom']
+    #             Classe = etree.SubElement(etudiant, "Classe")
+    #             Classe.text = dict['Classe']
+    #             Note = etree.SubElement(etudiant, "Note")data
+    #             Note.text = dict['Note']
+    #             print(etree.tostring(etudiants, pretty_print=True))
+                
+    #         """
+    #     with open("xml_file.xml", "w") as xml_file:
+    #         xml_file.write('\n'.join(convert_rows(dictio) for dictio in invalide))
 
 
 

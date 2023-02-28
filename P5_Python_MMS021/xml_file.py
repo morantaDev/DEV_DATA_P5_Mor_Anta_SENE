@@ -1,7 +1,7 @@
 import csv
 import P5_StructuresDeDonnees.csv_to_json_and_xml as csv_to_json_and_xml
 
-import P5_StructuresDeDonnees.function_json as function_json
+import P5_StructuresDeDonnees.function_json_xml as function_json_xml
 
 
 
@@ -18,7 +18,7 @@ with open("/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv") as fich
     tabInValid=[]
         
 for i in data:
-    if function_json.check_Numero(i) and function_json.Check_Nom(i) and function_json.Check_prenom(i) and function_json.Check_Classe(i) and function_json.Check_Note(i):
+    if function_json_xml.check_Numero(i) and function_json_xml.Check_Nom(i) and function_json_xml.Check_prenom(i) and function_json_xml.Check_Classe(i) and function_json_xml.Check_Note(i):
         tabValid.append(i)
         
     else:
@@ -26,7 +26,7 @@ for i in data:
         
 valide=[]
 for i in tabValid:
-    valide.append(function_json.calcul(i))
+    valide.append(function_json_xml.calcul(i))
 
 #print(valide)
 
