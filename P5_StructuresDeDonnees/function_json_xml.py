@@ -174,7 +174,7 @@ def convert_to_dict_list(data, format):
         raise ValueError("Format invalide. Veuillez sélectionner 'xml', 'yaml' ou 'json'.")
     
     
-def convert_to_xml(dic):
+def convert_to_xml(dic, filename):
 
     root = ET.Element("etudiants")
 
@@ -200,7 +200,7 @@ def convert_to_xml(dic):
         
     tree = ET.ElementTree(root)
 
-    tree.write("invalide.xml", encoding="UTF-8", xml_declaration=True, method='xml')
+    tree.write(filename, encoding="UTF-8", xml_declaration=True, method='xml')
 
 
 

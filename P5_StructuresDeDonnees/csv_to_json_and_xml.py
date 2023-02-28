@@ -14,15 +14,32 @@ print()
 
 
 data=[]
-valide=[]
-invalide=[]
-tabValid=[]
-tabInValid=[]
+# valide=[]
+# invalide=[]
+# tabValid=[]
+# tabInValid=[]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if choix==1:
     print("Afficher les valides sous format:")
     print("Entrer:\n1 pour le json\n2 pour le xml")
     format=int(input())
-    
+
     if format==1:
 
         with open("/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv",'r') as fichier:
@@ -30,8 +47,11 @@ if choix==1:
             for row in lecteur:
                 data.append(row)
                 
+            valide=[]
+            invalide=[]
             tabValid=[]
             tabInValid=[]
+
                 
         for i in data:
             if function_json_xml.check_Numero(i) and function_json_xml.Check_Nom(i) and function_json_xml.Check_prenom(i) and function_json_xml.Check_Classe(i) and function_json_xml.Check_Note(i):
@@ -78,6 +98,8 @@ if choix==1:
             for row in lecteur:
                 data.append(row)
                 
+            valide=[]
+            invalide=[]
             tabValid=[]
             tabInValid=[]
                 
@@ -114,11 +136,35 @@ if choix==1:
         
         with open("json_file", "w") as json_File:
             json_File.write(json.dumps(invalide, indent=4, ensure_ascii=False))
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
 elif choix==2:
     print("Afficher les valides sous format:")
     print("Entrer:\n1 pour le csv\n2 pour le xml")
     format=int(input())
+    valide=[]
+    invalide=[]
+    tabValid=[]
+    tabInValid=[]
     if format==1:
         with open('json_database', 'r') as f:
             data=json.load(f)
@@ -136,6 +182,9 @@ elif choix==2:
         invalide=[]
         for i in tabValid:
             valide.append(function_json_xml.calcul(i))
+            
+        for i in tabInValid:
+            invalide.append(i)
         
         #Conversion en csv
         #Récupèrer les entetes et les stockées dans la liste entete
@@ -157,12 +206,12 @@ elif choix==2:
         
         #print(valide)
         
-        for i in tabInValid:
-            invalide.append(i)
+        # for i in tabInValid:
+        #     invalide.append(i)
     
-        print(invalide)
+        #print(invalide)
     
-        # function_json_xml.convert_to_xml(invalide)      
+        function_json_xml.convert_to_xml(invalide, "invalide.xml")      
     # csv_file.close()
         
     elif format==2:
