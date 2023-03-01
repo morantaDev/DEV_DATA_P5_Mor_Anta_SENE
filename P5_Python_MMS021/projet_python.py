@@ -76,7 +76,7 @@ for i in range(len(tabValid_Date)-1):
     else:
         tabValid_classe.append(tabValid_Date[i])
 
-#print(len(tabInValid))             #55555555555555555
+print(len(tabInValid))             #55555555555555555
 
 #Note valide 
 tabInValid_note=[]
@@ -138,7 +138,9 @@ entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "Moyenne"]
 
 #cinq_premier=Fonctions_veille.affiche_cinqPremier(tableau_valide2)
 
-print()
 #print(Fonctions_veille.affiche_tableau(cinq_premier,entete1))
+
+
+Fonctions_veille.menu(tableau_valide, tableau_invalide)
 
 fichier.close()

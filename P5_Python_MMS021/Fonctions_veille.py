@@ -287,6 +287,12 @@ def affiche_tableau(donnees, entete):# Détermination de la largeur des colonnes
     return print_ligne      
     
     
+def affiche_cinqPremier(liste):
+    tri=sorted(liste, key=lambda x: x[-1], reverse=True)
+    
+    return tri[1:6]
+
+
 def menu(listeValid, listeInvalid):
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("----------MENU---------------MENU------------------------MENU----------------------MENU------------------")
@@ -314,7 +320,7 @@ def menu(listeValid, listeInvalid):
                 else:
                     continue
         elif choix==4:
-            pass
+            print(affiche_cinqPremier(listeValid))
         elif choix==5:
             new=Ajouter()
             listeValid.append(new)
@@ -323,16 +329,12 @@ def menu(listeValid, listeInvalid):
             for item in listeInvalid:
                 sublist=Search(item,num)
                 print(sublist)
-        print(modify(listeValid,sublist))
+                print(modify(listeValid,sublist))
             
-    except:
-        print("Veuillez entrer une bonne valeur")
+    except ValueError:
+        pass
 
 
-def affiche_cinqPremier(liste):
-    tri=sorted(liste, key=lambda x: x[-1], reverse=True)
-    
-    return tri[1:6]
 
 
     
