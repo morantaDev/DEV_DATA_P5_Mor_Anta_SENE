@@ -320,20 +320,20 @@ elif choix==3:
         
         
         
-        #     #Retourner un fichier csv pour les invalide
-        # entete = [i for i in valide[0]]
+        #Retourner un fichier csv pour les invalide
+        entete = [i for i in valide[0]]
         
-        # with open('data_csv.csv', 'w') as csv_file:
-        #     csvfile = csv.writer(csv_file)
-        #     csvfile.writerow(entete)
+        with open('data_csv.csv', 'w') as csv_file:
+            csvfile = csv.writer(csv_file)
+            csvfile.writerow(entete)
             
-        #     for i in invalide:
-        #         csvfile.writerow(i.values())
+            for i in invalide:
+                csvfile.writerow(i.values())
                 
-        #     csvfile.close()
+            csvfile.close()
             
-        # with open("json_file.json", "w") as jsonfile:
-        #     jsonfile.write(json.dumps(invalide, indent=4, ensure_ascii=False))
+        with open("json_file.json", "w") as jsonfile:
+            jsonfile.write(json.dumps(invalide, indent=4, ensure_ascii=False))
     
 
 
