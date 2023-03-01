@@ -245,11 +245,13 @@ def modify(listeValid,sublist):
 
 
 def affichage_pag(listeValid):
+    pagin=[]
     reponse=1
     while reponse==1:
         for i in range(0,len(listeValid),5):
-            pagin=listeValid[i:i+5]
-        reponse=input("Entrer 1 pour continuer de paginer ou 0 pour arrêter\n")
+            pagin+=[listeValid[i:i+5]]
+        print(pagin[-1])
+        reponse=int(input("Entrer 1 pour continuer de paginer ou 0 pour arrêter\n"))
         if reponse==0:
             break
         else:
@@ -257,11 +259,13 @@ def affichage_pag(listeValid):
     return pagin
 
 def affichage_pagin(listeValid,counter):
+    pagin=[]
     reponse=1
     while reponse==1:
         for i in range(0,len(listeValid),counter):
-            pagin=listeValid[i:i+counter]
-        reponse=input("Entrer 1 pour continuer de paginer ou 0 pour arrêter\n")
+            pagin+=[listeValid[i:i+counter]]
+            print(pagin[-1])
+        reponse=int(input("Entrer 1 pour continuer de paginer ou 0 pour arrêter\n"))
         if reponse==0:
             break
         else:
@@ -304,12 +308,17 @@ def menu(listeValid, listeInvalid):
     print("5. ajouter une information en vérifiant la validité des informations données")
     print("6. Modifier une information invalide ensuite le transférer dans la structure où les informations valides")
     print("7. Affichage par pagination de 5 lignes")
+    print("8. Affichage par pagination de n lignes")
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     choix=int(input())
     try:
         if choix==1:
-            print("Les informations valides sont:\n",listeValid)
+            entete1=["Numero", "Nom", "Prénom", "Date", "Classe", "Moyenne"]
+            valide = affiche_tableau(listeValid, entete1)
+            print("Les informations valides sont:\n",valide)
         elif choix==2:
+            # entete1=["CODE", "Numero", "Nom", "Prénom", "Date", "Classe", "Note"]
+            # invalide = affiche_tableau(listeInvalid, entete1)
             print("Les informations invalides sont:\n",listeInvalid)
         elif choix==3:
             num=str(input("Entrer le numéro cible\n"))
@@ -330,6 +339,11 @@ def menu(listeValid, listeInvalid):
                 sublist=Search(item,num)
                 print(sublist)
                 print(modify(listeValid,sublist))
+        elif choix==7:
+            print(affichage_pag(listeValid))
+        elif choix==8:
+            counter=int(input("Entrez le nombre de lignes par pagination"))
+            print(affichage_pagin(listeValid, counter))
             
     except ValueError:
         pass

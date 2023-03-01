@@ -97,15 +97,6 @@ tableau_invalide=tabInValid
 
 print(len(tableau_valide))
 
-
-# test=Fonctions_veille.tester()
-
-#print(Fonctions_veille.cinq_premier(tableau_valide))
-
-# #print(Fonctions_veille.n_premier(tableau_valide,2))
-
-
-
 tableau_valide1=[]
 
 for i in tableau_valide:
