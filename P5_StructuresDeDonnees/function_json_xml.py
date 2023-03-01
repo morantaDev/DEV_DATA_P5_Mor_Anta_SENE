@@ -157,7 +157,7 @@ def calcul(subdict):
     
 def convert_to_dict_list(data, format):
     
-    if format == "xml":
+    if format == 'xml' or "xml":
         root = ET.fromstring(data)
         result = []
         for child in root:

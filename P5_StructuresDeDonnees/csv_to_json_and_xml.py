@@ -234,7 +234,7 @@ elif choix==2:
         for i in tabInValid:
             invalide.append(i)
         
-        print(len(invalide))
+        #print(len(invalide))
         
         def convert_rows(items):
             return """<etudiant>
@@ -272,16 +272,69 @@ elif choix==2:
     
     
 elif choix==3:
-    def xml_to_csv(file_path, data_csv) -> None:
-        tree = ET.parse(file_path)
-        root =tree.getroot()
+    print("Afficher les valides sous format:")
+    print("Entrer:\n1 pour le csv\n2 pour le json")
+    format=int(input())
+    tree = ET.parse("xml_data.xml")
+    root = tree.getroot()
+
+    # Initialisation de la liste de dictionnaires
+    data1 = []
+
+    # Parcours des éléments "etudiant" du fichier XML
+    for etudiant in root.findall("etudiant"):
+        item = {}
+        # Stockage de l'identifiant de l'étudiant dans le dictionnaire
+        #item["id"] = etudiant.attrib["id"]
+        # Parcours des éléments enfants de l'étudiant
+        for child in etudiant:
+            # Stockage des éléments enfants dans le dictionnaire
+            item[child.tag] = child.text
+
+        data1.append(item)
+
+    # Affichage de la liste de dictionnaires
+    print(data1)
+    
+    valide=[]
+    invalide=[]
+    tabValid=[]
+    tabInValid=[]
+    
+    if format==1:
+        for i in data1:
+            if function_json_xml.check_Numero(i) and function_json_xml.Check_Nom(i) and function_json_xml.Check_prenom(i) and function_json_xml.Check_Classe(i) and function_json_xml.Check_Note(i):
+                tabValid.append(i)
+                
+            else:
+                tabInValid.append(i)
+                    
+                
+        for i in tabValid:
+            valide.append(function_json_xml.calcul(i))
+
+        for j in tabInValid:
+            invalide.append(j)
+        
+        print(len(valide))
         
         
-        with open(data_csv, 'w') as csv_file:
-            writer = csv.writer(csv_file)
+        
+        #     #Retourner un fichier csv pour les invalide
+        # entete = [i for i in valide[0]]
+        
+        # with open('data_csv.csv', 'w') as csv_file:
+        #     csvfile = csv.writer(csv_file)
+        #     csvfile.writerow(entete)
             
-        for item in writer:
-            pass
+        #     for i in invalide:
+        #         csvfile.writerow(i.values())
+                
+        #     csvfile.close()
+            
+        # with open("json_file.json", "w") as jsonfile:
+        #     jsonfile.write(json.dumps(invalide, indent=4, ensure_ascii=False))
+    
 
 
 else:
