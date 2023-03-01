@@ -9,7 +9,7 @@ def is_lower(sublist):
 
     for i in sublist:
         if i>='a' and i<='z':
-            return False 
+            return False
     return True
  
 def cpt_lettre(sublist):
