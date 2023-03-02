@@ -236,22 +236,25 @@ elif choix==2:
         
         #print(len(invalide))
         
-        def convert_rows(items):
-            return """<etudiant>
-            <Numero id="%s">
-                <Nom>%s</Nom>
-                <Prénom>%s</Prénom>
-                <Date_de_naissance>%s</Date_de_naissance>
-                <Classe>%s</Classe>
-                <Matieres>%s</Matieres>
-            </Numero>
-        </etudiant>
-    """ % (
-        items['Numero'], items['Nom'], items['Prénom'], items['Date de naissance'],items['Classe'], items['Matieres'])
+    #     def convert_rows(items):
+    #         return """<etudiant>
+    #         <Numero id="%s">
+    #             <Nom>%s</Nom>
+    #             <Prénom>%s</Prénom>
+    #             <Date_de_naissance>%s</Date_de_naissance>
+    #             <Classe>%s</Classe>
+    #             <Matieres>%s</Matieres>
+    #         </Numero>
+    #     </etudiant>
+    # """ % (
+    #     items['Numero'], items['Nom'], items['Prénom'], items['Date de naissance'],items['Classe'], items['Matieres'])
 
          
-        with open("xml_file.xml", "w") as xml_file:
-            xml_file.write('\n'.join(convert_rows(dictio) for dictio in valide))
+    #     with open("xml_file.xml", "w") as xml_file:
+    #         xml_file.write('\n'.join(convert_rows(dictio) for dictio in valide))
+    
+
+        function_json_xml.convert_to_xml(valide, "Valide.xml")  
         data1=[]
         
         #Retourner un fichier csv pour les invalide

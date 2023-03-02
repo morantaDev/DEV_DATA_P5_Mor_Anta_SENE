@@ -195,7 +195,7 @@ def convert_to_xml(dic, filename):
         Classe = ET.SubElement(etudiant, "Classe")
         Classe.text = item['Classe']
         Note = ET.SubElement(etudiant, "Note")
-        Note.text = item['Note']
+        Note.text = item['Matieres']
         
         
     tree = ET.ElementTree(root)
