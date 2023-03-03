@@ -2,11 +2,11 @@ import datetime
 import xml.etree.ElementTree as ET
 import json
 import csv
-#from dataclasses import dataclass
+from dataclasses import dataclass
 
 
 #@dataclass
-class etudiant:
+class etudiant:                 #Many
     # CODE : str
     # Numero : str
     # Nom : str
@@ -14,17 +14,36 @@ class etudiant:
     # date_naiss : str
     # Classe : str  
     # note : str
-    def __init__(self, CODE, Numero, Nom, Prenom, date_de_naissance, Classe, notes):
-        self.CODE = CODE
+    def __init__(self, Numero, Nom, Prenom, date_de_naissance, Classe, Notes):
+        #self.CODE = CODE
         self.Numero = Numero
         self.Nom = Nom
         self.Prenom = Prenom
         self.date_de_naissance = date_de_naissance
         self.Classe = Classe
-        self.notes = notes
+        self.Notes = Notes
     
     def calcul(self):
         pass
+    
+
+
+class Notes:                        #One 
+    def __init__(self, notes):
+        self.notes = notes
+        self.etudiant = []
+    
+    def ajout_note(self, objet_etudiant):
+        self.etudiant.append(objet_etudiant)
+        
+note = Notes("12")
+
+m = etudiant('12345', 'SENE', 'Mor Anta', '21/09/2019', '4emeA', '20')
+
+note.ajout_note(m)
+type
+print(note.__dict__)
+print(note.etudiant[0].date_de_naissance)
 
 #Récupèrer les données de bases
 
@@ -88,17 +107,17 @@ class Convertisseur:
         for item in dict:
             etudiant = ET.SubElement(root, "etudiant")
             code = ET.SubElement(etudiant, "CODE")
-            code.text = dict["CODE"]
+            code.text = item["CODE"]
             numero = ET.SubElement(etudiant, "Numero")
-            numero.text = dict["Numero"]
+            numero.text = item["Numero"]
             nom = ET.SubElement(etudiant, "Nom")
-            nom.text = dict["Nom"]
+            nom.text = item["Nom"]
             prenom = ET.SubElement(etudiant, "Prénom")
-            prenom.text = dict["Nom"]
+            prenom.text = item["Nom"]
             date_de_naiss = ET.SubElement(etudiant, "Date de naissance")
-            date_de_naiss.text = dict["Date de naissance"]
+            date_de_naiss.text = item["Date de naissance"]
             note = ET.SubElement(etudiant, "Notes")
-            note.text = dict["Notes"]
+            note.text = item["Notes"]
         
         tree = ET.ElementTree(root)
         
@@ -106,18 +125,32 @@ class Convertisseur:
         
         return  result
     
-    def dictList_to_json(dict):
-        with open("jsonfile", "w") as jsonfile:
-            data = json.dumps(dict)
+    def dictList_to_json(self, dictList, filename):
+        with open(filename, "w") as jsonfile:
+            jsonfile.write(json.dumps(dictList))
+
             
-    def dictList_to_csv():
-        pass
-    
+    def dictList_to_csv(dictList):
+        header = []
+        for item in dictList[0]:
+            header.append(item)
+        
+        with open("csvfile", "w") as csvfile:
+            csv_file = csv.writer(csvfile)
+
+            csv_file.writerow(header)
+            
+            for item in dictList.values():
+                csv_file.writerows(item)
+        
+            
+            
+
 csvfile = "/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv"
 jsonfile = "/home/moranta/DEV_DATA_P5_Mor_Anta_SENE/POO_projet/json_database.json"
 xmlfile = "/home/moranta/DEV_DATA_P5_Mor_Anta_SENE/POO_projet/xml_data.xml"
 
-print(Convertisseur.json_dictList(jsonfile))
+#print(Convertisseur.json_dictList(jsonfile))
     
 class validateur(Convertisseur):
     def is_lower(self, item):
@@ -167,6 +200,7 @@ class validateur(Convertisseur):
             return True
         except:
             return False
+        
         
         
         #return dt2
@@ -226,53 +260,61 @@ class validateur(Convertisseur):
             validateur.Check_Classe(etudiant) and
             validateur.Check_Note(etudiant)
         )
-
-
-
-
-class note(etudiant):
-    def calcul(subdict):
-        tab=[]
-        moyG=0
-        element=subdict['Note']
         
-        subject=element.split('#')
-        for i in range(len(subject)):
-            item3=subject[i].replace('[',':').replace(']',':').replace('|',':').replace(' ','').replace(',',':')
-            Split_2=item3.split(':')
-            tab.append(Split_2)
+
+
+
+# @dataclass
+# class note(etudiant):
+#     matiere : list
+    
+    
+#     def calcul(subdict):
+#         tab=[]
+#         moyG=0
+#         element=subdict['Note']
+        
+#         subject=element.split('#')
+#         for i in range(len(subject)):
+#             item3=subject[i].replace('[',':').replace(']',':').replace('|',':').replace(' ','').replace(',',':')
+#             Split_2=item3.split(':')
+#             tab.append(Split_2)
             
-            subdict1={}
+#             subdict1={}
             
-            for i  in tab:
-                key=i[0]
-                subdict1[key]=[float(x) for x in i[1:-1]]  
-                #subdict1["Matière"]=subdict[key] 
+#             for i  in tab:
+#                 key=i[0]
+#                 subdict1[key]=[float(x) for x in i[1:-1]]  
+#                 #subdict1["Matière"]=subdict[key] 
                 
 
-                subdict['Matieres']=subdict1
+#                 subdict['Matieres']=subdict1
                 
-        del subdict['Note']
+#         del subdict['Note']
 
-        moy=[]
-        som=0
-        for items in subdict['Matieres'].items():
-            #print(items[1])
-            if len(items[1])!=0:
-                for i in items[1]:
-                    moyG=sum(i for i in items[1])/len(items[1])
-                    moyG=float("%.2f"%moyG)
+#         moy=[]
+#         som=0
+#         for items in subdict['Matieres'].items():
+#             #print(items[1])
+#             if len(items[1])!=0:
+#                 for i in items[1]:
+#                     moyG=sum(i for i in items[1])/len(items[1])
+#                     moyG=float("%.2f"%moyG)
                     
-                moy.append(moyG)
+#                 moy.append(moyG)
                 
-            items[1].append(moyG)
+#             items[1].append(moyG)
             
-        for i in moy:
-            som+=i
-        #som=float('%.2f'%som)
-        moyenne=som/len(subdict['Matieres'])
+#         for i in moy:
+#             som+=i
+#         #som=float('%.2f'%som)
+#         moyenne=som/len(subdict['Matieres'])
         
-        subdict['Moyenne']=float('%.2f'%moyenne)
+#         subdict['Moyenne']=float('%.2f'%moyenne)
+        
+
+        
+    
     
     
     
