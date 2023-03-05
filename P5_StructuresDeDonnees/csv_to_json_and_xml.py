@@ -337,7 +337,28 @@ elif choix==3:
             
         with open("json_file.json", "w") as jsonfile:
             jsonfile.write(json.dumps(invalide, indent=4, ensure_ascii=False))
-    
+    	
+    	
+    	
+    	#############
+    	def dictList_to_json(self, dictList, filename):
+        with open(filename, "w") as jsonfile:
+            jsonfile.write(json.dumps(dictList))
+
+            
+    def dictList_to_csv(dictList):
+        header = []
+        for item in dictList[0]:
+            header.append(item)
+        
+        with open("csvfile", "w") as csvfile:
+            csv_file = csv.writer(csvfile)
+
+            csv_file.writerow(header)
+            
+            for item in dictList.values():
+                csv_file.writerows(item)
+        
 
 
 else:
