@@ -42,7 +42,7 @@ if choix==1:
 
     if format==1:
 
-        with open("/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv",'r') as fichier:
+        with open(" ",'r') as fichier:
             lecteur=csv.DictReader(fichier)
             for row in lecteur:
                 data.append(row)
