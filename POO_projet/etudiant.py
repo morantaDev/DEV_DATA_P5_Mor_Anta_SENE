@@ -5,6 +5,12 @@ import csv
 from dataclasses import dataclass
 
 
+
+csvfile = "/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv"
+jsonfile = "/home/moranta/DEV_DATA_P5_Mor_Anta_SENE/POO_projet/json_database.json"
+xmlfile = "/home/moranta/DEV_DATA_P5_Mor_Anta_SENE/POO_projet/xml_data.xml"
+
+
 #@dataclass
 class etudiant:                 #Many
     # CODE : str
@@ -29,21 +35,21 @@ class etudiant:                 #Many
 
 
 class Notes:                        #One 
-    def __init__(self, notes):
-        self.notes = notes
+    def __init__(self):
+        #self.notes = notes
         self.etudiant = []
     
     def ajout_note(self, objet_etudiant):
         self.etudiant.append(objet_etudiant)
         
-note = Notes("12")
+note = Notes()
 
 m = etudiant('12345', 'SENE', 'Mor Anta', '21/09/2019', '4emeA', '20')
 
+
 note.ajout_note(m)
-type
-print(note.__dict__)
-print(note.etudiant[0].date_de_naissance)
+print(m.__dict__)
+print(len(note.etudiant[0].date_de_naissance))
 
 #Récupèrer les données de bases
 
@@ -146,35 +152,31 @@ class Convertisseur:
             
             
 
-csvfile = "/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv"
-jsonfile = "/home/moranta/DEV_DATA_P5_Mor_Anta_SENE/POO_projet/json_database.json"
-xmlfile = "/home/moranta/DEV_DATA_P5_Mor_Anta_SENE/POO_projet/xml_data.xml"
-
 #print(Convertisseur.json_dictList(jsonfile))
     
-class validateur(Convertisseur):
-    def is_lower(self, item):
+class validateur:
+    def is_lower(item):
         for i in item:
             if i>='a' and i<='z':
                 return False
         return True
  
-    def cpt_lettre(self, item):     
+    def cpt_lettre(item):     
         counter=0
         for i in item:
             if i.isalpha()==True:
                 counter+=1
         return counter
-    def check_Numero(self, item):
-        for  i in range(len(item['Numero'])-1):
-            return len(item['Numero'])==7 and (item['Numero']).isalnum()==True and item.is_lower(self['Numero'])
+    def check_Numero(item):
+        for  i in range(len(item.Numero)-1):
+            return len(item.Numero)==7 and (item.Numero).isalnum()==True #and self.is_lower(item.Numero)
     def Check_Nom(self, item):
         for  i in range(len(item['Nom'])-1):
             return item['Nom'][0].isalpha()==True and item.cpt_lettre(item['Nom'])>=2
-    def Check_prenom(self, item):
+    def Check_prenom(item):
         for  i in range(len(item)-1):
             return item.cpt_lettre(item['Prénom'])>=3
-    def Check_Date(self, new_item):
+    def Check_Date(new_item):
         mois=0
         try:
             mois_en_chiffres = {'janvier': '01', 'fev': '02', 'février': '02', 'mars': '03', 'avril': '04', 'mai': '05', 'juin': '06', 'juillet': '07', 'août': '08', 'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'}
@@ -201,30 +203,30 @@ class validateur(Convertisseur):
         except:
             return False
         
-        
+
         
         #return dt2
-    def Check_Classe(self, item):
+    def Check_Classe(item):
         element=item['Classe'].strip()
         if len(element)!=0:
             return element[0] in ['3','4','5','6'] and element[-1] in ['A','B']
         else:
             return False
 
-    def Search(self, item, num):
+    def Search(item, num):
         try:
-            if item['Numero']==num:
+            if item.Numero==num:
                 print(item)
         except ValueError:
                 return None
 
-    def control_note(self, item):
+    def control_note(item):
         for i in item:
             if float(i)<=0 and float(i)>=20:
                 return True
         return False
         
-    def Check_Note(self, item):
+    def Check_Note(item):
         tab=[]
         mat=[]
         subject=item['Note'].split('#')
@@ -251,7 +253,7 @@ class validateur(Convertisseur):
         return True
     
     
-    def valide_etudiant(etudiant):
+    def valide_etudiant(self, etudiant):
         return(
             validateur.check_Numero(etudiant) and 
             validateur.Check_Nom(etudiant) and 
@@ -311,7 +313,23 @@ class validateur(Convertisseur):
 #         moyenne=som/len(subdict['Matieres'])
         
 #         subdict['Moyenne']=float('%.2f'%moyenne)
-        
+
+
+
+tabOb = []  
+with open(csvfile, 'r') as csv_file:
+    csvFile = csv.DictReader(csv_file)
+    for row in csvFile:
+        obj = etudiant(row['Numero'], row['Nom'], row['Prénom'], row['Date de naissance'], row['Classe'], row['Note'])     
+        tabOb.append(obj)
+
+
+
+for ob in tabOb:
+    print(ob.__dict__)
+    
+    pass
+
 
         
     
