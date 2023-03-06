@@ -74,8 +74,13 @@ for i in valide:
                 matiere.devoir=[float(x) for x in matiere.devoir]
                 matiere.examen =float(matiere.examen)
                 moy=((sum(matiere.devoir)/len(matiere.devoir))+2*matiere.examen)/3
-                print(moy)
-                print(matiere.__dict__)
+                # print(moy)
+                # matiere.ajouter_note(moy)
+                #matiere.update({'moyenne':moy})
+                #ajouter la moyenne dans la classe Matiere
+                matiere.moyenne=moy
+                print(vars(matiere))
+                print()
                 
         except:
             print("Les notes sont nulles")
