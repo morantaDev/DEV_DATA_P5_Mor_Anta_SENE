@@ -26,25 +26,22 @@ class etudiant:                 #Many
     
     def ajouter_etudiant(self):
         self.etudiant = []
-    
 
 
-class Notes:                        #One 
-    def __init__(self):
-        #self.notes = notes
-        self.etudiant = []
-    
-    def ajout_note(self, objet_etudiant):
-        self.etudiant.append(objet_etudiant)
+class Matiere:
+    def __init__(self, tab):
+        self.matiere = tab[0]
+        self.devoir = tab[1:-1]
+        self.examen = tab[-1]
         
-note = Notes()
+        
 
 m = etudiant('', '', '', '', '', '')
 
 
-note.ajout_note(m)
-print(m.__dict__)
-print(len(note.etudiant[0].date_de_naissance))
+# note.ajout_note(m)
+# print(m.__dict__)
+# print(len(note.etudiant[0].date_de_naissance))
 
 tableau = []
 tabOb = []  
@@ -55,16 +52,23 @@ with open(csvfile, 'r') as csv_file:
         tabOb.append(obj)
 
 
-
+split_note = []
+split_final = []
+tab = []
 for ob in tabOb:
     #print(ob.date_de_naissance)
     #print(mesfonctions.valide_etudiant(ob.__dict__))
-    print(mesfonctions.Check_Classe(ob))
-    pass
-
-
-        
+    #print(mesfonctions.Check_Classe(ob))
+    split_note.append(ob.Notes.split("#"))
+for item in split_note[0]:
+    element=item.replace('[',':').replace(']',':').replace('|',':').replace(' ','').replace(',',':')
+    element1 = element.split(":")
+    #print(element1[0])
+    del element1[-1]
+    matiere = Matiere(element1)
     
+    print(matiere.__dict__)
+        
     
     
     

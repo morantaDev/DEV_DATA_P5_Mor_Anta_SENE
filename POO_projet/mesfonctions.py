@@ -205,3 +205,53 @@ def valide_etudiant(etudiant):
         Check_Note(etudiant)
     )
         
+        
+def calcul(subdict):
+    tab=[]
+    moyG=0
+    element=subdict['Note']
+    
+    subject=element.split('#')
+    for i in range(len(subject)):
+        item3=subject[i].replace('[',':').replace(']',':').replace('|',':').replace(' ','').replace(',',':')
+        Split_2=item3.split(':')
+        tab.append(Split_2)
+        
+        subdict1={}
+        
+        for i  in tab:
+            key=i[0]
+            subdict1[key]=[float(x) for x in i[1:-1]]  
+            #subdict1["Matière"]=subdict[key] 
+            
+
+            subdict['Matieres']=subdict1
+            
+    del subdict['Note']
+
+    moy=[]
+    som=0
+    for items in subdict['Matieres'].items():
+        #print(items[1])
+        if len(items[1])!=0:
+            for i in items[1]:
+                moyG=sum(i for i in items[1])/len(items[1])
+                moyG=float("%.2f"%moyG)
+                
+            moy.append(moyG)
+            
+        items[1].append(moyG)
+        
+    for i in moy:
+        som+=i
+    #som=float('%.2f'%som)
+    moyenne=som/len(subdict['Matieres'])
+    
+    subdict['Moyenne']=float('%.2f'%moyenne)
+        
+
+     
+            
+    
+    return subdict
+
