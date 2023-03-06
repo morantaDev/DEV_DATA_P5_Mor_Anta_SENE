@@ -121,8 +121,7 @@ def Check_Date(new_item):
     try:
         mois_en_chiffres = {'janvier': '01', 'fev': '02', 'février': '02', 'mars': '03', 'avril': '04', 'mai': '05', 'juin': '06', 'juillet': '07', 'août': '08', 'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'}
         sep=['/','-','_','|',' ',',',':']
-        element=new_item.Date_de_naissance.strip()
-        
+        element=new_item.date_de_naissance.strip()
         for i in element:
             if i in sep:
                 item=element.split(i)
@@ -171,7 +170,7 @@ def control_note(item):
 def Check_Note(item):
     tab=[]
     mat=[]
-    subject=item['Note'].split('#')
+    subject=item.Notes.split('#')
     for i in range(len(subject)):
         item=subject[i].replace('[',':')
         item1=item.replace(']',':')
@@ -209,7 +208,7 @@ def valide_etudiant(etudiant):
 def calcul(subdict):
     tab=[]
     moyG=0
-    element=subdict['Note']
+    element=subdict.Note
     
     subject=element.split('#')
     for i in range(len(subject)):

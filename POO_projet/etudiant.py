@@ -6,15 +6,8 @@ import mesfonctions
 
 csvfile ="/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv"
 
-#@dataclass
+
 class etudiant:                 #Many
-    # CODE : str
-    # Numero : str
-    # Nom : str
-    # Prenom : str
-    # date_naiss : str
-    # Classe : str  
-    # note : str
     def __init__(self, Numero, Nom, Prenom, date_de_naissance, Classe, Notes):
         #self.CODE = CODE
         self.Numero = Numero
@@ -23,17 +16,17 @@ class etudiant:                 #Many
         self.date_de_naissance = date_de_naissance
         self.Classe = Classe
         self.Notes = Notes
-    
-    def ajouter_etudiant(self):
-        self.etudiant = []
-
+        self.Matiere = [Matiere]
 
 class Matiere:
     def __init__(self, tab):
         self.matiere = tab[0]
         self.devoir = tab[1:-1]
         self.examen = tab[-1]
-        
+    
+    def ajouter_note(self, MG):
+        self.MG = MG
+        self.MG.append(Matiere)
         
 
 m = etudiant('', '', '', '', '', '')
@@ -52,27 +45,47 @@ with open(csvfile, 'r') as csv_file:
         tabOb.append(obj)
 
 
+
+
 split_note = []
-split_final = []
+valide = []
 tab = []
 for ob in tabOb:
-    #print(ob.date_de_naissance)
-    #print(mesfonctions.valide_etudiant(ob.__dict__))
-    #print(mesfonctions.Check_Classe(ob))
-    split_note.append(ob.Notes.split("#"))
-for item in split_note[0]:
-    element=item.replace('[',':').replace(']',':').replace('|',':').replace(' ','').replace(',',':')
-    element1 = element.split(":")
-    #print(element1[0])
-    del element1[-1]
-    matiere = Matiere(element1)
     
-    print(matiere.__dict__)
-        
+    if mesfonctions.valide_etudiant(ob) == True:
+        valide.append(ob)
+#print(len(valide))
+#print(valide)
+for i in valide:
+    etu = i
+    #print(etu.Notes)
+    #print(etu)
+    etu1=etu.Notes.split("#")
+    #print(etu1)
+    for item in etu1:
+        #print(item)
+        element=item.replace('[',':').replace(']',':').replace('|',':').replace(' ','').replace(',',':')
+        element1 = element.split(":")
+        #print(element1)
+        try:
+            if len(element1)!=0:
+                del element1[-1]
+                matiere = Matiere(element1)
+                matiere.devoir=[float(x) for x in matiere.devoir]
+                matiere.examen =float(matiere.examen)
+                moy=((sum(matiere.devoir)/len(matiere.devoir))+2*matiere.examen)/3
+                print(moy)
+                print(matiere.__dict__)
+                
+        except:
+            print("Les notes sont nulles")
+
+
     
     
-    
-    
+
+
+
 
     
     
