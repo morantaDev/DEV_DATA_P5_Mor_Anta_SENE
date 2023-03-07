@@ -1,0 +1,28 @@
+{
+    "id": "72898E1B",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1678146768912.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "id": "29921be31bfd46d294c6b75949da9bc4",
+        "name": "donnees$Nom",
+        "title": "donnees$Nom",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 94562293582096,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1678146768912,
+    "read_only": false,
+    "read_only_alternatives": []
+}

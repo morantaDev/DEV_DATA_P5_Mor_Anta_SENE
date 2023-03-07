@@ -1,0 +1,5 @@
+donnees
+View(donnees)
+donnees
+donnees = read.csv('/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv')
+
