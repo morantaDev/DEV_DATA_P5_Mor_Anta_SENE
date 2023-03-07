@@ -8,8 +8,8 @@ csvfile ="/home/moranta/Downloads/Donnees_Projet_Python_DataC5(1).csv"
 
 
 class etudiant:                 #Many
-    def __init__(self, Numero, Nom, Prenom, date_de_naissance, Classe, Notes):
-        #self.CODE = CODE
+    def __init__(self, CODE, Numero, Nom, Prenom, date_de_naissance, Classe, Notes):
+        self.CODE = CODE
         self.Numero = Numero
         self.Nom = Nom
         self.Prenom = Prenom
@@ -29,19 +29,15 @@ class Matiere:
         self.MG.append(Matiere)
         
 
-m = etudiant('', '', '', '', '', '')
+m = etudiant('', '', '', '', '', '', '')
 
-
-# note.ajout_note(m)
-# print(m.__dict__)
-# print(len(note.etudiant[0].date_de_naissance))
 
 tableau = []
 tabOb = []  
 with open(csvfile, 'r') as csv_file:
     csvFile = csv.DictReader(csv_file)
     for row in csvFile:
-        obj = etudiant(row['Numero'], row['Nom'], row['Prénom'], row['Date de naissance'], row['Classe'], row['Note'])     
+        obj = etudiant(row['CODE'],row['Numero'], row['Nom'], row['Prénom'], row['Date de naissance'], row['Classe'], row['Note'])     
         tabOb.append(obj)
 
 
@@ -78,21 +74,65 @@ for i in valide:
                 # matiere.ajouter_note(moy)
                 #matiere.update({'moyenne':moy})
                 #ajouter la moyenne dans la classe Matiere
-                matiere.moyenne=moy
-                print(vars(matiere))
-                print()
+                # matiere.moyenne=float('%.2f'%moy)
+                # print(vars(matiere))
+                
+                
                 
         except:
             print("Les notes sont nulles")
 
 
+
+    print(vars(etu))
+    print()
     
     
+#Convertir le fichier csv en json
+
+# def dictList_to_json(filename, dict):
+#     with open(filename, "w") as jsonfile:
+#         jsonfile.write(json.dump(dict))
+
+# dictList_to_json('jsonfile', etu.__dict__)
 
 
+#Convertir un fichier csv en xml
 
 
+def dictList_to_xml(dict, filename):
+
+    root = ET.Element("etudiants")
+
+    #Parcours du dictionnaire et ajouter les différents étudiants dans le fichier xml
     
+    etudiant = ET.SubElement(root, "etudiant")
+    code = ET.SubElement(etudiant, "CODE")
+    code.text = dict.CODE
+    numero = ET.SubElement(etudiant, "Numero")
+    numero.text = dict.Numero
+    nom = ET.SubElement(etudiant, "Nom")
+    nom.text = dict.Nom
+    prenom = ET.SubElement(etudiant, "Prénom")
+    prenom.text = dict.Prenom
+    date_de_naiss = ET.SubElement(etudiant, "Date de naissance")
+    date_de_naiss.text = dict.date_de_naissance
+    note = ET.SubElement(etudiant, "Notes")
+    note.text = dict.Notes
+    # matiere = ET.SubElement(etudiant, "Matiere")
+    # matiere.text = dict.Matiere
+
+    tree = ET.ElementTree(root)
+
+    result = tree.write(filename, encoding="UTF-8", xml_declaration=True, method = "xml")
+
+    return  result
+
+
+for i in valide:
+
+    dictList_to_xml(i,'xmlfile')
+
     
     
     
