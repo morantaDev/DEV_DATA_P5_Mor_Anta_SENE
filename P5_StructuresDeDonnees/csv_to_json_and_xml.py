@@ -14,26 +14,6 @@ print()
 
 
 data=[]
-# valide=[]
-# invalide=[]
-# tabValid=[]
-# tabInValid=[]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 if choix==1:
     print("Afficher les valides sous format:")
@@ -137,25 +117,7 @@ if choix==1:
         with open("json_file", "w") as json_File:
             json_File.write(json.dumps(invalide, indent=4, ensure_ascii=False))
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+#=============================================================================================    
 
 elif choix==2:
     print("Afficher les valides sous format:")
@@ -233,26 +195,6 @@ elif choix==2:
         
         for i in tabInValid:
             invalide.append(i)
-        
-        #print(len(invalide))
-        
-    #     def convert_rows(items):
-    #         return """<etudiant>
-    #         <Numero id="%s">
-    #             <Nom>%s</Nom>
-    #             <Prénom>%s</Prénom>
-    #             <Date_de_naissance>%s</Date_de_naissance>
-    #             <Classe>%s</Classe>
-    #             <Matieres>%s</Matieres>
-    #         </Numero>
-    #     </etudiant>
-    # """ % (
-    #     items['Numero'], items['Nom'], items['Prénom'], items['Date de naissance'],items['Classe'], items['Matieres'])
-
-         
-    #     with open("xml_file.xml", "w") as xml_file:
-    #         xml_file.write('\n'.join(convert_rows(dictio) for dictio in valide))
-    
 
         function_json_xml.convert_to_xml(valide, "Valide.xml")  
         data1=[]
@@ -269,11 +211,8 @@ elif choix==2:
                 
             csvfile.close()
          
-        
-        
-    
-    
-    
+#=====================================================================================
+ 
 elif choix==3:
     print("Afficher les valides sous format:")
     print("Entrer:\n1 pour le csv\n2 pour le json")
@@ -341,7 +280,7 @@ elif choix==3:
     	
     	
     	#############
-    	def dictList_to_json(self, dictList, filename):
+    def dictList_to_json(self, dictList, filename):
         with open(filename, "w") as jsonfile:
             jsonfile.write(json.dumps(dictList))
 
