@@ -1,0 +1,13 @@
+body{
+    display: inline-block;
+    border: 1px solid black;
+}
+.entete{
+    border: 1px solid black;
+    text-align: center;
+    font-size: 70px;
+}
+
+.texte{
+    background-color: rgb(245, 144, 20);
+}
