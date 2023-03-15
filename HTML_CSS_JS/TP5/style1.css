@@ -1,0 +1,46 @@
+main{
+    display: flex;
+}
+section{
+    border: 1px solid black;
+    padding-right: 20px;
+}
+aside{
+    border: 1px solid green;
+    margin: 0 10px 10px 10px;
+    padding-right:150px;
+}
+.articles{
+    display: flex;
+    
+}
+article{
+    border: 1px solid blue;
+    margin: 10px;
+    padding-right: 220px;
+    padding-bottom: 300px;
+    
+}
+
+nav ul{
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+    margin-right: 160px;
+    
+}
+.body{
+    border: 1px solid black;
+    margin-right: 900px;
+
+}
+.header{
+    border: 1px solid purple;
+    padding-bottom: 40px;
+    margin-left: 10px;
+}
+header{
+    margin: 10px;
+    padding-left: 10px;
+}
