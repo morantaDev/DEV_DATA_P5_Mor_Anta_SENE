@@ -28,7 +28,7 @@ nav p{
     padding-bottom: 10px;
     font-size: 15px;
     background-color: rgb(159, 69, 243);
-    margin-left: 875px;
+    margin-left: 750px;
     text-align: center;
     color: white;
 }
@@ -55,5 +55,8 @@ aside{
 
 aside header{
     font-size: 20px;
-    margin-right: 200px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid pink;
 }
