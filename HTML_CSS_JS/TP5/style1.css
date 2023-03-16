@@ -20,24 +20,24 @@ article{
     padding-bottom: 300px;
     
 }
-
 nav ul{
     list-style: none;
 }
 ul li{
     display: inline-block;
     margin-right: 160px;
-    
 }
+
 .body{
     border: 1px solid black;
     margin-right: 900px;
-
+    background-color: rgb(150, 209, 241);
 }
 .header{
     border: 1px solid purple;
     padding-bottom: 40px;
     margin-left: 10px;
+    
 }
 header{
     margin: 10px;
