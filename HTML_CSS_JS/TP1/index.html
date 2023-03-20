@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Extensible Markup Language</title>
 </head>
 <body>
@@ -11,8 +12,24 @@
 
    <h1>XML</h1>
    <h2>Exemple</h2>
-   <p><img src="/home/moranta/Downloads/WhatsApp Image 2023-03-13 at 13.28.37.jpeg" alt="logo" width=40% height=40%></p>
 
+   <pre>
+<code>
+&lt;?xml version=<span>'1.0'</span> encoding=<span>'iso-8859-1'?</span>>
+&lt;mail>
+    &lt;de> <span>stephane.crozate@utc.fr</span> &lt;/de>
+    &lt;a> <span>fabrice.issac@utc.fr</span> &lt;/a>
+    &lt;objet> <span>Demande d'information</span> &lt;/object>
+    &lt;date> <span>01-03-2001</span> &lt;/date>
+    &lt;corps>
+        &lt;paragraphe><span>Bonjour Fabrice,</span> &lt;/paragraphe>
+        &lt;paragraphe><span>Peut-tu m'expliquer ce qu'est le langage XML ?</span>&lt;/paragraphe>
+        &lt;paragraphe><span>Il faudrait en effet ton avis éclairé sur le sujet.</span> &lt;/paragraphe>
+        &lt;paragraphe><span>J'attends ta réponse, à bientôt</span>&lt;/paragraphe>
+    &lt;/corps>
+&lt;/mail>
+</code>
+   </pre>
    <h3>Liste ordonnée et liste non ordonnée</h3>
    <ol>
     <li>Option 1</li>

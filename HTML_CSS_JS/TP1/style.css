@@ -1,0 +1,26 @@
+body{
+    border: 1px solid black;
+}
+
+pre{
+    border: 1px solid black;
+    background-color: black;
+    margin-right: 60%;  
+}
+
+span{
+    color: white;
+}
+code{
+    color: rgb(82, 150, 251);
+    padding-left: 0%;
+    font-size: 14px;  
+}
+
+span:first-child{
+    color: rgb(255, 115, 0);
+}
+
+span:nth-child(2){
+    color: rgb(255, 115, 0);
+}

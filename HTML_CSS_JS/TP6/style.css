@@ -1,3 +1,52 @@
 body{
-    background-image: url("/background.jpg") no-repeat;
+    background: url("/background.jpg") no-repeat fixed;
+    margin: 0;
+    padding: 0;
+
+}
+.title header{
+    color: white;
+    border: 1px solid red;
+    text-align: center;
+    font-size: 50px;
+}
+
+.hour{
+    color: white;
+    border: 1px solid green;
+    /* padding-bottom: 80px; */
+}
+.hour ul{
+    display: flex;
+    list-style: none;
+    font-size: 45px;
+    justify-content: center;
+    
+}
+.hour ol{
+    display: flex;
+    list-style: none;
+    font-size: 30px;
+    justify-content: center;
+}
+
+.hour ol li{
+    margin-right: 50px;
+    padding-right: 28px;
+}
+
+.hour ul li{
+    margin-right: 70px;
+    padding-right: 40px;
+}
+.annee{
+    color: white;
+    transform: translate(50%);
+}
+
+.container{
+    width: 900px;
+    margin-top: 150px;
+    border: 1px solid white;
+    transform: translate(50%, 50%);
 }
