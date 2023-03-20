@@ -14,39 +14,45 @@ body{
 .hour{
     color: white;
     border: 1px solid green;
-    /* padding-bottom: 80px; */
 }
 .hour ul{
     display: flex;
     list-style: none;
     font-size: 45px;
     justify-content: center;
-    
+    border: 1px solid rgb(255, 0, 221);
+    margin-top: 40px;
 }
 .hour ol{
     display: flex;
     list-style: none;
     font-size: 30px;
     justify-content: center;
+    border: 1px solid yellow;
 }
 
 .hour ol li{
     margin-right: 50px;
-    padding-right: 28px;
+    padding-right: 30px;
 }
 
 .hour ul li{
     margin-right: 70px;
     padding-right: 40px;
+    
 }
 .annee{
     color: white;
     transform: translate(50%);
+    font-size: 70px;
+    padding-right: 60px;
+    border: 1px solid blue;
+    margin-right: 300px;
+    opacity: 0.5;
 }
 
 .container{
     width: 900px;
-    margin-top: 150px;
     border: 1px solid white;
     transform: translate(50%, 50%);
 }
