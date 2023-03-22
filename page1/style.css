@@ -2,18 +2,33 @@ body{
     border: 1px solid black;
     margin: 0;
 }
-header{
+.haut{
     background-color: #74C69D;
+}
+header{
+    display: flex;
+}
+
+.down_bar{
+    border: 1px solid red;
     display: flex;
 }
 .entete{
-    margin-left: 50px;
+    margin-left: 120px;
 }   
+
+.text{
+    margin: 120px;
+}
+.logo_down_bar{
+    margin-right: 80px;
+}
+
 
 .options{
     width: 1500px;
     margin: auto;
-    padding-left: 900px;
+    padding-left: 800px;
 }
 .options ul{
     display: flex;
@@ -30,4 +45,34 @@ header{
 
 a{
     color: white;
+}
+
+.text h1{
+    color: white;
+    font-size: 20px;
+}
+.text p{
+    color: white;
+    margin-right: 280px;
+    /* border: 1px solid black; */
+    letter-spacing: 3px;
+}
+
+.text p:nth-child(2){
+    font-size: 35px;
+    /* border: 1px solid black; */
+    margin-top: -5px;
+    
+}
+.text p:nth-child(3){
+    font-size: 16px;
+    margin-top: -30px;
+    opacity: 0.8;
+}
+.btn1{
+    background-color: white;
+    margin: 60px 60px 60px 0;
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+    font-size: 24px;
 }
