@@ -92,6 +92,10 @@ footer{
     margin-left: 80px;
 }
 
+.logo_site img{
+    width: 350px;
+}
+
 .copyright{
     font-size: 20px;
     color: white;

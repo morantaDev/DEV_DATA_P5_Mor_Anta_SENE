@@ -1,5 +1,5 @@
 body{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 0;
 }
 .haut{
@@ -10,7 +10,7 @@ body{
 }
 
 .down_bar{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
 }
 .entete{
@@ -77,11 +77,193 @@ a{
     font-size: 24px;
 }
 
-.btn2, .btn3{
+.btn2, .btn3, .btn4{
     background-color: black;
     margin: 60px 60px 60px 0;
-    padding: 10px 40px 10px 40px;
+    padding: 10px 30px 10px 30px;
     border-radius: 10px;
     font-size: 24px;
     color: white;
+}
+
+.btn2{
+    margin-left: 8rem;
+}
+
+.btn3{
+    margin-left: 15rem;
+    position: relative;
+    top: -3rem;
+}
+
+.btn4{
+    margin-left: 5rem;
+    position: relative;
+    top: -3rem;
+}
+
+.patners{
+    position: relative;
+    width: 500px;
+    margin: auto;
+    top: 50px;
+
+}
+.patners img{
+    position: relative;
+    margin-left: -400px;
+    margin-bottom: -50px;
+    /* border: 1px solid black; */
+    bottom: 40px;
+
+}
+
+.patners h1{
+    color: #74C69D;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-left: 180px;
+    letter-spacing: 4px;
+    
+}
+.patners p:nth-child(2){
+    font-size: 36px;
+    margin-left: 4.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.patners p:nth-child(3){
+    position: relative;
+    font-size: 22px;
+    margin-left: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-right: 5rem;
+    padding-bottom: 20px;
+    top: -10px;
+}
+.partners p{
+    margin-left: 400px;
+    
+}
+.women{
+    display: flex;
+    margin: 6rem;
+}
+
+.femmes_text{
+    position: relative;
+    top: 3rem;
+    /* border: 1px solid greenyellow; */
+}
+
+.femmes_text h1{
+    font-size: 40px;
+    margin-right: 10rem;
+    margin-left: 15rem;
+    letter-spacing: 3px;
+    /* border: 1px solid green; */
+    
+}   
+.femmes_text p{
+    position: relative;
+    margin-right: 280px;
+    letter-spacing: 3px;
+    margin-right: 15rem;
+    margin-left: 15rem;
+}
+.femmes img{
+    margin-left: 4rem;
+}
+
+.homme{
+    display: flex;
+    margin: 6rem;
+    /* border: 1px solid pink; */
+}
+.homme_text{
+    position: relative;
+    top: 10rem;
+    margin-bottom: 35%;
+    /* margin-right: 20rem; */
+    /* border: 1px solid red; */
+}
+/* .homme_text h1{
+    font-size: 20px;
+} */
+
+
+.homme_text p{
+    /* margin-right: 280px; */
+    letter-spacing: 3px;
+    margin-right: 12rem;
+    margin-left: 5rem;
+}
+
+.homme_text h1{
+    font-size: 40px;
+    margin-right: 12rem;
+    margin-left: 5rem;
+    letter-spacing: 3px;
+    /* border: 1px solid green; */
+    
+}
+.homme_text p{
+    font-size: 16px;
+    margin-top: -30px;
+    opacity: 0.8;
+}
+
+.Homme img{
+    margin-right: 10rem;
+}
+.team{
+    width: 600px;
+    margin: auto;
+    position: relative;
+    top: -20rem;
+}
+
+
+.talents header{
+    color: #74C69D;
+    margin-left: 13rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+.talents h1{
+    font-size: 44px;
+    font-weight: bold;
+    margin-left: 8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.talents p{
+    border: 1px solid red;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 120px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer{
+    display: flex;
+    background-color: #74C69D;
+    margin: 50px 0 50px 0;
+    padding: 30px 0 30px 0;
+}
+
+.logo_site{
+    margin-left: 80px;
+}
+.logo_site img{
+    width: 350px;
+}
+
+.copyright{
+    font-size: 20px;
+    color: white;
+    margin-left: 900px;
+
 }
