@@ -5,7 +5,7 @@ body{
 .haut{
     background-color: #74C69D;
 }
-header{
+.haut header{
     display: flex;
 }
 
@@ -75,4 +75,13 @@ a{
     padding: 10px 40px 10px 40px;
     border-radius: 10px;
     font-size: 24px;
+}
+
+.btn2, .btn3{
+    background-color: black;
+    margin: 60px 60px 60px 0;
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    color: white;
 }
