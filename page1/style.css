@@ -247,6 +247,12 @@ a{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
+.images{
+    display: flex;
+    width: 1000px;
+    margin: auto;
+}
 footer{
     display: flex;
     background-color: #74C69D;
