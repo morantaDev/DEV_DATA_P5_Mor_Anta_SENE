@@ -1,16 +1,20 @@
 body{
     /* border: 1px solid black; */
     margin: 0;
+    padding: 0;
+    font-family: "Poppins";
 }
 .haut{
     background-color: #74C69D;
+    width: 1900px;
+    height: 100%;
 }
+
 .haut header{
     display: flex;
 }
 
 .down_bar{
-    /* border: 1px solid red; */
     display: flex;
 }
 .entete{
@@ -24,19 +28,24 @@ body{
     margin-right: 80px;
 }
 
+.logo_down_bar img{
+    width: 1800;
+    height: auto;
+}
 
 .options{
     width: 1500px;
     margin: auto;
     padding-left: 800px;
 }
+
 .options ul{
     display: flex;
     list-style: none;
     align-items: center;
     flex-direction: row;
     justify-content: center;
-
+    
 }
 
 .options ul li{
@@ -105,17 +114,21 @@ a{
 .patners{
     position: relative;
     width: 500px;
+    height: auto;
     margin: auto;
     top: 50px;
-
+    
 }
 .patners img{
-    position: relative;
+    /* position: relative;
     margin-left: -400px;
-    margin-bottom: -50px;
+    margin-bottom: -50px; */
     /* border: 1px solid black; */
-    bottom: 40px;
-
+    /* bottom: 40px; */
+    margin: 0 auto;
+    width: 1250px;
+    height: auto;
+    
 }
 
 .patners h1{
@@ -145,6 +158,18 @@ a{
 .partners p{
     margin-left: 400px;
     
+}
+.mes_logo{
+    display: flex;
+    width: 1000px;
+    margin: auto;
+    border: 1px solid green;
+}
+
+
+.mes_logo img{
+    width: 200px;
+    justify-content: space-around; 
 }
 .women{
     display: flex;
@@ -230,14 +255,14 @@ a{
     margin-left: 13rem;
     font-weight: bold;
     letter-spacing: 2px;
-
+    
 }
 .talents h1{
     font-size: 44px;
     font-weight: bold;
     margin-left: 8rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    
 }
 .talents p{
     /* border: 1px solid red; */
@@ -286,5 +311,19 @@ footer{
     font-size: 20px;
     color: white;
     margin-left: 900px;
-
+    
+}
+@media screen and (max-width = 1200px) {
+    .patners{
+        display: flex;
+    }
+    .text{
+        display: block;
+    }
+    .images{
+        display: block;
+    }
+    .patners header{
+        display:block;
+    }
 }
