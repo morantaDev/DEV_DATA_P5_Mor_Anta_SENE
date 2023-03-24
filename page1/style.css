@@ -7,7 +7,6 @@ body{
 .haut{
     background-color: #74C69D;
     width: 100%;
-    height: 100%;
 }
 
 .haut header{
@@ -63,13 +62,11 @@ a{
 .text p{
     color: white;
     margin-right: 280px;
-    /* border: 1px solid black; */
     letter-spacing: 3px;
 }
 
 .text p:nth-child(2){
     font-size: 35px;
-    /* border: 1px solid black; */
     margin-top: -5px;
     
 }
@@ -94,34 +91,29 @@ a{
     font-size: 24px;
     color: white;
 }
-
 .btn2{
     margin-left: 8rem;
 }
-
 .btn3{
     margin-left: 15rem;
-    position: relative;
-    top: -3rem;
 }
-
 .btn4{
     margin-left: 5rem;
-    position: relative;
-    top: -3rem;
 }
-
 .patners{
     position: relative;
-    width: 500px;
-    height: auto;
-    margin: auto;
+    width: 100%;
+    /* height: auto; */
+    margin: 0 auto;
     top: 50px;   
+    border: 1px solid blue;
+    padding: auto;
 }
 .patners img{
     margin: 0 auto;
     width: 1250px;
-    height: auto;
+    /* height: auto; */
+    border: 1px solid red;
 }
 .patners h1{
     color: #74C69D;
@@ -132,6 +124,7 @@ a{
     
 }
 .patners p:nth-child(2){
+    position: relative;
     font-size: 36px;
     margin-left: 4.5rem;
     font-weight: bold;
@@ -147,7 +140,7 @@ a{
     padding-bottom: 20px;
     top: -10px;
 }
-.partners p{
+.patners p{
     margin-left: 400px;
     
 }
@@ -169,7 +162,6 @@ a{
 .femmes_text{
     position: relative;
     top: 3rem;
-    /* border: 1px solid greenyellow; */
 }
 
 .femmes_text h1{
@@ -177,8 +169,6 @@ a{
     margin-right: 10rem;
     margin-left: 15rem;
     letter-spacing: 3px;
-    /* border: 1px solid green; */
-    
 }   
 .femmes_text p{
     position: relative;
@@ -194,22 +184,13 @@ a{
 .homme{
     display: flex;
     margin: 6rem;
-    /* border: 1px solid pink; */
 }
 .homme_text{
     position: relative;
     top: 10rem;
     margin-bottom: 35%;
-    /* margin-right: 20rem; */
-    /* border: 1px solid red; */
 }
-/* .homme_text h1{
-    font-size: 20px;
-} */
-
-
 .homme_text p{
-    /* margin-right: 280px; */
     letter-spacing: 3px;
     margin-right: 12rem;
     margin-left: 5rem;
@@ -220,8 +201,6 @@ a{
     margin-right: 12rem;
     margin-left: 5rem;
     letter-spacing: 3px;
-    /* border: 1px solid green; */
-    
 }
 .homme_text p{
     font-size: 16px;
@@ -233,10 +212,13 @@ a{
     margin-right: 10rem;
 }
 .team{
+    position: relative;
     width: 600px;
     margin: auto;
-    position: relative;
-    top: -20rem;
+    top: -5rem;
+}
+.talents{
+    float: right;
 }
 .talents header{
     color: #74C69D;
@@ -263,7 +245,6 @@ a{
     justify-content: space-around;
     margin-top: -15rem;
 }
-
 .images img{
     margin-right: 60px;
     border: 1px solid black;
@@ -271,7 +252,8 @@ a{
     box-shadow: 2px 5px 2px gray;
 }
 .btn5{
-    margin-left: 800px;   
+    margin-left: 800px;
+    position: relative;   
 }
 footer{
     display: flex;
@@ -293,7 +275,6 @@ footer{
     margin-left: 900px;
     
 }
-
 .images {
     display: flex;
     width: 1000px;
@@ -301,6 +282,15 @@ footer{
     justify-content: space-around;
     margin-top: -15rem;
 }
+
+/* main{
+    width: 100%;
+    height: 100%;
+} */
+
+
+
+
 
 @media screen and (max-width:1200px){
     .images{
@@ -315,15 +305,16 @@ footer{
     }
     .down_bar{
         display: block;
-        width: 800px;
+        
     }
     .mes_logo{
         display: block;
         margin: 0 auto;
     }
-    /* body{ 
-        margin: 0 auto;
-    } */
-   
-
+    .women{
+        display: block;
+    }
+    .homme{
+        display: block;
+    }
 }
