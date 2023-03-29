@@ -4,7 +4,7 @@ function createSection(){
   
     //alert("salut")
   let bloc = document.createElement('section');
-  bloc.setAttribute("id", counter)
+  // bloc.setAttribute("id", counter)
   bloc.innerHTML = `
       <div class="icon">
           <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -20,7 +20,7 @@ function createSection(){
   `
   document.querySelector('main').appendChild(bloc);
 
-
+  
 counter++
 }
 
@@ -31,26 +31,36 @@ document.addEventListener('DOMContentLoaded', (event)=>{
   element.addEventListener('click', function(){
     createSection()
   });
-
-
-  let ClickEdit = document.querySelector(".edit")
-  const textComposant = document.querySelector("section #text")
-  ClickEdit.addEventListener('click', function(){
-    if(textComposant.disabled){
-      textComposant.disabled = false
-    }else{
-      textComposant.disabled = true
-    }
-  });
-
-  let Click_delete = document.querySelector("#delete")
-  const to_delete_Composant = document.querySelector("section")
-  Click_delete.addEventListener('click', function(){
-    to_delete_Composant.remove()
-  })
-
+  
+  
 });
 
 
 
-console.log(document)
+  
+
+document.addEventListener("click",()=>{
+  const listOfSection = document.querySelectorAll("section")
+  console.log(listOfSection)
+  listOfSection.forEach(v => {
+
+    let ClickEdit = v.querySelector("#edit")
+    const textComposant = v.querySelector("#text")
+    ClickEdit.addEventListener('click', function(){
+      if(textComposant.disabled){
+        textComposant.disabled = false
+        // v.lastChild.disabled = false
+      }else{
+        textComposant.disabled = true
+        // v.lastChild.disabled = true
+      }
+    });
+    
+  })
+  const container = document.getElementsByClassName("container")
+  let Click_delete = document.querySelector("#delete")
+  Click_delete.addEventListener('click', function(event){
+    const to_delete_Composant = event.target.parentElement.parentElement.parentElement;
+    to_delete_Composant.remove()
+  })
+})

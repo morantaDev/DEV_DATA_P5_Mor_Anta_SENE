@@ -4,35 +4,39 @@ body{
 }
 .container{
     display: flex;
-    box-shadow: 5px 5px 5px grey;
     margin: 10% 30%;
     background-color: rgb(225, 224, 224);
     border: 1px solid green;
 }
 
-.btns{
+.btns, .btns1{
     border: 1px solid blue;
-    margin: 0  0 10px 5px;
+    margin: 0  5px 10px 5px;
     padding: 0 60px 100px 20px;
     background-color: white;
+    /* position: fixed; */
 }
-.btns p{
+.btns ul, .btns1 ul{
+    list-style: none;
+}
+.btns p, .btns1 p{
     margin-right: 20px;
-    padding-right: 70px;
+    margin-bottom: 10px;
+    padding-right: 40px;
     border-radius: 5px;
+    border: 1px solid green;
     font-size: 17px;
     font-family: Verdana, sans-serif;
 }
-.btns p:hover{
-    background-color: blue;
-    color: white;
-}
 .area{
     border: 1px solid red;
-    padding: 100px 50px;
+    padding: 100px 60px;
 }
 .area svg{
     border: 1px solid grey;
     padding: 10px 20px;
     border-radius: 3px;
+}
+#right:active, #left:active{
+    color: rgb(68, 192, 246);
 }
