@@ -2,6 +2,85 @@ body{
     width: 100%;
     margin: 0;
 }
+.gauche, .droite{
+    border: 1px solid black;
+    margin: 5px;
+    background-color: white;
+    padding-bottom: 50px;
+}
+.gauche p{
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.btns{
+    border: 1px solid black;
+    padding: 70% 35%;
+}
+.btns svg{
+    border: 1px solid black;
+    padding: 5px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 300px 100px 300px;
+    border: 1px solid green;
+    width: 703px;
+    margin: 25% 30%;
+    background-color: rgb(222, 220, 220);
+}
+.left:active, .right:active{
+    color: blue;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body{
+    width: 100%;
+    margin: 0;
+}
 .container{
     display: flex;
     margin: 10% 30%;
@@ -14,7 +93,6 @@ body{
     margin: 0  5px 10px 5px;
     padding: 0 60px 100px 20px;
     background-color: white;
-    /* position: fixed; */
 }
 .btns ul, .btns1 ul{
     list-style: none;
@@ -39,4 +117,4 @@ body{
 }
 #right:active, #left:active{
     color: rgb(68, 192, 246);
-}
+} */
