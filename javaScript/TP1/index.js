@@ -60,7 +60,7 @@ document.addEventListener("click",()=>{
   const container = document.getElementsByClassName("container")
   let Click_delete = document.querySelector("#delete")
   Click_delete.addEventListener('click', function(event){
-    const to_delete_Composant = event.target.parentElement.parentElement.parentElement;
+    const to_delete_Composant = event.target.parentElement.parentElement;
     to_delete_Composant.remove()
   })
 })
