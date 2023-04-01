@@ -15,16 +15,12 @@ let generateurNbr =function generateIntervalleNum(){
     return alNum;
 }
 
-
-// renvoie par exemple : "iL0v3"
-
 // console.log(generateur())
 generer.addEventListener('click', function(){
-    var ele = []
     for (let i=1; i<=Length; i++){
         zone.append(generateurNbr())
     }
-
+    
 })
 
 
@@ -44,37 +40,37 @@ generer.addEventListener('click', function(){
 
 
 // function strRandom(o) {
-//     var a = 15,
-//         b = 'abcdefghijklmnopqrstuvwxyz',
-//         c = '',
-//         d = 0,
-//         e = ''+b;
-//     if (o) {
-//         if (o.startsWithLowerCase) {
-//         c = b[Math.floor(Math.random() * b.length)];
-//         d = 1;
-//         }
-//         if (o.length) {
-//         a = o.length;
-//         }
-//         if (o.includeUpperCase) {
-//         e += b.toUpperCase();
-//         }
-//         if (o.includeNumbers) {
-//         e += '1234567890';
-//         }
+    //     var a = 15,
+    //         b = 'abcdefghijklmnopqrstuvwxyz',
+    //         c = '',
+    //         d = 0,
+    //         e = ''+b;
+    //     if (o) {
+        //         if (o.startsWithLowerCase) {
+            //         c = b[Math.floor(Math.random() * b.length)];
+            //         d = 1;
+            //         }
+            //         if (o.length) {
+                //         a = o.length;
+                //         }
+                //         if (o.includeUpperCase) {
+                    //         e += b.toUpperCase();
+                    //         }
+                    //         if (o.includeNumbers) {
+                        //         e += '1234567890';
+                        //         }
 //     }
 //     for (; d < a; d++) {
-//         c += e[Math.floor(Math.random() * e.length)];
-//     }
-//     return c;
-//     }
-
-//     var randu = strRandom({
-//     includeUpperCase: true,
-//     includeNumbers: true,
-//     length: 15,
-//     startsWithLowerCase: true
-//     });
+    //         c += e[Math.floor(Math.random() * e.length)];
+    //     }
+    //     return c;
+    //     }
     
-//     console.log(randu)
+    //     var randu = strRandom({
+        //     includeUpperCase: true,
+        //     includeNumbers: true,
+        //     length: 15,
+        //     startsWithLowerCase: true
+        //     });
+        
+        //     console.log(randu)

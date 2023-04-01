@@ -1,0 +1,33 @@
+body{
+    width: 100%;
+    margin: 0;
+    /* background: url("img/arbre_neige.jpeg"); */
+}
+.container{
+    /* border: 1px solid black; */
+    margin: 10% 20%;
+    text-align: center;
+    background: url("img/arbre_neige.jpeg");
+    /* color: white; */
+}
+.date{
+    font-size: 120px;
+    font-weight: bold;
+}
+.alpha{
+    display: grid;
+    grid-template-columns: 230px 200px 220px 250px;
+    margin-left: 10%;
+}
+header{
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+.alpha .element{
+    font-size: 35px;
+    /* text-align: center; */
+}
+/* .alpha div{
+    margin: 30px;
+    padding: 20px;
+} */
