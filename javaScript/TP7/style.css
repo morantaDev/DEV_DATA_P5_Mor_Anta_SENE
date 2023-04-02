@@ -20,6 +20,8 @@ body{
 
 .images img{
     width: 300px;
+    height: 300px;
+    position: relative;
 }
 .images #title{
     color: white;
@@ -45,13 +47,12 @@ span{
 section{
     margin: 20px;
 }
-/* #title{
-    position: relative;
-    z-index: 0;
-} */
 .imageEtTitre{
     position: relative;
     /* z-index: 0; */
+}
+.imageEtTitre img{
+    position: relative;
 }
 .descript{
     position: absolute;
@@ -62,4 +63,7 @@ section{
 /* vous pouvez ajouter cette règle pour afficher la description quand même */
 .descript{
     overflow: visible;
+    margin-top: -300px;
+    padding-top: -300px;
+    background-color: white;
 }

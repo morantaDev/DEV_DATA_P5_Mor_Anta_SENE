@@ -16,9 +16,9 @@ const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5e
 const image = document.querySelector('.images')
 
 document.addEventListener("DOMContentLoaded", function(){
+    let affichage = ""
     fetch(APIURL).then(response => response.json().then((data)=> {
         console.log(data);
-        let affichage = ""
         for(let img of data.results){
             const img_title = document.createElement("section")
             img_title.setAttribute('class', 'imageEtTitre')
@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function(){
             }
 
 
-            // const Sect = img_title.querySelector('.imageEtTitre')
             const description = img_title.querySelector('.descript');
+            description.style.display ="none"   
             console.log(description)
             console.log(img_title)
 
@@ -59,7 +59,27 @@ document.addEventListener("DOMContentLoaded", function(){
             affichage += img_title.outerHTML;
             image.innerHTML = affichage;
         }  
+        
+    }))
 
-    } 
-))
+    // Rechercher un film par son nom
+        // get input value 
+    function searchMoviesByTitle(title) {
+        const url = SEARCHAPI + encodeURIComponent(title);
+        return fetch(url)
+        .then(response => response.json())
+        .then(data => data.results)
+        .catch(error => console.error(error));
+    }
+    
+    // Exemple d'utilisation :
+    const searchInput = document.querySelector('#search');
+    searchInput.addEventListener("change", () => {
+        const title = searchInput.value;
+        searchMoviesByTitle(title)
+        .then(results => console.log(results))
+        .catch(error => console.error(error));
+    });
+
+
 })
