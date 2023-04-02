@@ -45,3 +45,21 @@ span{
 section{
     margin: 20px;
 }
+/* #title{
+    position: relative;
+    z-index: 0;
+} */
+.imageEtTitre{
+    position: relative;
+    /* z-index: 0; */
+}
+.descript{
+    position: absolute;
+    z-index: 1;
+}
+
+/* si la description est masquée par un conteneur parent qui a un overflow caché */
+/* vous pouvez ajouter cette règle pour afficher la description quand même */
+.descript{
+    overflow: visible;
+}

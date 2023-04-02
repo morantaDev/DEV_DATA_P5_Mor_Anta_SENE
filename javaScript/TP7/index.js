@@ -41,15 +41,20 @@ document.addEventListener("DOMContentLoaded", function(){
                 img_title.querySelector('span').style.color = "red";
             }
 
-            const description = img_title.querySelector('.descript');
-            description.style.display = 'none';
 
-            img_title.addEventListener('mouseover', () => {
-                description.style.display = 'block';
-            });
-            img_title.addEventListener('mouseout', () => {
+            // const Sect = img_title.querySelector('.imageEtTitre')
+            const description = img_title.querySelector('.descript');
+            console.log(description)
+            console.log(img_title)
+
+            img_title.addEventListener("mouseover", function(){
+                description.style.display = "block";
+            })
+            img_title.addEventListener("mouseout", function(){
                 description.style.display = 'none';
-            });
+                description.style.backgroundColor = 'white'
+            })
+
 
             affichage += img_title.outerHTML;
             image.innerHTML = affichage;
