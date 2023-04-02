@@ -1,10 +1,5 @@
-let counter = 0
 function createSection(){
-
-  
-    //alert("salut")
   let bloc = document.createElement('section');
-  // bloc.setAttribute("id", counter)
   bloc.innerHTML = `
       <div class="icon">
           <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -16,29 +11,15 @@ function createSection(){
             </svg>
       </div>
       <textarea name="text" id="text" cols="50" rows="30"></textarea>
-  
   `
   document.querySelector('main').appendChild(bloc);
-
-  
-counter++
 }
-
 document.addEventListener('DOMContentLoaded', (event)=>{
-  
   let element = document.querySelector(".add");
-  
   element.addEventListener('click', function(){
     createSection()
   });
-  
-  
 });
-
-
-
-  
-
 document.addEventListener("click",()=>{
   const listOfSection = document.querySelectorAll("section")
   console.log(listOfSection)
@@ -56,11 +37,10 @@ document.addEventListener("click",()=>{
       }
     });
     
-  })
-  const container = document.getElementsByClassName("container")
-  let Click_delete = document.querySelector("#delete")
-  Click_delete.addEventListener('click', function(event){
-    const to_delete_Composant = event.target.parentElement.parentElement;
-    to_delete_Composant.remove()
+    // const container = document.getElementsByClassName("container")
+    let Click_delete = v.querySelector("#delete")
+    Click_delete.addEventListener('click', function(){
+      v.remove()
+    })
   })
 })
