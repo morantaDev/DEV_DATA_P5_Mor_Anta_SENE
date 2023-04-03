@@ -18,10 +18,11 @@ const image = document.querySelector('.images')
 document.addEventListener("DOMContentLoaded", function(){
     let affichage = ""
     fetch(APIURL).then(response => response.json().then((data)=> {
-        console.log(data);
+        ///console.log(data);
         for(let img of data.results){
-            const img_title = document.createElement("section")
+            let img_title = document.createElement("section")
             img_title.setAttribute('class', 'imageEtTitre')
+
             img_title.innerHTML = `
             <img src="https://image.tmdb.org/t/p/w1280${img.backdrop_path}" alt="mon_image"/>
             <div id ='title'>
@@ -44,11 +45,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
             const description = img_title.querySelector('.descript');
             description.style.display ="none"   
-            console.log(description)
-            console.log(img_title)
+            //console.log(description)
+            //console.log(img_title)
 
-            img_title.addEventListener("mouseover", function(){
+            img_title.addEventListener("mouseover", function(event){
                 description.style.display = "block";
+                console.log(event.target)
+
             })
             img_title.addEventListener("mouseout", function(){
                 description.style.display = 'none';
@@ -56,8 +59,9 @@ document.addEventListener("DOMContentLoaded", function(){
             })
 
 
-            affichage += img_title.outerHTML;
-            image.innerHTML = affichage;
+           // affichage += img_title.outerHTML;
+            //image.innerHTML = affichage;
+            image.appendChild(img_title)
         }  
         
     }))
