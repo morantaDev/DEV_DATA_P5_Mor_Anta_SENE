@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function(){
 let score = 0
 
 const tableau_questions = [
@@ -44,15 +45,34 @@ const tableau_questions = [
 ];
 
 
-const button = document.querySelector(".btn")
-console.log(button)
-document.addEventListener('DOMContentLoaded', function(){
-    button.disabled = false
     
-    for(let i = 0; i<tableau_questions.length; i++){
+    
+for(let i = 0; i<tableau_questions.length; i++){
+        const card = document.createElement("div")
+        card.classList.add("cadre")
+
         const question = tableau_questions[i]
-        console.log(question.question)
+            console.log(question.question)
+            card.innerHTML =`<div class="ask"><header>${question.question}</header><div><div class="choice"><input type="radio" id="java" name="java" value="java"checked><label for="java">${question.a}</label></div><div class="choice"><input type="radio" id="c" name="c" value="c"><label for="c">${question.b}</label></div><div class="choice"><input type="radio" id="python" name="python" value="python"><label for="python">${question.c}</label></div><div class="choice"><input type="radio" id="javascript" name="javascript" value="javascript"><label for="javascript">${question.d}</label></div></div></div><div class="button"><button class="btn">Suivant</button></div>`
+            const button = card.querySelector(".button button")
+            console.log(button)
+            button.disabled = true
+        
+        button.addEventListener('click', function(){
+                const nextCard = card.nextElementSibling;
+                if (nextCard) {
+                  nextCard.querySelector(".button button").disabled = false;
+                  card.style.display = "none";
+                  nextCard.style.display = "block";
+                }
+        })
     
+        document.querySelector(".container").appendChild(card)
+
+        if (i === 0) {
+            button.disabled = false;
+            card.style.display = "block";
+          }
     }
 })
 
