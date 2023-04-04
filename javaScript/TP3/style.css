@@ -36,8 +36,8 @@ body{
 .btn3{
     background-color: rgb(51, 149, 247);
 }
-.projet{
-    /* border: 1px solid black; */
+.projet{ 
+    border: 1px solid black;
     background-color: rgb(39, 172, 39);
     font-size: 25px;
     width: 15%;
