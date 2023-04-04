@@ -5,6 +5,7 @@ const warning = document.querySelector('.warning')
 const info = document.querySelector('.info')
 
 
+let events = []
 
 projet.style.display = "none"
 
@@ -49,7 +50,7 @@ warning.addEventListener('click', function(){
         }  
     }, 1000)
 })
-info.addEventListener('click', function(){
+let infoEvent = info.addEventListener('click', function(){
     projet.style.display = "block"
     projet.style.backgroundColor = "blue"
     let x = setInterval(function(){
@@ -63,9 +64,15 @@ info.addEventListener('click', function(){
     }, 1000)
 })
 
+events.push(infoEvent)
+
 //je veux afficher les événements en forme de pile où lévenement précédant s'affichera au dessus de l'élément actuel ainsi de suite jusqu'à la fin des événements
 
+/*procédé
+je veux créér un tableau d'événement
+j'ajoute les différents événements et retourne le tableau à chaque fois un événement est ajouté
 
+*/
 
 
 // const events = []; // Tableau pour stocker les événements
