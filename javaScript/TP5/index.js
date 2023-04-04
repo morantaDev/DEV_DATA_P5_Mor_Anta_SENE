@@ -112,6 +112,8 @@ for(let i = 0; i<tableau_questions.length; i++){
                   nextCard.querySelector(".button button").disabled = false;
                   card.style.display = "none";
                   nextCard.style.display = "block";
+                } else {
+                    button.disabled = true;
                 }
         })
     
@@ -121,7 +123,6 @@ for(let i = 0; i<tableau_questions.length; i++){
             button.disabled = false;
             card.style.display = "block";
           }
-
         }
         const question1 = tableau_questions[1]
         console.log(question1.correct)

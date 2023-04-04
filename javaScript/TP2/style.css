@@ -9,7 +9,7 @@ body{
     padding-bottom: 50px;
 }
 .gauche p{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-right: 10px;
     margin-left: 10px;
     border-radius: 5px;

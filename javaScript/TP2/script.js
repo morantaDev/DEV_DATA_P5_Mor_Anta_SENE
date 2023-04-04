@@ -3,12 +3,13 @@ let boutonRightChoisi = document.querySelector("#right")
 let boutonLeftChoisi = document.querySelector("#left")
 
 let listOfD = document.querySelector(".droite")
+let listOfG = document.querySelector(".gauche")
 
 let paragrapheChoisi = document.querySelector(".btns p")
 
 let listOfP = document.querySelectorAll(".gauche p")
 
-console.log(listOfD)
+// console.log(listOfD)
 
 listOfP.forEach(element => {
     
@@ -17,30 +18,19 @@ listOfP.forEach(element => {
         //console.log(event.target)
         event.target.style.backgroundColor = "blue"
         event.target.style.color = "white"
-        //alert("jj")
-        //listOfD.appendChild(event.target)
-
+        
+        boutonRightChoisi.addEventListener('click', function(){
+            listOfD.appendChild(event.target)
+            listOfG.removeChild(event.target)
+        })
+        boutonLeftChoisi.addEventListener('click', function(){
+            listOfD.removeChild(event.target)
+            listOfG.appendChild(event.target)
+        })
     })
 
-    element.addEventListener("mouseout", function(event){
+    element.addEventListener("mouseout", function(event){   
         element.style.backgroundColor = ""
         element.style.color = ""
     })
 })
-/*
-colorer.addEventListener("mouseover", function(event){
-    listOfP.forEach(element =>{
-        element.style.backgroundColor = "blue"
-        element.style.color = "white"
-
-    const newP = document.createElement("p")
-    newP.textContent = element.textContent
-    console.log(newP)
-
-    })
-})
-
-boutonRightChoisi.addEventListener('click', function(){
-    document.querySelector(".droite").appendChild(newP)
-    
-})*/
