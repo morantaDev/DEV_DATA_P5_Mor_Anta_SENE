@@ -1,37 +1,66 @@
 const zone = document.querySelector('.text_zone')
 const generer = document.querySelector('.btn')
-const length = document.querySelector('input#length').value
+const length = document.querySelector('#length')
+const majus = document.querySelector('#majuscule')
+const minus = document.querySelector('#minuscule')
+const numbers = document.querySelector('#numbers')
+const speChar = document.querySelector('#character')
+
+var inputLength = 0
+
+//Récupérer la taille du code
+length.addEventListener('input', function(event){
+    inputLength = event.target.value
+    console.log(inputLength)
+})
 
 
 
-console.log(length)
+//Vérifier les cases cochées
+
+majus.addEventListener('change', function(){
+    console.log('true')
+})
+minus.addEventListener('change', function(){
+    console.log('true')
+})
+numbers.addEventListener('change', function(){
+    console.log('true')
+})
+speChar.addEventListener('change', function(){
+    console.log('true')
+})
 
 
+
+//Générer des nombres aléatoirement de 0 à 9 (une fois)
 let generateurNbr =function generateIntervalleNum(){
     var alNum = Math.floor(Math.random() * 10)
     return alNum;
 }
 
+//Générer des lettres minuscules aléatoirement de a à z (une fois)
 let generateurLettreMin = function generateLowLetter(){
     var letter = String.fromCharCode(Math.floor(Math.random()*26)+97)
     return letter
 }
 
+//Générer des lettres majuscules aléatoirement de A à Z (une fois)
 let generateurLettreMaj = function generateUpperLetter(){
     var letter = String.fromCharCode(Math.floor(Math.random()*26)+65)
     return letter
 }
 
+//Générer des caractères spéciaux aléatoirement (une fois)
 let generateurCharSpe = function generateSpecialChar(){
     const symbols = '!@#$%^&*(){}[]=<>/,.'
 	var symbol = symbols[Math.floor(Math.random() * symbols.length)];    
     return symbol
 }
 
-// console.log(generateur())
 generer.addEventListener('click', function(){
-    for (let i=1; i<=length; i++){
-        zone.append(generateurCharSpe())
+    for (let i=1; i<=inputLength; i++){
+        zone.append(generateurLettreMin())
     }
     
 })
