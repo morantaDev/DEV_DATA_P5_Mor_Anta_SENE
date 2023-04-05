@@ -1,24 +1,37 @@
 const zone = document.querySelector('.text_zone')
 const generer = document.querySelector('.btn')
-// const length = document.querySelector('.length input.value')
+const length = document.querySelector('input#length').value
+
+
 
 console.log(length)
 
-//generer des valeurs entre le min et max avec le max exclu
-function randNumber(min, max){
-    return Math.random * (max - min) + min;
-}
 
-var Length = 15
 let generateurNbr =function generateIntervalleNum(){
     var alNum = Math.floor(Math.random() * 10)
     return alNum;
 }
 
+let generateurLettreMin = function generateLowLetter(){
+    var letter = String.fromCharCode(Math.floor(Math.random()*26)+97)
+    return letter
+}
+
+let generateurLettreMaj = function generateUpperLetter(){
+    var letter = String.fromCharCode(Math.floor(Math.random()*26)+65)
+    return letter
+}
+
+let generateurCharSpe = function generateSpecialChar(){
+    const symbols = '!@#$%^&*(){}[]=<>/,.'
+	var symbol = symbols[Math.floor(Math.random() * symbols.length)];    
+    return symbol
+}
+
 // console.log(generateur())
 generer.addEventListener('click', function(){
-    for (let i=1; i<=Length; i++){
-        zone.append(generateurNbr())
+    for (let i=1; i<=length; i++){
+        zone.append(generateurCharSpe())
     }
     
 })
