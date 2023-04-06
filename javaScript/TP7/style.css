@@ -20,7 +20,7 @@ body{
 
 .images img{
     width: 300px;
-    height: 300px;
+    height: 500px;
     position: relative;
 }
 .images #title{
@@ -51,12 +51,13 @@ section{
     position: relative;
     /* z-index: 0; */
 }
-.imageEtTitre img{
+/* .imageEtTitre img{
     position: relative;
-}
+    top: 15px;
+} */
 .descript{
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 /* si la description est masquée par un conteneur parent qui a un overflow caché */
@@ -64,6 +65,6 @@ section{
 .descript{
     overflow: visible;
     margin-top: -300px;
-    padding-top: -300px;
+    /* padding-top: 100px; */
     background-color: white;
 }
