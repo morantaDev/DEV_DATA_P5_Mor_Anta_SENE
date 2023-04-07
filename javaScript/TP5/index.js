@@ -44,8 +44,17 @@ const tableau_questions = [
     }
 ];
 
+tableau_questions.forEach(question => {
+    console.log(question.question)
+    console.log(`a. ${question.a}`)
+    console.log(`b. ${question.b}`)
+    console.log(`c. ${question.c}`)
+    console.log(`d. ${question.d}`)
 
     
+})
+
+
     
 for(let i = 0; i<tableau_questions.length; i++){
 
@@ -88,6 +97,8 @@ for(let i = 0; i<tableau_questions.length; i++){
 
     
     ask.appendChild(choices)
+
+    
     }
         const button1 = document.createElement("div")
         button1.classList.add('button')
@@ -124,10 +135,11 @@ for(let i = 0; i<tableau_questions.length; i++){
             card.style.display = "block";
           }
         }
-        const question1 = tableau_questions[1]
-        console.log(question1.correct)
-        const choix1 = document.querySelector('input')
-        console.log(choix1)
+
+        // const question1 = tableau_questions[1]
+        // console.log(question1.correct)
+        // const choix1 = document.querySelector('input')
+        // console.log(choix1)
 
 })
 

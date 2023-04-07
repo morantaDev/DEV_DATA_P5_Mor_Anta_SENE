@@ -1,8 +1,9 @@
-const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=";
 
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 
 const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
+
 
 
 // fetch(APIURL)
@@ -14,12 +15,32 @@ const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5e
         // })
         
 const image = document.querySelector('.images')
+console.log(image)
 
-
+const sections = document.querySelectorAll(".imageEtTitre")
+console.log(sections)
 document.addEventListener("DOMContentLoaded", function(){
     
    //Lazy loading
    //créer un événement au scroll
+
+    window.addEventListener('scroll', () => {
+        console.log('🍿')
+
+        const {scrollTop, clientHeight} = document.documentElement;
+        console.log(scrollTop, clientHeight)
+    
+        console.log(image.getBoundingClientRect().top)
+
+        const topElementToTopViewPort = image.getBoundingClientRect().top;
+
+        image.style.opacity = '1'
+        if (scrollTop > (scrollTop + topElementToTopViewPort).toFixed) {
+            image.style.transition = 'opacity 1500ms'
+            image.style.opacity = '0'
+        }
+    })
+
 
     function createSection(element, addInHtml){
     let imgFound = document.createElement('section')
@@ -82,6 +103,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             })
 
+
+            
         })
         
         }  
@@ -99,8 +122,17 @@ document.addEventListener("DOMContentLoaded", function(){
         .then(data => data.results)
         .catch(error => console.error(error));
     }
-    
-    
 
 
+
+    
+    //
+//     var options = {
+//         root: document.querySelector('#scrollArea'),
+//         rootMargin: '0px',
+//         threshold: 1.0
+//       }
+      
+//       var observer = new IntersectionObserver(callback, options);
+      
 })

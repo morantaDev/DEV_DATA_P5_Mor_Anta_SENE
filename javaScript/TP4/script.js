@@ -47,6 +47,9 @@ const Length = length.addEventListener('input', function(event){
     inputLength = event.target.value
     // console.log(inputLength)
 })
+if (inputLength == undefined){
+    inputLength = input.value;
+}
 console.log(Length)
 generate.addEventListener('click', function(){
     const taille = inputLength;
@@ -63,13 +66,13 @@ function genererMotDePasse(lower, upper, number, symbol, length) {
 	let genererMotDePasse = '';
 	const nbrCaseCocher = lower + upper + number + symbol;
 	const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
-	console.log(typesArr)
+	
 	// S'il utilisateur ne selectionne pas une case 
-	if(typesCount === 0) {
+	if(nbrCaseCocher === 0) {
 		return '';
 	}
 	
-	// créer une boucle
+	// create a loop
 	for(let i=0; i<length; i+=nbrCaseCocher) {
 		typesArr.forEach(type => {
 			const funcName = Object.keys(type)[0];
