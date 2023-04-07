@@ -17,9 +17,11 @@ const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5e
 const image = document.querySelector('.images')
 console.log(image)
 
-const sections = document.querySelectorAll(".imageEtTitre")
-console.log(sections)
 document.addEventListener("DOMContentLoaded", function(){
+    const sections = document.querySelectorAll(".imageEtTitre")
+    console.log(sections)
+
+    sections.forEach(element => { console.log(element)})
     
    //Lazy loading
    //créer un événement au scroll
@@ -34,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
         const topElementToTopViewPort = image.getBoundingClientRect().top;
 
-        image.style.opacity = '1'
-        if (scrollTop > (scrollTop + topElementToTopViewPort).toFixed) {
-            image.style.transition = 'opacity 1500ms'
-            image.style.opacity = '0'
+        image.style.opacity = '0'
+        if (scrollTop > (scrollTop + topElementToTopViewPort).toFixed()) {
+            // image.style.transition = 'opacity 1500ms'
+            image.style.opacity = '1'
         }
     })
 
