@@ -1,4 +1,4 @@
-const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=";
+const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 
@@ -18,30 +18,36 @@ const image = document.querySelector('.images')
 console.log(image)
 
 document.addEventListener("DOMContentLoaded", function(){
-    const sections = document.querySelectorAll(".imageEtTitre")
-    console.log(sections)
-
-    sections.forEach(element => { console.log(element)})
     
-   //Lazy loading
-   //créer un événement au scroll
+    // const sections = document.querySelectorAll(".imageEtTitre")
+    // console.log(sections)
 
-    window.addEventListener('scroll', () => {
-        console.log('🍿')
+    // sections.forEach(element => { 
+    //     // console.log(element)
 
-        const {scrollTop, clientHeight} = document.documentElement;
-        console.log(scrollTop, clientHeight)
+    // //Lazy loading
+    // //créer un événement au scroll
+    //     window.addEventListener('scroll', () => {
+    //         console.log('🍿')
+     
+    //         const {scrollTop, clientHeight} = document.documentElement;
+    //         console.log(scrollTop, clientHeight)
+        
+    //         console.log(element.getBoundingClientRect().top)
+     
+    //         const topElementToTopViewPort = element.getBoundingClientRect().top;
+     
+    //         // image.style.opacity = '0'
+    //         if (scrollTop > (scrollTop + topElementToTopViewPort).toFixed()) {
+    //             // image.style.transition = 'opacity 1500ms'
+    //             // image.style.opacity = '1'
+    //             element.style.display = "block"
+    //         }
+    //     })
+    // })
     
-        console.log(image.getBoundingClientRect().top)
+   
 
-        const topElementToTopViewPort = image.getBoundingClientRect().top;
-
-        image.style.opacity = '0'
-        if (scrollTop > (scrollTop + topElementToTopViewPort).toFixed()) {
-            // image.style.transition = 'opacity 1500ms'
-            image.style.opacity = '1'
-        }
-    })
 
 
     function createSection(element, addInHtml){
@@ -49,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
         imgFound.classList.add('imageEtTitre')
         let img = document.createElement('IMG')
         img.setAttribute('src', `https://image.tmdb.org/t/p/w1280${element.poster_path}`)
+        // img.setAttribute('loading', 'lazy')
         let title = document.createElement('div')
         title.setAttribute('id', 'title')
         title_content = `${element.original_title}`
@@ -105,11 +112,38 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             })
 
-
             
         })
         
-        }  
+    }  
+    const sections = document.querySelectorAll('.imageEtTitre')
+    console.log(sections)
+
+    sections.forEach(element => { 
+        // console.log(element)
+
+    //Lazy loading
+    //créer un événement au scroll
+        window.addEventListener('scroll', () => {
+            console.log('🍿')
+     
+            const {scrollTop, clientHeight} = document.documentElement;
+            console.log(scrollTop, clientHeight)
+
+            console.log(document.documentElement.scrollTop)
+        
+            console.log(element.getBoundingClientRect().top)
+     
+            const topElementToTopViewPort = element.getBoundingClientRect().top;
+     
+            element.style.opacity = '1'
+            if (scrollTop > (scrollTop + topElementToTopViewPort).toFixed()) {
+                // element.style.transition = 'opacity 500ms'
+                // image.style.opacity = '1'
+                element.style.opacity = "0"
+            }
+        })
+    })
 
 
         
