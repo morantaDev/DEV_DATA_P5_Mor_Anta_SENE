@@ -5,36 +5,11 @@ const majus = document.querySelector('#majuscule')
 const minus = document.querySelector('#minuscule')
 const numbers = document.querySelector('#numbers')
 const speChar = document.querySelector('#character')
-
-var inputLength = 0
-
-//Récupérer la taille du code
-length.addEventListener('input', function(event){
-    inputLength = event.target.value
-    console.log(inputLength)
-})
-
-
-
-//Vérifier les cases cochées
-
-majus.addEventListener('change', function(){
-    console.log('true')
-})
-minus.addEventListener('change', function(){
-    console.log('true')
-})
-numbers.addEventListener('change', function(){
-    console.log('true')
-})
-speChar.addEventListener('change', function(){
-    console.log('true')
-})
-
+const generate = document.querySelector(".btn")
 
 
 //Générer des nombres aléatoirement de 0 à 9 (une fois)
-let generateurNbr =function generateIntervalleNum(){
+function generateIntervalleNum(){
     var alNum = Math.floor(Math.random() * 10)
     return alNum;
 }
@@ -46,24 +21,94 @@ let generateurLettreMin = function generateLowLetter(){
 }
 
 //Générer des lettres majuscules aléatoirement de A à Z (une fois)
-let generateurLettreMaj = function generateUpperLetter(){
+function generateUpperLetter(){
     var letter = String.fromCharCode(Math.floor(Math.random()*26)+65)
     return letter
 }
 
 //Générer des caractères spéciaux aléatoirement (une fois)
-let generateurCharSpe = function generateSpecialChar(){
+function generateSpecialChar(){
     const symbols = '!@#$%^&*(){}[]=<>/,.'
 	var symbol = symbols[Math.floor(Math.random() * symbols.length)];    
     return symbol
 }
 
-generer.addEventListener('click', function(){
-    for (let i=1; i<=inputLength; i++){
-        zone.append(generateurLettreMin())
-    }
-    
+const mesFonctions = {
+    lower: generateurLettreMin,
+    upper: generateUpperLetter,
+    number: generateIntervalleNum,
+    symbol: generateSpecialChar
+}
+
+var inputLength = 0
+
+//Récupérer la taille du code
+const Length = length.addEventListener('input', function(event){
+    inputLength = event.target.value
+    // console.log(inputLength)
 })
+console.log(Length)
+generate.addEventListener('click', function(){
+    const taille = inputLength;
+    const haslower = minus.checked;
+    const hasupper = majus.checked;
+    const hasnumb = numbers.checked;
+    const hasChar = speChar.checked;
+
+    zone.textContent = genererMotDePasse(haslower, hasupper, hasnumb, hasChar, taille)
+    console.log(zone)
+})
+
+function genererMotDePasse(lower, upper, number, symbol, length) {
+	let genererMotDePasse = '';
+	const nbrCaseCocher = lower + upper + number + symbol;
+	const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+	console.log(typesArr)
+	// S'il utilisateur ne selectionne pas une case 
+	if(typesCount === 0) {
+		return '';
+	}
+	
+	// créer une boucle
+	for(let i=0; i<length; i+=nbrCaseCocher) {
+		typesArr.forEach(type => {
+			const funcName = Object.keys(type)[0];
+			genererMotDePasse += mesFonctions[funcName]();
+		});
+	}
+	
+	const motDePasseFinal = genererMotDePasse.slice(0, length);
+	
+	return motDePasseFinal;
+}
+
+
+
+//Vérifier les cases cochées
+
+// majus.addEventListener('change', function(){
+//     console.log('true')
+// })
+// minus.addEventListener('change', function(){
+//     console.log('true')
+// })
+// numbers.addEventListener('change', function(){
+//     console.log('true')
+// })
+// speChar.addEventListener('change', function(){
+//     console.log('true')
+// })
+
+
+
+
+
+// generer.addEventListener('click', function(){
+//     for (let i=1; i<=inputLength; i++){
+//         zone.append(generateurLettreMin())
+//     }
+    
+// })
 
 
 
