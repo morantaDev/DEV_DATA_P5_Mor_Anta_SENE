@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function(){
      
             element.style.opacity = '1'
             if (scrollTop > (scrollTop + topElementToTopViewPort).toFixed()) {
-                // element.style.transition = 'opacity 500ms'
+                // element.style.transition = 'opacity 10ms'
                 // image.style.opacity = '1'
                 element.style.opacity = "0"
             }
