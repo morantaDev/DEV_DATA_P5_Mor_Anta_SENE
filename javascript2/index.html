@@ -15,7 +15,7 @@
         <nav class="sidebar">
             <div class="search"><input type="search" name="search" id="search" placeholder="Search..." style="background-color: #676566"></div>
             <div class="tables">
-                <div class="table">
+                <div class="table" id="enseign">
                     <div class="haut">
                         <span style="float:right; font-size:27px; color:white;">6</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-workspace person" viewBox="0 0 16 16">
@@ -25,7 +25,7 @@
                     </div>
                   <div class="title">Enseign.<span style="margin-left: 20px;">+</span></div>
                 </div>
-                <div class="table">
+                <div class="table" id="salles">
                     <div class="haut">
                         <span style="float:right; font-size:27px; color:white;">6</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house-door-fill house" viewBox="0 0 16 16">
@@ -34,7 +34,7 @@
                     </div>
                   <div class="title">Salles<span style="margin-left: 32px;">+</span></div>
                 </div>
-                <div class="table">
+                <div class="table" id="classes">
                     <div class="haut">
                         <span style="float:right; font-size:27px; color:white;">6</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill classe" viewBox="0 0 16 16">
@@ -43,7 +43,7 @@
                 </div>
               <div class="title">Classes<span style="margin-left: 20px;">+</span></div>
             </div>
-                <div class="table">
+                <div class="table" id="modules">
                     <div class="haut">
                         <span style="float:right; font-size:27px; color:white">6</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3-fill trash" viewBox="0 0 16 16">
@@ -53,16 +53,7 @@
                   <div class="title">Modules<span style="margin-left: 20px;">+</span></div>
                 </div>
             </div>
-            <select name="selection" id="select">
-                <!-- <option value=""></option> -->
-                <!-- <option value="modules">Modules</option>
-                <option value="algo">ALGO</option>
-                <option value="php">PHP</option>
-                <option value="python">PYTHON</option>
-                <option value="lc">LC</option>
-                <option value="javascript">JAVASCRIPT</option>
-                <option value="java">JAVA</option> -->
-            </select>
+            <select name="selection" id="select"></select>
         </nav>
 
         <div class="content">
@@ -95,32 +86,32 @@
             <main>
                 <section>
                     <div class="jour">
-                        <div class="name">Lundi</div>
+                        <div class="name">Lundi<span class="plusDay" style="color:green; padding-left:70px; font-size:25px;">+</span></div>
                     </div>
                 </section>
                 <section>
                     <div class="jour">
-                        <div class="name">Mardi</div>
+                        <div class="name">Mardi<span class="plusDay" style="color:green; padding-left:70px; font-size:25px;">+</span></div>
                     </div>
                 </section>
                 <section>
                     <div class="jour">
-                        <div class="name">Mercredi</div>
+                        <div class="name">Mercredi<span class="plusDay" style="color:green; padding-left:35px; font-size:25px;">+</span></div>
                     </div>
                 </section>
                 <section>
                     <div class="jour">
-                        <div class="name">Jeudi</div>
+                        <div class="name">Jeudi<span class="plusDay" style="color:green; padding-left:70px; font-size:25px;">+</span></div>
                     </div>
                 </section>
                 <section>
                     <div class="jour">
-                        <div class="name">Vendredi</div>
+                        <div class="name">Vendredi<span class="plusDay" style="color:green; padding-left:37px; font-size:25px;">+</span></div>
                     </div>
                 </section>
                 <section>
                     <div class="jour">
-                        <div class="name">Samedi</div>
+                        <div class="name">Samedi<span class="plusDay" style="color:green; padding-left:50px; font-size:25px;">+</span></div>
                     </div>
                 </section>
             </main>
@@ -128,16 +119,3 @@
     </div>
 </body>
 </html>
-
-
-
-
-
-<!-- 
-    const content = document.querySelector('.content')
-    const = document.querySelector('.content')
-    const toggle1  = document.querySelector(".toggle2")
-
-toggle.addEventListener('click', function(){ 
-    const result = content.classList.toggle(toggle1)
-}); -->

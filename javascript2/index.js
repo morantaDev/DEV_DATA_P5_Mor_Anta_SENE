@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
+    const body = document.querySelector('body')
     const toggle1 = document.querySelector('.toggle1')
     const toggle2 = document.querySelector('.toggle2')
     const content = document.querySelector('.content')
@@ -11,6 +12,11 @@ document.addEventListener('DOMContentLoaded', function(){
     const container =document.querySelector('.container')
     const navbar = document.querySelector('.navbar')
     const header = document.querySelector('h1')
+    const select = document.querySelector('#select')
+    const enseignants = document.querySelector('#enseign')
+    const salles = document.querySelector('#salles')
+    const classes = document.querySelector('#classes')
+    const modules = document.querySelector('#modules')
     console.log(allSpan)
     console.log(toggle2)
 
@@ -73,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function(){
             });
 
             allSpan.forEach(span=>{
-                span.style.color = ''
+                span.style.color = 'white'
             })
 
             daySection.forEach(section =>{
@@ -85,10 +91,68 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
 
-    tables.forEach(table=>{
-        table.addEventListener('click', function(){
-            table.style.backgroundColor = '#4EB2D7';
-            
-        })
+
+    function creationModule(){
+        const container1 = document.createElement('div')
+        container.classList.add('modal')
+        const header = document.createElement('header')
+        header.setAttribute('id', 'modalHeader')
+        const main = document.createElement('main')
+        main.classList.add('main')
+        const footer = document.createElement('footer')
+        const add = document.createElement('button')
+        const resume = document.createElement('button')
+        footer.append(add)
+        footer.append(resume)
+        container1.appendChild(header)
+        container1.appendChild(main)
+        container1.appendChild(footer)
+        // document.body.appendChild(container1)
+        // container1.style.display = 'block';
+    }
+
+    //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
+    listeDesEnseign = ['Enseignants','Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
+    listeDesSalles = ['101','102', '103', '104', '201', 'incub']
+    listeDesClasses = ['Classes', 'L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
+    listeDesModules = ['Modules','ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
+
+    
+    enseignants.addEventListener('click', function(){
+        enseignants.style.backgroundColor = '#4EB2D7';
+        for (let i = 0; i < listeDesEnseign.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesEnseign[i]}`
+            select.appendChild(option)
+        }
+        // creationModule()
+        // console.log(creationModule());
     })
+    salles.addEventListener('click', function(){
+        salles.style.backgroundColor = '#2AAA30';
+        for (let i = 0; i < listeDesSalles.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesSalles[i]}`
+            select.appendChild(option)
+        }
+    })
+    classes.addEventListener('click', function(){
+        classes.style.backgroundColor = '#D98341';
+        for (let i = 0; i < listeDesClasses.length; i++) {
+            const option = document.createElement('option')
+                option.textContent = `${listeDesClasses[i]}`
+                select.appendChild(option)
+        }
+    })
+    modules.addEventListener('click', function(){
+        modules.style.backgroundColor = '#CC0A33';
+        for (let i = 0; i < listeDesModules.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesModules[i]}`
+            select.appendChild(option)
+        }
+    })
+
+    
+
 })
