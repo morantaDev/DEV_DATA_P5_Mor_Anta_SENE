@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const salles = document.querySelector('#salles')
     const classes = document.querySelector('#classes')
     const modules = document.querySelector('#modules')
+    const plusDays = document.querySelectorAll('.plusDay')
     console.log(allSpan)
     console.log(toggle2)
 
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function(){
             search.style.backgroundColor = '#D0DCDF'
             header.style.color = 'black'
             navbar.style.backgroundColor = '#B7C3CD'
+            container.style.backgroundColor = '#F4F3F4'
            }
     })
     $('.toggle1').click(function(){
@@ -93,20 +95,104 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     function creationModule(){
+        listeDesEnseign = ['','Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
+        listeDesSalles = ['Choisir une Salle','101','102', '103', '104', '201', 'incub']
+        listeDesModules = ['Choisir un Module','ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
+        listheureDebut = ['Choisir une Heure', '8H', '9H', '10H', '11H', '12H', '13H', '14', '15H', '16', '17H']
+        listheureFin = ['Choisir une Heure','9H', '10H', '11H', '12H', '13H', '14', '15H', '16', '17H']
+
+        // listeDesClasses = ['Classes', 'L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
+        
         const container1 = document.createElement('div')
-        container.classList.add('modal')
+        container1.classList.add('modal')
         const header = document.createElement('header')
         header.setAttribute('id', 'modalHeader')
+        header.textContent = "Modal Title"
         const main = document.createElement('main')
-        main.classList.add('main')
+        main.classList.add('mainModal')
+
+        const section1 = document.createElement('section')
+        section1.classList.add('modalModule')
+        const module = document.createElement('p')
+        module.textContent = "module"
+        section1.append(module)
+        const selectModule = document.createElement('select')
+        for (let i = 0; i < listeDesModules.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesModules[i]}`
+            selectModule.append(option)
+        }
+        section1.appendChild(selectModule)
+
+        const section2 = document.createElement('section')
+        section2.classList.add('modalEnseign')
+        const enseign = document.createElement('p')
+        enseign.textContent = "Enseignant"
+        section2.append(enseign)
+        const selectEnseign = document.createElement('select')
+        for (let i = 0; i < listeDesEnseign.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesEnseign[i]}`
+            selectEnseign.append(option)
+        }
+        section2.appendChild(selectEnseign)
+
+        const section3 = document.createElement('section')
+        section3.classList.add('modalSalle')
+        const salle = document.createElement('p')
+        salle.textContent = "Salle"
+        section3.append(salle)
+        const selectSalle = document.createElement('select')
+        for (let i = 0; i < listeDesSalles.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesSalles[i]}`
+            selectSalle.append(option)
+        }
+        section3.appendChild(selectSalle)
+
+        const section4 = document.createElement('section')
+        section4.classList.add('modalBegin')
+        const debut = document.createElement('p')
+        debut.textContent = "Heure de Début"
+        section4.append(debut)
+        const selectDebut = document.createElement('select')
+        for (let i = 0; i < listheureDebut.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listheureDebut[i]}`
+            selectDebut.append(option)
+        }
+        section4.appendChild(selectDebut)
+
+        const section5 = document.createElement('section')
+        section5.classList.add('modalEnd')
+        const fin = document.createElement('p')
+        fin.textContent = "Heure de Fin"
+        section5.append(fin)
+        const selectFin = document.createElement('select')
+        for (let i = 0; i < listheureFin.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listheureFin[i]}`
+            selectFin.append(option)
+        }
+        section5.appendChild(selectFin)
+
+        main.appendChild(section1)
+        main.appendChild(section2)
+        main.appendChild(section3)
+        main.appendChild(section4)
+        main.appendChild(section5)
+
         const footer = document.createElement('footer')
         const add = document.createElement('button')
+        add.textContent = 'Ajouter'
         const resume = document.createElement('button')
+        resume.textContent ='Annuler'
         footer.append(add)
         footer.append(resume)
         container1.appendChild(header)
         container1.appendChild(main)
         container1.appendChild(footer)
+        content.appendChild(container1)
         // document.body.appendChild(container1)
         // container1.style.display = 'block';
     }
@@ -125,8 +211,6 @@ document.addEventListener('DOMContentLoaded', function(){
             option.textContent = `${listeDesEnseign[i]}`
             select.appendChild(option)
         }
-        // creationModule()
-        // console.log(creationModule());
     })
     salles.addEventListener('click', function(){
         salles.style.backgroundColor = '#2AAA30';
@@ -151,6 +235,12 @@ document.addEventListener('DOMContentLoaded', function(){
             option.textContent = `${listeDesModules[i]}`
             select.appendChild(option)
         }
+    })
+
+    plusDays.forEach(day => {
+        day.addEventListener('click', function(){
+            creationModule()
+        })
     })
 
     

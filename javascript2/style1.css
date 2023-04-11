@@ -143,6 +143,42 @@ section .name{
 .modal{
     position: relative;
     z-index: 2;
-    background-color: red;
+    background-color: black;
     padding-left: -60%;
+    border: 1px solid white;
+    top: -60%;
+    width: 60%;
+}
+#modalHeader{
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 25px;
+    background-color: #242123;
+}
+.mainModal{
+    color: black;
+    /* background-color: rgb(255, 255, 255); */
+}
+.mainModal .modalModule, .modalSalle, .modalEnseign, .modalClasse, .modalBegin, .modalEnd{
+    color: white;
+    display: flex;
+    margin-left: 10px;
+    /* border: 1px solid white; */
+    font-size: 15px;
+}
+.modal select{
+    margin-left: 400px;
+}
+.modal p {
+    font-size: 20px;
+}
+.modal footer{
+    background-color: #242123;
+    padding-left: 250px;
+}
+.modal button{
+    margin: 20px 3px;
+    padding: 10px;
+    font-size: 20px;
 }
