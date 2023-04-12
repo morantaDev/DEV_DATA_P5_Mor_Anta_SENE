@@ -130,10 +130,13 @@ document.addEventListener('DOMContentLoaded', function(){
         enseign.textContent = "Enseignant"
         section2.append(enseign)
         const selectEnseign = document.createElement('select')
+        let count = 0
         for (let i = 0; i < listeDesEnseign.length; i++) {
             const option = document.createElement('option')
+            option.setAttribute('id', `${count}`)
             option.textContent = `${listeDesEnseign[i]}`
             selectEnseign.append(option)
+            count++;
         }
         section2.appendChild(selectEnseign)
 
@@ -199,40 +202,65 @@ document.addEventListener('DOMContentLoaded', function(){
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
     listeDesEnseign = ['Enseignants','Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
-    listeDesSalles = ['101','102', '103', '104', '201', 'incub']
+    listeDesSalles = ['Salles','101','102', '103', '104', '201', 'incub']
     listeDesClasses = ['Classes', 'L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
     listeDesModules = ['Modules','ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
 
     
     enseignants.addEventListener('click', function(){
         enseignants.style.backgroundColor = '#4EB2D7';
+        let count = 0
+        select.innerHTML = ""
         for (let i = 0; i < listeDesEnseign.length; i++) {
             const option = document.createElement('option')
             option.textContent = `${listeDesEnseign[i]}`
+            option.setAttribute('id', `${count}`)
+            console.log(option)
             select.appendChild(option)
+            count++;
         }
     })
     salles.addEventListener('click', function(){
         salles.style.backgroundColor = '#2AAA30';
+        let count = 0;
+        // tables.forEach(table => {table.innerHTML = ""})
+        select.innerHTML = ""
         for (let i = 0; i < listeDesSalles.length; i++) {
             const option = document.createElement('option')
             option.textContent = `${listeDesSalles[i]}`
+            option.setAttribute('id', `${count}`)
+            console.log(option)
             select.appendChild(option)
+            count++;
         }
     })
     classes.addEventListener('click', function(){
+    const selectElement = document.getElementById("select");
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    // const selectedOptionId = selectedOption.id;
+    // console.log(selectedOptionId)
         classes.style.backgroundColor = '#D98341';
+        let count = 0;
+        select.innerHTML = ""
         for (let i = 0; i < listeDesClasses.length; i++) {
             const option = document.createElement('option')
                 option.textContent = `${listeDesClasses[i]}`
+                option.setAttribute('id', `${'option'+count}`)
+                console.log(option)
                 select.appendChild(option)
+                count++;
         }
     })
     modules.addEventListener('click', function(){
         modules.style.backgroundColor = '#CC0A33';
+        let count = 0; 
+        select.innerHTML = ""
         for (let i = 0; i < listeDesModules.length; i++) {
             const option = document.createElement('option')
             option.textContent = `${listeDesModules[i]}`
+            option.setAttribute('id', `${count}`)
+            console.log(option)
+            count++;
             select.appendChild(option)
         }
     })
@@ -244,5 +272,16 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     
+    const selectElement = document.getElementById("select");
+
+  const selectedOption = selectElement.selectedIndex;
+//   const selectedOptionId = selectedOption.id;
+  console.log(selectedOption)
+
+  function createCours(element1, element2, element3){
+    const section = document.createElement('section')
+    section.setAttribute('sectionCours')
+    
+  }
 
 })
