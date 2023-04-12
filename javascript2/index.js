@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function(){
             search.style.backgroundColor = ''
             header.style.color = ''
             navbar.style.backgroundColor = ''
+            container.style.backgroundColor = ''
         }
     })
 
@@ -201,13 +202,24 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
-    listeDesEnseign = ['Enseignants','Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
+    listeDesEnseign = ['Enseignants:','Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
     listeDesSalles = ['Salles','101','102', '103', '104', '201', 'incub']
     listeDesClasses = ['Classes', 'L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
     listeDesModules = ['Modules','ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
 
+    // "enseignants"={
+    //     id: 'Aly'
+    // }
+
     //Faire le link entre l'enseignant le la salle, la classe et le module
-    
+    monStockage = localStorage;
+    const maListe = ['Aly', '201', 'L2 CDSD', 'PYTHON']
+    localStorage.setItem(1, JSON.stringify(maListe))
+    var aly = localStorage.getItem(1)
+    console.log (aly)
+    const liste = JSON.parse(aly)
+    console.log(liste[2])
+
     
     enseignants.addEventListener('click', function(){
         enseignants.style.backgroundColor = '#4EB2D7';
@@ -299,11 +311,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const titre = document.getElementById('choix')
   console.log(choix)
+
   select.addEventListener('change', function(e){
     titre.innerHTML =''
     titre.innerHTML = e.target.value
-    // console.log(e)
     console.log(titre)
+    const indexElement = e.target.selectedIndex;
+    var getElement = localStorage.getItem(parseInt(indexElement))
+    console.log(indexElement)
+    console.log(getElement)
+    console.log(typeof(getElement))
   })
+
+
 
 })
