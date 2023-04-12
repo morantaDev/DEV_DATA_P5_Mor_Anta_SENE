@@ -206,6 +206,8 @@ document.addEventListener('DOMContentLoaded', function(){
     listeDesClasses = ['Classes', 'L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
     listeDesModules = ['Modules','ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
 
+    //Faire le link entre l'enseignant le la salle, la classe et le module
+    
     
     enseignants.addEventListener('click', function(){
         enseignants.style.backgroundColor = '#4EB2D7';
@@ -281,7 +283,27 @@ document.addEventListener('DOMContentLoaded', function(){
   function createCours(element1, element2, element3){
     const section = document.createElement('section')
     section.setAttribute('sectionCours')
-    
+    const first = document.createElement('p')
+    first.classList.add('pCours')
+    first.innerHTML = `${element1}`
+    const second = document.createElement('p')
+    second.setAttribute('id', 'pCours')
+    second.innerHTML = `${element2}`
+    const third  = document.createElement('p')
+    first.classList.add('pCours')
+    third.innerHTML = `${element3}`
+    second.append(first)
+    second.append(second)
+    second.append(third)
   }
+
+  const titre = document.getElementById('choix')
+  console.log(choix)
+  select.addEventListener('change', function(e){
+    titre.innerHTML =''
+    titre.innerHTML = e.target.value
+    // console.log(e)
+    console.log(titre)
+  })
 
 })
