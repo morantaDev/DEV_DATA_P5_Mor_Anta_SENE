@@ -110,12 +110,13 @@ section .jour{
 }
 section .name{
     background-color: #232122;
-    margin-right: 85%;
     color: white;
     padding: 40px 5px;
     /* text-align: center; */
     border-radius: 15px 0 0 15px;
     font-size: 25px;
+    display: flex;
+    width: 13%;
 }
 .navbar {
     background-color: #3F3D3E;
@@ -181,4 +182,15 @@ section .name{
     margin: 20px 3px;
     padding: 10px;
     font-size: 20px;
+}
+.divCours{
+    /* display: inline-block; */
+    border: 1px solid white;
+    position: relative;
+    width: 80px;
+    margin-left: 35px;
+    /* color: white; */
+}
+#lundi, #mardi, #mercredi, #jeudi, #vendredi{
+    display: flex;
 }

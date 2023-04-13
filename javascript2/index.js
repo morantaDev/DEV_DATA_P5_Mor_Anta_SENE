@@ -202,35 +202,121 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
-    listeDesEnseign = ['Enseignants:','Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
-    listeDesSalles = ['Salles','101','102', '103', '104', '201', 'incub']
-    listeDesClasses = ['Classes', 'L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
-    listeDesModules = ['Modules','ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
+    listeDesEnseign = ['Aly', 'Baila', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
+    listeDesSalles = ['101','102', '103', '104', '201', 'incub']
+    listeDesClasses = ['L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
+    listeDesModules = ['ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
 
-    // "enseignants"={
-    //     id: 'Aly'
+    let liste = [];
+
+    // for (let i = 0; i < listeDesEnseign.length; i++) {
+    // let enseignant = { id: i+1, nom: listeDesEnseign[i],  salle: listeDesSalles[i], classe: listeDesClasses[i], module: listeDesModules[i]};
+    // liste.push(enseignant);
     // }
+    // Affichage de la liste
+    // console.log(liste);
 
-    //Faire le link entre l'enseignant le la salle, la classe et le module
-    monStockage = localStorage;
-    const maListe = ['Aly', '201', 'L2 CDSD', 'PYTHON']
-    localStorage.setItem(1, JSON.stringify(maListe))
-    var aly = localStorage.getItem(1)
-    console.log (aly)
-    const liste = JSON.parse(aly)
-    console.log(liste[2])
+    const ENSEIGNANT1 = {nom: 'Aly', salle: '201', classe: 'L2 CDSD', module: 'PYTHON'}
+    const ENSEIGNANT2 = {nom: 'Baila', salle: '102', classe: 'L2 CDSD', module: 'PHP'}
+    const ENSEIGNANT3 = {nom: 'Ndoye', salle: '201', classe: '', module: 'PYTHON'}
+    const ENSEIGNANT4 = {nom: 'Mbaye', salle: 'incub', classe: 'L2 CDSD', module: 'LC'}
+    const ENSEIGNANT5 = {nom: 'Djiby', salle: '201', classe: '', module: 'PYTHON'}
+    const ENSEIGNANT6 = {nom: 'Seckouba', salle: '201', classe: '', module: 'PYTHON'}
+
+    const ENSEIGNANTS = [ENSEIGNANT1, ENSEIGNANT2, ENSEIGNANT3, ENSEIGNANT4,ENSEIGNANT5, ENSEIGNANT6]
+
+    // stockage = localStorage
+
+    let compteurId = 1
+    for (let i = 0; i < ENSEIGNANTS.length; i++) {
+        localStorage.setItem(`${compteurId}`, JSON.stringify(ENSEIGNANTS[i]))
+        compteurId++
+    }
+
+
 
     
+
+    const titre = document.getElementById('choix')
+    console.log(choix)
+    
+    select.addEventListener('click', function(e){
+        titre.innerHTML =''
+        titre.innerHTML = e.target.value
+        console.log(titre)
+        const indexElement = e.target.selectedIndex;
+        // console.log(indexElement)
+        const indexValue = e.target.value
+        console.log(indexValue)
+
+        var getData = localStorage.getItem(indexElement)
+        const liste = JSON.parse(getData)
+
+        console.log(liste)
+        console.log(liste.classe)
+
+        localStorage.removeItem('compteurId')
+        const localStorageData = [];
+
+        for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        localStorageData.push(JSON.parse(localStorage.getItem(key)));
+        }
+
+        console.log(localStorageData);
+        for(id in localStorageData) {
+            if (localStorageData[id].nom == indexValue){
+                console.log(localStorageData[id].salle)
+                console.log(localStorageData[id].module)
+                console.log(localStorageData[id].classe)
+                console.log(createCours(localStorageData[id].salle, localStorageData[id].classe, localStorageData[id].module, '#lundi', 3))
+                const divCours = document.querySelectorAll('.divCours')
+                divCours.forEach(div => {
+
+                    //Ajouter un tableau de couleurs et ajouter une couleur de fond aléatoirement
+                    div.style.backgroundColor = 'yellow'
+
+                    //Récupérer la largeur de notre div
+                    const largeur = div.offsetWidth;
+                    console.log(largeur)
+                })
+            } else if (localStorageData[id].salle == indexValue){
+                // alert('la salle existe dans la base de données')
+                console.log(localStorageData[id].nom)
+                console.log(localStorageData[id].classe)
+                console.log(localStorageData[id].module)
+                console.log(createCours(localStorageData[id].nom, localStorageData[id].classe, localStorageData[id].module, '#mardi', 2))
+            } else if (localStorageData[id].classe == indexValue){
+                // alert('la classe existe dans la base de données')
+                console.log(localStorageData[id].nom)
+                console.log(localStorageData[id].salle)
+                console.log(localStorageData[id].module)
+                console.log(createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#mercredi', 1))
+            } else if (localStorageData[id].module == indexValue){
+                // alert('le module existe dans la base de données')
+                console.log(localStorageData[id].nom)
+                console.log(localStorageData[id].salle)
+                console.log(localStorageData[id].classe)
+                console.log(createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].classe, '#jeudi', 3))
+            }
+            // else{
+            //     alert("l'élément recherché ne se contient pas de données dans la base de données")
+            // }
+        }
+
+    })
     enseignants.addEventListener('click', function(){
         enseignants.style.backgroundColor = '#4EB2D7';
         let count = 0
         select.innerHTML = ""
+        const option = document.createElement('option')
+        select.appendChild(option)
         for (let i = 0; i < listeDesEnseign.length; i++) {
             const option = document.createElement('option')
             option.textContent = `${listeDesEnseign[i]}`
-            option.setAttribute('id', `${count}`)
+            option.setAttribute('value', `${listeDesEnseign[i]}`)
             console.log(option)
-            select.appendChild(option)
+            select.add(option)
             count++;
         }
     })
@@ -239,90 +325,74 @@ document.addEventListener('DOMContentLoaded', function(){
         let count = 0;
         // tables.forEach(table => {table.innerHTML = ""})
         select.innerHTML = ""
+        const option = document.createElement('option')
+        select.appendChild(option)
         for (let i = 0; i < listeDesSalles.length; i++) {
             const option = document.createElement('option')
             option.textContent = `${listeDesSalles[i]}`
             option.setAttribute('id', `${count}`)
             console.log(option)
-            select.appendChild(option)
+            select.add(option)
             count++;
         }
     })
     classes.addEventListener('click', function(){
-    const selectElement = document.getElementById("select");
-    const selectedOption = selectElement.options[selectElement.selectedIndex];
-    // const selectedOptionId = selectedOption.id;
-    // console.log(selectedOptionId)
+        const selectElement = document.getElementById("select");
+        const selectedOption = selectElement.options[selectElement.selectedIndex];
+        // const selectedOptionId = selectedOption.id;
+        // console.log(selectedOptionId)
         classes.style.backgroundColor = '#D98341';
         let count = 0;
         select.innerHTML = ""
+        const option = document.createElement('option')
+        select.appendChild(option)
         for (let i = 0; i < listeDesClasses.length; i++) {
             const option = document.createElement('option')
-                option.textContent = `${listeDesClasses[i]}`
-                option.setAttribute('id', `${'option'+count}`)
-                console.log(option)
-                select.appendChild(option)
-                count++;
+            option.textContent = `${listeDesClasses[i]}`
+            option.setAttribute('id', `${'option'+count}`)
+            console.log(option)
+            select.add(option)
+            count++;
         }
     })
     modules.addEventListener('click', function(){
         modules.style.backgroundColor = '#CC0A33';
         let count = 0; 
         select.innerHTML = ""
+        const option = document.createElement('option')
+        select.appendChild(option)
         for (let i = 0; i < listeDesModules.length; i++) {
             const option = document.createElement('option')
             option.textContent = `${listeDesModules[i]}`
             option.setAttribute('id', `${count}`)
             console.log(option)
             count++;
-            select.appendChild(option)
+            select.add(option)
         }
     })
-
+    
     plusDays.forEach(day => {
         day.addEventListener('click', function(){
             creationModule()
         })
     })
-
+  function createCours(element1, element2, element3, day){
+      const section = document.createElement('div')
+      section.classList.add('divCours')
+      const first = document.createElement('p')
+      first.classList.add('pCours')
+      first.innerHTML = `${element1}`
+      const second = document.createElement('p')
+      second.setAttribute('id', 'pCours')
+      second.innerHTML = `${element2}`
+      const third  = document.createElement('p')
+      third.classList.add('pCours')
+      third.innerHTML = `${element3}`
+      section.append(first)
+      section.append(second)
+      section.append(third)
+    //   section.style.width = width * difference
+      document.querySelector(`${day}`).appendChild(section)
+    }
     
-    const selectElement = document.getElementById("select");
-
-  const selectedOption = selectElement.selectedIndex;
-//   const selectedOptionId = selectedOption.id;
-  console.log(selectedOption)
-
-  function createCours(element1, element2, element3){
-    const section = document.createElement('section')
-    section.setAttribute('sectionCours')
-    const first = document.createElement('p')
-    first.classList.add('pCours')
-    first.innerHTML = `${element1}`
-    const second = document.createElement('p')
-    second.setAttribute('id', 'pCours')
-    second.innerHTML = `${element2}`
-    const third  = document.createElement('p')
-    first.classList.add('pCours')
-    third.innerHTML = `${element3}`
-    second.append(first)
-    second.append(second)
-    second.append(third)
-  }
-
-  const titre = document.getElementById('choix')
-  console.log(choix)
-
-  select.addEventListener('change', function(e){
-    titre.innerHTML =''
-    titre.innerHTML = e.target.value
-    console.log(titre)
-    const indexElement = e.target.selectedIndex;
-    var getElement = localStorage.getItem(parseInt(indexElement))
-    console.log(indexElement)
-    console.log(getElement)
-    console.log(typeof(getElement))
-  })
-
-
-
 })
