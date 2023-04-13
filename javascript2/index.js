@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
-    listeDesEnseign = ['Aly', 'Baila', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
+    listeDesEnseign = ['Aly', 'Baila', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba', 'Aly']
     listeDesSalles = ['101','102', '103', '104', '201', 'incub']
     listeDesClasses = ['L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
     listeDesModules = ['ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
