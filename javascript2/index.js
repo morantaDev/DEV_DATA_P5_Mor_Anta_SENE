@@ -197,8 +197,6 @@ document.addEventListener('DOMContentLoaded', function(){
         container1.appendChild(main)
         container1.appendChild(footer)
         content.appendChild(container1)
-        // document.body.appendChild(container1)
-        // container1.style.display = 'block';
     }
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
@@ -207,14 +205,6 @@ document.addEventListener('DOMContentLoaded', function(){
     listeDesClasses = ['L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
     listeDesModules = ['ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
 
-    let liste = [];
-
-    // for (let i = 0; i < listeDesEnseign.length; i++) {
-    // let enseignant = { id: i+1, nom: listeDesEnseign[i],  salle: listeDesSalles[i], classe: listeDesClasses[i], module: listeDesModules[i]};
-    // liste.push(enseignant);
-    // }
-    // Affichage de la liste
-    // console.log(liste);
 
     const ENSEIGNANT1 = {nom: 'Aly', salle: '201', classe: 'L2 CDSD', module: 'PYTHON'}
     const ENSEIGNANT2 = {nom: 'Baila', salle: '102', classe: 'L2 CDSD', module: 'PHP'}
@@ -225,35 +215,30 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const ENSEIGNANTS = [ENSEIGNANT1, ENSEIGNANT2, ENSEIGNANT3, ENSEIGNANT4,ENSEIGNANT5, ENSEIGNANT6]
 
-    // stockage = localStorage
-
     let compteurId = 1
     for (let i = 0; i < ENSEIGNANTS.length; i++) {
         localStorage.setItem(`${compteurId}`, JSON.stringify(ENSEIGNANTS[i]))
         compteurId++
     }
 
-
-
-    
-
     const titre = document.getElementById('choix')
     console.log(choix)
     
+
     select.addEventListener('click', function(e){
         titre.innerHTML =''
         titre.innerHTML = e.target.value
         console.log(titre)
-        const indexElement = e.target.selectedIndex;
+        // const indexElement = e.target.selectedIndex;
         // console.log(indexElement)
         const indexValue = e.target.value
         console.log(indexValue)
 
-        var getData = localStorage.getItem(indexElement)
-        const liste = JSON.parse(getData)
+        // var getData = localStorage.getItem(indexElement)
+        // const liste = JSON.parse(getData)
 
-        console.log(liste)
-        console.log(liste.classe)
+        // console.log(liste)
+        // console.log(liste.classe)
 
         localStorage.removeItem('compteurId')
         const localStorageData = [];
@@ -269,13 +254,25 @@ document.addEventListener('DOMContentLoaded', function(){
                 console.log(localStorageData[id].salle)
                 console.log(localStorageData[id].module)
                 console.log(localStorageData[id].classe)
-                console.log(createCours(localStorageData[id].salle, localStorageData[id].classe, localStorageData[id].module, '#lundi', 3))
+                // const allDivCours = document.querySelectorAll('.divCours')
+                // allDivCours.forEach(divCours => {
+                // })
+
+                console.log(createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#lundi'))
                 const divCours = document.querySelectorAll('.divCours')
+                const pCoursId = document.querySelectorAll('#pCours')
+                const pCours = document.querySelectorAll('.pCours')
                 divCours.forEach(div => {
 
                     //Ajouter un tableau de couleurs et ajouter une couleur de fond aléatoirement
                     div.style.backgroundColor = 'yellow'
-
+                    pCoursId.forEach(pCoursid => {
+                        pCoursid.style.color = 'white'
+                    });
+                    pCours.forEach(pcours => {
+                        pcours.style.color = 'white'
+                    })
+                    
                     //Récupérer la largeur de notre div
                     const largeur = div.offsetWidth;
                     console.log(largeur)
@@ -285,19 +282,45 @@ document.addEventListener('DOMContentLoaded', function(){
                 console.log(localStorageData[id].nom)
                 console.log(localStorageData[id].classe)
                 console.log(localStorageData[id].module)
-                console.log(createCours(localStorageData[id].nom, localStorageData[id].classe, localStorageData[id].module, '#mardi', 2))
+                console.log(createCours(localStorageData[id].nom, localStorageData[id].classe, localStorageData[id].module, '#mardi'))
+                const divCours = document.querySelectorAll('.divCours')
+                const pCoursId = document.querySelectorAll('#pCours')
+                const pCours = document.querySelectorAll('.pCours')
+                divCours.forEach(div => {
+
+                    //Ajouter un tableau de couleurs et ajouter une couleur de fond aléatoirement
+                    div.style.backgroundColor = 'blue'
+                    pCoursId.forEach(pCoursid => {
+                        pCoursid.style.color = 'white'
+                    });
+                    pCours.forEach(pcours => {
+                        pcours.style.color = 'white'
+                    })
+                    
+                    //Récupérer la largeur de notre div
+                    const largeur = div.offsetWidth;
+                    console.log(largeur)
+                })
             } else if (localStorageData[id].classe == indexValue){
                 // alert('la classe existe dans la base de données')
                 console.log(localStorageData[id].nom)
                 console.log(localStorageData[id].salle)
                 console.log(localStorageData[id].module)
-                console.log(createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#mercredi', 1))
+                console.log(createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#mercredi'))
             } else if (localStorageData[id].module == indexValue){
                 // alert('le module existe dans la base de données')
+                const divCours = document.querySelectorAll('.divCours')
+                const pCoursId = document.querySelectorAll('#pCours')
+                const pCours = document.querySelectorAll('.pCours')
                 console.log(localStorageData[id].nom)
                 console.log(localStorageData[id].salle)
                 console.log(localStorageData[id].classe)
-                console.log(createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].classe, '#jeudi', 3))
+                daySection.forEach(day => {
+                    // divCours.forEach(div => {
+                    // })
+                    day.removeChild(divCours)
+                })
+                console.log(createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].classe, '#jeudi'))
             }
             // else{
             //     alert("l'élément recherché ne se contient pas de données dans la base de données")
@@ -305,8 +328,14 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
     })
+
+    //Remplissage de la balise select
+
     enseignants.addEventListener('click', function(){
         enseignants.style.backgroundColor = '#4EB2D7';
+        salles.style.backgroundColor = '';
+        classes.style.backgroundColor = '';
+        modules.style.backgroundColor = '';
         let count = 0
         select.innerHTML = ""
         const option = document.createElement('option')
@@ -320,8 +349,12 @@ document.addEventListener('DOMContentLoaded', function(){
             count++;
         }
     })
+
     salles.addEventListener('click', function(){
+        enseignants.style.backgroundColor = '';
         salles.style.backgroundColor = '#2AAA30';
+        classes.style.backgroundColor = '';
+        modules.style.backgroundColor = '';
         let count = 0;
         // tables.forEach(table => {table.innerHTML = ""})
         select.innerHTML = ""
@@ -341,7 +374,10 @@ document.addEventListener('DOMContentLoaded', function(){
         const selectedOption = selectElement.options[selectElement.selectedIndex];
         // const selectedOptionId = selectedOption.id;
         // console.log(selectedOptionId)
+        enseignants.style.backgroundColor = '';
+        salles.style.backgroundColor = '';
         classes.style.backgroundColor = '#D98341';
+        modules.style.backgroundColor = '';
         let count = 0;
         select.innerHTML = ""
         const option = document.createElement('option')
@@ -356,6 +392,9 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
     modules.addEventListener('click', function(){
+        enseignants.style.backgroundColor = '';
+        salles.style.backgroundColor = '';
+        classes.style.backgroundColor = '';
         modules.style.backgroundColor = '#CC0A33';
         let count = 0; 
         select.innerHTML = ""
@@ -391,7 +430,8 @@ document.addEventListener('DOMContentLoaded', function(){
       section.append(first)
       section.append(second)
       section.append(third)
-    //   section.style.width = width * difference
+
+    //   section.style.width = section.offsetWidth * 3
       document.querySelector(`${day}`).appendChild(section)
     }
     

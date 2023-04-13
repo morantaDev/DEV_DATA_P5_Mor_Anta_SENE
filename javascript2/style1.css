@@ -184,11 +184,12 @@ section .name{
     font-size: 20px;
 }
 .divCours{
-    /* display: inline-block; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
     position: relative;
     width: 80px;
     margin-left: 35px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px grey;
     /* color: white; */
 }
 #lundi, #mardi, #mercredi, #jeudi, #vendredi{
