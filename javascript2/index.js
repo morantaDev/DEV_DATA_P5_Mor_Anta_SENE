@@ -96,6 +96,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     function creationModule(){
+
+        //Revoir les listes ou peut-être utilisé une fonction pour récupérer ce type d'informations
         listeDesEnseign = ['','Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
         listeDesSalles = ['Choisir une Salle','101','102', '103', '104', '201', 'incub']
         listeDesModules = ['Choisir un Module','ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
@@ -200,56 +202,77 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
-    listeDesEnseign = ['Aly', 'Baila', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
-    listeDesSalles = ['101','102', '103', '104', '201', 'incub']
-    listeDesClasses = ['L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
-    listeDesModules = ['ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
+    listeDesEnseign = [{1: 'Aly', modals: [3, 4]}, {2: 'Baila', modals:[2]},{3:'Ndoye'},{4:'Mbaye', modals:[2]},{5:'Djiby'}, {6:'Seckouba'}]
+    listeDesSalles = [{1:'101', capacity: 20}, {2:'102', capacity: 20},{3:'103', capacity: 20},{4:'104', capacity: 20},{5:'201', capacity: 40}, {5:'incub', capacity: 30}]
+    listeDesClasses = [{1:'L2 GLRS A', effectif: 35},{2:'L2 GLRS B', effectif: 35}, {3:'L2 ETSE', effectif: 35}, {4:'L1 A', effectif: 35}, {5:'IAGE B', effectif: 35}, {6:'L2 CDSD', effectif: 35}]
+    listeDesModules = [{1: 'ALGO'},{2:'PHP'}, {3:'PYTHON'}, {6:'LC'}, {4:'JAVASCRIPT'}, {5:'JAVA'}]
+    listeDesJours = [{1: 'lundi'}, {2: 'mardi'}, {3: 'mercredi'}, {4: 'jeudi'}, {5: 'vendredi'}, {6: 'samedi'}]
+    
+    //Gérer la capacité et l'effectif des classes
+
+    let cours = []
+    const cours1 = {ensei: 1, sal: 5, clas: 6, mod: 3, heurDebut: 9, heureFin: 13, jour: 1}
+    const cours2 = {ensei: 1, sal: 2, clas: 6, mod: 4, heurDebut: 15, heureFin: 17, jour: 3}
+    const cours3 = {ensei: 2, sal: 2, clas: 6, mod: 2, heurDebut: 14, heureFin: 17, jour: 1}
+    const cours4 = {ensei: 3, sal: '', clas: '', mod: '', heurDebut: '', heureFin: '', jour: ''}
+    const cours5 = {ensei: 4, sal: 5, clas: 6, mod: 6, heurDebut: 8, heureFin: 10, jour: 4}
+    const cours6 = {ensei: '', sal: '', clas: '', mod: '', heurDebut: '', heureFin: '', jour: ''}
+    const cours7 = {ensei: '', sal: '', clas: '', mod: '', heurDebut: '', heureFin: '', jour: ''}
 
 
-    const ENSEIGNANT1 = {nom: 'Aly', salle: '201', classe: 'L2 CDSD', module: 'PYTHON'}
-    const ENSEIGNANT2 = {nom: 'Aly', salle: '102', classe: 'L2 CDSD', module: 'JAVASCRIPT'}
-    const ENSEIGNANT3 = {nom: 'Baila', salle: '102', classe: 'L2 CDSD', module: 'PHP'}
-    const ENSEIGNANT4 = {nom: 'Ndoye', salle: '201', classe: '', module: 'PYTHON'}
-    const ENSEIGNANT5 = {nom: 'Mbaye', salle: 'incub', classe: 'L2 CDSD', module: 'LC'}
-    const ENSEIGNANT6 = {nom: 'Djiby', salle: '201', classe: '', module: 'PYTHON'}
-    const ENSEIGNANT7 = {nom: 'Seckouba', salle: '201', classe: '', module: 'PYTHON'}
+    cours.push(cours1, cours2, cours3, cours4, cours5, cours6, cours7)
+    console.log(cours)
 
-    const ENSEIGNANTS = [ENSEIGNANT1, ENSEIGNANT2, ENSEIGNANT3, ENSEIGNANT4,ENSEIGNANT5, ENSEIGNANT6, ENSEIGNANT7]
+    //Trouver le cours correpondant à l'enseignant ayant l'identifiant 1
+    const coursAly  = cours.find(cours => cours.ensei === 1)
+    console.log(coursAly)
 
-    let compteurId = 1
-    for (let i = 0; i < ENSEIGNANTS.length; i++) {
-        localStorage.setItem(`${compteurId}`, JSON.stringify(ENSEIGNANTS[i]))
-        compteurId++
-    }
+    //Trouver le nom de l'enseignant correspondant
+
+    const enseignantAly = listeDesEnseign.find(enseigna => enseigna[1] === 'Aly')
+
+    //Afficher le nom de l'enseignant correspondant
+    console.log(enseignantAly[1])
+
+
+
+    // const ENSEIGNANT1 = {nom: 'Aly', salle: '201', classe: 'L2 CDSD', module: 'PYTHON'}
+    // const ENSEIGNANT2 = {nom: 'Aly', salle: '102', classe: 'L2 CDSD', module: 'JAVASCRIPT'}
+    // const ENSEIGNANT3 = {nom: 'Baila', salle: '102', classe: 'L2 CDSD', module: 'PHP'}
+    // const ENSEIGNANT4 = {nom: 'Ndoye', salle: '201', classe: '', module: 'PYTHON'}
+    // const ENSEIGNANT5 = {nom: 'Mbaye', salle: 'incub', classe: 'L2 CDSD', module: 'LC'}
+    // const ENSEIGNANT6 = {nom: 'Djiby', salle: '201', classe: '', module: 'PYTHON'}
+    // const ENSEIGNANT7 = {nom: 'Seckouba', salle: '201', classe: '', module: 'PYTHON'}
+
+    // const ENSEIGNANTS = [ENSEIGNANT1, ENSEIGNANT2, ENSEIGNANT3, ENSEIGNANT4,ENSEIGNANT5, ENSEIGNANT6, ENSEIGNANT7]
+
+    // let compteurId = 1
+    // for (let i = 0; i < ENSEIGNANTS.length; i++) {
+    //     localStorage.setItem(`${compteurId}`, JSON.stringify(ENSEIGNANTS[i]))
+    //     compteurId++
+    // }
 
     const titre = document.getElementById('choix')
     console.log(choix)
     
 
-    select.addEventListener('click', function(e){
-        titre.innerHTML =''
-        titre.innerHTML = e.target.value
-        console.log(titre)
-        // const indexElement = e.target.selectedIndex;
-        // console.log(indexElement)
-        const indexValue = e.target.value
-        console.log(indexValue)
+    // select.addEventListener('click', function(e){
+    //     titre.innerHTML =''
+    //     titre.innerHTML = e.target.value
+    //     console.log(titre)
+    //     // const indexElement = e.target.selectedIndex;
+    //     // console.log(indexElement)
+    //     const indexValue = e.target.value
+    //     // console.log(indexValue)
+    //     localStorage.removeItem('compteurId')
+    //     const localStorageData = [];
 
-        // var getData = localStorage.getItem(indexElement)
-        // const liste = JSON.parse(getData)
+    //     for (let i = 0; i < localStorage.length; i++) {
+    //     const key = localStorage.key(i);
+    //     localStorageData.push(JSON.parse(localStorage.getItem(key)));
+    //     }
 
-        // console.log(liste)
-        // console.log(liste.classe)
-
-        localStorage.removeItem('compteurId')
-        const localStorageData = [];
-
-        for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        localStorageData.push(JSON.parse(localStorage.getItem(key)));
-        }
-
-        console.log(localStorageData);
+    //     console.log(localStorageData);
 
         const listeDesCouleurs = ['#D74DD0','#77B6AD', '#89398F', '#8C3691', '#D76164', '#F69229', '#BE8487', '#3CADEB', '#D76164', '#F78002', '#0BA00F']
         let COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
@@ -259,82 +282,126 @@ document.addEventListener('DOMContentLoaded', function(){
         }, 1000)
 
 
-        for(id in localStorageData) {
-            if (localStorageData[id].nom == indexValue){
-                console.log(localStorageData[id].salle)
-                console.log(localStorageData[id].module)
-                console.log(localStorageData[id].classe)
-                // const allDivCours = document.querySelectorAll('.divCours')
-                // allDivCours.forEach(divCours => {
-                // })
-                if(localStorageData[id].module == 'JAVASCRIPT' && indexValue == 'Aly'){
-                    createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#mercredi', 2, 8,COLOR)
-                } 
-                if(localStorageData[id].module == 'PYTHON' && indexValue == 'Aly'){
+        // for(id in localStorageData) {
+        //     if (localStorageData[id].nom == indexValue){
+        //         if(localStorageData[id].module == 'JAVASCRIPT' && indexValue == 'Aly'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //             allDiv.forEach(div => {
+        //                 div.style.display = 'none'
+        //             })
+        //             createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#mercredi', 2, 8,COLOR)
+        //         } 
+        //         if(localStorageData[id].module == 'PYTHON' && indexValue == 'Aly'){
+        //             createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#lundi', 3, 1,COLOR)
+        //         }
+        //         if (indexValue == 'Baila'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //             allDiv.forEach(div => {
+        //                 div.style.display = 'none'
+        //             })
+        //             createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#lundi', 3, 6,COLOR)
+        //         }
+        //         if (indexValue == 'Mbaye'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //             allDiv.forEach(div => {
+        //                 div.style.display = 'none'
+        //             })
+        //             createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#jeudi', 2, 0,COLOR)
+        //         }
 
-                    createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#lundi', 4, 1,COLOR)
-                }
-                if (indexValue == 'Baila'){
-                    createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#lundi', 3, 6,COLOR)
-                }
-                if (indexValue == 'Mbaye'){
-                    createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#jeudi', 2, 0,COLOR)
-                }
+        //     } else if (localStorageData[id].salle == indexValue){
+        //         if(localStorageData[id].nom=='Aly' && localStorageData[id].module == 'PYTHON'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //             allDiv.forEach(div => {
+        //                 div.style.display = 'none'
+        //             })
+        //             createCours(localStorageData[id].classe, localStorageData[id].nom, localStorageData[id].module, '#lundi', 3, 1,COLOR)
+        //         } 
+        //         if(localStorageData[id].nom=='Aly' && localStorageData[id].module == 'JAVASCRIPT'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //             allDiv.forEach(div => {
+        //                 div.style.display = 'none'
+        //             })
+        //             createCours(localStorageData[id].classe, localStorageData[id].nom, localStorageData[id].module, '#mercredi', 2, 8,COLOR)
+        //         }
+        //         if(localStorageData[id].nom=='Baila'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //             allDiv.forEach(div => {
+        //                 div.style.display = 'none'
+        //             })
+        //             createCours(localStorageData[id].classe, localStorageData[id].nom, localStorageData[id].module, '#lundi', 3, 6,COLOR)
+        //         }
+        //         if(localStorageData[id].nom=='Mbaye'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //             allDiv.forEach(div => {
+        //                 div.style.display = 'none'
+        //             })
+        //             createCours(localStorageData[id].classe, localStorageData[id].nom, localStorageData[id].module, '#jeudi', 2, 0,COLOR)
+        //         }
+                
+        //     } else if (localStorageData[id].classe == indexValue){
+        //         if(localStorageData[id].nom=='Aly' && localStorageData[id].module == 'PYTHON'){
+        //             createCours(localStorageData[id].nom, localStorageData[id].module, localStorageData[id].salle, '#lundi', 3, 1,COLOR)
+        //         } 
+        //         if(localStorageData[id].nom=='Aly' && localStorageData[id].module == 'JAVASCRIPT'){
+        //             createCours(localStorageData[id].nom, localStorageData[id].module, localStorageData[id].salle, '#mercredi', 2, 8,COLOR)
+        //         }
+        //         if(localStorageData[id].nom=='Baila'){
+        //             createCours(localStorageData[id].nom, localStorageData[id].module, localStorageData[id].salle, '#lundi', 3, 2,COLOR)
+        //         }
+        //         if(localStorageData[id].nom=='Mbaye'){
+                    
+        //             createCours(localStorageData[id].nom, localStorageData[id].module, localStorageData[id].salle, '#jeudi', 2, 0,COLOR)
+        //         }
+                
+        //     } else if (localStorageData[id].module == indexValue){
+        //         if(indexValue == 'JAVASCRIPT' && localStorageData[id].nom == 'Aly'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //                 allDiv.forEach(div => {
+        //                     div.style.display = 'none'
+        //                 })
+        //             createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].classe, '#mercredi', 2, 8, COLOR)
+        //         }
+        //         if(indexValue == 'PYTHON' && localStorageData[id].nom == 'Aly'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //                 allDiv.forEach(div => {
+        //                     div.style.display = 'none'
+        //                 })
+        //             createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].classe, '#lundi', 3, 1, COLOR)
+        //         }
+        //         if(indexValue == 'LC'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //                 allDiv.forEach(div => {
+        //                     div.style.display = 'none'
+        //                 })
+        //             createCours(localStorageData[id].classe, localStorageData[id].nom, localStorageData[id].salle, '#jeudi', 2, 0, COLOR)
+        //         }
+        //         if(indexValue == 'PHP'){
+        //             const allDiv = document.querySelectorAll('.divCours')
+        //                 allDiv.forEach(div => {
+        //                     div.style.display = 'none'
+        //                 })
+        //             createCours(localStorageData[id].classe, localStorageData[id].nom, localStorageData[id].salle, '#lundi', 3, 6, COLOR)
+        //         }
+        //     }
+            // else if (localStorageData[id].module == indexValue && indexValue == 'PYTHON'){
+            //     if (localStorageData[id].nom == 'Aly'){
+            //             const allDiv = document.querySelectorAll('.divCours')
+            //             allDiv.forEach(div => {
+            //                 div.style.display = 'none'
+            //             })
+            //         createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].classe, '#lundi', 3, 1, COLOR)
+            //     } else{
+            //         const allDiv = document.querySelectorAll('.divCours')
+            //         allDiv.forEach(div => {
+            //             div.style.display = 'none'
+            //         })
+            //     }
+            // }
+            
+    //     }
+    // })
 
-            } else if (localStorageData[id].salle == indexValue){
-                // alert('la salle existe dans la base de données')
-                console.log(localStorageData[id].nom)
-                console.log(localStorageData[id].classe)
-                console.log(localStorageData[id].module)
-                createCours(localStorageData[id].nom, localStorageData[id].classe, localStorageData[id].module, '#mardi', 3, 0,COLOR)
-                const divCours = document.querySelectorAll('.divCours')
-                const pCoursId = document.querySelectorAll('#pCours')
-                const pCours = document.querySelectorAll('.pCours')
-                divCours.forEach(div => {
-
-                    //Ajouter un tableau de couleurs et ajouter une couleur de fond aléatoirement
-                    // div.style.backgroundColor = 'blue'
-                    pCoursId.forEach(pCoursid => {
-                        pCoursid.style.color = 'white'
-                    });
-                    pCours.forEach(pcours => {
-                        pcours.style.color = 'white'
-                    })
-                })
-            } else if (localStorageData[id].classe == indexValue){
-                // alert('la classe existe dans la base de données')
-                console.log(localStorageData[id].nom)
-                console.log(localStorageData[id].salle)
-                console.log(localStorageData[id].module)
-                if(localStorageData[id].nom=='Aly' && localStorageData[id].module == 'PYTHON'){
-                    createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#lundi', 4, 1,COLOR)
-                } 
-                if(localStorageData[id].nom=='Aly' && localStorageData[id].module == 'JAVASCRIPT'){
-                    createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#mercredi', 2, 8,COLOR)
-                }
-                if(localStorageData[id].nom=='Baila'){
-                    createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#lundi', 3, 1,COLOR)
-                }
-                if(localStorageData[id].nom=='Mbaye'){
-                    createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#jeudi', 2, 0,COLOR)
-                }
-            } else if (localStorageData[id].module == indexValue){
-                // alert('le module existe dans la base de données')
-                const divCours = document.querySelectorAll('.divCours')
-                const pCoursId = document.querySelectorAll('#pCours')
-                const pCours = document.querySelectorAll('.pCours')
-                console.log(localStorageData[id].nom)
-                console.log(localStorageData[id].salle)
-                console.log(localStorageData[id].classe)
-                daySection.forEach(day => {
-                    // divCours.forEach(div => {
-                    // })
-                    // day.removeChild(divCours)
-                })
-                createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].classe, '#jeudi', 3, 0)
-            }
-        }
-    })
     //Remplissage de la balise select
     enseignants.addEventListener('click', function(){
         enseignants.style.backgroundColor = '#4EB2D7';
