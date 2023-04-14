@@ -94,13 +94,13 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
 
+    const listeDesEnseign = ['Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
+    const listeDesSalles = ['101','102', '103', '104', '201', 'incub']
+    const listeDesModules = ['ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
 
     function creationModule(){
-
         //Revoir les listes ou peut-être utilisé une fonction pour récupérer ce type d'informations
-        listeDesEnseign = ['','Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
-        listeDesSalles = ['Choisir une Salle','101','102', '103', '104', '201', 'incub']
-        listeDesModules = ['Choisir un Module','ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
+        
         listheureDebut = ['Choisir une Heure', '8H', '9H', '10H', '11H', '12H', '13H', '14', '15H', '16', '17H']
         listheureFin = ['Choisir une Heure','9H', '10H', '11H', '12H', '13H', '14', '15H', '16', '17H']
 
@@ -202,11 +202,11 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
-    listeDesEnseign = [{1: 'Aly', modals: [3, 4]}, {2: 'Baila', modals:[2]},{3:'Ndoye'},{4:'Mbaye', modals:[2]},{5:'Djiby'}, {6:'Seckouba'}]
-    listeDesSalles = [{1:'101', capacity: 20}, {2:'102', capacity: 20},{3:'103', capacity: 20},{4:'104', capacity: 20},{5:'201', capacity: 40}, {5:'incub', capacity: 30}]
-    listeDesClasses = [{1:'L2 GLRS A', effectif: 35},{2:'L2 GLRS B', effectif: 35}, {3:'L2 ETSE', effectif: 35}, {4:'L1 A', effectif: 35}, {5:'IAGE B', effectif: 35}, {6:'L2 CDSD', effectif: 35}]
-    listeDesModules = [{1: 'ALGO'},{2:'PHP'}, {3:'PYTHON'}, {6:'LC'}, {4:'JAVASCRIPT'}, {5:'JAVA'}]
-    listeDesJours = [{1: 'lundi'}, {2: 'mardi'}, {3: 'mercredi'}, {4: 'jeudi'}, {5: 'vendredi'}, {6: 'samedi'}]
+    const ENSEIGNANTS = [{1: 'Aly', modals: [3, 4]}, {2: 'Baila', modals:[2]},{3:'Ndoye'},{4:'Mbaye', modals:[2]},{5:'Djiby'}, {6:'Seckouba'}]
+    const SALLES = [{1:'101', capacity: 20}, {2:'102', capacity: 20},{3:'103', capacity: 20},{4:'104', capacity: 20},{5:'201', capacity: 40}, {5:'incub', capacity: 30}]
+    const CLASSES = [{1:'L2 GLRS A', effectif: 35},{2:'L2 GLRS B', effectif: 35}, {3:'L2 ETSE', effectif: 35}, {4:'L1 A', effectif: 35}, {5:'IAGE B', effectif: 35}, {6:'L2 CDSD', effectif: 35}]
+    const MODULES = [{1: 'ALGO'},{2:'PHP'}, {3:'PYTHON'}, {6:'LC'}, {4:'JAVASCRIPT'}, {5:'JAVA'}]
+    const JOURS = [{1: 'lundi'}, {2: 'mardi'}, {3: 'mercredi'}, {4: 'jeudi'}, {5: 'vendredi'}, {6: 'samedi'}]
     
     //Gérer la capacité et l'effectif des classes
 
@@ -223,16 +223,148 @@ document.addEventListener('DOMContentLoaded', function(){
     cours.push(cours1, cours2, cours3, cours4, cours5, cours6, cours7)
     console.log(cours)
 
+    select.addEventListener('change', function(e){
+        const indexValue = e.target.value
+        const teacher = ENSEIGNANTS.find(elmt => elmt[1] === indexValue)
+        console.log(teacher)
+    })
+
     //Trouver le cours correpondant à l'enseignant ayant l'identifiant 1
     const coursAly  = cours.find(cours => cours.ensei === 1)
     console.log(coursAly)
 
     //Trouver le nom de l'enseignant correspondant
 
-    const enseignantAly = listeDesEnseign.find(enseigna => enseigna[1] === 'Aly')
+    const enseignantAly = ENSEIGNANTS.find(enseigna => enseigna[1] === 'Aly')
 
     //Afficher le nom de l'enseignant correspondant
     console.log(enseignantAly[1])
+
+
+
+    
+    const titre = document.getElementById('choix')
+    console.log(choix)
+    
+    
+    const listeDesCouleurs = ['#D74DD0','#77B6AD', '#89398F', '#8C3691', '#D76164', '#F69229', '#BE8487', '#3CADEB', '#D76164', '#F78002', '#0BA00F']
+    let COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
+    
+    setInterval(function(){
+        COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
+    }, 1000)
+    
+    
+    //Remplissage de la balise select
+    enseignants.addEventListener('click', function(){
+        enseignants.style.backgroundColor = '#4EB2D7';
+        salles.style.backgroundColor = '';
+        classes.style.backgroundColor = '';
+        modules.style.backgroundColor = '';
+        let count = 0
+        select.innerHTML = ""
+        const option = document.createElement('option')
+        select.appendChild(option)
+        for (let i = 0; i < listeDesEnseign.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesEnseign[i]}`
+            option.setAttribute('value', `${listeDesEnseign[i]}`)
+            console.log(option)
+            select.add(option)
+            count++;
+        }
+    })
+    
+    salles.addEventListener('click', function(){
+        enseignants.style.backgroundColor = '';
+        salles.style.backgroundColor = '#2AAA30';
+        classes.style.backgroundColor = '';
+        modules.style.backgroundColor = '';
+        let count = 0;
+        // tables.forEach(table => {table.innerHTML = ""})
+        select.innerHTML = ""
+        const option = document.createElement('option')
+        select.appendChild(option)
+        for (let i = 0; i < listeDesSalles.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesSalles[i]}`
+            option.setAttribute('id', `${count}`)
+            console.log(option)
+            select.add(option)
+            count++;
+        }
+    })
+    classes.addEventListener('click', function(){
+        const selectElement = document.getElementById("select");
+        // const selectedOption = selectElement.options[selectElement.selectedIndex];
+        // const selectedOptionId = selectedOption.id;
+        // console.log(selectedOptionId)
+        enseignants.style.backgroundColor = '';
+        salles.style.backgroundColor = '';
+        classes.style.backgroundColor = '#D98341';
+        modules.style.backgroundColor = '';
+        let count = 0;
+        select.innerHTML = ""
+        const option = document.createElement('option')
+        select.appendChild(option)
+        for (let i = 0; i < listeDesClasses.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesClasses[i]}`
+            option.setAttribute('id', `${'option'+count}`)
+            console.log(option)
+            select.add(option)
+            count++;
+        }
+    })
+    modules.addEventListener('click', function(){
+        enseignants.style.backgroundColor = '';
+        salles.style.backgroundColor = '';
+        classes.style.backgroundColor = '';
+        modules.style.backgroundColor = '#CC0A33';
+        let count = 0; 
+        select.innerHTML = ""
+        const option = document.createElement('option')
+        select.appendChild(option)
+        for (let i = 0; i < listeDesModules.length; i++) {
+            const option = document.createElement('option')
+            option.textContent = `${listeDesModules[i]}`
+            option.setAttribute('id', `${count}`)
+            console.log(option)
+            count++;
+            select.add(option)
+        }
+    })
+    
+    plusDays.forEach(day => {
+        day.addEventListener('click', function(){
+            creationModule()
+        })
+    })
+    function createCours(element1, element2, element3, day, difference, marge, couleur){
+        const section = document.createElement('div')
+        section.classList.add('divCours')
+        const first = document.createElement('p')
+        first.classList.add('pCours')
+        first.innerHTML = `${element1}`
+        const second = document.createElement('p')
+        second.setAttribute('id', 'pCours')
+        second.innerHTML = `${element2}`
+        const third  = document.createElement('p')
+        third.classList.add('pCours')
+        third.innerHTML = `${element3}`
+        section.append(first)
+        section.append(second)
+        section.append(third)
+        //   const offwidth = section.offsetWidth
+        //   console.log(offwidth)
+        const larg =  `${difference}`//section.offsetWidth * `${difference}`
+        console.log(larg)
+        section.style.width = `${9 * difference}%`
+        section.style.marginLeft = `${9 * marge}%`
+        section.style.backgroundColor = `${couleur}`
+        document.querySelector(`${day}`).appendChild(section)
+    }
+
 
 
 
@@ -251,35 +383,11 @@ document.addEventListener('DOMContentLoaded', function(){
     //     localStorage.setItem(`${compteurId}`, JSON.stringify(ENSEIGNANTS[i]))
     //     compteurId++
     // }
-
-    const titre = document.getElementById('choix')
-    console.log(choix)
+    
     
 
-    // select.addEventListener('click', function(e){
-    //     titre.innerHTML =''
-    //     titre.innerHTML = e.target.value
-    //     console.log(titre)
-    //     // const indexElement = e.target.selectedIndex;
-    //     // console.log(indexElement)
-    //     const indexValue = e.target.value
-    //     // console.log(indexValue)
-    //     localStorage.removeItem('compteurId')
-    //     const localStorageData = [];
 
-    //     for (let i = 0; i < localStorage.length; i++) {
-    //     const key = localStorage.key(i);
-    //     localStorageData.push(JSON.parse(localStorage.getItem(key)));
-    //     }
 
-    //     console.log(localStorageData);
-
-        const listeDesCouleurs = ['#D74DD0','#77B6AD', '#89398F', '#8C3691', '#D76164', '#F69229', '#BE8487', '#3CADEB', '#D76164', '#F78002', '#0BA00F']
-        let COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
-
-        setInterval(function(){
-            COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
-        }, 1000)
 
 
         // for(id in localStorageData) {
@@ -401,115 +509,4 @@ document.addEventListener('DOMContentLoaded', function(){
             
     //     }
     // })
-
-    //Remplissage de la balise select
-    enseignants.addEventListener('click', function(){
-        enseignants.style.backgroundColor = '#4EB2D7';
-        salles.style.backgroundColor = '';
-        classes.style.backgroundColor = '';
-        modules.style.backgroundColor = '';
-        let count = 0
-        select.innerHTML = ""
-        const option = document.createElement('option')
-        select.appendChild(option)
-        for (let i = 0; i < listeDesEnseign.length; i++) {
-            const option = document.createElement('option')
-            option.textContent = `${listeDesEnseign[i]}`
-            option.setAttribute('value', `${listeDesEnseign[i]}`)
-            console.log(option)
-            select.add(option)
-            count++;
-        }
-    })
-
-    salles.addEventListener('click', function(){
-        enseignants.style.backgroundColor = '';
-        salles.style.backgroundColor = '#2AAA30';
-        classes.style.backgroundColor = '';
-        modules.style.backgroundColor = '';
-        let count = 0;
-        // tables.forEach(table => {table.innerHTML = ""})
-        select.innerHTML = ""
-        const option = document.createElement('option')
-        select.appendChild(option)
-        for (let i = 0; i < listeDesSalles.length; i++) {
-            const option = document.createElement('option')
-            option.textContent = `${listeDesSalles[i]}`
-            option.setAttribute('id', `${count}`)
-            console.log(option)
-            select.add(option)
-            count++;
-        }
-    })
-    classes.addEventListener('click', function(){
-        const selectElement = document.getElementById("select");
-        // const selectedOption = selectElement.options[selectElement.selectedIndex];
-        // const selectedOptionId = selectedOption.id;
-        // console.log(selectedOptionId)
-        enseignants.style.backgroundColor = '';
-        salles.style.backgroundColor = '';
-        classes.style.backgroundColor = '#D98341';
-        modules.style.backgroundColor = '';
-        let count = 0;
-        select.innerHTML = ""
-        const option = document.createElement('option')
-        select.appendChild(option)
-        for (let i = 0; i < listeDesClasses.length; i++) {
-            const option = document.createElement('option')
-            option.textContent = `${listeDesClasses[i]}`
-            option.setAttribute('id', `${'option'+count}`)
-            console.log(option)
-            select.add(option)
-            count++;
-        }
-    })
-    modules.addEventListener('click', function(){
-        enseignants.style.backgroundColor = '';
-        salles.style.backgroundColor = '';
-        classes.style.backgroundColor = '';
-        modules.style.backgroundColor = '#CC0A33';
-        let count = 0; 
-        select.innerHTML = ""
-        const option = document.createElement('option')
-        select.appendChild(option)
-        for (let i = 0; i < listeDesModules.length; i++) {
-            const option = document.createElement('option')
-            option.textContent = `${listeDesModules[i]}`
-            option.setAttribute('id', `${count}`)
-            console.log(option)
-            count++;
-            select.add(option)
-        }
-    })
-    
-    plusDays.forEach(day => {
-        day.addEventListener('click', function(){
-            creationModule()
-        })
-    })
-  function createCours(element1, element2, element3, day, difference, marge, couleur){
-      const section = document.createElement('div')
-      section.classList.add('divCours')
-      const first = document.createElement('p')
-      first.classList.add('pCours')
-      first.innerHTML = `${element1}`
-      const second = document.createElement('p')
-      second.setAttribute('id', 'pCours')
-      second.innerHTML = `${element2}`
-      const third  = document.createElement('p')
-      third.classList.add('pCours')
-      third.innerHTML = `${element3}`
-      section.append(first)
-      section.append(second)
-      section.append(third)
-    //   const offwidth = section.offsetWidth
-    //   console.log(offwidth)
-      const larg =  `${difference}`//section.offsetWidth * `${difference}`
-      console.log(larg)
-      section.style.width = `${9 * difference}%`
-      section.style.marginLeft = `${9 * marge}%`
-      section.style.backgroundColor = `${couleur}`
-      document.querySelector(`${day}`).appendChild(section)
-    }
-    
 })
