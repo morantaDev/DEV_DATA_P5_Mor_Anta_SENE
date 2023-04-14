@@ -200,20 +200,21 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
-    listeDesEnseign = ['Aly', 'Baila', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba', 'Aly']
+    listeDesEnseign = ['Aly', 'Baila', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
     listeDesSalles = ['101','102', '103', '104', '201', 'incub']
     listeDesClasses = ['L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
     listeDesModules = ['ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
 
 
     const ENSEIGNANT1 = {nom: 'Aly', salle: '201', classe: 'L2 CDSD', module: 'PYTHON'}
-    const ENSEIGNANT2 = {nom: 'Baila', salle: '102', classe: 'L2 CDSD', module: 'PHP'}
-    const ENSEIGNANT3 = {nom: 'Ndoye', salle: '201', classe: '', module: 'PYTHON'}
-    const ENSEIGNANT4 = {nom: 'Mbaye', salle: 'incub', classe: 'L2 CDSD', module: 'LC'}
-    const ENSEIGNANT5 = {nom: 'Djiby', salle: '201', classe: '', module: 'PYTHON'}
-    const ENSEIGNANT6 = {nom: 'Seckouba', salle: '201', classe: '', module: 'PYTHON'}
+    const ENSEIGNANT2 = {nom: 'Aly', salle: '102', classe: 'L2 CDSD', module: 'JAVASCRIPT'}
+    const ENSEIGNANT3 = {nom: 'Baila', salle: '102', classe: 'L2 CDSD', module: 'PHP'}
+    const ENSEIGNANT4 = {nom: 'Ndoye', salle: '201', classe: '', module: 'PYTHON'}
+    const ENSEIGNANT5 = {nom: 'Mbaye', salle: 'incub', classe: 'L2 CDSD', module: 'LC'}
+    const ENSEIGNANT6 = {nom: 'Djiby', salle: '201', classe: '', module: 'PYTHON'}
+    const ENSEIGNANT7 = {nom: 'Seckouba', salle: '201', classe: '', module: 'PYTHON'}
 
-    const ENSEIGNANTS = [ENSEIGNANT1, ENSEIGNANT2, ENSEIGNANT3, ENSEIGNANT4,ENSEIGNANT5, ENSEIGNANT6]
+    const ENSEIGNANTS = [ENSEIGNANT1, ENSEIGNANT2, ENSEIGNANT3, ENSEIGNANT4,ENSEIGNANT5, ENSEIGNANT6, ENSEIGNANT7]
 
     let compteurId = 1
     for (let i = 0; i < ENSEIGNANTS.length; i++) {
@@ -249,6 +250,15 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         console.log(localStorageData);
+
+        const listeDesCouleurs = ['#D74DD0','#77B6AD', '#89398F', '#8C3691', '#D76164', '#F69229', '#BE8487', '#3CADEB', '#D76164', '#F78002', '#0BA00F']
+        let COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
+
+        setInterval(function(){
+            COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
+        }, 1000)
+
+
         for(id in localStorageData) {
             if (localStorageData[id].nom == indexValue){
                 console.log(localStorageData[id].salle)
@@ -257,56 +267,57 @@ document.addEventListener('DOMContentLoaded', function(){
                 // const allDivCours = document.querySelectorAll('.divCours')
                 // allDivCours.forEach(divCours => {
                 // })
+                if(localStorageData[id].module == 'JAVASCRIPT' && indexValue == 'Aly'){
+                    createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#mercredi', 2, 8,COLOR)
+                } 
+                if(localStorageData[id].module == 'PYTHON' && indexValue == 'Aly'){
 
-                console.log(createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#lundi'))
-                const divCours = document.querySelectorAll('.divCours')
-                const pCoursId = document.querySelectorAll('#pCours')
-                const pCours = document.querySelectorAll('.pCours')
-                divCours.forEach(div => {
+                    createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#lundi', 4, 1,COLOR)
+                }
+                if (indexValue == 'Baila'){
+                    createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#lundi', 3, 6,COLOR)
+                }
+                if (indexValue == 'Mbaye'){
+                    createCours(localStorageData[id].salle, localStorageData[id].module, localStorageData[id].classe,'#jeudi', 2, 0,COLOR)
+                }
 
-                    //Ajouter un tableau de couleurs et ajouter une couleur de fond aléatoirement
-                    div.style.backgroundColor = 'yellow'
-                    pCoursId.forEach(pCoursid => {
-                        pCoursid.style.color = 'white'
-                    });
-                    pCours.forEach(pcours => {
-                        pcours.style.color = 'white'
-                    })
-                    
-                    //Récupérer la largeur de notre div
-                    const largeur = div.offsetWidth;
-                    console.log(largeur)
-                })
             } else if (localStorageData[id].salle == indexValue){
                 // alert('la salle existe dans la base de données')
                 console.log(localStorageData[id].nom)
                 console.log(localStorageData[id].classe)
                 console.log(localStorageData[id].module)
-                console.log(createCours(localStorageData[id].nom, localStorageData[id].classe, localStorageData[id].module, '#mardi'))
+                createCours(localStorageData[id].nom, localStorageData[id].classe, localStorageData[id].module, '#mardi', 3, 0,COLOR)
                 const divCours = document.querySelectorAll('.divCours')
                 const pCoursId = document.querySelectorAll('#pCours')
                 const pCours = document.querySelectorAll('.pCours')
                 divCours.forEach(div => {
 
                     //Ajouter un tableau de couleurs et ajouter une couleur de fond aléatoirement
-                    div.style.backgroundColor = 'blue'
+                    // div.style.backgroundColor = 'blue'
                     pCoursId.forEach(pCoursid => {
                         pCoursid.style.color = 'white'
                     });
                     pCours.forEach(pcours => {
                         pcours.style.color = 'white'
                     })
-                    
-                    //Récupérer la largeur de notre div
-                    const largeur = div.offsetWidth;
-                    console.log(largeur)
                 })
             } else if (localStorageData[id].classe == indexValue){
                 // alert('la classe existe dans la base de données')
                 console.log(localStorageData[id].nom)
                 console.log(localStorageData[id].salle)
                 console.log(localStorageData[id].module)
-                console.log(createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#mercredi'))
+                if(localStorageData[id].nom=='Aly' && localStorageData[id].module == 'PYTHON'){
+                    createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#lundi', 4, 1,COLOR)
+                } 
+                if(localStorageData[id].nom=='Aly' && localStorageData[id].module == 'JAVASCRIPT'){
+                    createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#mercredi', 2, 8,COLOR)
+                }
+                if(localStorageData[id].nom=='Baila'){
+                    createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#lundi', 3, 1,COLOR)
+                }
+                if(localStorageData[id].nom=='Mbaye'){
+                    createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].module, '#jeudi', 2, 0,COLOR)
+                }
             } else if (localStorageData[id].module == indexValue){
                 // alert('le module existe dans la base de données')
                 const divCours = document.querySelectorAll('.divCours')
@@ -318,19 +329,13 @@ document.addEventListener('DOMContentLoaded', function(){
                 daySection.forEach(day => {
                     // divCours.forEach(div => {
                     // })
-                    day.removeChild(divCours)
+                    // day.removeChild(divCours)
                 })
-                console.log(createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].classe, '#jeudi'))
+                createCours(localStorageData[id].nom, localStorageData[id].salle, localStorageData[id].classe, '#jeudi', 3, 0)
             }
-            // else{
-            //     alert("l'élément recherché ne se contient pas de données dans la base de données")
-            // }
         }
-
     })
-
     //Remplissage de la balise select
-
     enseignants.addEventListener('click', function(){
         enseignants.style.backgroundColor = '#4EB2D7';
         salles.style.backgroundColor = '';
@@ -371,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function(){
     })
     classes.addEventListener('click', function(){
         const selectElement = document.getElementById("select");
-        const selectedOption = selectElement.options[selectElement.selectedIndex];
+        // const selectedOption = selectElement.options[selectElement.selectedIndex];
         // const selectedOptionId = selectedOption.id;
         // console.log(selectedOptionId)
         enseignants.style.backgroundColor = '';
@@ -415,7 +420,7 @@ document.addEventListener('DOMContentLoaded', function(){
             creationModule()
         })
     })
-  function createCours(element1, element2, element3, day){
+  function createCours(element1, element2, element3, day, difference, marge, couleur){
       const section = document.createElement('div')
       section.classList.add('divCours')
       const first = document.createElement('p')
@@ -430,8 +435,13 @@ document.addEventListener('DOMContentLoaded', function(){
       section.append(first)
       section.append(second)
       section.append(third)
-
-    //   section.style.width = section.offsetWidth * 3
+    //   const offwidth = section.offsetWidth
+    //   console.log(offwidth)
+      const larg =  `${difference}`//section.offsetWidth * `${difference}`
+      console.log(larg)
+      section.style.width = `${9 * difference}%`
+      section.style.marginLeft = `${9 * marge}%`
+      section.style.backgroundColor = `${couleur}`
       document.querySelector(`${day}`).appendChild(section)
     }
     
