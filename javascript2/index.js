@@ -254,144 +254,146 @@ document.addEventListener('DOMContentLoaded', function(){
                 console.log(teacher)
                 const teacherId = Object.keys(teacher)[0]
                 console.log(teacherId)
-                const course = cours.find(element => element.ensei == teacherId)
-                console.log(course)
+                const courses = cours.filter(element => element.ensei == teacherId)
+                console.log(courses)
 
                 //Récupéper la classe, la salle, le module
-                const classId = course.clas
-                console.log(classId)
-                
-                const dictClass = CLASSES.find(element =>  Object.keys(element)[0] == course.clas)
-                const classVALUE = dictClass[course.clas]
-                console.log(classVALUE)
-                const dictSalle = SALLES.find(element => Object.keys(element)[0] == course.sal)
-                const salVALUE = dictSalle[course.sal]
-                console.log(salVALUE)
-                const dictMod = MODULES.find(element => Object.keys(element)[0] == course.mod)
-                const modVALUE = dictMod[course.mod]
-                console.log(modVALUE)
+                courses.forEach(course => {
 
-                const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
-                const jourVALUE = dictJour[course.jour]
-                console.log(jourVALUE)
-                
-                const HeureDebut = course.heurDebut
-                const HeureFin = course.heureFin
-                // console.log(HeureFin)
+                    const classId = course.clas
+                    console.log(classId)
+                    
+                    const dictClass = CLASSES.find(element =>  Object.keys(element)[0] == course.clas)
+                    const classVALUE = dictClass[course.clas]
+                    console.log(classVALUE)
+                    const dictSalle = SALLES.find(element => Object.keys(element)[0] == course.sal)
+                    const salVALUE = dictSalle[course.sal]
+                    console.log(salVALUE)
+                    const dictMod = MODULES.find(element => Object.keys(element)[0] == course.mod)
+                    const modVALUE = dictMod[course.mod]
+                    console.log(modVALUE)
+                    const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
+                    const jourVALUE = dictJour[course.jour]
+                    console.log(jourVALUE)
+                    
+                    const HeureDebut = course.heurDebut
+                    const HeureFin = course.heureFin
+                    // console.log(HeureFin)
+    
+                    const duree = HeureFin - HeureDebut
+                    const marge = HeureDebut - 8
+                    createCours(classVALUE, modVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
+                })
 
-                const duree = HeureFin - HeureDebut
-                const marge = HeureDebut - 8
-                createCours(classVALUE, modVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
             } else if (room){
                 console.log(room)
                 const roomId = Object.keys(room)[0]
                 console.log(roomId)
-                const course = cours.find(element => element.sal == roomId)
-                console.log(course)
+                const courses = cours.filter(element => element.sal == roomId)
+                console.log(courses)
 
                 //Récupéper la classe, le nom, le module
 
-                // const classId = course.clas
+                // const classId = courses.clas
                 // console.log(classId)
-                
-                const dictClass = CLASSES.find(element =>  Object.keys(element)[0] == course.clas)
-                const classVALUE = dictClass[course.clas]
-                console.log(classVALUE)
-
-                const dictNom = ENSEIGNANTS.find(element => Object.keys(element)[0] == course.ensei)
-                const teacherVALUE = dictNom[course.ensei]
-                console.log(teacherVALUE)
-
-                const dictMod = MODULES.find(element => Object.keys(element)[0] == course.mod)
-                const modVALUE = dictMod[course.mod]
-                console.log(modVALUE)
-
-                const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
-                const jourVALUE = dictJour[course.jour]
-                console.log(jourVALUE)
-                
-                const HeureDebut = course.heurDebut
-                const HeureFin = course.heureFin
-                // console.log(HeureFin)
-
-                const duree = HeureFin - HeureDebut
-                const marge = HeureDebut - 8
-                createCours(classVALUE, teacherVALUE, modVALUE, jourVALUE, duree, marge, COLOR)
-            } 
-            else if(classroom){
+                courses.forEach(course => {
+                    const dictClass = CLASSES.find(element =>  Object.keys(element)[0] == course.clas)
+                    const classVALUE = dictClass[course.clas]
+                    console.log(classVALUE)
+    
+                    const dictNom = ENSEIGNANTS.find(element => Object.keys(element)[0] == course.ensei)
+                    const teacherVALUE = dictNom[course.ensei]
+                    console.log(teacherVALUE)
+    
+                    const dictMod = MODULES.find(element => Object.keys(element)[0] == course.mod)
+                    const modVALUE = dictMod[course.mod]
+                    console.log(modVALUE)
+    
+                    const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
+                    const jourVALUE = dictJour[course.jour]
+                    console.log(jourVALUE)
+                    
+                    const HeureDebut = course.heurDebut
+                    const HeureFin = course.heureFin
+                    // console.log(HeureFin)
+    
+                    const duree = HeureFin - HeureDebut
+                    const marge = HeureDebut - 8
+                    createCours(classVALUE, teacherVALUE, modVALUE, jourVALUE, duree, marge, COLOR)
+                })
+            }else if(classroom){
                 console.log(classroom)
                 const classRoomId = Object.keys(classroom)[0]
                 console.log(classRoomId)
-                const course = cours.find(element => element.clas == classRoomId)
-                console.log(course)
+                const courses = cours.filter(element => element.clas == classRoomId)
+                console.log(courses)
 
                 //Récupéper le nom, le module , la salle
 
-                // const classId = course.clas
-                // console.log(classId)
-
-                const dictNom = ENSEIGNANTS.find(element => Object.keys(element)[0] == course.ensei)
-                const teacherVALUE = dictNom[course.ensei]
-                console.log(teacherVALUE)
-
-                const dictMod = MODULES.find(element => Object.keys(element)[0] == course.mod)
-                const modVALUE = dictMod[course.mod]
-                console.log(modVALUE)
-
-                const dictSalle = SALLES.find(element => Object.keys(element)[0] == course.sal)
-                const salVALUE = dictSalle[course.sal]
-                console.log(salVALUE)
-
-
-                const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
-                const jourVALUE = dictJour[course.jour]
-                console.log(jourVALUE)
-                
-                const HeureDebut = course.heurDebut
-                const HeureFin = course.heureFin
-                // console.log(HeureFin)
-
-                const duree = HeureFin - HeureDebut
-                const marge = HeureDebut - 8
-                createCours(teacherVALUE, modVALUE, salVALUE, jourVALUE,duree, marge, COLOR)
+                courses.forEach(course => {
+                    const dictNom = ENSEIGNANTS.find(element => Object.keys(element)[0] == course.ensei)
+                    const teacherVALUE = dictNom[course.ensei]
+                    console.log(teacherVALUE)
+    
+                    const dictMod = MODULES.find(element => Object.keys(element)[0] == course.mod)
+                    const modVALUE = dictMod[course.mod]
+                    console.log(modVALUE)
+    
+                    const dictSalle = SALLES.find(element => Object.keys(element)[0] == course.sal)
+                    const salVALUE = dictSalle[course.sal]
+                    console.log(salVALUE)
+    
+    
+                    const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
+                    const jourVALUE = dictJour[course.jour]
+                    console.log(jourVALUE)
+                    
+                    const HeureDebut = course.heurDebut
+                    const HeureFin = course.heureFin
+                    // console.log(HeureFin)
+    
+                    const duree = HeureFin - HeureDebut
+                    const marge = HeureDebut - 8
+                    createCours(teacherVALUE, modVALUE, salVALUE, jourVALUE,duree, marge, COLOR)
+                })
 
             }else if(modle){
                 console.log(modle)
                 const modleId = Object.keys(modle)[0]
                 console.log(modleId)
-                const course = cours.find(element => element.mod == modleId)
-                console.log(course)
+                const courses = cours.filter(element => element.mod == modleId)
+                console.log(courses)
 
                 //Récupéper la classe, le nom , la salle
+                courses.forEach(course => {
+                    const dictClass = CLASSES.find(element =>  Object.keys(element)[0] == course.clas)
+                    const classVALUE = dictClass[course.clas]
+                    console.log(classVALUE)
+    
+                    const dictNom = ENSEIGNANTS.find(element => Object.keys(element)[0] == course.ensei)
+                    const teacherVALUE = dictNom[course.ensei]
+                    console.log(teacherVALUE)
+    
+                    const dictSalle = SALLES.find(element => Object.keys(element)[0] == course.sal)
+                    const salVALUE = dictSalle[course.sal]
+                    console.log(salVALUE)
+    
+    
+                    const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
+                    const jourVALUE = dictJour[course.jour]
+                    console.log(jourVALUE)
+                    
+                    const HeureDebut = course.heurDebut
+                    const HeureFin = course.heureFin
+                    // console.log(HeureFin)
+    
+                    const duree = HeureFin - HeureDebut
+                    const marge = HeureDebut - 8
+    
+                    createCours(classVALUE, teacherVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
 
-                // const classId = course.clas
-                // console.log(classId)
-
-                const dictClass = CLASSES.find(element =>  Object.keys(element)[0] == course.clas)
-                const classVALUE = dictClass[course.clas]
-                console.log(classVALUE)
-
-                const dictNom = ENSEIGNANTS.find(element => Object.keys(element)[0] == course.ensei)
-                const teacherVALUE = dictNom[course.ensei]
-                console.log(teacherVALUE)
-
-                const dictSalle = SALLES.find(element => Object.keys(element)[0] == course.sal)
-                const salVALUE = dictSalle[course.sal]
-                console.log(salVALUE)
-
-
-                const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
-                const jourVALUE = dictJour[course.jour]
-                console.log(jourVALUE)
+                })
                 
-                const HeureDebut = course.heurDebut
-                const HeureFin = course.heureFin
-                // console.log(HeureFin)
-
-                const duree = HeureFin - HeureDebut
-                const marge = HeureDebut - 8
-                createCours(classVALUE, teacherVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
-
             }
             
         }
@@ -507,6 +509,8 @@ document.addEventListener('DOMContentLoaded', function(){
         section.style.width = `${9 * duree}%`
         section.style.marginLeft = `${9 * marge}%`
         section.style.backgroundColor = `${couleur}`
+        // const days = document.querySelectorAll(`.${day}`)
+        // days.forEach((day) => day.appendChild(section))
         document.querySelector(`#${day}`).appendChild(section)
     }
 })
