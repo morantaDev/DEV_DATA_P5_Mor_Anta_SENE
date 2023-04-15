@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
 
-    const listeDesEnseign = ['Aly', 'Balla', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
+    const listeDesEnseign = ['Aly', 'Baila', 'Ndoye', 'Mbaye', 'Djiby', 'Seckouba']
     const listeDesSalles = ['101','102', '103', '104', '201', 'incub']
     const listeDesModules = ['ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
 
@@ -191,8 +191,10 @@ document.addEventListener('DOMContentLoaded', function(){
         const footer = document.createElement('footer')
         const add = document.createElement('button')
         add.textContent = 'Ajouter'
+        add.value = 'submit'
         const resume = document.createElement('button')
         resume.textContent ='Annuler'
+        resume.value = 'reset'
         footer.append(add)
         footer.append(resume)
         container1.appendChild(header)
@@ -225,8 +227,93 @@ document.addEventListener('DOMContentLoaded', function(){
 
     select.addEventListener('change', function(e){
         const indexValue = e.target.value
-        const teacher = ENSEIGNANTS.find(elmt => elmt[1] === indexValue)
-        console.log(teacher)
+        console.log(indexValue)
+
+        const titre = document.getElementById('choix')
+        console.log(choix)
+        titre.innerHTML = ''
+        titre.append(indexValue)
+
+        const listeDesCouleurs = ['#D74DD0','#77B6AD', '#89398F', '#8C3691', '#D76164', '#F69229', '#BE8487', '#3CADEB', '#D76164', '#F78002', '#0BA00F']
+        let COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
+        
+        setInterval(function(){
+            COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
+        }, 1000)
+    
+
+        for (let i = 0; i < ENSEIGNANTS.length; i++) {
+            const teacher = ENSEIGNANTS.find(element => element[i] == indexValue)
+            const room = SALLES.find(element => element[i] == indexValue)
+
+            if(teacher){
+                console.log(teacher)
+                const teacherId = Object.keys(teacher)[0]
+                console.log(teacherId)
+                const course = cours.find(element => element.ensei == teacherId)
+                console.log(course)
+
+                //Récupéper la classe, la salle, le module
+                const classId = course.clas
+                console.log(classId)
+                
+                const dictClass = CLASSES.find(element =>  Object.keys(element)[0] == course.clas)
+                const classVALUE = dictClass[course.clas]
+                console.log(classVALUE)
+                const dictSalle = SALLES.find(element => Object.keys(element)[0] == course.sal)
+                const salVALUE = dictSalle[course.sal]
+                console.log(salVALUE)
+                const dictMod = MODULES.find(element => Object.keys(element)[0] == course.mod)
+                const modVALUE = dictMod[course.mod]
+                console.log(modVALUE)
+
+                const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
+                const jourVALUE = dictJour[course.jour]
+                console.log(jourVALUE)
+                
+                const HeureDebut = course.heurDebut
+                const HeureFin = course.heureFin
+                // console.log(HeureFin)
+
+                const duree = HeureFin - HeureDebut
+                const marge = HeureDebut - 8
+                createCours(classVALUE, modVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
+            } else if (room){
+                console.log(room)
+                const roomId = Object.keys(room)[0]
+                console.log(roomId)
+                const course = cours.find(element => element.ensei == roomId)
+                console.log(course)
+
+                //Récupéper la classe, l nom, le module
+                const classId = course.clas
+                console.log(classId)
+                
+                const dictClass = CLASSES.find(element =>  Object.keys(element)[0] == course.clas)
+                const classVALUE = dictClass[course.clas]
+                console.log(classVALUE)
+
+                const dictNom = ENSEIGNANTS.find(element => Object.keys(element)[0] == course.ensei)
+                const teacherVALUE = dictNom[course.ensei]
+                console.log(teacherVALUE)
+
+                const dictMod = MODULES.find(element => Object.keys(element)[0] == course.mod)
+                const modVALUE = dictMod[course.mod]
+                console.log(modVALUE)
+
+                const dictJour = JOURS.find(element => Object.keys(element)[0] == course.jour)
+                const jourVALUE = dictJour[course.jour]
+                console.log(jourVALUE)
+                
+                const HeureDebut = course.heurDebut
+                const HeureFin = course.heureFin
+                // console.log(HeureFin)
+
+                const duree = HeureFin - HeureDebut
+                const marge = HeureDebut - 8
+                createCours(classVALUE, teacherVALUE, modVALUE, jourVALUE, duree, marge, COLOR)
+            }
+        }
     })
 
     //Trouver le cours correpondant à l'enseignant ayant l'identifiant 1
@@ -240,21 +327,6 @@ document.addEventListener('DOMContentLoaded', function(){
     //Afficher le nom de l'enseignant correspondant
     console.log(enseignantAly[1])
 
-
-
-    
-    const titre = document.getElementById('choix')
-    console.log(choix)
-    
-    
-    const listeDesCouleurs = ['#D74DD0','#77B6AD', '#89398F', '#8C3691', '#D76164', '#F69229', '#BE8487', '#3CADEB', '#D76164', '#F78002', '#0BA00F']
-    let COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
-    
-    setInterval(function(){
-        COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
-    }, 1000)
-    
-    
     //Remplissage de la balise select
     enseignants.addEventListener('click', function(){
         enseignants.style.backgroundColor = '#4EB2D7';
@@ -295,10 +367,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
     classes.addEventListener('click', function(){
-        const selectElement = document.getElementById("select");
-        // const selectedOption = selectElement.options[selectElement.selectedIndex];
-        // const selectedOptionId = selectedOption.id;
-        // console.log(selectedOptionId)
         enseignants.style.backgroundColor = '';
         salles.style.backgroundColor = '';
         classes.style.backgroundColor = '#D98341';
@@ -335,12 +403,12 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
     
-    plusDays.forEach(day => {
-        day.addEventListener('click', function(){
-            creationModule()
-        })
-    })
-    function createCours(element1, element2, element3, day, difference, marge, couleur){
+    // plusDays.forEach(day => {
+    //     day.addEventListener('click', function(){
+    //         creationModule()
+    //     })
+    // })
+    function createCours(element1, element2, element3, day, duree, marge, couleur){
         const section = document.createElement('div')
         section.classList.add('divCours')
         const first = document.createElement('p')
@@ -355,14 +423,10 @@ document.addEventListener('DOMContentLoaded', function(){
         section.append(first)
         section.append(second)
         section.append(third)
-        //   const offwidth = section.offsetWidth
-        //   console.log(offwidth)
-        const larg =  `${difference}`//section.offsetWidth * `${difference}`
-        console.log(larg)
-        section.style.width = `${9 * difference}%`
+        section.style.width = `${9 * duree}%`
         section.style.marginLeft = `${9 * marge}%`
         section.style.backgroundColor = `${couleur}`
-        document.querySelector(`${day}`).appendChild(section)
+        document.querySelector(`#${day}`).appendChild(section)
     }
 
 
