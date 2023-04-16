@@ -125,7 +125,6 @@ section .name{
     border-radius: 10px;
     position: relative;
     bottom: -15px;
-    
 }
 .navbar ul{
     display: flex;
@@ -137,12 +136,6 @@ section .name{
     margin-left: 7.3%;
     color: white;
 }
-
-/* .plusDay{
-    color:green; 
-    margin-left:70px; 
-    font-size:35px;
-} */
 
 .modal{
     position: relative;
@@ -162,7 +155,6 @@ section .name{
 }
 .mainModal{
     color: black;
-    /* background-color: rgb(255, 255, 255); */
 }
 .mainModal .modalModule, .modalSalle, .modalEnseign, .modalClasse, .modalBegin, .modalEnd{
     color: white;
@@ -173,9 +165,12 @@ section .name{
 }
 .modal select{
     margin-left: 400px;
+    width: 25%;
+    height: 5%;
 }
-.modal p {
+.modal span {
     font-size: 20px;
+    margin: 5px;
 }
 .modal footer{
     background-color: #242123;

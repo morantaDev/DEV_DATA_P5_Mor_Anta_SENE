@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const body = document.querySelector('body')
     const toggle1 = document.querySelector('.toggle1')
     const toggle2 = document.querySelector('.toggle2')
     const content = document.querySelector('.content')
@@ -117,10 +116,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
         const section1 = document.createElement('section')
         section1.classList.add('modalModule')
-        const module = document.createElement('p')
+        const module = document.createElement('span')
         module.textContent = "module"
         section1.append(module)
         const selectModule = document.createElement('select')
+        // selectModule.setAttribute('id','selectModule')
         for (let i = 0; i < listeDesModules.length; i++) {
             const option = document.createElement('option')
             option.textContent = `${listeDesModules[i]}`
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         const section2 = document.createElement('section')
         section2.classList.add('modalEnseign')
-        const enseign = document.createElement('p')
+        const enseign = document.createElement('span')
         enseign.textContent = "Enseignant"
         section2.append(enseign)
         const selectEnseign = document.createElement('select')
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         const section3 = document.createElement('section')
         section3.classList.add('modalSalle')
-        const salle = document.createElement('p')
+        const salle = document.createElement('span')
         salle.textContent = "Salle"
         section3.append(salle)
         const selectSalle = document.createElement('select')
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         const section4 = document.createElement('section')
         section4.classList.add('modalBegin')
-        const debut = document.createElement('p')
+        const debut = document.createElement('span')
         debut.textContent = "Heure de Début"
         section4.append(debut)
         const selectDebut = document.createElement('select')
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         const section5 = document.createElement('section')
         section5.classList.add('modalEnd')
-        const fin = document.createElement('p')
+        const fin = document.createElement('span')
         fin.textContent = "Heure de Fin"
         section5.append(fin)
         const selectFin = document.createElement('select')
@@ -192,10 +192,10 @@ document.addEventListener('DOMContentLoaded', function(){
         const footer = document.createElement('footer')
         const add = document.createElement('button')
         add.textContent = 'Ajouter'
-        add.value = 'submit'
+        add.setAttribute('id', 'add')
         const resume = document.createElement('button')
         resume.textContent ='Annuler'
-        resume.value = 'reset'
+        resume.setAttribute('id', 'resume')
         footer.append(add)
         footer.append(resume)
         container1.appendChild(header)
@@ -203,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function(){
         container1.appendChild(footer)
         content.appendChild(container1)
     }
+    
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
     const ENSEIGNANTS = [{1: 'Aly', modals: [3, 4]}, {2: 'Baila', modals:[2]},{3:'Ndoye'},{4:'Mbaye', modals:[2]},{5:'Djiby'}, {6:'Seckouba'}]
@@ -399,17 +400,56 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
 
-    //Trouver le cours correpondant à l'enseignant ayant l'identifiant 1
-    const coursAly  = cours.find(cours => cours.ensei === 1)
-    console.log(coursAly)
+    plusDays.forEach(plusDay => {
+        
 
-    //Trouver le nom de l'enseignant correspondant
+        plusDay.addEventListener('click', function(event){
+            const selectElement =  event.target.parentElement.parentElement.id
+            console.log(selectElement)
+            creationModule()
 
-    const enseignantAly = ENSEIGNANTS.find(enseigna => enseigna[1] === 'Aly')
+            const selectModal = document.querySelector('.modalModule select')
+            console.log(selectModal)
+            selectModal.addEventListener('change', function(e){
+                const moduleValue = e.target.value 
+                console.log(moduleValue)
 
-    //Afficher le nom de l'enseignant correspondant
-    console.log(enseignantAly[1])
+                const modalHeader = document.querySelector('#modalHeader')
+                modalHeader.textContent = ''
+                modalHeader.textContent = moduleValue
+                const ObjMod = MODULES.find(element => Object.values(element)==moduleValue)
 
+                //Fonction qui récupère les clés des objets
+                function getKeyByValue(obj, value) {
+                    for (let prop in obj) {
+                      if (obj.hasOwnProperty(prop)) {
+                        if (obj[prop] === value)
+                          return prop;
+                      }
+                    }
+                  }
+
+                const modKey = getKeyByValue(ObjMod, moduleValue)
+                console.log(modKey)
+                // console.log(modVALUE)
+
+            })
+
+            const modal = document.querySelector('.modal')
+            const annuler = document.querySelector('#resume')
+            const ajout = document.querySelector('#add')
+            annuler.addEventListener('click', function(){
+                // modal.style.display = 'none'
+                content.removeChild(modal)
+            })
+        
+            ajout.addEventListener('click', function(){
+                alert('salut')
+            })
+        })
+
+    })
+    
     //Remplissage de la balise select
     enseignants.addEventListener('click', function(){
         enseignants.style.backgroundColor = '#4EB2D7';
@@ -509,8 +549,9 @@ document.addEventListener('DOMContentLoaded', function(){
         section.style.width = `${9 * duree}%`
         section.style.marginLeft = `${9 * marge}%`
         section.style.backgroundColor = `${couleur}`
-        // const days = document.querySelectorAll(`.${day}`)
-        // days.forEach((day) => day.appendChild(section))
+        
         document.querySelector(`#${day}`).appendChild(section)
     }
+
+    
 })
