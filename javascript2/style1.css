@@ -155,6 +155,7 @@ section .name{
 }
 .mainModal{
     color: black;
+    background-color: #5E6867;
 }
 .mainModal .modalModule, .modalSalle, .modalEnseign, .modalClasse, .modalBegin, .modalEnd{
     color: white;
@@ -164,9 +165,10 @@ section .name{
     font-size: 15px;
 }
 .modal select{
-    margin-left: 400px;
+    margin-left: 500px;
     width: 25%;
-    height: 5%;
+    height: 15%;
+    font-size: 15px;
 }
 .modal span {
     font-size: 20px;

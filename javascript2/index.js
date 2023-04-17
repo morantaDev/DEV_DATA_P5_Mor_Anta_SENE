@@ -98,6 +98,16 @@ document.addEventListener('DOMContentLoaded', function(){
     const listeDesModules = ['ALGO','PHP', 'PYTHON', 'LC', 'JAVASCRIPT', 'JAVA']
     const listeDesClasses = ['L2 GLRS A', 'L2 GLRS B','L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
 
+    //Fonction qui récupère les clés des objets
+    function getKeyByValue(obj, value) {
+        for (let prop in obj) {
+          if (obj.hasOwnProperty(prop)) {
+            if (obj[prop] === value)
+              return prop;
+          }
+        }
+      }
+
     function creationModule(){
         //Revoir les listes ou peut-être utilisé une fonction pour récupérer ce type d'informations
         
@@ -226,16 +236,26 @@ document.addEventListener('DOMContentLoaded', function(){
         {ensei: 0, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0}
     ]
 
-    var selectClass = ""
-    select.addEventListener('change', function(e){
-        const indexValue = e.target.value
+    select.addEventListener('click', function(e){
+        // const parent = document.querySelector('.content');
+        // const children = document.querySelectorAll('.divCours');
+
+        // children.forEach(child => {
+        //     parent.removeChild(child);
+        // });
+
+        const clasValue = e.target.value
         // console.log(indexValue)
-        selectClass = indexValue
+        const obClas = CLASSES.find(element=>Object.values(element)[0]==clasValue)
+        const clasKey = getKeyByValue(obClas, clasValue)
+        console.log(clasKey)
+
+        currentCours.clas = parseInt(clasKey)
 
         const titre = document.getElementById('choix')
         console.log(choix)
         titre.innerHTML = ''
-        titre.append(indexValue)
+        titre.append(clasValue)
 
         const listeDesCouleurs = ['#D74DD0','#77B6AD', '#89398F', '#8C3691', '#D76164', '#F69229', '#BE8487', '#3CADEB', '#D76164', '#F78002', '#0BA00F']
         let COLOR = listeDesCouleurs[Math.floor(Math.random() * 10)]
@@ -246,10 +266,10 @@ document.addEventListener('DOMContentLoaded', function(){
     
 
         for (let i = 0; i < ENSEIGNANTS.length; i++) {
-            const teacher = ENSEIGNANTS.find(element => element[i] == indexValue)
-            const room = SALLES.find(element => element[i] == indexValue)
-            const classroom = CLASSES.find(element => element[i] == indexValue)
-            const modle = MODULES.find(element => element[i] == indexValue)
+            const teacher = ENSEIGNANTS.find(element => element[i] == clasValue)
+            const room = SALLES.find(element => element[i] == clasValue)
+            const classroom = CLASSES.find(element => element[i] == clasValue)
+            const modle = MODULES.find(element => element[i] == clasValue)
 
 
             if(teacher){
@@ -291,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 console.log(room)
                 const roomId = Object.keys(room)[0]
                 console.log(roomId)
-                const courses = cours.filter(element => element.sal == roomId)
+                const courses = cours.filter(element => Object.values(element)[1] == roomId)
                 console.log(courses)
 
                 //Récupéper la classe, le nom, le module
@@ -327,8 +347,11 @@ document.addEventListener('DOMContentLoaded', function(){
                 console.log(classroom)
                 const classRoomId = Object.keys(classroom)[0]
                 console.log(classRoomId)
-                const courses = cours.filter(element => element.clas == classRoomId)
+                const courses = cours.find(element => Object.values(element)[2] == classRoomId)
                 console.log(courses)
+
+
+                // if(course.length > 0){}
 
                 //Récupéper le nom, le module , la salle
 
@@ -402,23 +425,19 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     plusDays.forEach(plusDay => {
-
-        //Fonction qui récupère les clés des objets
-        function getKeyByValue(obj, value) {
-            for (let prop in obj) {
-              if (obj.hasOwnProperty(prop)) {
-                if (obj[prop] === value)
-                  return prop;
-              }
-            }
-          }
-
         plusDay.addEventListener('click', function(event){
             const selectElement =  event.target.parentElement.parentElement.id
             console.log(selectElement)
+
             creationModule()
 
-            jour = selectElement
+            const jour = selectElement
+            const obJour  = JOURS.find(element => Object.values(element)==jour)
+            console.log(Object.keys(obJour))
+            const idJour = parseInt(Object.keys(obJour)[0])
+            console.log(idJour)
+
+            currentCours.jour = idJour
 
             const selectModal = document.querySelector('.modalModule select')
             console.log(selectModal)
@@ -470,10 +489,23 @@ document.addEventListener('DOMContentLoaded', function(){
                 const salValue = e.target.value
                 console.log(salValue)
                 const ObSalle = SALLES.find(element => Object.values(element)[0]==salValue)
+                const salCapacite = ObSalle.capacity
+                console.log(salCapacite)
                 console.log(ObSalle)
                 const salKey = getKeyByValue(ObSalle, salValue)
                 console.log(salKey)
-                currentCours.sal = parseInt(salKey)
+                
+                
+                console.log(currentCours.clas)
+                const clasOb = CLASSES.find(element => Object.keys(element)[0]==currentCours.clas)
+                console.log(clasOb.effectif)
+
+                if(parseInt(clasOb.effectif) <= parseInt(ObSalle.capacity)){
+                    currentCours.sal = parseInt(salKey)
+                }else{
+                    alert("La salle ne peut pas contenir l'effectif de cette classe")
+                }
+                
             })
 
             const selectDebut = document.querySelector('.modalBegin select')
@@ -535,6 +567,14 @@ document.addEventListener('DOMContentLoaded', function(){
             ajout.addEventListener('click', function(){
                 cours.push(currentCours)
                 content.removeChild(modal)
+                console.log(currentCours)
+                const duree = parseInt(currentCours.heureFin)+1 - parseInt(currentCours.heurDebut)
+                const marge = currentCours.heurDebut - 8
+                const color = '#77B6AD'
+                
+
+                drawCourse(Object.values(ENSEIGNANTS[currentCours.ensei])[0], Object.values(MODULES[currentCours.mod])[0], Object.values(SALLES[currentCours.sal])[0],Object.values(JOURS[currentCours.jour])[0], duree, marge, color)
+                cours.push(currentCours)
                 console.log(cours)
             })
         })
@@ -582,6 +622,9 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     classes.addEventListener('click', function(e){
+        // const clasValue = e.target.value
+        // console.log(clasValue)
+
         enseignants.style.backgroundColor = '';
         salles.style.backgroundColor = '';
         classes.style.backgroundColor = '#D98341';
@@ -598,6 +641,8 @@ document.addEventListener('DOMContentLoaded', function(){
             select.add(option)
             count++;
         }
+
+        
     })
     modules.addEventListener('click', function(){
         enseignants.style.backgroundColor = '';
