@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function(){
     function creationModule(){
         //Revoir les listes ou peut-être utilisé une fonction pour récupérer ce type d'informations
         
-        listheureDebut = ['Choisir une Heure', '8H', '9H', '10H', '11H', '12H', '13H', '14', '15H', '16', '17H']
-        listheureFin = ['Choisir une Heure','9H', '10H', '11H', '12H', '13H', '14', '15H', '16', '17H']
+        listheureDebut = ['Choisir une Heure', '8H', '9H', '10H', '11H', '12H', '13H', '14H', '15H', '16H', '17H']
+        listheureFin = ['Choisir une Heure','9H', '10H', '11H', '12H', '13H', '14H', '15H', '16H', '17H']
 
         // listeDesClasses = ['Classes', 'L2 GLRS A', 'L2 GLRS B', 'L2 ETSE', 'L1 A', 'IAGE B', 'L2 CDSD']
         
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
-    const ENSEIGNANTS = [{1: 'Aly', modals: [3, 4]}, {2: 'Baila', modals:[2]},{3:'Ndoye'},{4:'Mbaye', modals:[2]},{5:'Djiby'}, {6:'Seckouba'}]
+    const ENSEIGNANTS = [{1: 'Aly', modals: [3, 4]}, {2: 'Baila', modals:[2]},{3:'Ndoye', modals: [2]},{4:'Mbaye', modals:[6]},{5:'Djiby'}, {6:'Seckouba'}]
     const SALLES = [{1:'101', capacity: 20}, {2:'102', capacity: 20},{3:'103', capacity: 20},{4:'104', capacity: 20},{5:'201', capacity: 40}, {6:'incub', capacity: 30}]
     const CLASSES = [{1:'L2 GLRS A', effectif: 35},{2:'L2 GLRS B', effectif: 35}, {3:'L2 ETSE', effectif: 35}, {4:'L1 A', effectif: 35}, {5:'IAGE B', effectif: 35}, {6:'L2 CDSD', effectif: 35}]
     const MODULES = [{1: 'ALGO'},{2:'PHP'}, {3:'PYTHON'}, {6:'LC'}, {4:'JAVASCRIPT'}, {5:'JAVA'}]
@@ -214,22 +214,23 @@ document.addEventListener('DOMContentLoaded', function(){
     
     //Gérer la capacité et l'effectif des classes
 
-    let cours = []
-    const cours1 = {ensei: 1, sal: 5, clas: 6, mod: 3, heurDebut: 9, heureFin: 13, jour: 1}
-    const cours2 = {ensei: 1, sal: 2, clas: 6, mod: 4, heurDebut: 15, heureFin: 17, jour: 3}
-    const cours3 = {ensei: 2, sal: 2, clas: 6, mod: 2, heurDebut: 14, heureFin: 17, jour: 1}
-    const cours4 = {ensei: 3, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0}
-    const cours5 = {ensei: 4, sal: 6, clas: 6, mod: 6, heurDebut: 8, heureFin: 10, jour: 4}
-    const cours6 = {ensei: 0, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0}
-    const cours7 = {ensei: 0, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0}
+    let currentCours = {}
 
+    let cours = [
+        {ensei: 1, sal: 5, clas: 6, mod: 3, heurDebut: 9, heureFin: 13, jour: 1},
+        {ensei: 1, sal: 2, clas: 6, mod: 4, heurDebut: 15, heureFin: 17, jour: 3},
+        {ensei: 2, sal: 2, clas: 6, mod: 2, heurDebut: 14, heureFin: 17, jour: 1},
+        {ensei: 3, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0},
+        {ensei: 4, sal: 6, clas: 6, mod: 6, heurDebut: 8, heureFin: 10, jour: 4},
+        {ensei: 0, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0},
+        {ensei: 0, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0}
+    ]
 
-    cours.push(cours1, cours2, cours3, cours4, cours5, cours6, cours7)
-    console.log(cours)
-
+    var selectClass = ""
     select.addEventListener('change', function(e){
         const indexValue = e.target.value
-        console.log(indexValue)
+        // console.log(indexValue)
+        selectClass = indexValue
 
         const titre = document.getElementById('choix')
         console.log(choix)
@@ -283,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
                     const duree = HeureFin - HeureDebut
                     const marge = HeureDebut - 8
-                    createCours(classVALUE, modVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
+                    drawCourse(classVALUE, modVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
                 })
 
             } else if (room){
@@ -320,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
                     const duree = HeureFin - HeureDebut
                     const marge = HeureDebut - 8
-                    createCours(classVALUE, teacherVALUE, modVALUE, jourVALUE, duree, marge, COLOR)
+                    drawCourse(classVALUE, teacherVALUE, modVALUE, jourVALUE, duree, marge, COLOR)
                 })
             }else if(classroom){
                 console.log(classroom)
@@ -355,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
                     const duree = HeureFin - HeureDebut
                     const marge = HeureDebut - 8
-                    createCours(teacherVALUE, modVALUE, salVALUE, jourVALUE,duree, marge, COLOR)
+                    drawCourse(teacherVALUE, modVALUE, salVALUE, jourVALUE,duree, marge, COLOR)
                 })
 
             }else if(modle){
@@ -391,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     const duree = HeureFin - HeureDebut
                     const marge = HeureDebut - 8
     
-                    createCours(classVALUE, teacherVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
+                    drawCourse(classVALUE, teacherVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
 
                 })
                 
@@ -401,12 +402,23 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     plusDays.forEach(plusDay => {
-        
+
+        //Fonction qui récupère les clés des objets
+        function getKeyByValue(obj, value) {
+            for (let prop in obj) {
+              if (obj.hasOwnProperty(prop)) {
+                if (obj[prop] === value)
+                  return prop;
+              }
+            }
+          }
 
         plusDay.addEventListener('click', function(event){
             const selectElement =  event.target.parentElement.parentElement.id
             console.log(selectElement)
             creationModule()
+
+            jour = selectElement
 
             const selectModal = document.querySelector('.modalModule select')
             console.log(selectModal)
@@ -419,21 +431,98 @@ document.addEventListener('DOMContentLoaded', function(){
                 modalHeader.textContent = moduleValue
                 const ObjMod = MODULES.find(element => Object.values(element)==moduleValue)
 
-                //Fonction qui récupère les clés des objets
-                function getKeyByValue(obj, value) {
-                    for (let prop in obj) {
-                      if (obj.hasOwnProperty(prop)) {
-                        if (obj[prop] === value)
-                          return prop;
-                      }
-                    }
-                  }
-
+                
                 const modKey = getKeyByValue(ObjMod, moduleValue)
                 console.log(modKey)
-                // console.log(modVALUE)
+                currentCours.mod = parseInt(modKey)
+
+                id_mod = parseInt(modKey)
+
+                
+                const enseign = ENSEIGNANTS.filter(element => element.modals?.includes(parseInt(modKey)))
+                console.log(enseign)
+
+
+                const selectTeacher = document.querySelector('.modalEnseign select')
+                selectTeacher.innerHTML = ''
+                enseign.forEach(element => {
+                    const option = document.createElement('option')
+                    option.setAttribute('value', Object.values(element)[0])
+                    option.textContent = Object.values(element)[0]
+                    selectTeacher.appendChild(option)
+                })
+
+                selectTeacher.addEventListener('click', function(e){
+                    const ensValue = e.target.value
+                    console.log(ensValue)
+                    const ObEns = enseign.find(element => Object.values(element)[0] == ensValue)
+                    console.log(ObEns)
+                    const ensKey = getKeyByValue(ObEns, ensValue)
+                    console.log(ensKey)
+                    
+                    currentCours.ensei = parseInt(ensKey)
+                })
 
             })
+
+            const selectSalle = document.querySelector('.modalSalle select')
+            selectSalle.addEventListener('click', function(e){
+                const salValue = e.target.value
+                console.log(salValue)
+                const ObSalle = SALLES.find(element => Object.values(element)[0]==salValue)
+                console.log(ObSalle)
+                const salKey = getKeyByValue(ObSalle, salValue)
+                console.log(salKey)
+                currentCours.sal = parseInt(salKey)
+            })
+
+            const selectDebut = document.querySelector('.modalBegin select')
+            selectDebut.addEventListener('click', function(e){
+                const debutValue = e.target.value
+                // console.log(debutValue)
+
+                begin = debutValue
+                if(begin.length == 2){
+                    begin = parseInt(begin.charAt(0))
+                }else{
+                    begin = parseInt(begin.match(/\d+/)[0]);
+                }
+                console.log(begin)
+
+                currentCours.heurDebut = parseInt(begin)
+
+                const selectFin = document.querySelector('.modalEnd select')
+                selectFin.innerHTML = ''
+                const taille = 17-begin
+                const option = document.createElement('option')
+                option.textContent = 'Choisir une heure de fin'
+                selectFin.appendChild(option)
+                for (let i = 1; i <= taille; i++) {
+                    const option = document.createElement('option')
+                    option.setAttribute('value', i)
+                    option.textContent = begin+i + 'H'
+
+                    selectFin.appendChild(option)
+                }
+
+                
+            })
+            const selectFin = document.querySelector('.modalEnd select')
+            selectFin.addEventListener('click', function(e){
+                const finValue = e.target.value
+                // console.log(finValue)
+
+                End = finValue
+                if(End.length == 2){
+                    End = parseInt(End.charAt(0))
+                }else{
+                    End = parseInt(End.match(/\d+/)[0]);
+                }
+                console.log(End)
+
+                currentCours.heureFin = parseInt(End)+8
+            })
+
 
             const modal = document.querySelector('.modal')
             const annuler = document.querySelector('#resume')
@@ -444,7 +533,9 @@ document.addEventListener('DOMContentLoaded', function(){
             })
         
             ajout.addEventListener('click', function(){
-                alert('salut')
+                cours.push(currentCours)
+                content.removeChild(modal)
+                console.log(cours)
             })
         })
 
@@ -489,7 +580,8 @@ document.addEventListener('DOMContentLoaded', function(){
             count++;
         }
     })
-    classes.addEventListener('click', function(){
+
+    classes.addEventListener('click', function(e){
         enseignants.style.backgroundColor = '';
         salles.style.backgroundColor = '';
         classes.style.backgroundColor = '#D98341';
@@ -531,7 +623,7 @@ document.addEventListener('DOMContentLoaded', function(){
     //         creationModule()
     //     })
     // })
-    function createCours(element1, element2, element3, day, duree, marge, couleur){
+    function drawCourse(element1, element2, element3, day, duree, marge, couleur){
         const section = document.createElement('div')
         section.classList.add('divCours')
         const first = document.createElement('p')
