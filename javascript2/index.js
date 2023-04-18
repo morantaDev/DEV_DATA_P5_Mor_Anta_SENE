@@ -160,6 +160,10 @@ document.addEventListener('DOMContentLoaded', function(){
         salle.textContent = "Salle"
         section3.append(salle)
         const selectSalle = document.createElement('select')
+        const option = document.createElement('option')
+        selectSalle.setAttribute('id', 'selectSalle')
+        option.textContent = 'Choisir une salle'
+        selectSalle.append(option)
         for (let i = 0; i < listeDesSalles.length; i++) {
             const option = document.createElement('option')
             option.textContent = `${listeDesSalles[i]}`
@@ -211,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function(){
         container1.appendChild(header)
         container1.appendChild(main)
         container1.appendChild(footer)
-        content.appendChild(container1)
+        document.body.appendChild(container1)
     }
     
 
@@ -529,7 +533,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 selectFin.appendChild(option)
                 for (let i = 1; i <= taille; i++) {
                     const option = document.createElement('option')
-                    option.setAttribute('value', i)
+                    option.setAttribute('value', begin+i)
                     option.textContent = begin+i + 'H'
 
                     selectFin.appendChild(option)
@@ -540,17 +544,18 @@ document.addEventListener('DOMContentLoaded', function(){
             const selectFin = document.querySelector('.modalEnd select')
             selectFin.addEventListener('click', function(e){
                 const finValue = e.target.value
-                // console.log(finValue)
+                console.log(finValue)
 
-                End = finValue
-                if(End.length == 2){
-                    End = parseInt(End.charAt(0))
+                if(finValue.length == 2){
+                    parseInt(finValue.charAt(0))
+                    currentCours.heureFin = parseInt(finValue)
+
                 }else{
-                    End = parseInt(End.match(/\d+/)[0]);
-                }
-                console.log(End)
+                    parseInt(finValue.match(/\d+/)[0]);
+                    currentCours.heureFin = parseInt(finValue)
 
-                currentCours.heureFin = parseInt(End)+8
+                }
+
             })
 
 
@@ -559,16 +564,16 @@ document.addEventListener('DOMContentLoaded', function(){
             const ajout = document.querySelector('#add')
             annuler.addEventListener('click', function(){
                 // modal.style.display = 'none'
-                content.removeChild(modal)
+                document.body.removeChild(modal)
             })
         
 
             
             ajout.addEventListener('click', function(){
                 cours.push(currentCours)
-                content.removeChild(modal)
+                document.body.removeChild(modal)
                 console.log(currentCours)
-                const duree = parseInt(currentCours.heureFin)+1 - parseInt(currentCours.heurDebut)
+                const duree = parseInt(currentCours.heureFin) - parseInt(currentCours.heurDebut)
                 const marge = currentCours.heurDebut - 8
                 const color = '#77B6AD'
                 //
@@ -595,7 +600,7 @@ document.addEventListener('DOMContentLoaded', function(){
         for (let i = 0; i < listeDesEnseign.length; i++) {
             const option = document.createElement('option')
             option.textContent = `${listeDesEnseign[i]}`
-            option.setAttribute('value', `${listeDesEnseign[i]}`+1)
+            option.setAttribute('value', `${listeDesEnseign[i]}`)
             console.log(option)
             select.add(option)
             count++;
