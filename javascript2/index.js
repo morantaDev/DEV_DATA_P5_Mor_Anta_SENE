@@ -245,12 +245,13 @@ document.addEventListener('DOMContentLoaded', function(){
         // });
 
         const clasValue = e.target.value
-        // console.log(indexValue)
-        const obClas = CLASSES.find(element=>Object.values(element)[0]==clasValue)
-        const clasKey = getKeyByValue(obClas, clasValue)
-        console.log(clasKey)
+        console.log(clasValue)
+        // const obClas = CLASSES.find(element=>console.log(Object.values(element)))
+        // console.log(obClas)
+        // const clasKey = getKeyByValue(obClas, clasValue)
+        // console.log(clasKey)
 
-        currentCours.clas = parseInt(clasKey)
+        // currentCours.clas = parseInt(clasKey)
 
         const titre = document.getElementById('choix')
         console.log(choix)
@@ -266,10 +267,10 @@ document.addEventListener('DOMContentLoaded', function(){
     
 
         for (let i = 0; i < ENSEIGNANTS.length; i++) {
-            const teacher = ENSEIGNANTS.find(element => element[i] == clasValue)
-            const room = SALLES.find(element => element[i] == clasValue)
-            const classroom = CLASSES.find(element => element[i] == clasValue)
-            const modle = MODULES.find(element => element[i] == clasValue)
+            const teacher = ENSEIGNANTS.find(element => Object.values(element)[0] == clasValue)
+            const room = SALLES.find(element => Object.values(element)[0]== clasValue)
+            const classroom = CLASSES.find(element => Object.values(element)[0]== clasValue)
+            const modle = MODULES.find(element => Object.values(element)[0]== clasValue)
 
 
             if(teacher){
@@ -311,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 console.log(room)
                 const roomId = Object.keys(room)[0]
                 console.log(roomId)
-                const courses = cours.filter(element => Object.values(element)[1] == roomId)
+                const courses = cours.filter(element => element.sal == roomId)
                 console.log(courses)
 
                 //Récupéper la classe, le nom, le module
@@ -347,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 console.log(classroom)
                 const classRoomId = Object.keys(classroom)[0]
                 console.log(classRoomId)
-                const courses = cours.find(element => Object.values(element)[2] == classRoomId)
+                const courses = cours.filter(element => element.clas == classRoomId)
                 console.log(courses)
 
 
@@ -356,6 +357,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 //Récupéper le nom, le module , la salle
 
                 courses.forEach(course => {
+
                     const dictNom = ENSEIGNANTS.find(element => Object.keys(element)[0] == course.ensei)
                     const teacherVALUE = dictNom[course.ensei]
                     console.log(teacherVALUE)
@@ -391,6 +393,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 //Récupéper la classe, le nom , la salle
                 courses.forEach(course => {
+                    
                     const dictClass = CLASSES.find(element =>  Object.keys(element)[0] == course.clas)
                     const classVALUE = dictClass[course.clas]
                     console.log(classVALUE)
@@ -416,7 +419,6 @@ document.addEventListener('DOMContentLoaded', function(){
                     const marge = HeureDebut - 8
     
                     drawCourse(classVALUE, teacherVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
-
                 })
                 
             }
@@ -454,8 +456,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 const modKey = getKeyByValue(ObjMod, moduleValue)
                 console.log(modKey)
                 currentCours.mod = parseInt(modKey)
-
-                id_mod = parseInt(modKey)
 
                 
                 const enseign = ENSEIGNANTS.filter(element => element.modals?.includes(parseInt(modKey)))
@@ -622,8 +622,15 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     classes.addEventListener('click', function(e){
-        // const clasValue = e.target.value
-        // console.log(clasValue)
+        const clasValue = e.target.value
+        console.log(clasValue)
+
+        const obClas = CLASSES.find(element => Object.values(element)==clasValue)
+        const idClass = getKeyByValue(obClas, clasValue)
+        console.log(idClass)
+
+        currentCours.clas = idClass
+        
 
         enseignants.style.backgroundColor = '';
         salles.style.backgroundColor = '';
@@ -641,7 +648,7 @@ document.addEventListener('DOMContentLoaded', function(){
             select.add(option)
             count++;
         }
-
+        
         
     })
     modules.addEventListener('click', function(){

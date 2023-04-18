@@ -155,7 +155,7 @@ section .name{
 }
 .mainModal{
     color: black;
-    background-color: #5E6867;
+    background-color: #535253;
 }
 .mainModal .modalModule, .modalSalle, .modalEnseign, .modalClasse, .modalBegin, .modalEnd{
     color: white;
