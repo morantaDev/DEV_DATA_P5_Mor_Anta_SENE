@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
 
     //Créer un tableau contenant des la liste des enseignants, la liste des salles, la liste des classes et la liste des modules
-    const ENSEIGNANTS = [{},{1: 'Aly', modals: [3, 4]}, {2: 'Baila', modals:[2]},{3:'Ndoye', modals: [2]},{4:'Mbaye', modals:[6]},{5:'Djiby'}, {6:'Seckouba'}]
+    const ENSEIGNANTS = [{},{1: 'Aly', modals: [3, 4]}, {2: 'Baila', modals:[2]},{3:'Ndoye', modals: [2]},{4:'Mbaye', modals:[6]},{5:'Djiby'}, {6:'Seckouba', modals:[5]}]
     const SALLES = [{},{1:'101', capacity: 20}, {2:'102', capacity: 20},{3:'103', capacity: 20},{4:'104', capacity: 20},{5:'201', capacity: 40}, {6:'incub', capacity: 30}]
     const CLASSES = [{},{1:'L2 GLRS A', effectif: 35},{2:'L2 GLRS B', effectif: 35}, {3:'L2 ETSE', effectif: 35}, {4:'L1 A', effectif: 35}, {5:'IAGE B', effectif: 35}, {6:'L2 CDSD', effectif: 35}]
     const MODULES = [{},{1: 'ALGO'},{2:'PHP'}, {3:'PYTHON'}, {6:'LC'}, {4:'JAVASCRIPT'}, {5:'JAVA'}]
@@ -570,7 +570,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             
             ajout.addEventListener('click', function(){
-                cours.push(currentCours)
+
                 document.body.removeChild(modal)
                 console.log(currentCours)
                 const duree = parseInt(currentCours.heureFin) - parseInt(currentCours.heurDebut)
@@ -582,6 +582,10 @@ document.addEventListener('DOMContentLoaded', function(){
                 drawCourse(Object.values(ENSEIGNANTS[currentCours.ensei])[0], Object.values(MODULES[currentCours.mod])[0], Object.values(SALLES[currentCours.sal])[0],Object.values(JOURS[currentCours.jour])[0], duree, marge, color)
                 cours.push(currentCours)
                 console.log(cours)
+                
+                const nbreCours = document.querySelector('.nombreDeCours')
+                nbreCours.textContent= cours.length +' '+'cours'
+                
             })
         })
 
@@ -695,5 +699,6 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelector(`#${day}`).appendChild(section)
     }
 
-    
+    const nbreCours = document.querySelector('.nombreDeCours')
+    nbreCours.textContent= cours.length +' '+'cours'
 })
