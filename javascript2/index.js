@@ -196,12 +196,15 @@ document.addEventListener('DOMContentLoaded', function(){
             selectFin.append(option)
         }
         section5.appendChild(selectFin)
+        const message_Error = document.createElement('p')
+        message_Error.setAttribute('id', 'error')
 
         main.appendChild(section1)
         main.appendChild(section2)
         main.appendChild(section3)
         main.appendChild(section4)
         main.appendChild(section5)
+        main.appendChild(message_Error)
 
         const footer = document.createElement('footer')
         const add = document.createElement('button')
@@ -223,30 +226,40 @@ document.addEventListener('DOMContentLoaded', function(){
     const ENSEIGNANTS = [{},{1: 'Aly', modals: [3, 4]}, {2: 'Baila', modals:[2]},{3:'Ndoye', modals: [2]},{4:'Mbaye', modals:[6]},{5:'Djiby'}, {6:'Seckouba', modals:[5]}]
     const SALLES = [{},{1:'101', capacity: 20}, {2:'102', capacity: 20},{3:'103', capacity: 20},{4:'104', capacity: 20},{5:'201', capacity: 40}, {6:'incub', capacity: 30}]
     const CLASSES = [{},{1:'L2 GLRS A', effectif: 35},{2:'L2 GLRS B', effectif: 35}, {3:'L2 ETSE', effectif: 35}, {4:'L1 A', effectif: 35}, {5:'IAGE B', effectif: 35}, {6:'L2 CDSD', effectif: 35}]
-    const MODULES = [{},{1: 'ALGO'},{2:'PHP'}, {3:'PYTHON'}, {6:'LC'}, {4:'JAVASCRIPT'}, {5:'JAVA'}]
+    const MODULES = [{},{1: 'ALGO'},{2:'PHP'}, {3:'PYTHON'}, {4:'JAVASCRIPT'}, {5:'JAVA'}, {6:'LC'}]
     const JOURS = [{},{1: 'lundi'}, {2: 'mardi'}, {3: 'mercredi'}, {4: 'jeudi'}, {5: 'vendredi'}, {6: 'samedi'}]
     
     //Gérer la capacité et l'effectif des classes
 
     let currentCours = {}
 
-    let cours = [
-        {ensei: 1, sal: 5, clas: 6, mod: 3, heurDebut: 9, heureFin: 13, jour: 1},
-        {ensei: 1, sal: 2, clas: 6, mod: 4, heurDebut: 15, heureFin: 17, jour: 3},
-        {ensei: 2, sal: 2, clas: 6, mod: 2, heurDebut: 14, heureFin: 17, jour: 1},
-        {ensei: 3, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0},
-        {ensei: 4, sal: 6, clas: 6, mod: 6, heurDebut: 8, heureFin: 10, jour: 4},
-        {ensei: 0, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0},
-        {ensei: 0, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0}
-    ]
+    // let cours = [
+    //     {ensei: 1, sal: 5, clas: 6, mod: 3, heurDebut: 9, heureFin: 13, jour: 1},
+    //     {ensei: 1, sal: 2, clas: 6, mod: 4, heurDebut: 15, heureFin: 17, jour: 3},
+    //     {ensei: 2, sal: 2, clas: 6, mod: 2, heurDebut: 14, heureFin: 17, jour: 1},
+    //     {ensei: 3, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0},
+    //     {ensei: 4, sal: 6, clas: 6, mod: 6, heurDebut: 8, heureFin: 10, jour: 4},
+    //     {ensei: 0, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0},
+    //     {ensei: 0, sal: 0, clas: 0, mod: 0, heurDebut: 0, heureFin: 0, jour: 0}
+    // ]
+    var cours = []
+    let count = 1
+    while  (localStorage.getItem(count)){
+        cours.push(JSON.parse(localStorage.getItem(count)))
+        count++
+    }
+    console.log(cours)
 
     select.addEventListener('click', function(e){
+    
         // const parent = document.querySelector('.content');
         // const children = document.querySelectorAll('.divCours');
 
         // children.forEach(child => {
         //     parent.removeChild(child);
         // });
+        
+        // divCours.innerHTML = ''
 
         const clasValue = e.target.value
         console.log(clasValue)
@@ -274,7 +287,15 @@ document.addEventListener('DOMContentLoaded', function(){
         const modle = MODULES.find(element => Object.values(element)[0]== e.target.value)
 
 
+        // const divJour = document.querySelectorAll('.jour')
+            const divCours = document.querySelectorAll('.divCours')
+            // divJour.forEach(divjour =>{
+            // })
+            divCours.forEach(element=>{
+                element.style.display ='none'
+            })
         if(teacher){
+
             console.log(teacher)
             const teacherId = Object.keys(teacher)[0]
             console.log(teacherId)
@@ -306,6 +327,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 const duree = HeureFin - HeureDebut
                 const marge = HeureDebut - 8
+                
                 drawCourse(classVALUE, modVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
             })
 
@@ -343,6 +365,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 const duree = HeureFin - HeureDebut
                 const marge = HeureDebut - 8
+
+                const divCours = document.querySelectorAll('.divCours')
+                divCours.forEach(element =>{
+                    console.log(element)
+                    element.innerHTML =''
+                })
                 drawCourse(classVALUE, teacherVALUE, modVALUE, jourVALUE, duree, marge, COLOR)
             })
         }else if(classroom){
@@ -382,6 +410,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 const duree = HeureFin - HeureDebut
                 const marge = HeureDebut - 8
+                const divCours = document.querySelectorAll('.divCours')
+                divCours.forEach(element =>{
+                    console.log(element)
+                    element.innerHTML =''
+                })
                 drawCourse(teacherVALUE, modVALUE, salVALUE, jourVALUE,duree, marge, COLOR)
             })
 
@@ -418,14 +451,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 const duree = HeureFin - HeureDebut
                 const marge = HeureDebut - 8
-
+                const divCours = document.querySelectorAll('.divCours')
+                divCours.forEach(element =>{
+                    console.log(element)
+                    element.innerHTML =''
+                })
                 drawCourse(classVALUE, teacherVALUE, salVALUE, jourVALUE, duree, marge, COLOR)
             })
             
         }
-        // for (let i = 1; i < ENSEIGNANTS.length; i++) {
-            
-        // }
     })
 
     plusDays.forEach(plusDay => {
@@ -505,7 +539,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 if(parseInt(clasOb.effectif) <= parseInt(ObSalle.capacity)){
                     currentCours.sal = parseInt(salKey)
                 }else{
-                    alert("La salle ne peut pas contenir l'effectif de cette classe")
+                    const erreur = document.querySelector('#error')
+                    erreur.textContent = "La salle sélectionnée ne peut pas contenir l'effectif de cette classe."
                 }
                 
             })
@@ -578,13 +613,23 @@ document.addEventListener('DOMContentLoaded', function(){
                 const color = '#77B6AD'
                 //
                 
-
+                const divCours = document.querySelectorAll('.divCours')
+                divCours.forEach(element =>{
+                    console.log(element)
+                    element.innerHTML =''
+                })
                 drawCourse(Object.values(ENSEIGNANTS[currentCours.ensei])[0], Object.values(MODULES[currentCours.mod])[0], Object.values(SALLES[currentCours.sal])[0],Object.values(JOURS[currentCours.jour])[0], duree, marge, color)
                 cours.push(currentCours)
                 console.log(cours)
                 
                 const nbreCours = document.querySelector('.nombreDeCours')
                 nbreCours.textContent= cours.length +' '+'cours'
+
+                let compteur = 1
+                cours.forEach(cours =>{
+                    var element = localStorage.setItem(compteur, JSON.stringify(cours))
+                    compteur++
+                })
                 
             })
         })
