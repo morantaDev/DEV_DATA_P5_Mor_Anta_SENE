@@ -574,6 +574,22 @@ document.addEventListener('DOMContentLoaded', function(){
                     selectFin.appendChild(option)
                 }
 
+                //Ajouter des contraintes
+
+                //1. un enseignant ne peut pas avoir deux cours qui débuteront au même moment
+                //2. Le nouveau cours ne peut pas avoir lieu dans une salle occupée à des heures précises 
+                //3.le même enseignant ne peut pas faire cours dans deux salles différentes ou avoir un même cours dans son heure de cours
+            
+            cours.forEach(element=>{
+                if (element.ensei==currentCours.ensei && (element.heurDebut==currentCours.heurDebut || element.heurFin>currentCours.heurDebut)){
+                    alert('Cet enseignant a cours à cette heure prise')
+                }else if(element.sal==currentCours.sal && (element.heurDebut==currentCours.heurDebut ||element.heureFin>currentCours.heurDebut)){
+                    alert('Cette salle est occupée à cette heure prise')
+                }else if(element.ensei==currentCours.ensei && (element.sal!=currentCours.sal ||element.heureFin>currentCours.heurDebut)){
+                    alert('Cet enseignant a cours à cette heure prise')
+                }
+            })
+
                 
             })
             const selectFin = document.querySelector('.modalEnd select')
@@ -597,6 +613,8 @@ document.addEventListener('DOMContentLoaded', function(){
             const modal = document.querySelector('.modal')
             const annuler = document.querySelector('#resume')
             const ajout = document.querySelector('#add')
+
+            
             annuler.addEventListener('click', function(){
                 // modal.style.display = 'none'
                 document.body.removeChild(modal)
@@ -618,18 +636,36 @@ document.addEventListener('DOMContentLoaded', function(){
                     console.log(element)
                     element.innerHTML =''
                 })
+                
+                let compteur = 1
+                
+                
+                // for(element of cours){
+                    //     if (element.ensei==currentCours.ensei && element.heurDebut==currentCours.heurDebut){
+                        //         alert('Cet enseignant a cours à cette heure prise')
+                        //     }else if(element.sal==currentCours.sal && element.heurDebut==currentCours.heurDebut){
+                            //         alert('Cet enseignant a cours à cette heure prise')
+                            //     } else{
+                                //         drawCourse(Object.values(ENSEIGNANTS[currentCours.ensei])[0], Object.values(MODULES[currentCours.mod])[0], Object.values(SALLES[currentCours.sal])[0],Object.values(JOURS[currentCours.jour])[0], duree, marge, color)
+                                //         cours.push(currentCours)
+                                //         console.log(cours)
+                                
+                                //         var ajout_Element = localStorage.setItem(compteur, JSON.stringify(element))
+                                //         compteur++
+                                //     }
+                                // }
+
                 drawCourse(Object.values(ENSEIGNANTS[currentCours.ensei])[0], Object.values(MODULES[currentCours.mod])[0], Object.values(SALLES[currentCours.sal])[0],Object.values(JOURS[currentCours.jour])[0], duree, marge, color)
                 cours.push(currentCours)
-                console.log(cours)
                 
                 const nbreCours = document.querySelector('.nombreDeCours')
                 nbreCours.textContent= cours.length +' '+'cours'
 
-                let compteur = 1
-                cours.forEach(cours =>{
-                    var element = localStorage.setItem(compteur, JSON.stringify(cours))
+                cours.forEach(element=>{
+                    var ajout_Element = localStorage.setItem(compteur, JSON.stringify(element))
                     compteur++
                 })
+                console.log(cours)
                 
             })
         })
@@ -717,11 +753,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
     
-    // plusDays.forEach(day => {
-    //     day.addEventListener('click', function(){
-    //         creationModule()
-    //     })
-    // })
     function drawCourse(element1, element2, element3, day, duree, marge, couleur){
         const section = document.createElement('div')
         section.classList.add('divCours')
