@@ -1,0 +1,40 @@
+USE casse_automobile;
+CREATE TABLE IF NOT EXISTS piece(
+	id int auto_increment not null, 
+	categorie ENUM('carosserie', 'mecanique', 'electricite', 'vulganisation'), 
+	date_recup date not null,
+	primary key (id) 
+	);
+CREATE TABLE IF NOT EXISTS reference(
+	id int auto_increment not null,
+	prix int(10) not null,
+	primary key(id) 
+	);
+CREATE TABLE IF NOT EXISTS vehicule(
+	id int auto_increment not null,
+	marque varchar(50) not null,
+	modele varchar(50) not null,
+	annee int(4) not null,
+	primary key(id) 
+	);
+	
+CREATE TABLE CONVENIR(
+	id_vehicule int not null,
+	id_reference int not null,
+	CONSTRAINT fk_vehicule 
+	FOREIGN KEY (id_vehicule) REFERENCES vehicule(id),
+	CONSTRAINT fk_reference 
+	FOREIGN KEY (id_reference) REFERENCES reference(id),
+	
+ALTER TABLE piece ADD id_reference int not null;
+ALTER TABLE piece ADD id_vehicule int null;
+ALTER TABLE piece
+ADD CONSTRAINT fk_reference 
+FOREIGN KEY (id_reference) REFERENCES reference(id);
+
+ALTER TABLE piece
+ADD CONSTRAINT fk_vehicule 
+FOREIGN KEY (id_vehicule) REFERENCES vehicule(id);
+
+desc piece, reference, vehicule;
+
