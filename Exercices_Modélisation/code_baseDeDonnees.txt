@@ -1,0 +1,158 @@
+************************SELECT********************************
+SELECT nom AS nomDuContribuable, adr AS adresseDuContribuable 
+FROM contribuable 
+JOIN declaration ON contribuable.ncont = declaration.ncont;
+
+************************SOUS-REQUETE********************************
+SELECT contribuable.ncont, nom 
+FROM contribuable 
+INNER JOIN payer_amende 
+WHERE payer_amende.ncont = contribuable.ncont 
+ORDER BY date ASC 
+LIMIT 1;
+
+
+*************************SUM******************************
+SELECT contribuable.ncont, nom,libelle, SUM(montant) 
+FROM contribuable 
+INNER JOIN payer_amende ON contribuable.ncont = payer_amende.ncont 
+INNER JOIN amende ON amende.namende = payer_amende.namende 
+GROUP BY contribuable.ncont, nom, libelle;
+
+*************************AVG******************************
+SELECT contribuable.ncont, nom, AVG(montant) AS moyenne_montant_taxes 
+FROM contribuable 
+INNER JOIN payer_taxe ON contribuable.ncont = payer_taxe.ncont 
+INNER JOIN taxes ON taxes.ntaxe = payer_taxe.ntaxe 
+GROUP BY contribuable.ncont, nom, montant;
+
+*************************MIN******************************
+SELECT tel, nom,libelle, MIN(montant) AS minimale_Amende 
+FROM contribuable 
+INNER JOIN payer_amende ON contribuable.ncont = payer_amende.ncont 
+INNER JOIN amende ON amende.namende = payer_amende.namende 
+GROUP BY tel, nom, libelle;
+
+*************************MAX******************************
+SELECT contribuable.ncont, nom, libelle, MAX(montant) 
+FROM contribuable 
+INNER JOIN payer_taxe ON contribuable.ncont = payer_taxe.ncont 
+INNER JOIN taxes ON payer_taxe.ntaxe = taxes.ntaxe 
+INNER JOIN declaration ON contribuable.ncont = declaration.ncont 
+GROUP BY contribuable.ncont, nom, libelle;
+
+*************************ORDER BY******************************
+SELECT contribuable.ncont, nom, libelle, MAX(montant)  
+FROM contribuable  
+INNER JOIN payer_taxe ON contribuable.ncont = payer_taxe.ncont  
+INNER JOIN taxes ON payer_taxe.ntaxe = taxes.ntaxe  
+INNER JOIN declaration ON contribuable.ncont = declaration.ncont  
+GROUP BY contribuable.ncont, nom, libelle, payer_taxe.date 
+ORDER BY payer_taxe.date ASC  
+LIMIT 5;
+
+*************************GROUP BY******************************
+SELECT libelle, montant, nom 
+FROM contribuable 
+INNER JOIN payer_taxe ON contribuable.ncont= payer_taxe.ncont 
+INNER JOIN declaration ON contribuable.ncont= declaration.ncont 
+INNER JOIN taxes ON payer_taxe.ntaxe = taxes.ntaxe 
+WHERE payer_taxe.date = '2020-06-05' 
+GROUP BY nom, libelle, montant;
+
+*************************HAVNG******************************
+SELECT nom, contribuable.ncont 
+FROM contribuable 
+INNER JOIN declaration ON contribuable.ncont = declaration.ncont 
+INNER JOIN payer_amende ON contribuable.ncont = payer_amende.ncont 
+INNER JOIN amende ON payer_amende.namende = amende.namende 
+WHERE declaration.libelle = 'spectacle' 
+GROUP BY nom, contribuable.ncont 
+HAVING SUM(montant)>500000;
+
+*************************UNION******************************
+SELECT SUM(montant) AS montants_totaux 
+FROM amende 
+INNER JOIN payer_amende ON payer_amende.namende = amende.namende 
+INNER JOIN declaration ON payer_amende.ncont = declaration.ncont 
+WHERE declaration.libelle = 'spectacle' 
+UNION 
+SELECT SUM(montant) AS montants_totaux 
+FROM amende INNER JOIN payer_amende ON payer_amende.namende = amende.namende 
+INNER JOIN declaration ON payer_amende.ncont = declaration.ncont 
+WHERE declaration.libelle = 'publicité';
+
+*************************ROUND******************************
+SELECT nom, contribuable.ncont 
+FROM contribuable 
+INNER JOIN declaration ON contribuable.ncont = declaration.ncont 
+INNER JOIN payer_amende ON contribuable.ncont = payer_amende.ncont 
+INNER JOIN amende ON payer_amende.namende = amende.namende 
+WHERE declaration.libelle = 'spectacle' 
+GROUP BY nom, contribuable.ncont 
+HAVING ROUND(SUM(montant), 2)>500000;
+
+*************************DISTINCT******************************
+SELECT DISTINCT contribuable.ncont, contribuable.nom
+FROM contribuable
+LEFT JOIN payer_amende ON contribuable.ncont = payer_amende.ncont
+WHERE payer_amende.ncont IS NULL;
+
+
+************************COUNT********************************
+SELECT  nom, contribuable.ncont AS numero 
+FROM contribuable 
+INNER JOIN payer_amende ON contribuable.ncont = payer_amende.ncont 
+INNER JOIN amende ON payer_amende.namende = amende.namende 
+GROUP BY nom, contribuable.ncont 
+HAVING COUNT(amende.namende)>4;
+
+************************LIMIT********************************
+SELECT contribuable.ncont AS numero, nom
+FROM contribuable  
+INNER JOIN payer_taxe ON contribuable.ncont = payer_taxe.ncont  
+INNER JOIN taxes ON payer_taxe.ntaxe = taxes.ntaxe  
+INNER JOIN declaration ON contribuable.ncont =declaration.ncont  
+GROUP BY numero, nom, montant  
+ORDER BY montant DESC 
+LIMIT 1;
+
+************************LIKE********************************
+SELECT * 
+FROM contribuable 
+WHERE adr LIKE '%paris%';
+
+************************IN & NOT IN********************************
+SELECT DISTINCT nom, contribuable.ncont AS numero 
+FROM contribuable 
+INNER JOIN payer_amende ON contribuable.ncont = payer_amende.ncont 
+INNER JOIN amende ON payer_amende.namende = amende.namende 
+GROUP BY nom, tel 
+HAVING SUM(montant) IN (0, 0, 0.0, 0.00, 0.000);
+
+SELECT DISTINCT contribuable.ncont, nom
+FROM contribuable
+WHERE contribuable.ncont NOT IN (SELECT payer_amende.ncont FROM payer_amende);
+
+
+************************BETWEEN********************************
+SELECT contribuable.ncont AS numero, nom 
+FROM contribuable 
+INNER JOIN declaration ON contribuable.ncont = declaration.ncont 
+WHERE date BETWEEN '2020-04-04' AND '2020-04-15' OR date BETWEEN '2020-05-15' AND '2020-05-25';
+
+****************************************************************
+SELECT tel AS numéro, nom, MONTH(payer_taxe.date) AS mois, SUM(montant) AS taxe_totale 
+FROM contribuable 
+INNER JOIN payer_taxe ON contribuable.ncont = payer_taxe.ncont 
+INNER JOIN taxes ON payer_taxe.ntaxe = taxes.ntaxe 
+INNER JOIN declaration ON contribuable.ncont = declaration.ncont 
+GROUP BY tel, nom, mois;
+
+
+************************************************************
+SELECT * FROM contribuable WHERE LENGTH(nom) BETWEEN 4 AND 6;
+
+
+
+

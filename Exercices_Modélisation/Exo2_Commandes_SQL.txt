@@ -1,0 +1,70 @@
+CREATE DATABASE bibliotheque;
+
+USE bibliotheque;
+
+CREATE TABLE  ouvrage(
+	id int auto_increment not null,
+	titre VARCHAR(30) not null,
+	nbre_page int(3),
+	id_motCle int not null,
+	PTRIMARY KEY(id)
+	);
+CREATE TABLE mot_Cle(
+	id int auto_increment not null,
+	libelle VARCHAR(30) not null,
+	PRIMARY KEY(id)
+	);
+CREATE TABLE adherent(
+	id int auto_increment not null,
+	nom VARCHAR(30) not null,
+	adresse VARCHAR(30) not null,
+	telephone VARCHAR(15),
+	PRIMARY KEY(id)
+	);
+CREATE TABLE emprunter(
+	id_ouvrage int not null,
+	id_adherent int not null,
+	CONSTRAINT fk_ouvrage FOREIGN KEY(id_ouvrage) REFERENCES ouvrage(id),
+	CONSTRAINT fk_adherent FOREIGN KEY(id_adherent) REFERENCES adherent(id)
+	);
+CREATE TABLE ecrire(
+	id_ouvrage int,
+	id_auteur int,
+	CONSTRAINT fk_ecrire_ouvrage FOREIGN KEY(id_ouvrage) REFERENCES ouvrage(id),
+	CONSTRAINT fk_ecrire_auteur FOREIGN KEY(id_auteur) REFERENCES auteur(id)
+	);
+CREATE TABLE auteur(
+	id int auto_increment not null,
+	nom VARCHAR(30) not null,
+	prenom VARCHAR(30) null,
+	PRIMARY KEY(id)
+	);
+
+ALTER TABLE ouvrage 
+	ADD CONSTRAINT fk_motCle
+	FOREIGN KEY (id_motCle) REFERENCES ouvrage(id);
+	
+desc ouvrage; desc mot_Cle; desc adherent; desc emprunter; desc ecrire; desc auteur;
+
+
+INSERT INTO mot_Cle(libelle) VALUES ('ROMANS');
+INSERT INTO ouvrage(titre, nbre_page, id_motCle) VALUES ('GERMINAL', 500, 1);
+INSERT INTO adherent(nom, adresse, telephone) VALUES ('Mor Anta SENE', 'Fann Residence', '781093515');
+INSERT INTO emprunter(id_ouvrage, id_adherent) VALUES (1,1);
+INSERT INTO auteur(nom, prenom) VALUES ('ZOLA','Emil');
+INSERT INTO ecrire(id_ouvrage, id_auteur) VALUES (1,1);
+
+INSERT INTO mot_Cle(libelle) VALUES ('ROMANS');
+INSERT INTO ouvrage(titre, nbre_page, id_motCle) VALUES ('MADAME BOVARY', 474, 1);
+INSERT INTO adherent(nom, adresse, telephone) VALUES ('Mor Anta SENE', 'Fann Residence', '781093515');
+INSERT INTO emprunter(id_ouvrage, id_adherent) VALUES (1,1);
+INSERT INTO auteur(nom, prenom) VALUES ('FLAUBERT','Gustave');
+INSERT INTO ecrire(id_ouvrage, id_auteur) VALUES (2,2);
+
+INSERT INTO mot_Cle(libelle) VALUES ('FICTION');
+INSERT INTO ouvrage(titre, nbre_page, id_motCle) VALUES ("LES SECRETS DE L'UNIVERS", 312, 2);
+INSERT INTO adherent(nom, adresse, telephone) VALUES ('Mor Anta SENE', 'Fann Residence', '781093515');
+INSERT INTO emprunter(id_ouvrage, id_adherent) VALUES (3,1);
+INSERT INTO auteur(nom, prenom) VALUES ('MITCHELL','Sarah');
+INSERT INTO ecrire(id_ouvrage, id_auteur) VALUES (3,3);
+

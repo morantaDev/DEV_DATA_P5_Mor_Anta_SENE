@@ -1,0 +1,79 @@
+CREATE DATABASE aquarium;
+
+USE aquarium;
+
+CREATE TABLE piece(
+	id int auto_increment,
+	nom VARCHAR(30),
+	PRIMARY KEY(id)
+	);
+CREATE TABLE bassin(
+	id int auto_increment not null,
+	nom VARCHAR(30) null,
+	id_piece int not null,
+	PRIMARY KEY (id),
+	CONSTRAINT fk_piece FOREIGN KEY(id_piece) REFERENCES piece(id)
+	);
+CREATE TABLE animal(
+	id int auto_increment not null,
+	nom VARCHAR(50),
+	date_depart date not null,
+	date_arrivee date not null,
+	id_bassin int not null,
+	id_ordre int not null,
+	PRIMARY KEY(id),
+	CONSTRAINT fk_bassin FOREIGN KEY(id_bassin) REFERENCES bassin(id),
+	CONSTRAINT fk_ordre FOREIGN KEY(id_ordre) REFERENCES ordre(id)
+	);
+	
+CREATE TABLE ordre(
+	id int auto_increment not null,
+	nom VARCHAR(30),
+	PRIMARY KEY(id)
+	);
+CREATE TABLE famille(
+	id int auto_increment not null,
+	nom VARCHAR(30),
+	PRIMARY KEY(id)
+	);
+CREATE TABLE genre(
+	id int auto_increment not null,
+	nom VARCHAR(30),
+	PRIMARY KEY(id)
+	);
+CREATE TABLE espece(
+	id int auto_increment not null,
+	nom VARCHAR(30),
+	PRIMARY KEY(id)
+	);
+CREATE TABLE suivi_medical(
+	id int auto_increment not null,
+	date_soin date,
+	nature_soin VARCHAR(30),
+	PRIMARY KEY(id)
+	);
+	
+	
+desc animal; desc piece; desc ordre; desc bassin; desc famille; desc suivi_medical;
+
+INSERT INTO ordre(nom) VALUES ('Ordre 1');
+INSERT INTO piece(nom) VALUES ('piece 1');
+INSERT INTO bassin(nom, id_piece) VALUES ('Bassin 1', 1);
+INSERT INTO animal(nom,date_depart, date_arrivee, id_bassin,id_ordre) VALUES ('PIEUVRE', '12/01/2012', '17/05/2012', 5, 1)
+
+
+
+INSERT INTO ordre(nom) VALUES ('Ordre 2');
+INSERT INTO piece(nom) VALUES ('piece 2');
+INSERT INTO bassin(nom, id_piece) VALUES ('Bassin 2', 1);
+INSERT INTO animal(nom,date_depart, date_arrivee, id_bassin,id_ordre) VALUES ('REQUIN MARTEAU', '2012/01/12', '2012/05/17', 6, 1);
+
+
+
+INSERT INTO ordre(nom) VALUES ('Ordre 3');
+INSERT INTO piece(nom) VALUES ('piece 3');
+INSERT INTO bassin(nom, id_piece) VALUES ('Bassin 3', 1);
+INSERT INTO animal(nom,date_depart, date_arrivee, id_bassin,id_ordre) VALUES ('REQUIN BLANC', '2012/01/12', '2012/05/17', 7, 1);
+
+
+

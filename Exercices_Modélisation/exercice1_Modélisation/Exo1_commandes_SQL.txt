@@ -36,5 +36,19 @@ ALTER TABLE piece
 ADD CONSTRAINT fk_vehicule 
 FOREIGN KEY (id_vehicule) REFERENCES vehicule(id);
 
+INSERT INTO reference(prix) VALUES (1000);
+INSERT INTO vehicule(marque, modele, annee) VALUES ('mercedes', 'mercedes', 2012);
+INSERT INTO piece(categorie, date_recup) VALUES ('mecanique', '21/07/2022', 'croix alternateur');
+
+INSERT INTO vehicule(marque, modele, annee) VALUES ('X5', 'BMW', 2019);
+INSERT INTO reference(prix) VALUES (10000000);
+INSERT INTO piece(categorie, date_recup, id_reference, id_vehicule, nom) VALUES ('vulganisation', '21/01/19',2,2, 'pneus');
+
+INSERT INTO reference(prix) VALUES (12000000);
+INSERT INTO vehicule(marque, modele, annee) VALUES ('Benz', 'Mercedes', 2021);
+INSERT INTO piece(categorie, date_recup, id_reference, id_vehicule, nom) VALUES ('carosserie', '21/01/19',3,3, 'peinture');
+
 desc piece, reference, vehicule;
+
+
 
