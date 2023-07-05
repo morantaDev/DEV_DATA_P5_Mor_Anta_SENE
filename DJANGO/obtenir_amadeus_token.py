@@ -1,6 +1,7 @@
 # import requests
 
 import json
+import requests
 
 # # URL pour obtenir le jeton d'accès
 # token_url = "https://test.api.amadeus.com/v1/security/oauth2/token"
@@ -464,23 +465,60 @@ import json
 ###########################################################################################
 #my code that generate hotel
 
+# import random
+
+# hotels = ['Hotel A', 'Hotel B', 'Hotel C', 'Hotel D', 'Hotel E']
+# room_types = ['Single Room', 'Double Room', 'Suite', 'Deluxe Room', 'Family Room']
+
+# def generate_hotel():
+#     hotel = random.choice(hotels)
+#     room_capacity = random.randint(1, 4)
+#     room_type = random.choice(room_types)
+#     description = f"{room_type} at {hotel}"
+#     return hotel, room_capacity, description
+
+# num_hotels = 5
+
+# for _ in range(num_hotels):
+#     hotel, room_capacity, description = generate_hotel()
+#     print(f"Hotel: {hotel}")
+#     print(f"Room Capacity: {room_capacity}")
+#     print(f"Description: {description}")
+#     # print()
+
+
+###########################################################################################
+from faker import Faker
 import random
 
-hotels = ['Hotel A', 'Hotel B', 'Hotel C', 'Hotel D', 'Hotel E']
-room_types = ['Single Room', 'Double Room', 'Suite', 'Deluxe Room', 'Family Room']
+fake = Faker()
 
-def generate_hotel():
-    hotel = random.choice(hotels)
-    room_capacity = random.randint(1, 4)
-    room_type = random.choice(room_types)
-    description = f"{room_type} at {hotel}"
-    return hotel, room_capacity, description
+hotels = []
 
-num_hotels = 5
+image_available = [
+    {"name":"chambre_simple", "url": "https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80"},
+    {"name": "chambre_double", "url": "https://unsplash.com/fr/photos/_Sr6plc5dpQ"},
+    {"name": "chambre_de_luxe", "url":"https://images.unsplash.com/photo-1519710889408-a67e1c7e0452?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"},
+    {"name":"suite", "url":"https://unsplash.com/fr/photos/AOBEP4Qq00s"}
+     
+]
+image_url=""
+for _ in range(100):
+    room=random.choice(["chambre_simple", "chambre_double", "chambre_de_luxe", "suite"])
+    for img_url in image_available:
+        if room==img_url['name']:
+            image_url = img_url['url']
+    hotel = {
+        "name": fake.company(),
+        "room" :room,
+        "description": fake.text(),
+        "capacity": fake.random_int(min=1, max=6),
+        "address": fake.address(),
+        "city": fake.city(),
+        "country": fake.country(),
+        "image_url" : image_url
+    }
+    hotels.append(hotel)
 
-for _ in range(num_hotels):
-    hotel, room_capacity, description = generate_hotel()
-    print(f"Hotel: {hotel}")
-    print(f"Room Capacity: {room_capacity}")
-    print(f"Description: {description}")
-    print()
+print(hotels)
+
