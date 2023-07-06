@@ -7,7 +7,7 @@ async function runScript(){
     try{
         await driver.get("https://www.farmmachinerysales.com.au/items/tillage-seeding-category/?offset=0");
 
-        await driver.wait(until.elementsLocated(By.css('.key-details__value')), 5000);
+        // await driver.wait(until.elementsLocated(By.css('.key-details__value')), 5000);
 
         const values = await driver.findElements(By.className('key-details__value'));
 
@@ -22,4 +22,4 @@ async function runScript(){
         await driver.quit();
     }
 }
-runScript()
+runScript();
