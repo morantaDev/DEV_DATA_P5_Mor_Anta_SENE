@@ -1,0 +1,13 @@
+{
+  "name": "scraping_NodeJS_selenium",
+  "version": "1.0.0",
+  "description": "first scraping using NodeJS and Selenium",
+  "main": "index.js",
+  "author": "Mor Anta SENE",
+  "license": "MIT",
+  "dependencies": {
+    "chromedriver": "^2.46",
+    "nodemon": "^2.0.22",
+    "selenium-webdriver": "^4.10.0"
+  }
+}
