@@ -1,0 +1,22 @@
+{
+  "name": "Reactjs-project-using-node-js-for-the-backend",
+  "version": "1.0.0",
+  "description": "this is react.js project that using nodejs as a server in order to fetch datas",
+  "main": "index.js",
+  "author": "Mor Anta SENE",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "server": "nodemon server.js",
+    "tail": "npx tailwindcss -i ./src/App.css -o ./dist/output.css --watch"
+  }
+}
